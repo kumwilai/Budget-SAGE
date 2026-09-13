@@ -1,0 +1,161 @@
+{
+  "checkpoint": {
+    "all_best_checkpoints": [
+      "/home/kumwilai/research/signgen-t2m/outputs/signbase_slrtp_2026-09-11/model/44000_best.ckpt"
+    ],
+    "n_best_checkpoints": 1,
+    "selected": "/home/kumwilai/research/signgen-t2m/outputs/signbase_slrtp_2026-09-11/model/44000_best.ckpt"
+  },
+  "cross_check": {
+    "gpu_log_exists_but_no_gpu_prediction_bank": true,
+    "other_completed_prediction_banks_in_eval_directory": [],
+    "processor_shadow_vs_harvested_tensor_exact": true
+  },
+  "files": {
+    "checkpoint": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/signbase_slrtp_2026-09-11/model/44000_best.ckpt",
+      "sha256": "9544e272bd1b15eae34db555ff09db93627674290292bf811307dcf5709cd26c"
+    },
+    "duration_policy": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/text_duration_policy/text_duration_policy.joblib",
+      "sha256": "38a192cbb297572c86a7c1e1590773c4fbe7f966bd77e31c7065f97681effc82"
+    },
+    "ground_truth": {
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+      "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+    },
+    "prediction": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/signbase_slrtp_2026-09-11/eval_20260912/preds/signbase_test_sampleseed11.pt",
+      "sha256": "fdbe08061c27fa7b85dd6c6c4ad5079fe3848c16c36c2231dab367457ebc243a"
+    },
+    "rescore_result": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/signbase_slrtp_2026-09-11/eval_gpu_2026-09-12/audit_existing_cpu/results/signbase_seed11_cpu_rescore.json",
+      "sha256": "35b3ea17ceb3fe9d568cede38806e52fdded25e05b3aee6a0e20226b7834c0df"
+    },
+    "stored_result": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/signbase_slrtp_2026-09-11/eval_20260912/results/signbase_44000_test_fps25.json",
+      "sha256": "35b3ea17ceb3fe9d568cede38806e52fdded25e05b3aee6a0e20226b7834c0df"
+    }
+  },
+  "metric_definition": "Hand joints 8:50; body joints 0:8; full xyz. Speed is first-difference L2 mean, jerk is third-difference L2 mean, and pose standard deviation is temporal std averaged over joints/channels. Corpus statistic is median clip value; reported ratio is prediction median divided by official-GT median.",
+  "motion_ratios": {
+    "body_speed": {
+      "definition": "median clip mean of full-xyz first-difference L2 magnitude on joints 0:8; prediction/GT",
+      "gt_median": 0.00961698405444622,
+      "n_clips": 641,
+      "pred_median": 0.011802736669778824,
+      "ratio": 1.2272804657840797
+    },
+    "duration": {
+      "definition": "organiser mean of per-clip length ratios after common fps handling",
+      "ratio": 1.091551509095655
+    },
+    "hand_jerk": {
+      "definition": "median clip mean of full-xyz third-difference L2 magnitude on joints 8:50; prediction/GT",
+      "gt_median": 0.017476815730333328,
+      "n_clips": 641,
+      "pred_median": 0.08281803876161575,
+      "ratio": 4.738737310016611
+    },
+    "hand_pose_standard_deviation": {
+      "definition": "median clip temporal full-xyz standard deviation averaged over joints 8:50; prediction/GT",
+      "gt_median": 0.0649891048669815,
+      "n_clips": 641,
+      "pred_median": 0.038870204240083694,
+      "ratio": 0.5981033947096596
+    },
+    "hand_speed": {
+      "definition": "median clip mean of full-xyz first-difference L2 magnitude on joints 8:50; prediction/GT",
+      "gt_median": 0.02902499958872795,
+      "n_clips": 641,
+      "pred_median": 0.03518099710345268,
+      "ratio": 1.2120929406357495
+    }
+  },
+  "organiser_ground_truth_control": {
+    "absolute_differences": {
+      "avg_duration": 0.0,
+      "bleu1": 0.0,
+      "bleu2": 0.0,
+      "bleu3": 1.4210854715202004e-14,
+      "bleu4": 0.0,
+      "chrf": 0.0,
+      "dtw_mje": 0.0,
+      "rouge": 0.0,
+      "total_distance": 0.0,
+      "wer": 0.0
+    },
+    "max_absolute_difference": 1.4210854715202004e-14,
+    "note": "BLEU-3 differs by floating roundoff below 1e-12; all other retained values are exact",
+    "published": {
+      "avg_duration": 1.0,
+      "bleu1": 34.39639390982878,
+      "bleu2": 22.038589437767946,
+      "bleu3": 16.092729031718463,
+      "bleu4": 12.777148564612425,
+      "chrf": 34.58509769785496,
+      "dtw_mje": 0.0,
+      "rouge": 35.19608041310144,
+      "total_distance": 1.0,
+      "wer": 85.77470203767781
+    },
+    "reproduced": {
+      "avg_duration": 1.0,
+      "bleu1": 34.39639390982878,
+      "bleu2": 22.038589437767946,
+      "bleu3": 16.092729031718477,
+      "bleu4": 12.777148564612425,
+      "chrf": 34.58509769785496,
+      "dtw_mje": 0.0,
+      "rouge": 35.19608041310144,
+      "total_distance": 1.0,
+      "wer": 85.77470203767781
+    },
+    "reproduces_within_1e-12": true
+  },
+  "prediction_contract": {
+    "all_shapes_T_178_3": true,
+    "duration_policy_fit_split": "train",
+    "duration_policy_sha256_matches_record": true,
+    "duration_source": "frozen text-only regressor fitted on the training split",
+    "ground_truth_duration_conditioned": false,
+    "inference_sampling_seed": 11,
+    "keys_equal_official_test": true,
+    "n_predictions": 641,
+    "pose_or_coordinates_supplied": false,
+    "shadow_bank_tensor_exact": true,
+    "source_input": "official test German text, verbatim",
+    "supplied_length_mae_vs_gt_frames": 15.778471138845553,
+    "supplied_length_pearson_vs_gt": 0.8615012816205062,
+    "supplied_lengths_equal_generated_lengths": 641,
+    "supplied_lengths_equal_gt_count": 15,
+    "total_prediction_frames": 66710,
+    "training_seed": 27
+  },
+  "score_reproduction": {
+    "exact_match": true,
+    "independent_cpu_rescore": {
+      "avg_duration": 1.091551509095655,
+      "bleu1": 28.023405849716596,
+      "bleu4": 8.114023840000726,
+      "dtw_mje": 0.03831321746110916,
+      "total_distance": 1.092017412185669,
+      "wer": 91.49045239010637
+    },
+    "stored": {
+      "avg_duration": 1.091551509095655,
+      "bleu1": 28.023405849716596,
+      "bleu4": 8.114023840000726,
+      "dtw_mje": 0.03831321746110916,
+      "total_distance": 1.092017412185669,
+      "wer": 91.49045239010637
+    }
+  },
+  "verdict": {
+    "admissible_label": "locally trained Sign-Base, seed 11, text-predicted duration",
+    "fully_reproducible_generation_execution": false,
+    "generation_provenance_limit": "the CPU runtime device shim and full producer shell command were not preserved; admit as a hashed stored bank, not as an independently reproducible generation run",
+    "ground_truth_duration_conditioned": false,
+    "stored_bank_and_scoring_checks_pass": true
+  }
+}

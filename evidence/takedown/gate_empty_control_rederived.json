@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "base_policy_identical": true,
+    "certificate_count": 641,
+    "certificate_ids_identical": true,
+    "envelope_fields_identical": {
+      "archive_commitment": true,
+      "archive_id": true,
+      "detector_config": true,
+      "manifest_key_id": true
+    },
+    "ledgers_identical_count": 641,
+    "only_added_policy_field_is_withdrawal": true,
+    "pose_bank_ids_identical": true,
+    "pose_descriptors_identical_count": 641,
+    "pose_tensor_count": 641,
+    "pose_tensors_bit_identical_count": 641,
+    "schema_transition": [
+      "clean-source-release-v1",
+      "clean-source-release-v2"
+    ],
+    "withdrawal_commitment_is_empty": true,
+    "withdrawn_sources_exactly_empty": true
+  },
+  "control": "gate_empty_vs_frozen_primary",
+  "passed": true
+}

@@ -1,0 +1,32 @@
+{
+  "design_sha256": "147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6",
+  "environment": {
+    "cuda_visible_devices": "",
+    "device": "cpu",
+    "executable": "/home/kumwilai/research/coopns-slr/.venv/bin/python",
+    "machine": "x86_64",
+    "numerical_threads": 1,
+    "packages": {
+      "fastdtw": "0.3.4",
+      "jiwer": "4.0.0",
+      "numpy": "2.4.2",
+      "sacrebleu": "2.6.0",
+      "torch": "2.10.0"
+    },
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "python_hash_seed": "not_set",
+    "torch_runtime_build": "2.10.0+cu128"
+  },
+  "execution": {
+    "output_directory": {
+      "canonical_path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+      "device": 2096,
+      "inode": 3057717
+    },
+    "run_id": "2bb1bde2a6660473bc0b2eaa1ac0edcb2f0725a9f92c4755e6392a964630d7da",
+    "schema": "recent_control_execution_identity_v1",
+    "start_unix_ns": 1788843376217572871
+  },
+  "schema": "recent_control_admission_v3"
+}

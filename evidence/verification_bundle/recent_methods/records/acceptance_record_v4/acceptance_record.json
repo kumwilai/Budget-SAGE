@@ -1,0 +1,123 @@
+{
+  "schema": "recent_control_admission_execution_record_v4",
+  "created_at": "2026-09-08T11:58:00+07:00",
+  "review_state": "Corrected execution and regression evidence complete; awaiting distinct independent review.",
+  "correction": {
+    "defect": "After design_03 was sealed, its official-status narrative changed from the sealed 6041-byte SHA256 2128bfe2f6179ebb1efded5d0fb88d14c0d358a554b95f2fce2f62c9b73f1fd0 to the current 6389-byte SHA256 e6782c9f204c97ec74c749a6994922947313c308fd4e318c94abfbfb39c81561. The v3 validator therefore rejects the live evidence chain.",
+    "resolution": "V4 freshly seals the current narrative and every current dependency, then repeats the unchanged audit twice in separate sequential CPU processes.",
+    "supersession": "All v1-v3 artifacts remain unchanged. V3 is superseded for closure; v4 is the candidate closure record pending distinct review."
+  },
+  "implementation": {
+    "path": "scripts/audit_recent_control_admission.py",
+    "bytes": 64047,
+    "sha256": "eb2b7f183e031c95d6cb1d57f88c79dcc295e810e73aa96cf6a75c3981fba706"
+  },
+  "tests": {
+    "path": "tests/test_audit_recent_control_admission.py",
+    "bytes": 25755,
+    "sha256": "206f421aaf0fb488267695f63e504b7622a4c8e089ac158ca7c1426a5d271976"
+  },
+  "correction_plan": {
+    "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/execution_plan.json",
+    "bytes": 2396,
+    "sha256": "10f1ae404ec9fb5e5d9ec839931f95034f12321fb5073a679d964ba30a72be2d"
+  },
+  "synthetic_gate": {
+    "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/synthetic_gate_01.xml",
+    "bytes": 9856,
+    "sha256": "570c8d45cc9e1eb4e4f82c9b309df38baee2333a4968ab4167bf0f3e33001fde",
+    "tests": 66,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 2.299,
+    "implementation_and_test_hashes_embedded": true
+  },
+  "sealed_design": {
+    "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/design.json",
+    "bytes": 28844,
+    "sha256": "147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6",
+    "seal_path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/seal.json",
+    "seal_bytes": 274,
+    "seal_sha256": "e837b6da7b255345ae38959a7cb43d37caabf8822dd7b79feebf1d38b949efaa",
+    "input_records": 117,
+    "current_official_status": {
+      "path": "outputs/revision/nonhuman_closure_20260907/recent_slp_official_artifact_update.md",
+      "bytes": 6389,
+      "sha256": "e6782c9f204c97ec74c749a6994922947313c308fd4e318c94abfbfb39c81561"
+    }
+  },
+  "environment": {
+    "device": "cpu",
+    "cuda_visible_devices": "",
+    "python": "3.12.3",
+    "python_hash_seed": "not_set",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.2",
+    "sacrebleu": "2.6.0",
+    "jiwer": "4.0.0",
+    "fastdtw": "0.3.4",
+    "numerical_threads": 1,
+    "probe_seed": 0,
+    "training_or_corpus_generation": false
+  },
+  "executions": [
+    {
+      "directory": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+      "run_id": "2bb1bde2a6660473bc0b2eaa1ac0edcb2f0725a9f92c4755e6392a964630d7da",
+      "start_unix_ns": 1788843376217572871,
+      "completed_unix_ns": 1788843387237926175,
+      "elapsed_seconds": 7.4393457929982105,
+      "peak_rss_kib": 3974000,
+      "start_sha256": "858964b22f74e0b25d6f296629a5ff5f183745467c8dc92c5ce6a2e27e0d05f5",
+      "scientific_sha256": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3",
+      "telemetry_sha256": "1b5826552390153de5d616ba276de071b9fd044711294a606150ea3b51422fea",
+      "output_seal_sha256": "38ad1988284766c3279676df4c918c8c99cbd0dbf1f7b5744f7cf8c70fb845e9"
+    },
+    {
+      "directory": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+      "run_id": "aa029a545acabf7df8ae1ae17e926c6fde98bfbfa50b0406348b0f8afcaa761a",
+      "start_unix_ns": 1788843398015244503,
+      "completed_unix_ns": 1788843406190609590,
+      "elapsed_seconds": 8.175510319997557,
+      "peak_rss_kib": 3973904,
+      "start_sha256": "4fdc49b524646e402f281817ecbce36650b89b9984c85866a69e02168d07ee00",
+      "scientific_sha256": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3",
+      "telemetry_sha256": "f4144ec04cc34857ed825c0e1a4e49ac0d51a5bbed4f5425d646a62e6373c977",
+      "output_seal_sha256": "14322e1a761edb526f068c721aa61e27d2334c4f885869d3ac487b0e79a596aa"
+    }
+  ],
+  "execution_order": "Two separate sequential Python processes; no overlapping memory-heavy process.",
+  "resource_ceiling_exclusive_kib": 7340032,
+  "comparison": {
+    "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/comparison_checks.json",
+    "bytes": 2834,
+    "sha256": "5900f2e2df637d12fe928aca194dc255eade8238d5a8ab41676b00e8c8b660b3",
+    "exit_code": 0,
+    "distinct_nonaliased_executions": true,
+    "disjoint_nonhardlinked_execution_artifacts": true,
+    "scientific_json_byte_identical": true
+  },
+  "admission_decisions_each_run": {
+    "ADMITTED": 1,
+    "REJECTED": 4
+  },
+  "admitted_result": {
+    "id": "organizer_progressive_transformer_release",
+    "split": "test",
+    "items": 641,
+    "declared_fps": 12,
+    "bleu1": 16.914736358800415,
+    "bleu4": 1.5942094217904001,
+    "wer": 101.678841471229,
+    "dtw_mje": 0.044929325580596924
+  },
+  "commands": [
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python -B -m pytest -q tests/test_audit_recent_control_admission.py --basetemp outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/synthetic_tmp_01 --junitxml outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/synthetic_gate_01.xml -o cache_dir=outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/pytest_cache_01",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python -B scripts/audit_recent_control_admission.py seal --output outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python -B scripts/audit_recent_control_admission.py run --design outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/design.json --design-sha256 147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6 --output outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python -B scripts/audit_recent_control_admission.py run --design outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/design.json --design-sha256 147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6 --output outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python -B scripts/audit_recent_control_admission.py compare --design outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/design.json --design-sha256 147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6 --output outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04 --repeat outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04"
+  ],
+  "claim_ceiling": "Post-hoc admission and reproducibility audit of stored artifacts. One 641-item organizer PT release bank is admitted for its stored re-score using declared --fps 12 and the frozen SLRTP evaluator. Four local architectural controls remain rejected as named-method reproductions. This does not authenticate producer execution, native-rate provenance, or computation against an owner rewriting all evidence. It establishes no recent-method superiority, fresh recognizer evaluation, or untouched-test result. Missing-artifact conclusions apply only to inspected official sources. No training or corpus generation occurs; the audit's declared tiny frozen-checkpoint probes and saved-prediction metric recomputation are disclosed."
+}

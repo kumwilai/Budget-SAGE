@@ -1,0 +1,69 @@
+{
+  "archive_admission": "raw pose and span source IDs intersect declared train-manifest IDs before generator validation",
+  "budget": [
+    2,
+    5
+  ],
+  "feasibility_only": true,
+  "inputs": {
+    "allocator": {
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/strict_route_only_cac.py",
+      "sha256": "adf35187206bff43c9c07569c0de8f92252e6a7fe32f52103eeab25e7a302fa5"
+    },
+    "dev_manifest": {
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/csl_daily_dev.json",
+      "sha256": "adb4e784b1704a668ab8c14eda17b35ae467f2fafcbce079aeacd29d3deaad78"
+    },
+    "implementation": {
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/audit_csl_text_route_transfer.py",
+      "sha256": "98b1950b64255d6671d8746f38e71c9d3dd1758f54d690528f029c1c7941ab58"
+    },
+    "planner": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_extension/scripts/build_retrieval_gloss_plans_csl.py",
+      "sha256": "75dddd6deceda33ce9451f432c11116678fefd4eb82561eeb01f77fdeda12568"
+    },
+    "pose_archive": {
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/CSL-Daily.train",
+      "sha256": "d9a521e0af39e1571234b79843a9f9f7267eb49bb624ba802334208f63df03d9"
+    },
+    "resampling": {
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/build_csl_pg_rast_native_hrnet.py",
+      "sha256": "351c5f753d0e102ecb5593ddc25f47eefe86043358349964008fe4defda92843"
+    },
+    "spans": {
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/gloss_spans_ctc_train.json",
+      "sha256": "a91330147dede1ce7299e0195eb5b66cffe7c20e198a11ead21141286c8df2f3"
+    },
+    "test_manifest": {
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/csl_daily_test.json",
+      "sha256": "97b1f6fe4bd4348009d1b49ddac072c1404811e9393797a4a30b762e6b0f8c5b"
+    },
+    "train_manifest": {
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/csl_daily_train.json",
+      "sha256": "8b0f8eafb15757a1f66689e447b44df0bddaf92a03d0a84d424f3eef8c227cf7"
+    }
+  },
+  "joins": "plain concatenation",
+  "length": "train median, round to integer then nearest multiple of four",
+  "local_unit_rule": "exclude intervals spanning an entire source clip; local candidates use strict subintervals",
+  "max_per_gloss": 64,
+  "missing_unit": "omit token; refuse if no local units; count every refusal and omission",
+  "query_fields": [
+    "id",
+    "text"
+  ],
+  "ranking": "donor similarity; low-ID tie break",
+  "revision_note": "v4 adds resolved output-root confinement; v3 scientific settings unchanged",
+  "scope": "text planning/native gloss assembly/fixed frame admission; not PHOENIX semantic guards, phrase lattice, learned router, authentication, or sign efficacy",
+  "seed": 0,
+  "selection": "highconf_len",
+  "version": "CSL-text-native-fixed40-v4",
+  "versions": {
+    "numpy": "2.4.2",
+    "torch": "2.10.0+cu128"
+  },
+  "weights_word_char": [
+    0.6,
+    0.4
+  ]
+}

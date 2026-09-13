@@ -1,0 +1,31 @@
+{
+  "completed_unix_ns": 1788843406190609590,
+  "elapsed_seconds": 8.175510319997557,
+  "environment": {
+    "cuda_visible_devices": "",
+    "device": "cpu",
+    "executable": "/home/kumwilai/research/coopns-slr/.venv/bin/python",
+    "machine": "x86_64",
+    "numerical_threads": 1,
+    "packages": {
+      "fastdtw": "0.3.4",
+      "jiwer": "4.0.0",
+      "numpy": "2.4.2",
+      "sacrebleu": "2.6.0",
+      "torch": "2.10.0"
+    },
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "python_hash_seed": "not_set",
+    "torch_runtime_build": "2.10.0+cu128"
+  },
+  "hidden_exceptions": 0,
+  "peak_rss_kib": 3973904,
+  "run_id": "aa029a545acabf7df8ae1ae17e926c6fde98bfbfa50b0406348b0f8afcaa761a",
+  "token_telemetry": "unknown",
+  "worker_identity": {
+    "observed_effort": "unknown",
+    "observed_model": "unknown",
+    "requested_model": "gpt-6-astra"
+  }
+}

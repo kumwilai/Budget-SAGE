@@ -1,0 +1,28 @@
+{
+  "archive_sha256": "d9a521e0af39e1571234b79843a9f9f7267eb49bb624ba802334208f63df03d9",
+  "construction_commitments": {
+    "allocation_protocol_sha256": "c56b941d29a02edaf407483d161776b59b4dfb25c9b2f1eab24e0810b819af7d",
+    "archive_admission_sha256": "a0c471237ff297a1973440cab84b5778c077c8f686dd8a8324c2a56afbd212d3",
+    "prescore_sha256": "bddb2e3cb8f9788216f2ca78ac2b5d4c5cca632ccb3dd0126393b2770953e503",
+    "protocol_sha256": "82a1d2b1444b34c134a4f41d240ded7574a4ba2f6d017fb8c76d363fcf2c433f"
+  },
+  "entries": 1176,
+  "exact_reconstructions": 1176,
+  "fallback_clips": 831,
+  "fallback_frames": 51744,
+  "helper_sha256": "040809dd3259ed5e7f98e78b4bee944a00403e145ccf4a17bbfbee9fc3dd8cd7",
+  "implementation_sha256": "ae65fb2b1d486354866a06d2160c7bae570ada5e6fd4c3e9b4c5e558ef62836b",
+  "integer_budget": "172385 <= 172442",
+  "issuer_route_records_read": false,
+  "manifest_sha256": "633cc69c5e4c9d99a78859d0bd31dd4d0f84eb2387656187345e8c45a8fa2194",
+  "peak_rss_kb": 7522884,
+  "pose_bank_sha256": "4da2ef715257438e350ef736787e7f554834a3cd7a5c5307480ec4209684bee6",
+  "replay_clips": 345,
+  "replay_frames": 34477,
+  "total_frames": 86221,
+  "train_manifest_sha256": "8b0f8eafb15757a1f66689e447b44df0bddaf92a03d0a84d424f3eef8c227cf7",
+  "unique_training_sources": 1124,
+  "untraced_frames": 0,
+  "verdict": "PASS",
+  "within_source_interpolated_positions": 3702
+}

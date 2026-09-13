@@ -1,0 +1,338 @@
+{
+  "generated": "2026-09-06",
+  "operator": "design pass, executed on coordinator instruction",
+  "evaluator": {
+    "path": "external/SLRTP-Sign-Production-Evaluation/main.py",
+    "git_head": "db35105a94e126feb04619d56f6103ba8369d382",
+    "local_diff": "diff --git a/back_translation/back_translate.py b/back_translation/back_translate.py\nindex bee4dbd..0d95810 100644\n--- a/back_translation/back_translate.py\n+++ b/back_translation/back_translate.py\n@@ -292,7 +292,7 @@ def make_back_translation_model(model_dir: Union[str, Path]):\n             )\n     cfg = load_config(cfg_file)\n \n-    use_cuda = cfg[\"training\"].get(\"use_cuda\", False)\n+    use_cuda = cfg[\"training\"].get(\"use_cuda\", False) and torch.cuda.is_available()\n \n     # load the data\n     data_cfg = cfg[\"data\"]\n@@ -403,7 +403,8 @@ def back_translate(model: SignModel, poses: torch.Tensor\n             end += batch_size\n \n             batch = translation_bacth(_sgn, _sgn_mask, _sgn_length)\n-            batch.make_cuda()\n+            if next(model.parameters()).is_cuda:\n+                batch.make_cuda()\n             (\n                 batch_gls_predictions,\n                 batch_txt_predictions,\ndiff --git a/metrics.py b/metrics.py\nindex 00e3447..c56fb71 100644\n--- a/metrics.py\n+++ b/metrics.py\n@@ -28,12 +28,21 @@ def wer(hypotheses: list, references: list):\n             jiwer.ReduceToListOfListOfWords(),\n         ]\n     )\n-    wer = jiwer.wer(\n-        references,\n-        hypotheses,\n-        truth_transform=transforms,\n-        hypothesis_transform=transforms,\n-    )\n+    # jiwer 3.x renamed `truth_transform` \u2192 `reference_transform`\n+    try:\n+        wer = jiwer.wer(\n+            references,\n+            hypotheses,\n+            reference_transform=transforms,\n+            hypothesis_transform=transforms,\n+        )\n+    except TypeError:\n+        wer = jiwer.wer(\n+            references,\n+            hypotheses,\n+            truth_transform=transforms,\n+            hypothesis_transform=transforms,\n+        )\n     return wer * 100\n \n \n",
+    "bt_model_files": {
+      "gls.vocab": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/gls.vocab",
+        "bytes": 8877,
+        "sha256": "149ed86e65aec4af83949235375929bf56351d5c80ac2e460aaaad48f374a641"
+      },
+      "validations.txt": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/validations.txt",
+        "bytes": 51983,
+        "sha256": "728ea93456c07ed8ed929e5f303548d5ecb4054b123de2b87957c12ab7475fd6"
+      },
+      "txt.vocab": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/txt.vocab",
+        "bytes": 28304,
+        "sha256": "f45eb2df34ab02acaccdbf298558024c1001f481edd3d0514ae961a69a835e3b"
+      },
+      "config.yaml": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/config.yaml",
+        "bytes": 2659,
+        "sha256": "8afa31c1fb30141619b5dcd4f9b8241a94dbf8b0f2f9a17db958a5841f05e35f"
+      },
+      "best.ckpt": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/best.ckpt",
+        "bytes": 80560590,
+        "sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428"
+      }
+    },
+    "libs": {
+      "torch": "2.10.0+cu128",
+      "jiwer": "4.0.0",
+      "sacrebleu": "2.6.0",
+      "fastdtw": "0.3.4",
+      "python": "3.12.3"
+    },
+    "cwd_for_runs": "outputs/baseline_protocol/evaluator_workspace"
+  },
+  "organizer_reference_values": {
+    "gt_test": {
+      "bleu1": 34.39639390982878,
+      "bleu4": 12.777148564612425,
+      "wer": 85.77470203767781,
+      "dtw_mje": 0.0
+    },
+    "gt_dev": {
+      "bleu1": 35.64289683751959,
+      "bleu4": 13.378651856913775,
+      "wer": 83.37019018133569,
+      "dtw_mje": 0.0
+    },
+    "pt_test_table1": {
+      "bleu1": 22.17,
+      "bleu2": 10.71,
+      "bleu3": 7.09,
+      "bleu4": 5.43,
+      "chrf": 24.13,
+      "rouge": 21.98,
+      "wer": 101.45,
+      "dtw_mje": 0.0418,
+      "total_distance": 0.257,
+      "avg_duration": 0.999
+    },
+    "pt_demo30_dev": {
+      "bleu1": 15.946522413242281,
+      "bleu2": 4.580890661810554,
+      "bleu3": 0.0,
+      "bleu4": 0.0,
+      "chrf": 19.755041720753972,
+      "rouge": 15.536963615448718,
+      "wer": 101.83727034120736,
+      "dtw_mje": 0.04589659720659256,
+      "total_distance": 0.30942216515541077
+    }
+  },
+  "runs": [
+    {
+      "run": "01",
+      "tag": "gt_identity_test_fps25",
+      "kind": "anchor",
+      "split": "test",
+      "fps_flag": 25,
+      "pred_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+        "bytes": 138094241,
+        "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+      },
+      "gt_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+        "bytes": 138094241,
+        "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+      },
+      "n_clips": 641,
+      "pred_over_gt_frame_ratio": 1.0,
+      "avg_duration_assert": {
+        "value": 1.0,
+        "passed": true
+      },
+      "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/ --tag gt_identity_test_fps25 --fps 25",
+      "results_json": "outputs/baseline_protocol/evaluator_workspace/results/gt_identity_test_fps25.json",
+      "log": "outputs/baseline_protocol/logs/01_gt_identity_test_fps25.log",
+      "metrics": {
+        "bleu": {
+          "bleu1": 34.39639390982878,
+          "bleu2": 22.038589437767946,
+          "bleu3": 16.092729031718477,
+          "bleu4": 12.777148564612425
+        },
+        "chrf": 34.58509769785496,
+        "rouge": 35.19608041310144,
+        "wer": 85.77470203767781,
+        "dtw_mje": 0.0,
+        "total_distance": 1.0,
+        "avg_duration": 1.0
+      },
+      "comparability": "comparable: harness fidelity anchor, organizers README test GT row"
+    },
+    {
+      "run": "02",
+      "tag": "pt_organizer_release_test_fps12",
+      "kind": "baseline",
+      "split": "test",
+      "fps_flag": 12,
+      "pred_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_test.pt",
+        "bytes": 142897889,
+        "sha256": "fc084977b9e68cd448b472a1a8640cc62772773a3d12d1bb970f33219fa978f4"
+      },
+      "gt_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+        "bytes": 138094241,
+        "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+      },
+      "n_clips": 641,
+      "pred_over_gt_frame_ratio": 0.503,
+      "avg_duration_assert": {
+        "value": 0.9998164467504118,
+        "passed": true
+      },
+      "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/ --tag pt_organizer_release_test_fps12 --fps 12",
+      "results_json": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps12.json",
+      "log": "outputs/baseline_protocol/logs/02_pt_organizer_release_test_fps12.log",
+      "metrics": {
+        "bleu": {
+          "bleu1": 16.914736358800415,
+          "bleu2": 5.730855049988388,
+          "bleu3": 2.650144892996147,
+          "bleu4": 1.5942094217904001
+        },
+        "chrf": 19.027939992366928,
+        "rouge": 17.255835698396783,
+        "wer": 101.678841471229,
+        "dtw_mje": 0.044929325580596924,
+        "total_distance": 0.3021577000617981,
+        "avg_duration": 0.9998164467504118
+      },
+      "comparability": "comparable: official organizer release, native 178, no conversion, no GT injection, 641 clips"
+    },
+    {
+      "run": "03",
+      "tag": "pt_organizer_release_dev_fps12",
+      "kind": "baseline",
+      "split": "dev",
+      "fps_flag": 12,
+      "pred_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_dev.pt",
+        "bytes": 125566835,
+        "sha256": "7b960ab1352886a0cb709dede6aec8a4bff2b767049d5f4895589df9b7775149"
+      },
+      "gt_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt",
+        "bytes": 118718160,
+        "sha256": "73acbfbcb63b05eae02071da58dec95177551d90bb3a711a36b78f2eeb73e85c"
+      },
+      "n_clips": 515,
+      "pred_over_gt_frame_ratio": 0.5028,
+      "avg_duration_assert": {
+        "value": 0.9998355085720831,
+        "passed": true
+      },
+      "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_dev.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/ --tag pt_organizer_release_dev_fps12 --fps 12",
+      "results_json": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_dev_fps12.json",
+      "log": "outputs/baseline_protocol/logs/03_pt_organizer_release_dev_fps12.log",
+      "metrics": {
+        "bleu": {
+          "bleu1": 15.709580632595015,
+          "bleu2": 4.514958474148895,
+          "bleu3": 1.3823969304114618,
+          "bleu4": 0.0
+        },
+        "chrf": 18.79132852230694,
+        "rouge": 16.339854832972133,
+        "wer": 100.42753943682736,
+        "dtw_mje": 0.044927388429641724,
+        "total_distance": 0.2942831516265869,
+        "avg_duration": 0.9998355085720831
+      },
+      "comparability": "comparable: official organizer release, native 178, no conversion, 515 clips; no published reference exists"
+    },
+    {
+      "run": "04",
+      "tag": "pt_organizer_release_test_fps25_WRONG_negative_control",
+      "kind": "negative_control",
+      "split": "test",
+      "fps_flag": 25,
+      "pred_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_test.pt",
+        "bytes": 142897889,
+        "sha256": "fc084977b9e68cd448b472a1a8640cc62772773a3d12d1bb970f33219fa978f4"
+      },
+      "gt_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+        "bytes": 138094241,
+        "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+      },
+      "n_clips": 641,
+      "pred_over_gt_frame_ratio": 0.503,
+      "avg_duration_assert": {
+        "value": 0.5060557740726089,
+        "passed": true
+      },
+      "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/ --tag pt_organizer_release_test_fps25_WRONG_negative_control --fps 25",
+      "results_json": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps25_WRONG_negative_control.json",
+      "log": "outputs/baseline_protocol/logs/04_pt_organizer_release_test_fps25_WRONG_negative_control.log",
+      "metrics": {
+        "bleu": {
+          "bleu1": 12.085775482527875,
+          "bleu2": 3.255457042705461,
+          "bleu3": 1.2405187536312816,
+          "bleu4": 0.6287072198708521
+        },
+        "chrf": 15.381362783157645,
+        "rouge": 15.867687688318405,
+        "wer": 98.64154812251698,
+        "dtw_mje": 0.042016174644231796,
+        "total_distance": 0.2819112539291382,
+        "avg_duration": 0.5060557740726089
+      },
+      "comparability": "NOT a valid PT number: 12 fps file subsampled a second time; documents the legacy pt_dev.json defect"
+    },
+    {
+      "run": "05",
+      "tag": "gt_identity_dev_fps25",
+      "kind": "anchor",
+      "split": "dev",
+      "fps_flag": 25,
+      "pred_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt",
+        "bytes": 118718160,
+        "sha256": "73acbfbcb63b05eae02071da58dec95177551d90bb3a711a36b78f2eeb73e85c"
+      },
+      "gt_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt",
+        "bytes": 118718160,
+        "sha256": "73acbfbcb63b05eae02071da58dec95177551d90bb3a711a36b78f2eeb73e85c"
+      },
+      "n_clips": 515,
+      "pred_over_gt_frame_ratio": 1.0,
+      "avg_duration_assert": {
+        "value": 1.0,
+        "passed": true
+      },
+      "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/ --tag gt_identity_dev_fps25 --fps 25",
+      "results_json": "outputs/baseline_protocol/evaluator_workspace/results/gt_identity_dev_fps25.json",
+      "log": "outputs/baseline_protocol/logs/05_gt_identity_dev_fps25.log",
+      "metrics": {
+        "bleu": {
+          "bleu1": 35.64289683751959,
+          "bleu2": 23.060216602791453,
+          "bleu3": 16.90703014627281,
+          "bleu4": 13.378651856913775
+        },
+        "chrf": 34.82214188714514,
+        "rouge": 36.85085849846843,
+        "wer": 83.37019018133569,
+        "dtw_mje": 0.0,
+        "total_distance": 1.0,
+        "avg_duration": 1.0
+      },
+      "comparability": "comparable: harness fidelity anchor, organizers README dev GT row"
+    },
+    {
+      "run": "06",
+      "tag": "pt_demo30_dev_fps12",
+      "kind": "anchor",
+      "split": "dev",
+      "fps_flag": 12,
+      "pred_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/demo_data/progressive_transformer_baseline_dev.pt",
+        "bytes": 15069570,
+        "sha256": "b069cb3b4703ef168501a719ed47134514cd5b1154874fc17664e9d7c9d7cf5e"
+      },
+      "gt_file": {
+        "path": "external/SLRTP-Sign-Production-Evaluation/demo_data/ground_truth_dev.pt",
+        "bytes": 6946923,
+        "sha256": "e66d7ee2c3f0c3c5f8134f9ea7222ba835def94cc2471b583303631f16feff08"
+      },
+      "n_clips": 30,
+      "pred_over_gt_frame_ratio": 0.5028,
+      "avg_duration_assert": {
+        "value": 0.9996969696969698,
+        "passed": true
+      },
+      "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/demo_data/progressive_transformer_baseline_dev.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/demo_data/ground_truth_dev.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/ --tag pt_demo30_dev_fps12 --fps 12",
+      "results_json": "outputs/baseline_protocol/evaluator_workspace/results/pt_demo30_dev_fps12.json",
+      "log": "outputs/baseline_protocol/logs/06_pt_demo30_dev_fps12.log",
+      "metrics": {
+        "bleu": {
+          "bleu1": 15.946522413242281,
+          "bleu2": 4.580890661810554,
+          "bleu3": 0.0,
+          "bleu4": 0.0
+        },
+        "chrf": 19.755041720753972,
+        "rouge": 15.536963615448718,
+        "wer": 101.83727034120736,
+        "dtw_mje": 0.044946566224098206,
+        "total_distance": 0.30942216515541077,
+        "avg_duration": 0.9996969696969698
+      },
+      "comparability": "30-clip dev subset; organizers README demo row"
+    }
+  ],
+  "not_scored": [
+    "sign_idd (see inventory_2026-09-06.json for reasons)",
+    "ustc_moe",
+    "hfut_lmc",
+    "hacettepe",
+    "g2p_ddm",
+    "soke",
+    "ham2pose_upstream"
+  ]
+}

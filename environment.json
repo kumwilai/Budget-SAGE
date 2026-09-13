@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-09-13",
+  "interpreter": {
+    "implementation": "CPython",
+    "version": "3.12.3",
+    "compiler": "GCC 13.3.0"
+  },
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "reported_gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "scope": "Observed verification environment; exact package pins are in requirements-verification.txt",
+  "limitations": [
+    "The SLRTP evaluator and dataset-controlled assets are external and are not redistributed.",
+    "The environment record supports the released verification gate; it is not a container image of missing historical producers."
+  ]
+}

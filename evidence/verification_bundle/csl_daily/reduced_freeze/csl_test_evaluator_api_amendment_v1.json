@@ -1,0 +1,61 @@
+{
+  "schema": "csl_test_evaluator_api_amendment_v1",
+  "date": "2026-09-07",
+  "reason": "The sealed evaluator implementation also exposed an unsupported development-split path whose four-field log header was intentionally rejected by the historical development validator. The supported interface is now test-only, while the exact evaluated implementation remains byte-for-byte available.",
+  "classification": "post-evaluation API and provenance-path amendment; not a new model, route freeze, certificate seal, evaluation, metric, or statistical analysis",
+  "decision_preceded_composed_outcome_analysis": true,
+  "scientific_state_changed": false,
+  "freeze_or_seal_modified": false,
+  "scored_result_or_log_modified": false,
+  "historical_development_contract": {
+    "implementation_sha256": "59f77a5deeb1b8f5ea985b0eab251f68e31e7d575d406a52069a76d239859c92",
+    "header_fields": [
+      "input",
+      "input_sha256"
+    ],
+    "accepts_current_test_implementation": false
+  },
+  "sealed_test_implementation": {
+    "original_recorded_path": "scripts/run_csl_mska_split_eval.py",
+    "resolved_snapshot_path": "scripts/run_csl_mska_split_eval_57b74fa1.py",
+    "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9",
+    "byte_identical_to_evaluated_implementation": true
+  },
+  "supported_test_only_wrapper": {
+    "path": "scripts/run_csl_mska_split_eval.py",
+    "sha256": "e7a155afad52103c31bbdc00a49932e0df7a024af7b9e1c87f3499f9c80b95d6",
+    "rejects_development_before_output_creation": true,
+    "delegates_only_after_full_snapshot_hash_check": true
+  },
+  "analysis_validator": {
+    "path": "scripts/reduced_learned_csl_route.py",
+    "sha256": "ad47d700905bd5bc8dfb9196a9bccebed07c3ccf487e3579fe4ce49fd9085065",
+    "exact_role_path_resolution_only": true,
+    "generic_hash_fallback": false,
+    "historical_development_pin_unchanged": true
+  },
+  "focused_gate": {
+    "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/kumwilai/research/coopns-slr/.venv/bin/python -m pytest -q tests/test_csl_mska_eval_adapter.py tests/test_reduced_learned_csl_route.py",
+    "result": "161 passed in 17.36s",
+    "adapter_test_sha256": "5c9ae1b9a195c87ceef96493e6910896024413856b228e7c844b9d4a5aacfed4",
+    "route_test_sha256": "21e6466ee36c4dd0abb6e7bc36b68dd890c58ca3b73bafffc8e3508b3cd48f24"
+  },
+  "sealed_inputs_and_outputs": {
+    "freeze_sha256": "3031ebfec31aaebe6cb9b145cdfecb9e2040e44250ab7a8d91b8d8d30b17e608",
+    "seal_sha256": "1d2f6fa96b4e8983b84e4c1140ada6f77cbbab5c11ba59a6463e1e66460fd7b3",
+    "test_local_result_sha256": "47597d8b5560566b1ccae5c21e1e17e90100208e539320b4dbcc2500739dadb4",
+    "test_local_log_sha256": "ea6d315c921c6cad4b407593f52c9592de6d51a1b01ac9df18787c746c3821bf",
+    "test_whole_result_sha256": "e98167c6ce3d303c943c8a610a92b5a73feffc586879203288903c0dbae2e4e9",
+    "test_whole_log_sha256": "438ec9c1b7158d36e41e4267fda1897fbc315002195cd66b16e99da68c169ffd",
+    "first20_fixed_result_sha256": "ff49fb153681f5bfda1ee0e8995f4f2ee1eff410f2d67542f7811547bb1039e7",
+    "first20_fixed_log_sha256": "e966ef3e05697b74a413a26ebf3391b6289e5b4497232323c1fa30f480b08a9a",
+    "first20_learned_result_sha256": "ff123bb9e2a4a077d2e60a785f15f109e557b24bcad519fac7f6a9a894a4683d",
+    "first20_learned_log_sha256": "108ab149e05ffc694c2d312031c9b3fde7e89c8dcda3dfe863289049824381f3"
+  },
+  "final_analysis": {
+    "path": "outputs/revision/astra_open_closure_20260906/csl_reduced_learned_analysis_v3/analysis.json",
+    "sha256": "6186c07a4b8297c64040f4bfb6857cc352fdbf1f64dc95edacf9cf6221209756",
+    "implementation_sha256": "ad47d700905bd5bc8dfb9196a9bccebed07c3ccf487e3579fe4ce49fd9085065"
+  },
+  "claim_ceiling": "supported-interface and sealed-evidence compatibility only; no new efficacy, historical-execution, untouched-test, full-method-transfer, or human-intelligibility claim"
+}

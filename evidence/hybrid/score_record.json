@@ -1,0 +1,44 @@
+{
+  "evaluator_command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py /home/kumwilai/research/signgen-t2m/outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/budget_sage_signjepa_hybrid_test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt /home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model --tag budget_sage_signjepa_hybrid_test --fps 25",
+  "evaluator_cwd": "/home/kumwilai/research/signgen-t2m/outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/evaluator_workspace",
+  "inputs": {
+    "back_translation_model_ckpt": {
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/best.ckpt",
+      "sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428"
+    },
+    "bank": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/budget_sage_signjepa_hybrid_test.pt",
+      "sha256": "6245e8b90395a514ff1bdf383f2c7a133e630525a5f992740c8a54be31d56dcb"
+    },
+    "ground_truth": {
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+      "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+    }
+  },
+  "interpreter": "/home/kumwilai/research/coopns-slr/.venv/bin/python",
+  "metrics": {
+    "avg_duration": 0.8625320530313528,
+    "bleu": {
+      "bleu1": 34.29584881396584,
+      "bleu2": 24.338427679037615,
+      "bleu3": 18.68588111516803,
+      "bleu4": 15.339975745126376
+    },
+    "chrf": 34.568151037192905,
+    "dtw_mje": 0.04592249542474747,
+    "rouge": 36.96708490268454,
+    "total_distance": 0.7380924224853516,
+    "wer": 84.68537741894143
+  },
+  "motion": {
+    "body_speed_ratio": 0.8390834427681091,
+    "clips": 641,
+    "face_speed_ratio": 1.2412674661936818,
+    "hand_jerk_ratio": 1.2096954002636733,
+    "hand_posestd_ratio": 0.9603191745965299,
+    "hand_speed_ratio": 0.8010153704759342
+  },
+  "motion_command": "/home/kumwilai/research/coopns-slr/.venv/bin/python /home/kumwilai/research/signgen-t2m/scripts/sign_jepa_source_locked_fusion.py motion_eval --pred_pt outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/budget_sage_signjepa_hybrid_test.pt --reference_pt external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt --out_json outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/evaluator_workspace/results/budget_sage_signjepa_hybrid_test_motion.json",
+  "split": "test",
+  "tag": "budget_sage_signjepa_hybrid_test"
+}

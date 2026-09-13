@@ -1,0 +1,51 @@
+{
+  "schema": "reduced_learned_csl_pose_evaluation_preregistration_v1",
+  "declared_date": "2026-09-06",
+  "scope": "Post-test CSL-Daily extension of native source assembly and allocation. This is a one-feature reduced learned transfer, not the PHOENIX nine-feature semantic-guard/phrase-lattice router, cross-language efficacy, or human intelligibility evidence.",
+  "historical_access": "CSL-Daily and v4 donor-gloss-plan test annotations have previously been inspected. New MSKA pose scores have not been read for these branch banks. Do not describe the corpus as pristine or untouched.",
+  "splits": {"train": 18400, "dev": 1077, "test": 1176},
+  "frozen_inputs": {
+    "v4_protocol": {"path": "outputs/revision/astra_open_closure_20260906/csl_text_transfer_v4/protocol.json", "sha256": "82a1d2b1444b34c134a4f41d240ded7574a4ba2f6d017fb8c76d363fcf2c433f"},
+    "dev_prescore": {"path": "outputs/revision/astra_open_closure_20260906/csl_text_transfer_v4/dev_prescore_hashes.json", "sha256": "93165d5c2703625148b476541b5af55de346d77d1f457d9ada8596331da55694"},
+    "test_prescore": {"path": "outputs/revision/astra_open_closure_20260906/csl_text_transfer_v4/test_prescore_hashes.json", "sha256": "7abc1ed2c63ded02193e7b02819e695b34d80a531127443b6cfc11a89275cfbe"},
+    "mska_checkpoint": {"path": "external/baselines/MSKA/pretrained_models/CSL-Daily_SLR/best.pth", "sha256": "57674e966c74de57657201374677ff64f823973e2ffb15e64928a973034e5de7"},
+    "mska_config": {"path": "external/baselines/MSKA/configs/csl-daily_s2g.yaml", "sha256": "72b76dbd3000d411287d3affc0e5163a2452a87e968bf57c5a68343884181141"}
+  },
+  "evaluation": {
+    "primary_head": "ensemble_last_",
+    "secondary_heads": ["body_", "fuse_", "left_", "right_"],
+    "beam_size": 5,
+    "batch_size": 1,
+    "num_workers": 0,
+    "preprocessing": "Frozen CSL-Daily MSKA config and tokenizer; no PHOENIX gloss cleanup; native HRNet-133 tensors unchanged; attach name/text/gloss and emitted num_frames only after prescore pose hashes.",
+    "checkpoint_loading": "Require zero missing and unexpected model keys after the documented recognition_network prefix projection.",
+    "references": "Both dev branch prediction records must have identical per-ID references, matching the declared CSL-Daily dev gloss annotation. Test annotations are unavailable to routing and fitting.",
+    "runtime": "CPU or GPU subject to measured availability; record device, versions, command, hashes, per-ID hypotheses, counts, elapsed time and peak RSS. Never silently drop samples."
+  },
+  "learned_allocation": {
+    "features": ["train_caption_donor_similarity"],
+    "feature_source": "v4 trace similarity from train-only word .6 / character .4 TF-IDF, fixed before MSKA scoring",
+    "target": "y_i = 100 * (edit_count(local_dev_i) - edit_count(whole_dev_i)) / sum_j reference_gloss_token_count(dev_j)",
+    "target_head": "ensemble_last_",
+    "fit_rows": "one row per development request; no trajectory replication; no test examples, labels, scores or selector targets",
+    "estimator": {"class": "sklearn.ensemble.GradientBoostingRegressor", "n_estimators": 400, "max_depth": 4, "learning_rate": 0.05, "subsample": 0.85, "min_samples_leaf": 20, "random_state": 0},
+    "rank": "decreasing predicted y_i; exact ties use lexicographically smallest request ID",
+    "admission": {"numerator": 2, "denominator": 5, "cost": "3 * whole_candidate_frames + 2 * local_candidate_frames", "capacity": "2 * sum(local_candidate_frames)", "algorithm": "one-pass ranked feasible admission", "optimality_claimed": false},
+    "candidate_lengths": "training-donor or constructed-local emitted lengths only; feasibility inputs, not learned features",
+    "tuning": "No hyperparameter, head, seed, budget, feature, or checkpoint selection from test scores; retain the declared model even for a negative result."
+  },
+  "order": [
+    "Hash this declaration before any new MSKA pose evaluation.",
+    "Materialize and hash dev whole-replay bank using training donors; evaluate dev local and dev whole branches independently.",
+    "Fit reduced one-feature regressor from dev ensemble_last_ edit differences only.",
+    "Construct test route from test similarities and candidate lengths; write and hash scores, IDs, mask, poses, model parameters, source recipes and source certificate before evaluating any test branch bank with MSKA.",
+    "Evaluate test local and whole branches with the same frozen MSKA instance/configuration contract; compose fixed40 and reduced-learned per-item predictions by their already frozen masks.",
+    "Independently score a deterministic routed subset (first 20 test IDs in lexical order) and require exact hypothesis identity to the corresponding branch prediction on all five heads; if this fails, retain failure and directly score both full routed banks without changing the frozen routing choices.",
+    "Compute all-head corpus WER, emitted and hypothesis/reference lengths, coverage/refusal counts, paired primary contrast and source-certificate results."
+  ],
+  "primary_contrast": "reduced learned fixed40 minus nonlearned fixed40 test corpus gloss-WER; negative is better",
+  "falsifier": "No learned benefit if the primary WER contrast is nonnegative or its declared paired interval includes zero. A recognizer or certificate failure blocks that class of claim. Retain all null, failed and negative runs.",
+  "uncertainty": {"replicates": 10000, "seed": 30373, "sampling_unit": "normalized public query caption group; resample groups with replacement and include every utterance in a sampled group", "normalization": "v4 planner Unicode NFKC, lowercase, punctuation to spaces, collapse whitespace", "interval": "percentile 2.5 and 97.5 percent", "metric": "recompute ratio of total edit counts to total reference gloss tokens for each bootstrap sample"},
+  "mandatory_failures": ["missing/duplicate IDs", "missing primary head", "nonfinite features or predictions", "development branch reference mismatch", "checkpoint key mismatch", "query/training source overlap", "test annotations loaded by routing", "invalid integer replay budget", "unreconstructible or unauthenticated source recipe"],
+  "remaining_scope": "Even a positive reduced transfer does not establish full PHOENIX-method equivalence, raw-video production, human CSL or DGS intelligibility, public nonrepudiation, or generalization to an untouched corpus/evaluator."
+}

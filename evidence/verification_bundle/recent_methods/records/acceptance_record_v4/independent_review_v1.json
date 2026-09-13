@@ -1,0 +1,878 @@
+{
+  "schema": "recent_control_admission_v4_independent_review_v1",
+  "status": "PASS",
+  "timestamp_utc": "2026-09-08T05:07:37Z",
+  "timestamp_unix_seconds": 1788844057,
+  "risk_marked": true,
+  "reviewer": {
+    "requested_model": "gpt-6-astra",
+    "requested_role": "Distinct critical scientific and evidence reviewer",
+    "requested_effort": "max",
+    "observed_model": "unknown",
+    "observed_effort": "unknown",
+    "agent_task": "/root/astra_migration_adjudication",
+    "independence": "Root produced the v4 execution and acceptance records. This distinct reviewer inspected existing evidence and created only this supplementary review receipt."
+  },
+  "supplements": {
+    "acceptance_record": {
+      "bytes": 8110,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/acceptance_record.json",
+      "sha256": "61f0e96cc2b688a551388261e9b7e16a8e15bb3aaf733fcfa93602772f1f2417"
+    },
+    "statement": "This independent review supplements rather than mutates acceptance_record.json. Its unchanged awaiting-distinct-independent-review state is resolved by this separately bound PASS receipt.",
+    "prior_evidence": "All earlier evidence is retained. V4 supersedes v3 for closure under the stated claim ceiling; the failed v3 live-input validation is not retroactively accepted."
+  },
+  "checks": {
+    "artifact_bindings": {
+      "status": "PASS",
+      "sealed_input_records": 117,
+      "reviewed_artifacts": 132,
+      "listed_sizes_and_sha256_recomputed": true,
+      "all_117_sealed_input_records_match": true,
+      "final_rehash_found_no_review_time_drift": true,
+      "final_acceptance_record_sha256": "61f0e96cc2b688a551388261e9b7e16a8e15bb3aaf733fcfa93602772f1f2417"
+    },
+    "source_and_gate": {
+      "status": "PASS",
+      "unchanged_implementation_and_tests": true,
+      "errors": 0,
+      "expanded_source_case_count": 66,
+      "failures": 0,
+      "skipped": 0,
+      "source_properties": {
+        "audit_implementation_sha256": "eb2b7f183e031c95d6cb1d57f88c79dcc295e810e73aa96cf6a75c3981fba706",
+        "audit_tests_sha256": "206f421aaf0fb488267695f63e504b7622a4c8e089ac158ca7c1426a5d271976"
+      },
+      "tests": 66,
+      "gate_was_inspected_not_rerun": true,
+      "zero_failure_error_or_skipped_nodes": true,
+      "unique_testcase_inventory_matches_static_parametrized_source_inventory": true
+    },
+    "execution_separation": {
+      "status": "PASS",
+      "separate_canonical_directories_and_directory_inodes": true,
+      "distinct_run_ids_and_start_timestamps": true,
+      "sequential_recorded_execution_intervals": true,
+      "eight_distinct_regular_single_link_execution_artifacts": true,
+      "start_seal_telemetry_and_comparison_identities_match": true,
+      "original_filesystem_identity_bindings_match": true,
+      "executions": [
+        {
+          "artifact_inodes": {
+            "output_seal.json": {
+              "device": 2096,
+              "inode": 3057721
+            },
+            "scientific.json": {
+              "device": 2096,
+              "inode": 3057719
+            },
+            "start.json": {
+              "device": 2096,
+              "inode": 3057718
+            },
+            "telemetry.json": {
+              "device": 2096,
+              "inode": 3057720
+            }
+          },
+          "completed_unix_ns_decimal": "1788843387237926175",
+          "directory": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+          "elapsed_seconds": 7.4393457929982105,
+          "execution_identity": {
+            "output_directory": {
+              "canonical_path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+              "device": 2096,
+              "inode": 3057717
+            },
+            "run_id": "2bb1bde2a6660473bc0b2eaa1ac0edcb2f0725a9f92c4755e6392a964630d7da",
+            "schema": "recent_control_execution_identity_v1",
+            "start_unix_ns_decimal": "1788843376217572871"
+          },
+          "peak_rss_kib": 3974000
+        },
+        {
+          "artifact_inodes": {
+            "output_seal.json": {
+              "device": 2096,
+              "inode": 3057726
+            },
+            "scientific.json": {
+              "device": 2096,
+              "inode": 3057724
+            },
+            "start.json": {
+              "device": 2096,
+              "inode": 3057723
+            },
+            "telemetry.json": {
+              "device": 2096,
+              "inode": 3057725
+            }
+          },
+          "completed_unix_ns_decimal": "1788843406190609590",
+          "directory": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+          "elapsed_seconds": 8.175510319997557,
+          "execution_identity": {
+            "output_directory": {
+              "canonical_path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+              "device": 2096,
+              "inode": 3057722
+            },
+            "run_id": "aa029a545acabf7df8ae1ae17e926c6fde98bfbfa50b0406348b0f8afcaa761a",
+            "schema": "recent_control_execution_identity_v1",
+            "start_unix_ns_decimal": "1788843398015244503"
+          },
+          "peak_rss_kib": 3973904
+        }
+      ],
+      "interpretation": "The records establish two distinct, sequential, internally consistent recorded executions on their original filesystem. They do not authenticate computation against an owner who rewrites execution records and hashes."
+    },
+    "scientific_consistency": {
+      "status": "PASS",
+      "scientific_json_byte_identical": true,
+      "scientific_sha256_both_runs": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3",
+      "scientific_content_equals_v3_except_design_sha256": true,
+      "admission_counts_each_run": {
+        "ADMITTED": 1,
+        "REJECTED": 4
+      },
+      "rejected_local_controls": [
+        "pt",
+        "signidd",
+        "soke",
+        "g2p_ddm"
+      ],
+      "admitted_result": {
+        "bleu1": 16.914736358800415,
+        "bleu4": 1.5942094217904001,
+        "declared_fps": 12,
+        "dtw_mje": 0.044929325580596924,
+        "id": "organizer_progressive_transformer_release",
+        "items": 641,
+        "split": "test",
+        "wer": 101.678841471229
+      },
+      "six_saved_evaluator_result_records_match_provenance": true,
+      "recorded_saved_prediction_wer_recomputations_match_stored_results": true,
+      "fresh_metric_recomputation_performed_by_this_reviewer": false
+    },
+    "resources": {
+      "status": "PASS",
+      "ceiling_exclusive_kib": 7340032,
+      "recorded_peaks_kib": [
+        3974000,
+        3973904
+      ],
+      "both_recorded_peaks_strictly_below_ceiling": true,
+      "recorded_hidden_exceptions_each_run": 0,
+      "sealed_min_available_policy_kib": 11534336,
+      "sealed_one_memory_heavy_process_policy": true,
+      "recorded_device": "cpu",
+      "recorded_numerical_threads": 1,
+      "interpretation": "Recorded self-process peak RSS measured by the pinned audit; no independent process-lifetime or process-tree memory attestation."
+    },
+    "metadata": {
+      "status": "PASS",
+      "acceptance_sizes_hashes_environment_counts_metrics_and_execution_fields_match": true,
+      "elapsed_seconds_fields_match_telemetry": true,
+      "acceptance_and_comparison_created_at_are_ordered_after_run_completion": true,
+      "declared_scientific_and_probe_scopes_match_unchanged_source": true,
+      "unchanged_audit_schema_recent_control_admission_v3_with_v4_evidence_record_version": true,
+      "strict_core_json_parsing_rejected_duplicate_keys_and_nonfinite_numbers": true
+    },
+    "v3_drift_and_supersession": {
+      "status": "PASS",
+      "v3_design_sha256": "965a66f50c156591393162e2360d12373c6952ed433c97c2fbf052249cf0d593",
+      "old_official_status_bytes": 6041,
+      "old_official_status_sha256": "2128bfe2f6179ebb1efded5d0fb88d14c0d358a554b95f2fce2f62c9b73f1fd0",
+      "current_official_status_bytes": 6389,
+      "current_official_status_sha256": "e6782c9f204c97ec74c749a6994922947313c308fd4e318c94abfbfb39c81561",
+      "only_changed_design_input": "official_status",
+      "other_design_policy_environment_and_input_records_unchanged": true,
+      "v3_recorded_scientific_sha256_preserved": "dd69e233422c0b8b8a4a0c44d93e87ca44abc72b09ffd53260955e76a109ebfb",
+      "v3_explicitly_superseded_for_closure": true
+    },
+    "external_evaluator_and_source_limits": {
+      "status": "PASS",
+      "evaluator_git_head": "db35105a94e126feb04619d56f6103ba8369d382",
+      "evaluator_origin_and_exact_local_diff_match_stored_provenance": true,
+      "pt_scope": "641-item test release-bank stored re-score with declared --fps 12 and frozen evaluator; no authenticated producer execution or native-rate provenance.",
+      "missing_artifact_scope": "Only inspected official sources, as bounded by the pinned official-status narrative; no global absence claim or new internet availability survey is asserted.",
+      "scientific_claim_scope": "No recent-method superiority, newly reproduced named generator, fresh recognizer evaluation, or untouched-test result."
+    },
+    "reviewer_actions": {
+      "status": "PASS",
+      "description": "Read-only hash, JSON, XML, source and filesystem-metadata checks; no tests, training, checkpoint probes or inference executed by this reviewer.",
+      "tests_executed": false,
+      "training_executed": false,
+      "inference_or_checkpoint_probes_executed": false,
+      "existing_evidence_modified": false,
+      "sole_new_file": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/independent_review_v1.json"
+    }
+  },
+  "conclusion": "PASS for v4 closure solely at the exact claim ceiling below. The current narrative and all 117 sealed inputs match the fresh design; the source-bound gate and both distinct recorded executions support the stated stored-artifact admission result. This supplement supplies the distinct independent review missing from acceptance_record.json.",
+  "claim_ceiling": "Post-hoc admission and reproducibility audit of stored artifacts. One 641-item organizer PT release bank is admitted for its stored re-score using declared --fps 12 and the frozen SLRTP evaluator. Four local architectural controls remain rejected as named-method reproductions. This does not authenticate producer execution, native-rate provenance, or computation against an owner rewriting all evidence. It establishes no recent-method superiority, fresh recognizer evaluation, or untouched-test result. Missing-artifact conclusions apply only to inspected official sources. No training or corpus generation occurs; the audit's declared tiny frozen-checkpoint probes and saved-prediction metric recomputation are disclosed.",
+  "reviewed_artifacts": [
+    {
+      "bytes": 1652,
+      "path": "/home/kumwilai/research/signgen-t2m/AGENTS.md",
+      "sha256": "13f0ca1feaf5bb2d8bef7bd344e1158aa37b326e6ec5bdf0f488098023fcc35c"
+    },
+    {
+      "bytes": 11117,
+      "path": "/home/kumwilai/research/signgen-t2m/CLAUDE.md",
+      "sha256": "93f499219f65f79fb1ef4678c7918a5e35571c0c9158ff2551aec4ae7a610d93"
+    },
+    {
+      "bytes": 6538,
+      "path": "/home/kumwilai/research/signgen-t2m/CODEX_RESUME_PROMPT.md",
+      "sha256": "c52da2bc828380d123dd75765efd53d3f4916979e3b10a5686ec983767d24a25"
+    },
+    {
+      "bytes": 197614,
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/csl_daily_dev.json",
+      "sha256": "adb4e784b1704a668ab8c14eda17b35ae467f2fafcbce079aeacd29d3deaad78"
+    },
+    {
+      "bytes": 217686,
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/csl_daily_test.json",
+      "sha256": "97b1f6fe4bd4348009d1b49ddac072c1404811e9393797a4a30b762e6b0f8c5b"
+    },
+    {
+      "bytes": 3330427,
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/csl_daily_train.json",
+      "sha256": "8b0f8eafb15757a1f66689e447b44df0bddaf92a03d0a84d424f3eef8c227cf7"
+    },
+    {
+      "bytes": 6694653,
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/CSL-Daily/sentence_label/csl2020ct_v2.pkl",
+      "sha256": "1fd29a33cd87550b9228f88aa35df26e6e906d0d27177648d5123f6b1babd741"
+    },
+    {
+      "bytes": 492376,
+      "path": "/home/kumwilai/research/signgen-t2m/data/csl-daily/CSL-Daily/sentence_label/split_1.txt",
+      "sha256": "45960c86eaeb2e27bf14f81321aab711b67a144ce931383f8b2ff0cc7c144bdf"
+    },
+    {
+      "bytes": 7553,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/G2P-DDM/modules/vq_codeunet.py",
+      "sha256": "e08e07c9bd813b6e90c4f514b94f99b5ac819a4ad5e571ccc14e267a044ae165"
+    },
+    {
+      "bytes": 43932,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/G2P-DDM/stage2_models/vq_diffusion_codeunet.py",
+      "sha256": "4b25fc3f2cdadb42dbaa7e1e6b2e66b881b6f183a5aab0c94812a811202f2120"
+    },
+    {
+      "bytes": 3495821719,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/CSL-Daily.train",
+      "sha256": "d9a521e0af39e1571234b79843a9f9f7267eb49bb624ba802334208f63df03d9"
+    },
+    {
+      "bytes": 20306,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/train.py",
+      "sha256": "a9ffaed27548c86a08c1cd7716c6dfcdef8aedbef7113a28aba626116c33ad0d"
+    },
+    {
+      "bytes": 2379,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/ProgressiveTransformersSLP/loss.py",
+      "sha256": "f18d4e7a2f3122d8622b2e05db190cac8994a5c50d112c3cf74595743639ae41"
+    },
+    {
+      "bytes": 12417,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/ProgressiveTransformersSLP/model.py",
+      "sha256": "7000db1fed1686200a2744f582219d675a69fc286872c07ab759e3abb8723886"
+    },
+    {
+      "bytes": 4756,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/Sign-IDD/ACD_Denoiser.py",
+      "sha256": "6ca24d574497715fd1199cabcc3991811a84f2ae91a06328b43dc69e43b44515"
+    },
+    {
+      "bytes": 8953,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/Sign-IDD/ACD.py",
+      "sha256": "dfb29a3e640deb2acd8aff356b4fd5f9e421bbc5bd612419d5ffb5402ffe7b41"
+    },
+    {
+      "bytes": 870,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/Sign-IDD/ID.py",
+      "sha256": "e980dc2f4a9522d548788d94685138dcf60df9806839b5b0d29b18b33104b0a2"
+    },
+    {
+      "bytes": 240,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/SOKE/configs/lm/mbart_h2s_csl_phoenix.yaml",
+      "sha256": "9da74b7e31cca10e6a445839cee3c050ced1859e9038cb9fa58fcd295649b43a"
+    },
+    {
+      "bytes": 42241,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/SOKE/mGPT/archs/mgpt_mbart.py",
+      "sha256": "dfa79bd923e738c94a66c15ec2960ed3a704b2d44857c61e8d3fb95a8c2828b1"
+    },
+    {
+      "bytes": 5075,
+      "path": "/home/kumwilai/research/signgen-t2m/external/baselines/SOKE/README.md",
+      "sha256": "e050ebed5e5eedb97fbf17e38f84f197778bbad1b7723274e267f017da3e5243"
+    },
+    {
+      "bytes": 72,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/__init__.py",
+      "sha256": "a3ce75c4e9bf91d05f9666956497b5fd837b87820c55d463ccd2d9d045f147f0"
+    },
+    {
+      "bytes": 13601,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/back_translate.py",
+      "sha256": "b77764fda657a3bfe664c592c9302f5080cf4455a5769db4a11a5058066d0f63"
+    },
+    {
+      "bytes": 7652,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_attention.py",
+      "sha256": "9afaa0cf5539d5458a7ee31e605badc1024e5e9488834ad65ae1a59bdb7eeb29"
+    },
+    {
+      "bytes": 21770,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_decoders.py",
+      "sha256": "b8690366e6c1f79a590146c6c9828cc481fed126431f199a745c0fccb86d8587"
+    },
+    {
+      "bytes": 7228,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_embeddings.py",
+      "sha256": "f10dd130dc0bca715b703c8e9da1a8209faf71d4346112c3a97784942b9190de"
+    },
+    {
+      "bytes": 8434,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_encoders.py",
+      "sha256": "421128c5a6a05674a52311a2e4c4302cb8f64d9af271a231fa548d8de2c9f560"
+    },
+    {
+      "bytes": 6365,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_initialization.py",
+      "sha256": "5bcf23ee378912b7fed01f3b03cf39500ca94d5bc7e8fe3ad73e4ba4f220a795"
+    },
+    {
+      "bytes": 16752,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_model.py",
+      "sha256": "0c53c2a486b18b930dc3fe204b1174ff007e47a5eecb677a7d23ed9bc0caba1a"
+    },
+    {
+      "bytes": 17432,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_search.py",
+      "sha256": "8722cefa64e4e0df8efd100700c73b8fb010b7ebaf5ef1f84acd5a93e748e601"
+    },
+    {
+      "bytes": 9275,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/back_translation/bt_transformer_layers.py",
+      "sha256": "d20f3ca42be37ba203731fea8551fdb7334b6cbd39464ce842b8f74ebacdf05e"
+    },
+    {
+      "bytes": 6946923,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/demo_data/ground_truth_dev.pt",
+      "sha256": "e66d7ee2c3f0c3c5f8134f9ea7222ba835def94cc2471b583303631f16feff08"
+    },
+    {
+      "bytes": 15069570,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/demo_data/progressive_transformer_baseline_dev.pt",
+      "sha256": "b069cb3b4703ef168501a719ed47134514cd5b1154874fc17664e9d7c9d7cf5e"
+    },
+    {
+      "bytes": 2237,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/external_metrics/rouge.py",
+      "sha256": "96f4478bfbc5df67f9a282d87aa8297d1c5041a3670211a359632236427a6862"
+    },
+    {
+      "bytes": 119977,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/external_metrics/sacrebleu.py",
+      "sha256": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f"
+    },
+    {
+      "bytes": 821,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/helpers.py",
+      "sha256": "cd3a4e3f5c1580cf3222b14a68069bf3d66d56250b805a90461984112227376d"
+    },
+    {
+      "bytes": 5007,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/main.py",
+      "sha256": "0734cfce77505409a90f52eaabcf83555a8228475124c7380cdd0f2a8eade07b"
+    },
+    {
+      "bytes": 3760,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/make_128_face_from_478.py",
+      "sha256": "34374382d4545530e209466d664b3888329bc3439cd0f2bce37e7d7e218b590b"
+    },
+    {
+      "bytes": 7791,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/metrics.py",
+      "sha256": "e2b010e74d7e6e7e0496feee39ea6720ab21effc333ac85c894ffd2a676e789a"
+    },
+    {
+      "bytes": 80560590,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/best.ckpt",
+      "sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428"
+    },
+    {
+      "bytes": 2659,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/config.yaml",
+      "sha256": "8afa31c1fb30141619b5dcd4f9b8241a94dbf8b0f2f9a17db958a5841f05e35f"
+    },
+    {
+      "bytes": 8877,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/gls.vocab",
+      "sha256": "149ed86e65aec4af83949235375929bf56351d5c80ac2e460aaaad48f374a641"
+    },
+    {
+      "bytes": 28304,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/txt.vocab",
+      "sha256": "f45eb2df34ab02acaccdbf298558024c1001f481edd3d0514ae961a69a835e3b"
+    },
+    {
+      "bytes": 51983,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/validations.txt",
+      "sha256": "728ea93456c07ed8ed929e5f303548d5ecb4054b123de2b87957c12ab7475fd6"
+    },
+    {
+      "bytes": 118718160,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt",
+      "sha256": "73acbfbcb63b05eae02071da58dec95177551d90bb3a711a36b78f2eeb73e85c"
+    },
+    {
+      "bytes": 125566835,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_dev.pt",
+      "sha256": "7b960ab1352886a0cb709dede6aec8a4bff2b767049d5f4895589df9b7775149"
+    },
+    {
+      "bytes": 142897889,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/PT_baseline_test.pt",
+      "sha256": "fc084977b9e68cd448b472a1a8640cc62772773a3d12d1bb970f33219fa978f4"
+    },
+    {
+      "bytes": 138094241,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+      "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+    },
+    {
+      "bytes": 11984,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/README.md",
+      "sha256": "a6284ea50ede69cc5336a86613e58efbe7fd4c72226be57ed1c97b42287caf73"
+    },
+    {
+      "bytes": 198,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/requirements.txt",
+      "sha256": "575df86165b892a919853fd3e61231365e5c90c5e5485df7618a72fb41135549"
+    },
+    {
+      "bytes": 5746,
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/skeleton_def.py",
+      "sha256": "54570fa976cfc53f4dcf1038c06f482d8abced666c87932ff34338114bd0a473"
+    },
+    {
+      "bytes": 10732,
+      "path": "/home/kumwilai/research/signgen-t2m/HANDOFF.md",
+      "sha256": "5506fbd58ab18c14f04bd1a1e06c5f325a4c3b89c1b51ac3c549b748c93be177"
+    },
+    {
+      "bytes": 44163,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/gt_identity_dev_fps25_text_preds.pt",
+      "sha256": "c62f1edd22f8cb0c5bbdee0f9ab14003fec6f7a6a301d96fbb16b5970fed6a0d"
+    },
+    {
+      "bytes": 333,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/gt_identity_dev_fps25.json",
+      "sha256": "0be499a58d9bdfd14ec358c229fba8e72e7800d5db4ca587da02ba65430c8693"
+    },
+    {
+      "bytes": 52809,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/gt_identity_test_fps25_text_preds.pt",
+      "sha256": "d6175695619262bde9527e674065c9d4e6322ca1440037645cb9ed3fd439585b"
+    },
+    {
+      "bytes": 334,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/gt_identity_test_fps25.json",
+      "sha256": "b58d2f41a62a2c4e2b38d0c6e5fef1bb58273e5a692896a6aa8bb4c33ac4c6dc"
+    },
+    {
+      "bytes": 3767,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_demo30_dev_fps12_text_preds.pt",
+      "sha256": "6cf8bbb5d98360ef5d6766a3c004b4ea3f1adad0b1a643363abc73374bfb711f"
+    },
+    {
+      "bytes": 355,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_demo30_dev_fps12.json",
+      "sha256": "39b883d6ea8ba0528cada098158de4ae0a3621bff204ff7eea5ed0915df24c23"
+    },
+    {
+      "bytes": 41593,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_dev_fps12_text_preds.pt",
+      "sha256": "770fd80d3e6686da8322f43cca5114ef6d1d6687007d260dbb78a9c89020147d"
+    },
+    {
+      "bytes": 368,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_dev_fps12.json",
+      "sha256": "b70e5f531354fd172a7ca763de3f61b8fe0718417cbd245b75f14807e9bfaded"
+    },
+    {
+      "bytes": 49919,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps12_text_preds.pt",
+      "sha256": "e285501831c0cca672f2c476f0b546a0afb9aadb96bc2583ed93f664cd69874d"
+    },
+    {
+      "bytes": 381,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps12.json",
+      "sha256": "6fdbdfdf6d73f4730c7de345cac7475af46e81bb57a394d6f17aa21e1701b187"
+    },
+    {
+      "bytes": 39113,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps25_WRONG_negative_control_text_preds.pt",
+      "sha256": "2cb5e184a7773a551800658dedcee0952d3de61004d41ac880044f652bf04a76"
+    },
+    {
+      "bytes": 383,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps25_WRONG_negative_control.json",
+      "sha256": "f0977b9005a844566862dddfb07b6791696b1aef12cca95e50df2becaf90c89a"
+    },
+    {
+      "bytes": 8359,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/logs/01_gt_identity_test_fps25.log",
+      "sha256": "7a72b337f892588dff339e084168c0433dc84d4bc593fe116bf2bf02af70b08e"
+    },
+    {
+      "bytes": 8113,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/logs/02_pt_organizer_release_test_fps12.log",
+      "sha256": "430c44ce9bf8cd6f6c4cb017d1f162dadc9a707f6adf66f98ca1c335a9ee5a0e"
+    },
+    {
+      "bytes": 6969,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/logs/03_pt_organizer_release_dev_fps12.log",
+      "sha256": "ff6e5c7260badc9aa7d8703d0a872c536dd079ce099e2de13196db7185c150de"
+    },
+    {
+      "bytes": 6917,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/logs/04_pt_organizer_release_test_fps25_WRONG_negative_control.log",
+      "sha256": "f235dcb1f2e287090a7d088e747679a115d3ba70d9afde1af26ccbb6d8862057"
+    },
+    {
+      "bytes": 7078,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/logs/05_gt_identity_dev_fps25.log",
+      "sha256": "641412a1ed767513b29178574e14819504bdb34e0b6e5f342fa070b020b67a77"
+    },
+    {
+      "bytes": 1258,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/logs/06_pt_demo30_dev_fps12.log",
+      "sha256": "a314382cdf65b2a76bef33dc80ecaf7bf0a386a1335c8fac851aba13145b431f"
+    },
+    {
+      "bytes": 18118,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/baseline_protocol/provenance.json",
+      "sha256": "e7cea4b70cb936fd38d83540aff0d23e141c3fcdbb17a301b24f681d7dbf6f8b"
+    },
+    {
+      "bytes": 28185,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/chain.log",
+      "sha256": "354492a17311d1b11cd0034b4510c91a6718c205d9353825407ce544102e1e07"
+    },
+    {
+      "bytes": 1424,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/diff_train.log",
+      "sha256": "081526fc8f57bab2818be11c511a93254f7bdb1ca70615e052d76ac70e36c114"
+    },
+    {
+      "bytes": 41766156,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/diff/best.pt",
+      "sha256": "0c969969ce4df44e423ceba0d38a0616100ca59e1112c626af0de06df6b18c0d"
+    },
+    {
+      "bytes": 4509,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/diff/train_log.json",
+      "sha256": "e23d8030f77d7001c3a74e475bd23dad81451cd415983cf0a11c3ec736f8e9fd"
+    },
+    {
+      "bytes": 42852443,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/g2p_ddm/best.pt",
+      "sha256": "349213987704e46b967b2bc88277b557bf4d2d7a74fd40737a7f8b85c610843d"
+    },
+    {
+      "bytes": 6527,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/g2p_ddm/train_log.json",
+      "sha256": "8000e80d4291983d4de98f77677453df22885776b0c9e4ef686cf4aaffe563f7"
+    },
+    {
+      "bytes": 3316,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/PROTOCOL.md",
+      "sha256": "8d3b4827c679dc7ceae1f381c2bce5863155fac0c78df2a45a1a38da747d1d53"
+    },
+    {
+      "bytes": 1822,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/pt_generate.log",
+      "sha256": "fd9ac686806ca2f0aef1a1044c9a840214b9199fab2ca2207067af5e03a5066f"
+    },
+    {
+      "bytes": 7092,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/pt_train_full.log",
+      "sha256": "9bd542e6ed6bfe15881d88d946b50b793a848f71fa1b13dfa9e3ac85c35bf173"
+    },
+    {
+      "bytes": 2055,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/pt_train.log",
+      "sha256": "c609a28bbdc42e9116d7ef860e5a2037fd02b17b5d31cacede4d884b81d3b82c"
+    },
+    {
+      "bytes": 33050363,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/pt/best.pt",
+      "sha256": "e46351e1993a57684a9e0a73f3bbe4913576e15a3ab59b9fef094ea38c1b8d95"
+    },
+    {
+      "bytes": 6139,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/pt/train_log.json",
+      "sha256": "677d940cf87581fb50feced962f565196ae32539dd0d732e0d0f593fee8de226"
+    },
+    {
+      "bytes": 312,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/score_pt_full.log",
+      "sha256": "64d5e64bfc3a1cf42fd1be3d0e421c34cbf7ca333b292714f58021b83a4a2fff"
+    },
+    {
+      "bytes": 101,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/score_pt.log",
+      "sha256": "3fcd9147b289f9a135a9246c16a74c752d88903341b13966b66ee73e85b1afc7"
+    },
+    {
+      "bytes": 42852443,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/soke/best.pt",
+      "sha256": "ae8465c65eeef881bb247588ed330255d73220c86ec3877879aa638568690dfc"
+    },
+    {
+      "bytes": 6545,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/soke/train_log.json",
+      "sha256": "45ccf6bf2b57f96f1216424b602107a2924a741a5c7fe07ff5912b514c88f697"
+    },
+    {
+      "bytes": 358,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/verify_teacher.log",
+      "sha256": "1b3e83fe7dbf2da2a7fe3015f7f45b3d8df51bc037304bd4308df801693e7ded"
+    },
+    {
+      "bytes": 7852407,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/vqvae/best.pt",
+      "sha256": "9016ffb2517ca7471256da886c8c715fc7f36aab360fb45c4fa18558765f54c5"
+    },
+    {
+      "bytes": 4503,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_baselines/vqvae/train_log.json",
+      "sha256": "6f9e370b1b332edd983514d021f6d07003ba3342bb4dbe0c679bc05755856383"
+    },
+    {
+      "bytes": 45806,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_mska_results/raw_fast_g2p_ddm.log",
+      "sha256": "1c27afa15b083018321f551b353e03deb9859813bd749b656e2ddc14eb00ecc7"
+    },
+    {
+      "bytes": 45757,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_mska_results/raw_fast_pt.log",
+      "sha256": "514532c177ecf7aced2d866a62693dcfa16a476747604af2dc208eee7c1e42bb"
+    },
+    {
+      "bytes": 45806,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_mska_results/raw_fast_signidd.log",
+      "sha256": "1a267ac20f7b5288ae99d57fb81abeb12e806408f1019a25438edac5ca580d39"
+    },
+    {
+      "bytes": 45806,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_mska_results/raw_fast_soke.log",
+      "sha256": "a78040ac0e247692bf4a84dd099bcf803876c1c5a40a278074de24f598806ab4"
+    },
+    {
+      "bytes": 125963810,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.dev_g2p_ddm",
+      "sha256": "3a0e8e859a0c9e23dcb386f0909772150a1fba1d39c30b9225e154839a9a545e"
+    },
+    {
+      "bytes": 125964449,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.dev_native_hclen_b0_budget000",
+      "sha256": "bec06f16f8e7361ed1e5fcdad0108fa21fa25cee133ee4e12d42de76caa626e9"
+    },
+    {
+      "bytes": 125964389,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.dev_pt",
+      "sha256": "f8a943a76d3d0d1dd50a7ccb79db71b7f5118f15106575f59ba33d639fb957c4"
+    },
+    {
+      "bytes": 125964407,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.dev_signidd",
+      "sha256": "d15c8ae438bdeede6d960b8abdc2be49757102d438c19912f1b8e8fc9aa15e60"
+    },
+    {
+      "bytes": 125963788,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.dev_soke",
+      "sha256": "9a0c121db9f6f27ec087cc85a016166475627e68f80f5746e71d8841e2e832c0"
+    },
+    {
+      "bytes": 139205606,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.test_g2p_ddm",
+      "sha256": "3860468559207e5ba1d9c545a328d4c3bd2ba175bef9e926516ccb65a7167b7a"
+    },
+    {
+      "bytes": 139205687,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.test_native_hclen_b0_budget000",
+      "sha256": "b217df4b6fdda60dbec5bb675ce0b08c9d124029f73eec7ab679f39066256c16"
+    },
+    {
+      "bytes": 139206337,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.test_pt",
+      "sha256": "3659c81b1d071dc9592880daa29885eb03090fc8cc87cc39a62ee615ae3e1a7d"
+    },
+    {
+      "bytes": 139206351,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.test_signidd",
+      "sha256": "ea76fd41d5c4df7ff162567c46ced25f01e4239959ac1718021b17b18ed1c121"
+    },
+    {
+      "bytes": 139205662,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/csl_msla_inputs/CSL-Daily.test_soke",
+      "sha256": "2e131fb4bf5b80b23a7fa5e1e80d85ea8cab10fa87a8073c2b5924c7ea2cf125"
+    },
+    {
+      "bytes": 282,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_text_transfer_v4/archive_admission.json",
+      "sha256": "a0c471237ff297a1973440cab84b5778c077c8f686dd8a8324c2a56afbd212d3"
+    },
+    {
+      "bytes": 2964,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_text_transfer_v4/protocol.json",
+      "sha256": "82a1d2b1444b34c134a4f41d240ded7574a4ba2f6d017fb8c76d363fcf2c433f"
+    },
+    {
+      "bytes": 6948,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v3/acceptance_record.json",
+      "sha256": "ba5bd872c4deb24f5e2d1a1e62f8cd2eb7c7bbf0f1aad2320b3a22d09596cbb5"
+    },
+    {
+      "bytes": 8110,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/acceptance_record.json",
+      "sha256": "61f0e96cc2b688a551388261e9b7e16a8e15bb3aaf733fcfa93602772f1f2417"
+    },
+    {
+      "bytes": 2834,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/comparison_checks.json",
+      "sha256": "5900f2e2df637d12fe928aca194dc255eade8238d5a8ab41676b00e8c8b660b3"
+    },
+    {
+      "bytes": 2396,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/execution_plan.json",
+      "sha256": "10f1ae404ec9fb5e5d9ec839931f95034f12321fb5073a679d964ba30a72be2d"
+    },
+    {
+      "bytes": 9856,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/acceptance_record_v4/synthetic_gate_01.xml",
+      "sha256": "570c8d45cc9e1eb4e4f82c9b309df38baee2333a4968ab4167bf0f3e33001fde"
+    },
+    {
+      "bytes": 28844,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_03/design.json",
+      "sha256": "965a66f50c156591393162e2360d12373c6952ed433c97c2fbf052249cf0d593"
+    },
+    {
+      "bytes": 274,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_03/seal.json",
+      "sha256": "aa48f74a2774a5829911f6d184d80e3eb0fdf2340601d3cbd7758926a24417a6"
+    },
+    {
+      "bytes": 28844,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/design.json",
+      "sha256": "147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6"
+    },
+    {
+      "bytes": 274,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/seal.json",
+      "sha256": "e837b6da7b255345ae38959a7cb43d37caabf8822dd7b79feebf1d38b949efaa"
+    },
+    {
+      "bytes": 1627,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/output_seal.json",
+      "sha256": "14322e1a761edb526f068c721aa61e27d2334c4f885869d3ac487b0e79a596aa"
+    },
+    {
+      "bytes": 62622,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/scientific.json",
+      "sha256": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3"
+    },
+    {
+      "bytes": 1089,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/start.json",
+      "sha256": "4fdc49b524646e402f281817ecbce36650b89b9984c85866a69e02168d07ee00"
+    },
+    {
+      "bytes": 919,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/telemetry.json",
+      "sha256": "f4144ec04cc34857ed825c0e1a4e49ac0d51a5bbed4f5425d646a62e6373c977"
+    },
+    {
+      "bytes": 62622,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_03/scientific.json",
+      "sha256": "dd69e233422c0b8b8a4a0c44d93e87ca44abc72b09ffd53260955e76a109ebfb"
+    },
+    {
+      "bytes": 1615,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04/output_seal.json",
+      "sha256": "38ad1988284766c3279676df4c918c8c99cbd0dbf1f7b5744f7cf8c70fb845e9"
+    },
+    {
+      "bytes": 62622,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04/scientific.json",
+      "sha256": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3"
+    },
+    {
+      "bytes": 1086,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04/start.json",
+      "sha256": "858964b22f74e0b25d6f296629a5ff5f183745467c8dc92c5ce6a2e27e0d05f5"
+    },
+    {
+      "bytes": 920,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04/telemetry.json",
+      "sha256": "1b5826552390153de5d616ba276de071b9fd044711294a606150ea3b51422fea"
+    },
+    {
+      "bytes": 6389,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_slp_official_artifact_update.md",
+      "sha256": "e6782c9f204c97ec74c749a6994922947313c308fd4e318c94abfbfb39c81561"
+    },
+    {
+      "bytes": 1818,
+      "path": "/home/kumwilai/research/signgen-t2m/PROJECT_AGENT_PROFILE.md",
+      "sha256": "e7d945796e2f0cbced9cc5d7c69b83f43725265c6fc0f3205e90f39b503b4f0f"
+    },
+    {
+      "bytes": 64047,
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/audit_recent_control_admission.py",
+      "sha256": "eb2b7f183e031c95d6cb1d57f88c79dcc295e810e73aa96cf6a75c3981fba706"
+    },
+    {
+      "bytes": 18861,
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/csl_baselines_vq.py",
+      "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8"
+    },
+    {
+      "bytes": 17239,
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/csl_baselines.py",
+      "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f"
+    },
+    {
+      "bytes": 2694,
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_baselines_chain.sh",
+      "sha256": "4ce9ec43509b9f43789c05eb7c77714bf8e447aae5d6e5e2ac942fd1990c5aca"
+    },
+    {
+      "bytes": 6083,
+      "path": "/home/kumwilai/research/signgen-t2m/scripts/score_csl_mska_fast.py",
+      "sha256": "036cda943fc8ad682be1dbb8e0ce887b7a5f7bb0d78ad08d897a07f3a6d4b6f6"
+    },
+    {
+      "bytes": 14296,
+      "path": "/home/kumwilai/research/signgen-t2m/src/baselines/progressive_transformer.py",
+      "sha256": "724454572fa72c1ba370cd4855f834e1492679e07f8b2cfce56e1799e1159b67"
+    },
+    {
+      "bytes": 25755,
+      "path": "/home/kumwilai/research/signgen-t2m/tests/test_audit_recent_control_admission.py",
+      "sha256": "206f421aaf0fb488267695f63e504b7622a4c8e089ac158ca7c1426a5d271976"
+    }
+  ]
+}

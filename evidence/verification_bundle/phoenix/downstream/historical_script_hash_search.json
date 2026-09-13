@@ -1,0 +1,19 @@
+{
+  "schema": "historical_script_hash_search.v1",
+  "date": "2026-09-06",
+  "targets": {
+    "build_retrieval_gloss_plans.py": "234d29ef820e9b6520d77d60811e71d5191f7b051be23439d379fa7fae3f35ea",
+    "phrase_lattice_assemble_slrtp178.py": "469dedaa75aaacddb46d487013099b97e0a6ce636a3f77ff869d1124fa7ecf81",
+    "build_clean_route_ledger.py": "6c6d77e2e2bc174ba229ca2f7fb41f0cdeeb2340d6ed033551e927d633fe38f0"
+  },
+  "roots": ["/home/kumwilai/research/signgen-t2m", "/home/kumwilai/research"],
+  "filters": "named .py/.pyc, archives, patches/backups; files <50 MiB",
+  "candidate_file_count": 35729,
+  "archives_scanned": 537,
+  "git_objects": "unavailable; rev-list returned 0 and cwd not recognized as Git repository",
+  "py_pyc_distinction": "both source basenames and .pyc candidates included; no match",
+  "result": "exact no-match for all three SHA-256 values",
+  "commands": ["find ... | sort -u | xargs -0 -n 200 sha256sum", "in-memory ZIP/TAR member SHA-256 scan", "git rev-list --objects --all"],
+  "claim_supported": "No matching historical source bytes found in scanned coverage.",
+  "claim_not_supported": "Cannot establish global absence outside scanned roots/filters."
+}

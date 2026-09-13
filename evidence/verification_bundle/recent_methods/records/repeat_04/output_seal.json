@@ -1,0 +1,49 @@
+{
+  "artifact_inodes": {
+    "scientific.json": {
+      "device": 2096,
+      "inode": 3057724
+    },
+    "start.json": {
+      "device": 2096,
+      "inode": 3057723
+    },
+    "telemetry.json": {
+      "device": 2096,
+      "inode": 3057725
+    }
+  },
+  "design_sha256": "147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6",
+  "execution": {
+    "output_directory": {
+      "canonical_path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+      "device": 2096,
+      "inode": 3057722
+    },
+    "run_id": "aa029a545acabf7df8ae1ae17e926c6fde98bfbfa50b0406348b0f8afcaa761a",
+    "schema": "recent_control_execution_identity_v1",
+    "start_unix_ns": 1788843398015244503
+  },
+  "outputs": {
+    "scientific.json": {
+      "bytes": 62622,
+      "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/scientific.json",
+      "sha256": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3"
+    },
+    "start.json": {
+      "bytes": 1089,
+      "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/start.json",
+      "sha256": "4fdc49b524646e402f281817ecbce36650b89b9984c85866a69e02168d07ee00"
+    },
+    "telemetry.json": {
+      "bytes": 919,
+      "path": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04/telemetry.json",
+      "sha256": "f4144ec04cc34857ed825c0e1a4e49ac0d51a5bbed4f5425d646a62e6373c977"
+    }
+  },
+  "schema": "recent_control_admission_v3",
+  "seal_inode": {
+    "device": 2096,
+    "inode": 3057726
+  }
+}

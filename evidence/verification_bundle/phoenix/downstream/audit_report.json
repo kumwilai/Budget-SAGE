@@ -1,0 +1,516 @@
+{
+  "alignment_report": {
+    "bytes": 4661,
+    "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/alignment_rebuild/audit_report.json",
+    "reported_claim": "The preserved Phase-24 interval bank is semantically reproducible from the committed builder and inputs.",
+    "reported_status": "PASS",
+    "sha256": "9db97ad961f6cd9f161adcf52095112f31b67dcede497870c7d01d63fc1bf2ef"
+  },
+  "claim_not_supported": "The absent historical execution log and the original byte contents of the three drifted scripts were not recovered. Behavioral equality does not establish byte identity of those historical sources.",
+  "claim_supported": "The upstream interval bank and all scientific outputs of the three drifted clean-route build components are reproducible with versioned current replacements on every frozen development and test item.",
+  "environment": {
+    "numpy": "2.4.2",
+    "platform": "Linux 6.6.87.2-microsoft-standard-WSL2",
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "torch": "2.10.0+cu128"
+  },
+  "frozen_protocol": {
+    "bytes": 31167,
+    "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_test_protocol.json",
+    "sha256": "412f5b2923b67369b1ccaddcdc1daae6549690faacec590023d417eda3cb7f3f"
+  },
+  "route_rebuild": {
+    "record": {
+      "bytes": 4118,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/rebuilt_learned_route.json",
+      "sha256": "724b07619586418b6a081c10482cfaab2a33afdd76a6080ae85058e262669386"
+    },
+    "stdout": {
+      "bytes": 26,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/route.log",
+      "sha256": "9661b99e7eb0fdf2440e908dc6a811da2f8ecce26e5e27360ba7b0510006ddc7"
+    },
+    "timing": {
+      "bytes": 1686,
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/route_time.log",
+      "sha256": "33d7f33201eb45d877c255b6e1a74219a61c8a433097a86f7de02625ddb59632"
+    }
+  },
+  "schema": "clean_route_missing_component_rebuild_audit_v1",
+  "script_lineage": {
+    "scripts/build_clean_route_ledger.py": {
+      "current": {
+        "bytes": 11800,
+        "path": "/home/kumwilai/research/signgen-t2m/scripts/build_clean_route_ledger.py",
+        "sha256": "2bf2831935537b94a8360f519c45ce5c60792b09e4db75553a296e3867893498"
+      },
+      "historical_bytes_recovered": false,
+      "historical_sha256": "6c6d77e2e2bc174ba229ca2f7fb41f0cdeeb2340d6ed033551e927d633fe38f0"
+    },
+    "scripts/build_retrieval_gloss_plans.py": {
+      "current": {
+        "bytes": 9316,
+        "path": "/home/kumwilai/research/signgen-t2m/scripts/build_retrieval_gloss_plans.py",
+        "sha256": "cc06ea2e30605723ce4b4ff2acc09bafbb8293d964569fda529d134080426dcc"
+      },
+      "historical_bytes_recovered": false,
+      "historical_sha256": "234d29ef820e9b6520d77d60811e71d5191f7b051be23439d379fa7fae3f35ea"
+    },
+    "scripts/phrase_lattice_assemble_slrtp178.py": {
+      "current": {
+        "bytes": 19667,
+        "path": "/home/kumwilai/research/signgen-t2m/scripts/phrase_lattice_assemble_slrtp178.py",
+        "sha256": "c303be1625b51db846e4bdcfb7d1352f00199d3f031a3f49bbbb1910f6791662"
+      },
+      "historical_bytes_recovered": false,
+      "historical_sha256": "469dedaa75aaacddb46d487013099b97e0a6ce636a3f77ff869d1124fa7ecf81"
+    }
+  },
+  "splits": {
+    "dev": {
+      "artifacts": {
+        "frozen_assembler_trace": {
+          "bytes": 1109514,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/sota_chase/phase43_phrase_lattice/trace_revision_clean_phrase_lattice_dev.json",
+          "sha256": "348d1b82a8e74842109fcedccc05d403fd1990934ab5cbe4a08a9116dc9ac941"
+        },
+        "frozen_candidate_lengths": {
+          "bytes": 73598,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_dev_candidate_lengths.json",
+          "sha256": "5e531afd18006b565b0c9f1d9d9d43700fbe77d2c938d19f747e91d9eb58b2a1"
+        },
+        "frozen_final_route": {
+          "bytes": 87286326,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_strict_cac_frame40_dev.pt",
+          "sha256": "b8be4c1e5e6224250a66c954f790deabda548ada1baab27700d879ababed7f39"
+        },
+        "frozen_learned_mask": {
+          "bytes": 16884,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_strict_cac_frame40_dev.npz",
+          "sha256": "7906ebb77e9d5cc35dd79fce06f4f8ab377647ac7621582c2eb484059584a0bd"
+        },
+        "frozen_ledger": {
+          "bytes": 797038,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_strict_cac_frame40_dev_ledger.json",
+          "sha256": "7f4f7c44742bc900709c033aefd8a6af07f9d0d1efe0475c98b484e8b0f9c93f"
+        },
+        "frozen_planner_trace": {
+          "bytes": 214237,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_dev_donor_trace.json",
+          "sha256": "dd0d267cd39ff133d17dc274a9f4ddd2a33b91d76f7f33ab60397c14cb4a4cfd"
+        },
+        "frozen_plans": {
+          "bytes": 70406,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_dev_plans.json",
+          "sha256": "2e0d39e9479bbb7ad2aa4eec8d26318d4fb28193bfc91558e4e07dfda1567c9d"
+        },
+        "frozen_pose_bank": {
+          "bytes": 77218915,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/revision_clean_phrase_lattice_dev.pt",
+          "sha256": "db5dc7b424b54479b48b903a5d7e99dfdf8df5a342537e8a2a02feaa59f0cbb3"
+        },
+        "frozen_queries": {
+          "bytes": 81730,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_dev_queries.json",
+          "sha256": "4d74fdb04d192de9cbeeaa747b5427a473e2e1ba931fb47e31088d78f74db5ab"
+        },
+        "frozen_retrieval": {
+          "bytes": 109536329,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/revision_clean_topk_dev.pt",
+          "sha256": "4b651cf4c10175f5bb966dfda1827afcde85a58d4be5d2981e228ad0015e9a81"
+        },
+        "frozen_retrieval_trace": {
+          "bytes": 3559519,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/revision_clean_topk_dev_trace.json",
+          "sha256": "db3612607702cd1c93f1b5b1baf5ea006f1bf8dceb5b8231e52c93d779f36021"
+        },
+        "legacy_planner_projection": {
+          "bytes": 214237,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/donor_trace_legacy_projection.json",
+          "sha256": "dd0d267cd39ff133d17dc274a9f4ddd2a33b91d76f7f33ab60397c14cb4a4cfd"
+        },
+        "rebuilt_assembler_trace": {
+          "bytes": 1149868,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/assembler_trace.json",
+          "sha256": "c2fa30ab96ee3c2f14f9d99bd60dddea5a3c57f8de9440523acfc27e04e00e2a"
+        },
+        "rebuilt_candidate_lengths": {
+          "bytes": 73691,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/rebuilt_candidate_lengths.json",
+          "sha256": "d1dca71301f4af574f706a5a85c36acefeb9b940dadfeb31156da3a412e9d9a4"
+        },
+        "rebuilt_final_route": {
+          "bytes": 87284763,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/rebuilt_learned_route_dev.pt",
+          "sha256": "825be2c8bbeb6b4e18e48bfce3c10ff57bad9479a959d73e3efd62e110debe4b"
+        },
+        "rebuilt_learned_mask": {
+          "bytes": 16884,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/routes/rebuilt_clean_strict_cac_frame40_dev.npz",
+          "sha256": "7906ebb77e9d5cc35dd79fce06f4f8ab377647ac7621582c2eb484059584a0bd"
+        },
+        "rebuilt_ledger": {
+          "bytes": 797336,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/rebuilt_ledger.json",
+          "sha256": "151fdeab3d862f51d78ce53d8c095380ece78b25eaf4b68bf59c57a145be9acc"
+        },
+        "rebuilt_planner_trace": {
+          "bytes": 433375,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/donor_trace.json",
+          "sha256": "c6846f16746e33f504dd3df3def2f9d66dc3dd7c97eaf9bfb485cff86cdf9bfb"
+        },
+        "rebuilt_plans": {
+          "bytes": 70406,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/plans.json",
+          "sha256": "2e0d39e9479bbb7ad2aa4eec8d26318d4fb28193bfc91558e4e07dfda1567c9d"
+        },
+        "rebuilt_pose_bank": {
+          "bytes": 77211300,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/rebuilt_phrase_lattice_dev.pt",
+          "sha256": "88d738e4d7b9812c2209902ad04bdf0ebfbec6a7eead697f43cb2a213b20d8f3"
+        },
+        "rebuilt_queries": {
+          "bytes": 81730,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/queries.json",
+          "sha256": "4d74fdb04d192de9cbeeaa747b5427a473e2e1ba931fb47e31088d78f74db5ab"
+        },
+        "rebuilt_retrieval": {
+          "bytes": 109531255,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/rebuilt_retrieval_dev.pt",
+          "sha256": "d11f6f517abfada1803456b425fe55fab979b3b584fef6544b184fdbbeb892f4"
+        },
+        "rebuilt_retrieval_trace": {
+          "bytes": 3559519,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/rebuilt_retrieval_trace.json",
+          "sha256": "db3612607702cd1c93f1b5b1baf5ea006f1bf8dceb5b8231e52c93d779f36021"
+        }
+      },
+      "checks": {
+        "all_final_route_pose_tensors_torch_equal": true,
+        "all_local_pose_tensors_torch_equal": true,
+        "all_retrieval_pose_tensors_torch_equal": true,
+        "assembler_trace_legacy_projection_equal": true,
+        "candidate_lengths_scientific_fields_equal": true,
+        "learned_route_mask_fields_equal": true,
+        "ledger_scientific_fields_equal": true,
+        "local_pose_ids_equal": true,
+        "planner_trace_legacy_projection_equal": true,
+        "plans_byte_identical": true,
+        "queries_byte_identical": true,
+        "retrieval_trace_byte_identical": true
+      },
+      "final_route_pose_comparison": {
+        "all_tensors_torch_equal": true,
+        "first_mismatch_ids": [],
+        "mismatch_count": 0,
+        "n_clips": 515,
+        "rebuilt_frames": 40786,
+        "reference_frames": 40786,
+        "same_id_order": true,
+        "same_id_set": true
+      },
+      "learned_route_mask_comparison": {
+        "all_fields_equal": true,
+        "fields_equal": {
+          "eligible": true,
+          "ids": true,
+          "in_S": true,
+          "scores": true,
+          "selected_feature_names": true,
+          "sids": true
+        }
+      },
+      "local_pose_comparison": {
+        "all_tensors_torch_equal": true,
+        "first_mismatch_ids": [],
+        "mismatch_count": 0,
+        "n_clips": 515,
+        "rebuilt_frames": 36070,
+        "reference_frames": 36070,
+        "same_id_order": true,
+        "same_id_set": true
+      },
+      "logs": {
+        "assembler.log": {
+          "bytes": 592,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/assembler.log",
+          "sha256": "bbf19f1cf08ce963eeaf41074de3bc05b35830dcc57e99f25987936a465c5822"
+        },
+        "assembler_time.log": {
+          "bytes": 1506,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/assembler_time.log",
+          "sha256": "5d9518db560a0e268bd14250218d942ce3ef9afc9ef42a3da88195e6f89dc4dd"
+        },
+        "ledger.log": {
+          "bytes": 197,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/ledger.log",
+          "sha256": "4fb46be59650d9c9fc2a882a185f158ae6ccbeb1daad26343a62c2a13b507d07"
+        },
+        "ledger_time.log": {
+          "bytes": 1486,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/ledger_time.log",
+          "sha256": "5201057574832d4b8ffc3c49fb99146ef2bf0e76e800ec5587abec6adb3eeabc"
+        },
+        "materialize.log": {
+          "bytes": 297,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/materialize.log",
+          "sha256": "0ee5319d8444e96ca4929e588987034b9f4c439e29aff773859c291aa12ca23c"
+        },
+        "planner.log": {
+          "bytes": 63,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/planner.log",
+          "sha256": "4373083fbfd29c80322a79bb789b891acb80ed3b22ea96bde6fbdc3c0de0dc7a"
+        },
+        "planner_time.log": {
+          "bytes": 1424,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/planner_time.log",
+          "sha256": "ef85d8417df5de29c53ffa05a5a9299b9d1860aaa0d09dcaa73e42b1f1f777b4"
+        },
+        "retrieval.log": {
+          "bytes": 473,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/retrieval.log",
+          "sha256": "b71a8e3268d37ec6da2dbba69b07b857e257b8b7818065c2b2e92fb19f481930"
+        },
+        "retrieval_time.log": {
+          "bytes": 1370,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/dev/retrieval_time.log",
+          "sha256": "78296a3a7bd2895b4866357565eb2aef2e4c3c36f972c4c814920d6167938b49"
+        }
+      },
+      "retrieval_pose_comparison": {
+        "all_tensors_torch_equal": true,
+        "first_mismatch_ids": [],
+        "mismatch_count": 0,
+        "n_clips": 515,
+        "rebuilt_frames": 51203,
+        "reference_frames": 51203,
+        "same_id_order": true,
+        "same_id_set": true
+      },
+      "status": "PASS"
+    },
+    "test": {
+      "artifacts": {
+        "frozen_assembler_trace": {
+          "bytes": 1358735,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/sota_chase/phase43_phrase_lattice/trace_revision_clean_phrase_lattice_test.json",
+          "sha256": "6234698bb709aa7329352b1225f8b7f8c550f8f399274ac0450d63ab9bfb10f0"
+        },
+        "frozen_candidate_lengths": {
+          "bytes": 91539,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_test_candidate_lengths.json",
+          "sha256": "0ebfa1aa89b430df12ba74a5a6e48b1980994762b1b5d9b33e717a1260eea50d"
+        },
+        "frozen_final_route": {
+          "bytes": 105415383,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_strict_cac_frame40_test.pt",
+          "sha256": "3e2125b73bfa7591ec0cbab771a617f40bea0de68ec974d3e746676523d56c3d"
+        },
+        "frozen_learned_mask": {
+          "bytes": 20290,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_strict_cac_frame40_test.npz",
+          "sha256": "5a8fd775dd426c54a2f4f6da042f9360c7e6486e896e0d1aafcc0754fd53208a"
+        },
+        "frozen_ledger": {
+          "bytes": 994285,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_strict_cac_frame40_test_ledger.json",
+          "sha256": "9f63c64c306cc5b145a502087fb785b1389836eac66c73529a8ae70f342d46f4"
+        },
+        "frozen_planner_trace": {
+          "bytes": 266766,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_test_donor_trace.json",
+          "sha256": "23c182e2f44b5045359c7e1bb71a5d7ed077d9c9ef5b4d715b13124fb3198470"
+        },
+        "frozen_plans": {
+          "bytes": 85996,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_test_plans.json",
+          "sha256": "e272811550cc3e7700605057f5eee25f2473de6dd76942be1be031b077f8607b"
+        },
+        "frozen_pose_bank": {
+          "bytes": 91284410,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/revision_clean_phrase_lattice_test.pt",
+          "sha256": "09b71bc957c789fbccaccc416f36d1aef043f1bcfa3a6d65d7aa9cf47949466e"
+        },
+        "frozen_queries": {
+          "bytes": 98433,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/clean_source_test_queries.json",
+          "sha256": "4920cd5ddb2d5b81527e2259f8e4cf037b87a8ef093de994820b4793aefe935f"
+        },
+        "frozen_retrieval": {
+          "bytes": 135253620,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/revision_clean_topk_test.pt",
+          "sha256": "0f6cd6f2fcd471fff56db5d10a5179f1cf798bcee203a26c3b3968d193d104fc"
+        },
+        "frozen_retrieval_trace": {
+          "bytes": 4454005,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/revision_clean_topk_test_trace.json",
+          "sha256": "d2066da1a0693e4186377f3c0724c71b58be8f9515f484ce377eb9422d5a29ee"
+        },
+        "legacy_planner_projection": {
+          "bytes": 266766,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/donor_trace_legacy_projection.json",
+          "sha256": "23c182e2f44b5045359c7e1bb71a5d7ed077d9c9ef5b4d715b13124fb3198470"
+        },
+        "rebuilt_assembler_trace": {
+          "bytes": 1409041,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/assembler_trace.json",
+          "sha256": "25a10e980f24b5da5e96226de6106677c9130db9f5f84439d55add02764832b2"
+        },
+        "rebuilt_candidate_lengths": {
+          "bytes": 91634,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/rebuilt_candidate_lengths.json",
+          "sha256": "18503e91143dcfa18f924240aca8e2c11139b074f7e19acc85fcc07c496828bd"
+        },
+        "rebuilt_final_route": {
+          "bytes": 105413442,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/rebuilt_learned_route_test.pt",
+          "sha256": "358566aab606fd4fe8e8920b36631bb59a45aba22b419a795ab9fed8d9f69b9d"
+        },
+        "rebuilt_learned_mask": {
+          "bytes": 20290,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/routes/rebuilt_clean_strict_cac_frame40_test.npz",
+          "sha256": "5a8fd775dd426c54a2f4f6da042f9360c7e6486e896e0d1aafcc0754fd53208a"
+        },
+        "rebuilt_ledger": {
+          "bytes": 994584,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/rebuilt_ledger.json",
+          "sha256": "2952c78e301af3c8f994215644be92ef3c7c598ae4b9eba19b8365539d2b42ff"
+        },
+        "rebuilt_planner_trace": {
+          "bytes": 535084,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/donor_trace.json",
+          "sha256": "0bd030ffb79df6f4c0cb6a5717fd9c80c3971423b5723b150c0487d69516191a"
+        },
+        "rebuilt_plans": {
+          "bytes": 85996,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/plans.json",
+          "sha256": "e272811550cc3e7700605057f5eee25f2473de6dd76942be1be031b077f8607b"
+        },
+        "rebuilt_pose_bank": {
+          "bytes": 91275017,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/rebuilt_phrase_lattice_test.pt",
+          "sha256": "7d5c6fca7bbab43adae12995decf117af37ef0ee4cb2a607af3b6eedec491d83"
+        },
+        "rebuilt_queries": {
+          "bytes": 98433,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/queries.json",
+          "sha256": "4920cd5ddb2d5b81527e2259f8e4cf037b87a8ef093de994820b4793aefe935f"
+        },
+        "rebuilt_retrieval": {
+          "bytes": 135251558,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/rebuilt_retrieval_test.pt",
+          "sha256": "d9e254ab3989b8b07b0bcefd637e49a0740fcb06013372648cbcfbf91db7b783"
+        },
+        "rebuilt_retrieval_trace": {
+          "bytes": 4454005,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/rebuilt_retrieval_trace.json",
+          "sha256": "d2066da1a0693e4186377f3c0724c71b58be8f9515f484ce377eb9422d5a29ee"
+        }
+      },
+      "checks": {
+        "all_final_route_pose_tensors_torch_equal": true,
+        "all_local_pose_tensors_torch_equal": true,
+        "all_retrieval_pose_tensors_torch_equal": true,
+        "assembler_trace_legacy_projection_equal": true,
+        "candidate_lengths_scientific_fields_equal": true,
+        "learned_route_mask_fields_equal": true,
+        "ledger_scientific_fields_equal": true,
+        "local_pose_ids_equal": true,
+        "planner_trace_legacy_projection_equal": true,
+        "plans_byte_identical": true,
+        "queries_byte_identical": true,
+        "retrieval_trace_byte_identical": true
+      },
+      "final_route_pose_comparison": {
+        "all_tensors_torch_equal": true,
+        "first_mismatch_ids": [],
+        "mismatch_count": 0,
+        "n_clips": 641,
+        "rebuilt_frames": 49254,
+        "reference_frames": 49254,
+        "same_id_order": true,
+        "same_id_set": true
+      },
+      "learned_route_mask_comparison": {
+        "all_fields_equal": true,
+        "fields_equal": {
+          "eligible": true,
+          "ids": true,
+          "in_S": true,
+          "scores": true,
+          "selected_feature_names": true,
+          "sids": true
+        }
+      },
+      "local_pose_comparison": {
+        "all_tensors_torch_equal": true,
+        "first_mismatch_ids": [],
+        "mismatch_count": 0,
+        "n_clips": 641,
+        "rebuilt_frames": 42635,
+        "reference_frames": 42635,
+        "same_id_order": true,
+        "same_id_set": true
+      },
+      "logs": {
+        "assembler.log": {
+          "bytes": 580,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/assembler.log",
+          "sha256": "a6629865e5de7a731a0e66887192870fa1d8e9b36d70b57820e14061b0c82dad"
+        },
+        "assembler_time.log": {
+          "bytes": 1512,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/assembler_time.log",
+          "sha256": "29194b6eabcc06b40c48a689cdd764a42fa2e9bfef356f86ccec050e1e2e8362"
+        },
+        "ledger.log": {
+          "bytes": 196,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/ledger.log",
+          "sha256": "489be3408062d6f68bc51d70d65d4763c46d053d4b9db8bbdafdd10ddafc70fc"
+        },
+        "ledger_time.log": {
+          "bytes": 1492,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/ledger_time.log",
+          "sha256": "e4a8ff6d322d1ba69bc9c06bbc1bf06a3e4ca73920e67c1539a23b431822999b"
+        },
+        "materialize.log": {
+          "bytes": 296,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/materialize.log",
+          "sha256": "de592ab5f38bf856e1bff4549e100e59b86f75117cad5f201d12378c9bce00e9"
+        },
+        "planner.log": {
+          "bytes": 63,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/planner.log",
+          "sha256": "73a2b69315ed3980ea037b33be4657870995d025c18bd8ac19aa79c8073155e5"
+        },
+        "planner_time.log": {
+          "bytes": 1427,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/planner_time.log",
+          "sha256": "9aedb139327fc7fa1413cf206699b138f997fc5106c72cefee37cd5aaedaf8cb"
+        },
+        "retrieval.log": {
+          "bytes": 473,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/retrieval.log",
+          "sha256": "d3753cc070cec95b457c012f1f731c701d475c7b11f5663f07cc934566b2cec7"
+        },
+        "retrieval_time.log": {
+          "bytes": 1374,
+          "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/downstream_rebuild/test/retrieval_time.log",
+          "sha256": "e7bf02263a3382a7a522ea9464c953369dcbd50050be3e6176e2ff678c430b69"
+        }
+      },
+      "retrieval_pose_comparison": {
+        "all_tensors_torch_equal": true,
+        "first_mismatch_ids": [],
+        "mismatch_count": 0,
+        "n_clips": 641,
+        "rebuilt_frames": 63224,
+        "reference_frames": 63224,
+        "same_id_order": true,
+        "same_id_set": true
+      },
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

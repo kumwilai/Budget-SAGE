@@ -1,0 +1,77 @@
+{
+  "run": "keyed pose watermark on restored leak-free generative route, test-641",
+  "date": "2026-09-11",
+  "preregistration": {
+    "path": "/home/kumwilai/research/signgen-t2m/outputs/watermark_generative_route_20260911/preregistration_watermark_20260911_frozen.md",
+    "sha256": "065bdc4701a77ea0871cb15cbc1b41c3660cf0e0359545ced6b00ba5fcfcf3e1"
+  },
+  "protocol_status": "Cost measurement of a post-hoc signal on an already-committed route. Not a new operating point, not a selection, not a method change. Pass A re-scores the identical committed unmarked bank only to establish evaluator determinism; Pass B scores the same bank plus an additive mark. No watermark parameter was chosen using any back-translation metric; the secondary amplitude was deliberately never scored.",
+  "interpreter": "/home/kumwilai/research/coopns-slr/.venv/bin/python",
+  "seeds": {
+    "perturbation_rng": 0,
+    "derangement_rng": 0,
+    "amplitude_precheck_rng": 0
+  },
+  "key_id_sha256_16": "97d41a11b8b9c6d0",
+  "key_material_recorded": false,
+  "scheme_source": {
+    "path": "/home/kumwilai/research/signgen-t2m/scripts/pose_watermark.py",
+    "sha256": "f3142f02c3987d0fbbfd0c08956dc83aa148731348aa22a156dffde037c10847",
+    "modified_by_this_run": false
+  },
+  "driver_scripts": {
+    "/home/kumwilai/research/signgen-t2m/scripts/watermark_generative_route_20260911.py": "cba7a2e152a885e1513c3714586714416746e4d526e31013509ca6a103ecac30",
+    "/home/kumwilai/research/signgen-t2m/scripts/watermark_decimate_certguided_addendum.py": "26797326988aadbc9c5225d89b5cdddfce17c47f5c838abeea90b3e4df243360",
+    "/home/kumwilai/research/signgen-t2m/scripts/watermark_summarise_20260911.py": "c051dc79a771a1a95c40aa93d15de0c8aaaa6895ad8091a4e6333913843b9872"
+  },
+  "inputs": {
+    "unmarked_bank": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/generative_route_restore_20260911/test641_mt5gloss.pt",
+      "sha256": "2307335ff0ba921034819a4b7a3b7208841a89cb224630083f2c350bfa17c912"
+    },
+    "ground_truth": {
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+      "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+    },
+    "back_translation_ckpt": {
+      "path": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/best.ckpt",
+      "sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428"
+    }
+  },
+  "outputs": {
+    "marked_bank_eps1e-3": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/watermark_generative_route_20260911/test641_mt5gloss_wm.pt",
+      "sha256": "dc085a007c067e5e46be9439584e429839939e2d968e0efcc8ec45f20c0f2d2f"
+    },
+    "marked_bank_eps2.5e-4": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/watermark_generative_route_20260911/test641_mt5gloss_wm_eps2.5e-4.pt",
+      "sha256": "f7b0423be058cf1e635a43b68511ec64f27cc8ddd6b05eb340fed4426448b057"
+    }
+  },
+  "commands": [
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_generative_route_20260911.py embed --eps 1e-3",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_generative_route_20260911.py embed --eps 2.5e-4 --out_name test641_mt5gloss_wm_eps2.5e-4.pt",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_generative_route_20260911.py detect --eps 1e-3",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_generative_route_20260911.py detect --eps 2.5e-4 --out_name test641_mt5gloss_wm_eps2.5e-4.pt",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_generative_route_20260911.py boundary --eps 1e-3",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_generative_route_20260911.py boundary --eps 2.5e-4 --out_name test641_mt5gloss_wm_eps2.5e-4.pt",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/watermark_decimate_certguided_addendum.py",
+    "cd outputs/watermark_generative_route_20260911/evaluator_workspace && /home/kumwilai/research/coopns-slr/.venv/bin/python external/SLRTP-Sign-Production-Evaluation/main.py <bank> external/.../data/test.pt external/.../backTranslation_PHIX_model --tag <repro_unmarked_test641|marked_eps1e-3_test641> --fps 25",
+    "/home/kumwilai/research/coopns-slr/.venv/bin/python scripts/sign_jepa_source_locked_fusion.py motion_eval --pred_pt <bank> --reference_pt external/.../data/test.pt --out_json <json>"
+  ],
+  "artifacts": {
+    "boundary_record_eps0.00025.json": "075094bb4ab80dab1a0d44dd52ee4f2d5b1f001eb2fbacf457960ce569b43cd6",
+    "boundary_record_eps0.001.json": "6c8f5aecf1ebc2a55b4513e73654e3fb5b1b4bf9a749611fdd192b220aa83cb6",
+    "detect_record_eps0.00025.json": "ccc25ce89a76072196b6d94a6f52aaf976eca36f2a7922621375fdeb23fbb154",
+    "detect_record_eps0.001.json": "f892ee58f96dd535f4cb8f3ecc51cf84e37745d908aba6aa0ce10a12d53b9048",
+    "embed_record_eps0.00025.json": "75c6a0d762ff341d36e63edd5930223e6ec4d2acfc14eb6e21f0999fa8157330",
+    "embed_record_eps0.001.json": "c6c0d7a1a8d7c87c752a6b32b9fffa7ca62ee5feb388a8da799b8be63b972eae",
+    "marked_eps1e-3_motion.json": "06a0a9cb5d0a20eedb2203b6d319f480bcf1590a52aa60517ab2b82befcbe66c",
+    "marked_eps2.5e-4_motion.json": "ce6b6da2287d5bdec88571f0889c713610f65be63a903cdb3c01c3cd74e9bf46",
+    "posthoc_decimate_certguided.json": "b097a8738c6f19042649593d1a5ec7cc3735fff7488129c19790932bdb4e6d05",
+    "provenance_watermark_20260911.json": "5cd18abae2e8e6b37e2b51c213a04650389f805873dc2c9b35995190a49242ed",
+    "repro_unmarked_motion.json": "3695a4dad3b12ef4d78a58a419a298597cf3114bbf8124e1107b484f2424114a",
+    "evaluator_workspace/results/marked_eps1e-3_test641.json": "de0a0ea146a396e8e9a4c130fb2b9bbd91e9256938fee92ed14365a6ba8b9009",
+    "evaluator_workspace/results/repro_unmarked_test641.json": "c3d87fca3f934b04f35e48a71b78ae1256c8c445cbf2dd1dcf2a065c920c9a45"
+  }
+}

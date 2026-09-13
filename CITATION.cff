@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use Budget-SAGE, please cite the associated article."
+title: "Budget-SAGE: Verifiable Source Routing for Provenance-Governed Text-to-Sign Generation"
+type: software
+license: MIT
+repository-code: "https://github.com/kumwilai/-Budget-SAGE"
+version: 1.0.0
+date-released: 2026-09-13
+authors:
+  - family-names: Kumwilaisak
+    given-names: Wuttipong
+    affiliation: King Mongkut's University of Technology Thonburi
+  - family-names: Kuo
+    given-names: C.-C. Jay
+    affiliation: University of Southern California
+preferred-citation:
+  type: article
+  title: "Verifiable Source Routing for Provenance-Governed Text-to-Sign Generation"
+  authors:
+    - family-names: Kumwilaisak
+      given-names: Wuttipong
+    - family-names: Kuo
+      given-names: C.-C. Jay
+  journal: IEEE Transactions on Multimedia
+  year: 2026

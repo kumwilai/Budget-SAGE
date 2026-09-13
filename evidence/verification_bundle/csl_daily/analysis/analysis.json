@@ -1,0 +1,1504 @@
+{
+  "adapter_annotation_lineages": {
+    "fixed40_first20": {
+      "adapter_caption_authority": "exact canonical MSKA metadata; ignored by pinned S2G loader",
+      "canonical_manifest": {
+        "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/CSL-Daily.test",
+        "sha256": "40f22e1c007e744e63fcf20be2e86f0519ecffe99717f5d4b9f434218250e964"
+      },
+      "canonical_metadata_sha256": "a641564da1d0b739380b52f1215b9abfbe4f0b6eb6dc78778dbc6db6579efda8",
+      "caption_mismatch_count": 1,
+      "caption_mismatches": [
+        {
+          "generation_query_text": "微信是谁发送的？",
+          "id": "S000236_P0000_T00",
+          "mska_metadata_text": "微信是谁发的。"
+        }
+      ],
+      "caption_normalization_applied": false,
+      "generation_and_bootstrap_caption_authority": "preregistered v4 JSON manifest; unchanged",
+      "generation_caption_sha256": "7b77be917eafc99a0aa43349f1fb942b4db37ebadd9c2d4dc135cbcb18e52abb",
+      "gloss_mismatch_count": 0,
+      "n": 20,
+      "name_mismatch_count": 0,
+      "pose_only_contract": {
+        "accepted_evaluator_sha256_by_split": {
+          "dev": "59f77a5deeb1b8f5ea985b0eab251f68e31e7d575d406a52069a76d239859c92",
+          "test": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+        },
+        "caption_read_by_dataset": false,
+        "config": {
+          "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/configs/csl-daily_s2g.yaml",
+          "sha256": "72b76dbd3000d411287d3affc0e5163a2452a87e968bf57c5a68343884181141"
+        },
+        "local_recognition_import_closure": {
+          "bundle_algorithm": "SHA256 of UTF-8 canonical JSON relative-path to SHA256 mapping",
+          "bundle_sha256": "c1fa73518427e7303eb2909d5b29b4b1204f7ed4d63437cdb16e30117ee404b4",
+          "entrypoint": {
+            "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval_57b74fa1.py",
+            "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+          },
+          "files": {
+            "Rouge.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Rouge.py",
+              "sha256": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd"
+            },
+            "Tokenizer.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Tokenizer.py",
+              "sha256": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13"
+            },
+            "Visualhead.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Visualhead.py",
+              "sha256": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d"
+            },
+            "datasets.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/datasets.py",
+              "sha256": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf"
+            },
+            "metrics.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/metrics.py",
+              "sha256": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445"
+            },
+            "recognition.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/recognition.py",
+              "sha256": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621"
+            },
+            "sacrebleu.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/sacrebleu.py",
+              "sha256": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f"
+            },
+            "utils.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/utils.py",
+              "sha256": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+            }
+          },
+          "live_gloss_vocabulary": {
+            "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/gloss2ids.pkl",
+            "sha256": "3b347a8a3c81ad2a2e79eaa28b89dcc0502cd09070f29175bb3e86f338afdf4d"
+          },
+          "local_import_edges": {
+            "Rouge.py": [],
+            "Tokenizer.py": [],
+            "Visualhead.py": [
+              "utils.py"
+            ],
+            "datasets.py": [
+              "Tokenizer.py",
+              "utils.py"
+            ],
+            "metrics.py": [
+              "Rouge.py",
+              "sacrebleu.py"
+            ],
+            "recognition.py": [
+              "Tokenizer.py",
+              "Visualhead.py"
+            ],
+            "sacrebleu.py": [],
+            "utils.py": []
+          },
+          "nonlocal_import_roots": [
+            "PIL",
+            "__future__",
+            "argparse",
+            "builtins",
+            "collections",
+            "contextlib",
+            "copy",
+            "cv2",
+            "datetime",
+            "einops",
+            "functools",
+            "gzip",
+            "hashlib",
+            "io",
+            "itertools",
+            "json",
+            "logging",
+            "math",
+            "matplotlib",
+            "numpy",
+            "os",
+            "pathlib",
+            "pickle",
+            "portalocker",
+            "random",
+            "re",
+            "resource",
+            "seaborn",
+            "signal",
+            "sys",
+            "tarfile",
+            "tensorflow",
+            "time",
+            "torch",
+            "torchtext",
+            "torchvision",
+            "transformers",
+            "typing",
+            "unicodedata",
+            "urllib",
+            "yaml",
+            "zipfile"
+          ],
+          "poison_caption_test_scope": "native dataset __getitem__/collate methods only; not all imports",
+          "relative_path_sha256": {
+            "Rouge.py": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd",
+            "Tokenizer.py": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13",
+            "Visualhead.py": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d",
+            "datasets.py": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf",
+            "metrics.py": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445",
+            "recognition.py": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621",
+            "sacrebleu.py": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f",
+            "utils.py": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+          },
+          "runtime_execution_attested": false,
+          "schema": "reduced_csl_local_recognition_import_closure_v1",
+          "scope": "recursive static Import/ImportFrom closure, including nested statements, in the MSKA repository",
+          "third_party_environment_hashed": false
+        },
+        "task": "S2G"
+      },
+      "reference_authority": "exact agreement between declared gloss and canonical MSKA gloss",
+      "schema": "reduced_csl_annotation_lineage_v1"
+    },
+    "learned40_first20": {
+      "adapter_caption_authority": "exact canonical MSKA metadata; ignored by pinned S2G loader",
+      "canonical_manifest": {
+        "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/CSL-Daily.test",
+        "sha256": "40f22e1c007e744e63fcf20be2e86f0519ecffe99717f5d4b9f434218250e964"
+      },
+      "canonical_metadata_sha256": "a641564da1d0b739380b52f1215b9abfbe4f0b6eb6dc78778dbc6db6579efda8",
+      "caption_mismatch_count": 1,
+      "caption_mismatches": [
+        {
+          "generation_query_text": "微信是谁发送的？",
+          "id": "S000236_P0000_T00",
+          "mska_metadata_text": "微信是谁发的。"
+        }
+      ],
+      "caption_normalization_applied": false,
+      "generation_and_bootstrap_caption_authority": "preregistered v4 JSON manifest; unchanged",
+      "generation_caption_sha256": "7b77be917eafc99a0aa43349f1fb942b4db37ebadd9c2d4dc135cbcb18e52abb",
+      "gloss_mismatch_count": 0,
+      "n": 20,
+      "name_mismatch_count": 0,
+      "pose_only_contract": {
+        "accepted_evaluator_sha256_by_split": {
+          "dev": "59f77a5deeb1b8f5ea985b0eab251f68e31e7d575d406a52069a76d239859c92",
+          "test": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+        },
+        "caption_read_by_dataset": false,
+        "config": {
+          "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/configs/csl-daily_s2g.yaml",
+          "sha256": "72b76dbd3000d411287d3affc0e5163a2452a87e968bf57c5a68343884181141"
+        },
+        "local_recognition_import_closure": {
+          "bundle_algorithm": "SHA256 of UTF-8 canonical JSON relative-path to SHA256 mapping",
+          "bundle_sha256": "c1fa73518427e7303eb2909d5b29b4b1204f7ed4d63437cdb16e30117ee404b4",
+          "entrypoint": {
+            "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval_57b74fa1.py",
+            "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+          },
+          "files": {
+            "Rouge.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Rouge.py",
+              "sha256": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd"
+            },
+            "Tokenizer.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Tokenizer.py",
+              "sha256": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13"
+            },
+            "Visualhead.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Visualhead.py",
+              "sha256": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d"
+            },
+            "datasets.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/datasets.py",
+              "sha256": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf"
+            },
+            "metrics.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/metrics.py",
+              "sha256": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445"
+            },
+            "recognition.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/recognition.py",
+              "sha256": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621"
+            },
+            "sacrebleu.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/sacrebleu.py",
+              "sha256": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f"
+            },
+            "utils.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/utils.py",
+              "sha256": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+            }
+          },
+          "live_gloss_vocabulary": {
+            "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/gloss2ids.pkl",
+            "sha256": "3b347a8a3c81ad2a2e79eaa28b89dcc0502cd09070f29175bb3e86f338afdf4d"
+          },
+          "local_import_edges": {
+            "Rouge.py": [],
+            "Tokenizer.py": [],
+            "Visualhead.py": [
+              "utils.py"
+            ],
+            "datasets.py": [
+              "Tokenizer.py",
+              "utils.py"
+            ],
+            "metrics.py": [
+              "Rouge.py",
+              "sacrebleu.py"
+            ],
+            "recognition.py": [
+              "Tokenizer.py",
+              "Visualhead.py"
+            ],
+            "sacrebleu.py": [],
+            "utils.py": []
+          },
+          "nonlocal_import_roots": [
+            "PIL",
+            "__future__",
+            "argparse",
+            "builtins",
+            "collections",
+            "contextlib",
+            "copy",
+            "cv2",
+            "datetime",
+            "einops",
+            "functools",
+            "gzip",
+            "hashlib",
+            "io",
+            "itertools",
+            "json",
+            "logging",
+            "math",
+            "matplotlib",
+            "numpy",
+            "os",
+            "pathlib",
+            "pickle",
+            "portalocker",
+            "random",
+            "re",
+            "resource",
+            "seaborn",
+            "signal",
+            "sys",
+            "tarfile",
+            "tensorflow",
+            "time",
+            "torch",
+            "torchtext",
+            "torchvision",
+            "transformers",
+            "typing",
+            "unicodedata",
+            "urllib",
+            "yaml",
+            "zipfile"
+          ],
+          "poison_caption_test_scope": "native dataset __getitem__/collate methods only; not all imports",
+          "relative_path_sha256": {
+            "Rouge.py": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd",
+            "Tokenizer.py": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13",
+            "Visualhead.py": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d",
+            "datasets.py": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf",
+            "metrics.py": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445",
+            "recognition.py": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621",
+            "sacrebleu.py": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f",
+            "utils.py": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+          },
+          "runtime_execution_attested": false,
+          "schema": "reduced_csl_local_recognition_import_closure_v1",
+          "scope": "recursive static Import/ImportFrom closure, including nested statements, in the MSKA repository",
+          "third_party_environment_hashed": false
+        },
+        "task": "S2G"
+      },
+      "reference_authority": "exact agreement between declared gloss and canonical MSKA gloss",
+      "schema": "reduced_csl_annotation_lineage_v1"
+    },
+    "local": {
+      "adapter_caption_authority": "exact canonical MSKA metadata; ignored by pinned S2G loader",
+      "canonical_manifest": {
+        "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/CSL-Daily.test",
+        "sha256": "40f22e1c007e744e63fcf20be2e86f0519ecffe99717f5d4b9f434218250e964"
+      },
+      "canonical_metadata_sha256": "5fb20a0327a41780d43e3c02207feb1bd1ccee1344f412c97fec906d0653b815",
+      "caption_mismatch_count": 49,
+      "caption_mismatches": [
+        {
+          "generation_query_text": "微信是谁发送的？",
+          "id": "S000236_P0000_T00",
+          "mska_metadata_text": "微信是谁发的。"
+        },
+        {
+          "generation_query_text": "微信是谁发送的？",
+          "id": "S000236_P0008_T00",
+          "mska_metadata_text": "微信是谁发的。"
+        },
+        {
+          "generation_query_text": "公司离家很远，他为什么不打车？",
+          "id": "S000317_P0004_T00",
+          "mska_metadata_text": "公司离家很远，她为什么不打车？"
+        },
+        {
+          "generation_query_text": "公司离家很远，他为什么不打车？",
+          "id": "S000317_P0008_T00",
+          "mska_metadata_text": "公司离家很远，她为什么不打车？"
+        },
+        {
+          "generation_query_text": "他的姐姐是老师，平时开车去学校。",
+          "id": "S001142_P0000_T00",
+          "mska_metadata_text": "她的姐姐是老师，平时开车去学校。"
+        },
+        {
+          "generation_query_text": "服务员，卫生间在哪里？",
+          "id": "S001246_P0000_T00",
+          "mska_metadata_text": "服务员，卫生间在哪里。"
+        },
+        {
+          "generation_query_text": "服务员，卫生间在哪里？",
+          "id": "S001246_P0008_T00",
+          "mska_metadata_text": "服务员，卫生间在哪里。"
+        },
+        {
+          "generation_query_text": "他果然是深爱着别人，不然也不会拒绝你。",
+          "id": "S002018_P0005_T00",
+          "mska_metadata_text": "她果然是深爱着另一个人，不然也不会拒绝你。"
+        },
+        {
+          "generation_query_text": "宽容使我们变得互相理解，互相友爱，互相尊重。",
+          "id": "S002062_P0000_T00",
+          "mska_metadata_text": "宽容使我们变得互相理解，互相信任，互相友爱。"
+        },
+        {
+          "generation_query_text": "宽容使我们变得互相理解，互相友爱，互相尊重。",
+          "id": "S002062_P0007_T00",
+          "mska_metadata_text": "宽容使我们变得互相理解，互相信任，互相友爱。"
+        },
+        {
+          "generation_query_text": "他们已经离婚了，但仍然保持联系。",
+          "id": "S002063_P0000_T00",
+          "mska_metadata_text": "他们已经离婚了，但仍然藕断丝连地保持联系。"
+        },
+        {
+          "generation_query_text": "他手工一天做的活没有机器半个小时做的好。",
+          "id": "S002122_P0005_T00",
+          "mska_metadata_text": "他手工一天做的笨活没有机器半个小时做的好。"
+        },
+        {
+          "generation_query_text": "他手工一天做的活没有机器半个小时做的好。",
+          "id": "S002122_P0007_T00",
+          "mska_metadata_text": "他手工一天做的笨活没有机器半个小时做的好。"
+        },
+        {
+          "generation_query_text": "他喜欢模仿歌星唱歌，还很有模有样。",
+          "id": "S002132_P0005_T00",
+          "mska_metadata_text": "她喜欢模仿歌星唱歌，还很有模有样。"
+        },
+        {
+          "generation_query_text": "他喜欢模仿歌星唱歌，还很有模有样。",
+          "id": "S002132_P0007_T00",
+          "mska_metadata_text": "她喜欢模仿歌星唱歌，还很有模有样。"
+        },
+        {
+          "generation_query_text": "经过几次的失败，实验终于成功了，大家非常高兴，奔走相告。",
+          "id": "S002264_P0000_T00",
+          "mska_metadata_text": "经过几次的失败，试验终于成功了，大家欣喜若狂，奔走相告。"
+        },
+        {
+          "generation_query_text": "经过几次的失败，实验终于成功了，大家非常高兴，奔走相告。",
+          "id": "S002264_P0007_T00",
+          "mska_metadata_text": "经过几次的失败，试验终于成功了，大家欣喜若狂，奔走相告。"
+        },
+        {
+          "generation_query_text": "有些小孩子很害怕输液，一直大哭。",
+          "id": "S002274_P0005_T00",
+          "mska_metadata_text": "有些小孩子很害怕输液，一直嚎啕大哭。"
+        },
+        {
+          "generation_query_text": "有些小孩子很害怕输液，一直大哭。",
+          "id": "S002274_P0007_T00",
+          "mska_metadata_text": "有些小孩子很害怕输液，一直嚎啕大哭。"
+        },
+        {
+          "generation_query_text": "你有什么办法就快说，别不说话。",
+          "id": "S002529_P0000_T00",
+          "mska_metadata_text": "你有什么办法就快说，别藏着掖着。"
+        },
+        {
+          "generation_query_text": "这间玻璃房子有一百年历史了。",
+          "id": "S002578_P0000_T00",
+          "mska_metadata_text": "这间玻璃作坊有一百年历史了。"
+        },
+        {
+          "generation_query_text": "这间玻璃房子有一百年历史了。",
+          "id": "S002578_P0005_T00",
+          "mska_metadata_text": "这间玻璃作坊有一百年历史了。"
+        },
+        {
+          "generation_query_text": "他把处方上的药名弄错了，结果出了大麻烦。",
+          "id": "S003289_P0002_T00",
+          "mska_metadata_text": "我怎么找不到医生开给我的处方了？"
+        },
+        {
+          "generation_query_text": "老师安慰了半天，他才止住了哭。",
+          "id": "S003418_P0002_T00",
+          "mska_metadata_text": "老师安慰了半天，她才止住了哭。"
+        },
+        {
+          "generation_query_text": "有人说，长期服用避孕药会对女性身体不好。",
+          "id": "S003537_P0000_T00",
+          "mska_metadata_text": "有人说，长期服用避孕药会打乱女性的内分泌平衡。"
+        },
+        {
+          "generation_query_text": "有人说，长期服用避孕药会对女性身体不好。",
+          "id": "S003537_P0001_T00",
+          "mska_metadata_text": "有人说，长期服用避孕药会打乱女性的内分泌平衡。"
+        },
+        {
+          "generation_query_text": "性格，既不固定也不是不变，而是活动变化着的。",
+          "id": "S003551_P0000_T00",
+          "mska_metadata_text": "性格，既不坚固也不是一成不变，而是活动变化着的。"
+        },
+        {
+          "generation_query_text": "性格，既不固定也不是不变，而是活动变化着的。",
+          "id": "S003551_P0001_T00",
+          "mska_metadata_text": "性格，既不坚固也不是一成不变，而是活动变化着的。"
+        },
+        {
+          "generation_query_text": "我们不能理解他所说的话。",
+          "id": "S003579_P0002_T00",
+          "mska_metadata_text": "我们不能理解他所说的一番话。"
+        },
+        {
+          "generation_query_text": "这孩子一天到晚玩，真令人操心。",
+          "id": "S003605_P0000_T00",
+          "mska_metadata_text": "这孩子一天到晚，游手好闲，真令人操心。"
+        },
+        {
+          "generation_query_text": "这孩子一天到晚玩，真令人操心。",
+          "id": "S003605_P0001_T00",
+          "mska_metadata_text": "这孩子一天到晚，游手好闲，真令人操心。"
+        },
+        {
+          "generation_query_text": "考生可向学院办公室查询考试分数。",
+          "id": "S003619_P0000_T00",
+          "mska_metadata_text": "考生可向学院办公室查询最终录取结果。"
+        },
+        {
+          "generation_query_text": "老师和同学们一致称赞小王是一个好学生。",
+          "id": "S003633_P0000_T00",
+          "mska_metadata_text": "老师和同学们一致称赞东东是一个好学生。"
+        },
+        {
+          "generation_query_text": "老师和同学们一致称赞小王是一个好学生。",
+          "id": "S003633_P0001_T00",
+          "mska_metadata_text": "老师和同学们一致称赞东东是一个好学生。"
+        },
+        {
+          "generation_query_text": "大家一致称赞老师献身于教育事业的精神。",
+          "id": "S003645_P0000_T00",
+          "mska_metadata_text": "大家众口同声地称赞她献身于教育事业的精神。"
+        },
+        {
+          "generation_query_text": "大家一致称赞老师献身于教育事业的精神。",
+          "id": "S003645_P0002_T00",
+          "mska_metadata_text": "大家众口同声地称赞她献身于教育事业的精神。"
+        },
+        {
+          "generation_query_text": "我们要和与合同承包商协调合作，保障工作的顺利完成。",
+          "id": "S003651_P0001_T00",
+          "mska_metadata_text": "我们要和与合同承包商协调合作，保障维修工作的顺利完成。"
+        },
+        {
+          "generation_query_text": "这条小路十分安静，以至于他都能听到身边人的呼吸的声音。",
+          "id": "S003860_P0000_T00",
+          "mska_metadata_text": "这条小路十分安静，以至于她都能听到身边人的呼吸的声音。"
+        },
+        {
+          "generation_query_text": "这条小路十分安静，以至于他都能听到身边人的呼吸的声音。",
+          "id": "S003860_P0002_T00",
+          "mska_metadata_text": "这条小路十分安静，以至于她都能听到身边人的呼吸的声音。"
+        },
+        {
+          "generation_query_text": "朋友抱怨他的妈妈很唠叨。",
+          "id": "S004161_P0000_T00",
+          "mska_metadata_text": "朋友抱怨她的妈妈很唠叨。"
+        },
+        {
+          "generation_query_text": "朋友抱怨他的妈妈很唠叨。",
+          "id": "S004161_P0002_T00",
+          "mska_metadata_text": "朋友抱怨她的妈妈很唠叨。"
+        },
+        {
+          "generation_query_text": "联欢会上，看到小王模仿明星，我们看笑了。",
+          "id": "S005418_P0000_T00",
+          "mska_metadata_text": "联欢会上，看到小王模仿明星，我们不禁哑然失笑。"
+        },
+        {
+          "generation_query_text": "联欢会上，看到小王模仿明星，我们看笑了。",
+          "id": "S005418_P0009_T00",
+          "mska_metadata_text": "联欢会上，看到小王模仿明星，我们不禁哑然失笑。"
+        },
+        {
+          "generation_query_text": "他很爱护家园的一草一木。",
+          "id": "S005764_P0006_T00",
+          "mska_metadata_text": "她很爱护家园的一草一木。"
+        },
+        {
+          "generation_query_text": "像你这样粗糙的人原来也会有害羞的时候啊！",
+          "id": "S005957_P0000_T00",
+          "mska_metadata_text": "像你这样大大咧咧的人原来也会有害羞的时候啊！"
+        },
+        {
+          "generation_query_text": "他撒谎说自己已经有交往对象了。",
+          "id": "S006430_P0000_T00",
+          "mska_metadata_text": "她撒谎说自己已经有交往对象了。"
+        },
+        {
+          "generation_query_text": "还有其他症状吗，比如说呕吐、头痛？",
+          "id": "S006640_P0009_T00",
+          "mska_metadata_text": "还有其他症状吗，比如说恶心，呕吐，腹泻？"
+        },
+        {
+          "generation_query_text": "你看他受了那么大的委屈都没说，你还有什么不平呢？",
+          "id": "S006967_P0000_T00",
+          "mska_metadata_text": "你看她受了那么大的委屈都没说，你还有什么不平呢？"
+        },
+        {
+          "generation_query_text": "广告公司可以充分发挥自己在绘画和美术上的技术。",
+          "id": "S007137_P0003_T00",
+          "mska_metadata_text": "广告公司可以充分发挥自己在绘画和美术装潢上的技术。"
+        }
+      ],
+      "caption_normalization_applied": false,
+      "generation_and_bootstrap_caption_authority": "preregistered v4 JSON manifest; unchanged",
+      "generation_caption_sha256": "126c4bc1f5661566daab70c06c2e169e0f60b4b9c7ee47ce2fa047212f824501",
+      "gloss_mismatch_count": 0,
+      "n": 1176,
+      "name_mismatch_count": 0,
+      "pose_only_contract": {
+        "accepted_evaluator_sha256_by_split": {
+          "dev": "59f77a5deeb1b8f5ea985b0eab251f68e31e7d575d406a52069a76d239859c92",
+          "test": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+        },
+        "caption_read_by_dataset": false,
+        "config": {
+          "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/configs/csl-daily_s2g.yaml",
+          "sha256": "72b76dbd3000d411287d3affc0e5163a2452a87e968bf57c5a68343884181141"
+        },
+        "local_recognition_import_closure": {
+          "bundle_algorithm": "SHA256 of UTF-8 canonical JSON relative-path to SHA256 mapping",
+          "bundle_sha256": "c1fa73518427e7303eb2909d5b29b4b1204f7ed4d63437cdb16e30117ee404b4",
+          "entrypoint": {
+            "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval_57b74fa1.py",
+            "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+          },
+          "files": {
+            "Rouge.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Rouge.py",
+              "sha256": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd"
+            },
+            "Tokenizer.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Tokenizer.py",
+              "sha256": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13"
+            },
+            "Visualhead.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Visualhead.py",
+              "sha256": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d"
+            },
+            "datasets.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/datasets.py",
+              "sha256": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf"
+            },
+            "metrics.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/metrics.py",
+              "sha256": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445"
+            },
+            "recognition.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/recognition.py",
+              "sha256": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621"
+            },
+            "sacrebleu.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/sacrebleu.py",
+              "sha256": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f"
+            },
+            "utils.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/utils.py",
+              "sha256": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+            }
+          },
+          "live_gloss_vocabulary": {
+            "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/gloss2ids.pkl",
+            "sha256": "3b347a8a3c81ad2a2e79eaa28b89dcc0502cd09070f29175bb3e86f338afdf4d"
+          },
+          "local_import_edges": {
+            "Rouge.py": [],
+            "Tokenizer.py": [],
+            "Visualhead.py": [
+              "utils.py"
+            ],
+            "datasets.py": [
+              "Tokenizer.py",
+              "utils.py"
+            ],
+            "metrics.py": [
+              "Rouge.py",
+              "sacrebleu.py"
+            ],
+            "recognition.py": [
+              "Tokenizer.py",
+              "Visualhead.py"
+            ],
+            "sacrebleu.py": [],
+            "utils.py": []
+          },
+          "nonlocal_import_roots": [
+            "PIL",
+            "__future__",
+            "argparse",
+            "builtins",
+            "collections",
+            "contextlib",
+            "copy",
+            "cv2",
+            "datetime",
+            "einops",
+            "functools",
+            "gzip",
+            "hashlib",
+            "io",
+            "itertools",
+            "json",
+            "logging",
+            "math",
+            "matplotlib",
+            "numpy",
+            "os",
+            "pathlib",
+            "pickle",
+            "portalocker",
+            "random",
+            "re",
+            "resource",
+            "seaborn",
+            "signal",
+            "sys",
+            "tarfile",
+            "tensorflow",
+            "time",
+            "torch",
+            "torchtext",
+            "torchvision",
+            "transformers",
+            "typing",
+            "unicodedata",
+            "urllib",
+            "yaml",
+            "zipfile"
+          ],
+          "poison_caption_test_scope": "native dataset __getitem__/collate methods only; not all imports",
+          "relative_path_sha256": {
+            "Rouge.py": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd",
+            "Tokenizer.py": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13",
+            "Visualhead.py": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d",
+            "datasets.py": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf",
+            "metrics.py": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445",
+            "recognition.py": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621",
+            "sacrebleu.py": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f",
+            "utils.py": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+          },
+          "runtime_execution_attested": false,
+          "schema": "reduced_csl_local_recognition_import_closure_v1",
+          "scope": "recursive static Import/ImportFrom closure, including nested statements, in the MSKA repository",
+          "third_party_environment_hashed": false
+        },
+        "task": "S2G"
+      },
+      "reference_authority": "exact agreement between declared gloss and canonical MSKA gloss",
+      "schema": "reduced_csl_annotation_lineage_v1"
+    },
+    "whole": {
+      "adapter_caption_authority": "exact canonical MSKA metadata; ignored by pinned S2G loader",
+      "canonical_manifest": {
+        "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/CSL-Daily.test",
+        "sha256": "40f22e1c007e744e63fcf20be2e86f0519ecffe99717f5d4b9f434218250e964"
+      },
+      "canonical_metadata_sha256": "5fb20a0327a41780d43e3c02207feb1bd1ccee1344f412c97fec906d0653b815",
+      "caption_mismatch_count": 49,
+      "caption_mismatches": [
+        {
+          "generation_query_text": "微信是谁发送的？",
+          "id": "S000236_P0000_T00",
+          "mska_metadata_text": "微信是谁发的。"
+        },
+        {
+          "generation_query_text": "微信是谁发送的？",
+          "id": "S000236_P0008_T00",
+          "mska_metadata_text": "微信是谁发的。"
+        },
+        {
+          "generation_query_text": "公司离家很远，他为什么不打车？",
+          "id": "S000317_P0004_T00",
+          "mska_metadata_text": "公司离家很远，她为什么不打车？"
+        },
+        {
+          "generation_query_text": "公司离家很远，他为什么不打车？",
+          "id": "S000317_P0008_T00",
+          "mska_metadata_text": "公司离家很远，她为什么不打车？"
+        },
+        {
+          "generation_query_text": "他的姐姐是老师，平时开车去学校。",
+          "id": "S001142_P0000_T00",
+          "mska_metadata_text": "她的姐姐是老师，平时开车去学校。"
+        },
+        {
+          "generation_query_text": "服务员，卫生间在哪里？",
+          "id": "S001246_P0000_T00",
+          "mska_metadata_text": "服务员，卫生间在哪里。"
+        },
+        {
+          "generation_query_text": "服务员，卫生间在哪里？",
+          "id": "S001246_P0008_T00",
+          "mska_metadata_text": "服务员，卫生间在哪里。"
+        },
+        {
+          "generation_query_text": "他果然是深爱着别人，不然也不会拒绝你。",
+          "id": "S002018_P0005_T00",
+          "mska_metadata_text": "她果然是深爱着另一个人，不然也不会拒绝你。"
+        },
+        {
+          "generation_query_text": "宽容使我们变得互相理解，互相友爱，互相尊重。",
+          "id": "S002062_P0000_T00",
+          "mska_metadata_text": "宽容使我们变得互相理解，互相信任，互相友爱。"
+        },
+        {
+          "generation_query_text": "宽容使我们变得互相理解，互相友爱，互相尊重。",
+          "id": "S002062_P0007_T00",
+          "mska_metadata_text": "宽容使我们变得互相理解，互相信任，互相友爱。"
+        },
+        {
+          "generation_query_text": "他们已经离婚了，但仍然保持联系。",
+          "id": "S002063_P0000_T00",
+          "mska_metadata_text": "他们已经离婚了，但仍然藕断丝连地保持联系。"
+        },
+        {
+          "generation_query_text": "他手工一天做的活没有机器半个小时做的好。",
+          "id": "S002122_P0005_T00",
+          "mska_metadata_text": "他手工一天做的笨活没有机器半个小时做的好。"
+        },
+        {
+          "generation_query_text": "他手工一天做的活没有机器半个小时做的好。",
+          "id": "S002122_P0007_T00",
+          "mska_metadata_text": "他手工一天做的笨活没有机器半个小时做的好。"
+        },
+        {
+          "generation_query_text": "他喜欢模仿歌星唱歌，还很有模有样。",
+          "id": "S002132_P0005_T00",
+          "mska_metadata_text": "她喜欢模仿歌星唱歌，还很有模有样。"
+        },
+        {
+          "generation_query_text": "他喜欢模仿歌星唱歌，还很有模有样。",
+          "id": "S002132_P0007_T00",
+          "mska_metadata_text": "她喜欢模仿歌星唱歌，还很有模有样。"
+        },
+        {
+          "generation_query_text": "经过几次的失败，实验终于成功了，大家非常高兴，奔走相告。",
+          "id": "S002264_P0000_T00",
+          "mska_metadata_text": "经过几次的失败，试验终于成功了，大家欣喜若狂，奔走相告。"
+        },
+        {
+          "generation_query_text": "经过几次的失败，实验终于成功了，大家非常高兴，奔走相告。",
+          "id": "S002264_P0007_T00",
+          "mska_metadata_text": "经过几次的失败，试验终于成功了，大家欣喜若狂，奔走相告。"
+        },
+        {
+          "generation_query_text": "有些小孩子很害怕输液，一直大哭。",
+          "id": "S002274_P0005_T00",
+          "mska_metadata_text": "有些小孩子很害怕输液，一直嚎啕大哭。"
+        },
+        {
+          "generation_query_text": "有些小孩子很害怕输液，一直大哭。",
+          "id": "S002274_P0007_T00",
+          "mska_metadata_text": "有些小孩子很害怕输液，一直嚎啕大哭。"
+        },
+        {
+          "generation_query_text": "你有什么办法就快说，别不说话。",
+          "id": "S002529_P0000_T00",
+          "mska_metadata_text": "你有什么办法就快说，别藏着掖着。"
+        },
+        {
+          "generation_query_text": "这间玻璃房子有一百年历史了。",
+          "id": "S002578_P0000_T00",
+          "mska_metadata_text": "这间玻璃作坊有一百年历史了。"
+        },
+        {
+          "generation_query_text": "这间玻璃房子有一百年历史了。",
+          "id": "S002578_P0005_T00",
+          "mska_metadata_text": "这间玻璃作坊有一百年历史了。"
+        },
+        {
+          "generation_query_text": "他把处方上的药名弄错了，结果出了大麻烦。",
+          "id": "S003289_P0002_T00",
+          "mska_metadata_text": "我怎么找不到医生开给我的处方了？"
+        },
+        {
+          "generation_query_text": "老师安慰了半天，他才止住了哭。",
+          "id": "S003418_P0002_T00",
+          "mska_metadata_text": "老师安慰了半天，她才止住了哭。"
+        },
+        {
+          "generation_query_text": "有人说，长期服用避孕药会对女性身体不好。",
+          "id": "S003537_P0000_T00",
+          "mska_metadata_text": "有人说，长期服用避孕药会打乱女性的内分泌平衡。"
+        },
+        {
+          "generation_query_text": "有人说，长期服用避孕药会对女性身体不好。",
+          "id": "S003537_P0001_T00",
+          "mska_metadata_text": "有人说，长期服用避孕药会打乱女性的内分泌平衡。"
+        },
+        {
+          "generation_query_text": "性格，既不固定也不是不变，而是活动变化着的。",
+          "id": "S003551_P0000_T00",
+          "mska_metadata_text": "性格，既不坚固也不是一成不变，而是活动变化着的。"
+        },
+        {
+          "generation_query_text": "性格，既不固定也不是不变，而是活动变化着的。",
+          "id": "S003551_P0001_T00",
+          "mska_metadata_text": "性格，既不坚固也不是一成不变，而是活动变化着的。"
+        },
+        {
+          "generation_query_text": "我们不能理解他所说的话。",
+          "id": "S003579_P0002_T00",
+          "mska_metadata_text": "我们不能理解他所说的一番话。"
+        },
+        {
+          "generation_query_text": "这孩子一天到晚玩，真令人操心。",
+          "id": "S003605_P0000_T00",
+          "mska_metadata_text": "这孩子一天到晚，游手好闲，真令人操心。"
+        },
+        {
+          "generation_query_text": "这孩子一天到晚玩，真令人操心。",
+          "id": "S003605_P0001_T00",
+          "mska_metadata_text": "这孩子一天到晚，游手好闲，真令人操心。"
+        },
+        {
+          "generation_query_text": "考生可向学院办公室查询考试分数。",
+          "id": "S003619_P0000_T00",
+          "mska_metadata_text": "考生可向学院办公室查询最终录取结果。"
+        },
+        {
+          "generation_query_text": "老师和同学们一致称赞小王是一个好学生。",
+          "id": "S003633_P0000_T00",
+          "mska_metadata_text": "老师和同学们一致称赞东东是一个好学生。"
+        },
+        {
+          "generation_query_text": "老师和同学们一致称赞小王是一个好学生。",
+          "id": "S003633_P0001_T00",
+          "mska_metadata_text": "老师和同学们一致称赞东东是一个好学生。"
+        },
+        {
+          "generation_query_text": "大家一致称赞老师献身于教育事业的精神。",
+          "id": "S003645_P0000_T00",
+          "mska_metadata_text": "大家众口同声地称赞她献身于教育事业的精神。"
+        },
+        {
+          "generation_query_text": "大家一致称赞老师献身于教育事业的精神。",
+          "id": "S003645_P0002_T00",
+          "mska_metadata_text": "大家众口同声地称赞她献身于教育事业的精神。"
+        },
+        {
+          "generation_query_text": "我们要和与合同承包商协调合作，保障工作的顺利完成。",
+          "id": "S003651_P0001_T00",
+          "mska_metadata_text": "我们要和与合同承包商协调合作，保障维修工作的顺利完成。"
+        },
+        {
+          "generation_query_text": "这条小路十分安静，以至于他都能听到身边人的呼吸的声音。",
+          "id": "S003860_P0000_T00",
+          "mska_metadata_text": "这条小路十分安静，以至于她都能听到身边人的呼吸的声音。"
+        },
+        {
+          "generation_query_text": "这条小路十分安静，以至于他都能听到身边人的呼吸的声音。",
+          "id": "S003860_P0002_T00",
+          "mska_metadata_text": "这条小路十分安静，以至于她都能听到身边人的呼吸的声音。"
+        },
+        {
+          "generation_query_text": "朋友抱怨他的妈妈很唠叨。",
+          "id": "S004161_P0000_T00",
+          "mska_metadata_text": "朋友抱怨她的妈妈很唠叨。"
+        },
+        {
+          "generation_query_text": "朋友抱怨他的妈妈很唠叨。",
+          "id": "S004161_P0002_T00",
+          "mska_metadata_text": "朋友抱怨她的妈妈很唠叨。"
+        },
+        {
+          "generation_query_text": "联欢会上，看到小王模仿明星，我们看笑了。",
+          "id": "S005418_P0000_T00",
+          "mska_metadata_text": "联欢会上，看到小王模仿明星，我们不禁哑然失笑。"
+        },
+        {
+          "generation_query_text": "联欢会上，看到小王模仿明星，我们看笑了。",
+          "id": "S005418_P0009_T00",
+          "mska_metadata_text": "联欢会上，看到小王模仿明星，我们不禁哑然失笑。"
+        },
+        {
+          "generation_query_text": "他很爱护家园的一草一木。",
+          "id": "S005764_P0006_T00",
+          "mska_metadata_text": "她很爱护家园的一草一木。"
+        },
+        {
+          "generation_query_text": "像你这样粗糙的人原来也会有害羞的时候啊！",
+          "id": "S005957_P0000_T00",
+          "mska_metadata_text": "像你这样大大咧咧的人原来也会有害羞的时候啊！"
+        },
+        {
+          "generation_query_text": "他撒谎说自己已经有交往对象了。",
+          "id": "S006430_P0000_T00",
+          "mska_metadata_text": "她撒谎说自己已经有交往对象了。"
+        },
+        {
+          "generation_query_text": "还有其他症状吗，比如说呕吐、头痛？",
+          "id": "S006640_P0009_T00",
+          "mska_metadata_text": "还有其他症状吗，比如说恶心，呕吐，腹泻？"
+        },
+        {
+          "generation_query_text": "你看他受了那么大的委屈都没说，你还有什么不平呢？",
+          "id": "S006967_P0000_T00",
+          "mska_metadata_text": "你看她受了那么大的委屈都没说，你还有什么不平呢？"
+        },
+        {
+          "generation_query_text": "广告公司可以充分发挥自己在绘画和美术上的技术。",
+          "id": "S007137_P0003_T00",
+          "mska_metadata_text": "广告公司可以充分发挥自己在绘画和美术装潢上的技术。"
+        }
+      ],
+      "caption_normalization_applied": false,
+      "generation_and_bootstrap_caption_authority": "preregistered v4 JSON manifest; unchanged",
+      "generation_caption_sha256": "126c4bc1f5661566daab70c06c2e169e0f60b4b9c7ee47ce2fa047212f824501",
+      "gloss_mismatch_count": 0,
+      "n": 1176,
+      "name_mismatch_count": 0,
+      "pose_only_contract": {
+        "accepted_evaluator_sha256_by_split": {
+          "dev": "59f77a5deeb1b8f5ea985b0eab251f68e31e7d575d406a52069a76d239859c92",
+          "test": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+        },
+        "caption_read_by_dataset": false,
+        "config": {
+          "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/configs/csl-daily_s2g.yaml",
+          "sha256": "72b76dbd3000d411287d3affc0e5163a2452a87e968bf57c5a68343884181141"
+        },
+        "local_recognition_import_closure": {
+          "bundle_algorithm": "SHA256 of UTF-8 canonical JSON relative-path to SHA256 mapping",
+          "bundle_sha256": "c1fa73518427e7303eb2909d5b29b4b1204f7ed4d63437cdb16e30117ee404b4",
+          "entrypoint": {
+            "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval_57b74fa1.py",
+            "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+          },
+          "files": {
+            "Rouge.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Rouge.py",
+              "sha256": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd"
+            },
+            "Tokenizer.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Tokenizer.py",
+              "sha256": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13"
+            },
+            "Visualhead.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/Visualhead.py",
+              "sha256": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d"
+            },
+            "datasets.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/datasets.py",
+              "sha256": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf"
+            },
+            "metrics.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/metrics.py",
+              "sha256": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445"
+            },
+            "recognition.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/recognition.py",
+              "sha256": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621"
+            },
+            "sacrebleu.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/sacrebleu.py",
+              "sha256": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f"
+            },
+            "utils.py": {
+              "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/utils.py",
+              "sha256": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+            }
+          },
+          "live_gloss_vocabulary": {
+            "path": "/home/kumwilai/research/signgen-t2m/external/baselines/MSKA/data/CSL-Daily/gloss2ids.pkl",
+            "sha256": "3b347a8a3c81ad2a2e79eaa28b89dcc0502cd09070f29175bb3e86f338afdf4d"
+          },
+          "local_import_edges": {
+            "Rouge.py": [],
+            "Tokenizer.py": [],
+            "Visualhead.py": [
+              "utils.py"
+            ],
+            "datasets.py": [
+              "Tokenizer.py",
+              "utils.py"
+            ],
+            "metrics.py": [
+              "Rouge.py",
+              "sacrebleu.py"
+            ],
+            "recognition.py": [
+              "Tokenizer.py",
+              "Visualhead.py"
+            ],
+            "sacrebleu.py": [],
+            "utils.py": []
+          },
+          "nonlocal_import_roots": [
+            "PIL",
+            "__future__",
+            "argparse",
+            "builtins",
+            "collections",
+            "contextlib",
+            "copy",
+            "cv2",
+            "datetime",
+            "einops",
+            "functools",
+            "gzip",
+            "hashlib",
+            "io",
+            "itertools",
+            "json",
+            "logging",
+            "math",
+            "matplotlib",
+            "numpy",
+            "os",
+            "pathlib",
+            "pickle",
+            "portalocker",
+            "random",
+            "re",
+            "resource",
+            "seaborn",
+            "signal",
+            "sys",
+            "tarfile",
+            "tensorflow",
+            "time",
+            "torch",
+            "torchtext",
+            "torchvision",
+            "transformers",
+            "typing",
+            "unicodedata",
+            "urllib",
+            "yaml",
+            "zipfile"
+          ],
+          "poison_caption_test_scope": "native dataset __getitem__/collate methods only; not all imports",
+          "relative_path_sha256": {
+            "Rouge.py": "65762148a0dfdef40cd3b6482054c2a5c962144907e642d175305f2218e907fd",
+            "Tokenizer.py": "a5f21a4f8dad5cd2e251178028355ed79384812a28cadba556e4b892720ffe13",
+            "Visualhead.py": "1a1c2b0a646b1e35a374b5152ddf5d3c588ee3aa3ec2d047e50e62ef4a3bb88d",
+            "datasets.py": "85004ee684452599a2fde75e5d432b33b85062854ea9c2370b9fca80ee1713cf",
+            "metrics.py": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445",
+            "recognition.py": "d31a968d2ad6b4641f37116ae00c02e1514eb9213a03bdf2a87660071eee6621",
+            "sacrebleu.py": "511541090733cdeff88e334a6ed651ef94b46cd37163666cbbfc121962a3723f",
+            "utils.py": "59d44ab4f070f05b354209e7e917969ce3fbf00dc6ba84ded9145a5d7f4fb43b"
+          },
+          "runtime_execution_attested": false,
+          "schema": "reduced_csl_local_recognition_import_closure_v1",
+          "scope": "recursive static Import/ImportFrom closure, including nested statements, in the MSKA repository",
+          "third_party_environment_hashed": false
+        },
+        "task": "S2G"
+      },
+      "reference_authority": "exact agreement between declared gloss and canonical MSKA gloss",
+      "schema": "reduced_csl_annotation_lineage_v1"
+    }
+  },
+  "all_head_metrics": {
+    "fixed40": {
+      "body_hyp": {
+        "hyp_ref_ratio": 0.767940457676072,
+        "num_del": 3006,
+        "num_err": 8367,
+        "num_hyp": 6913,
+        "num_ins": 917,
+        "num_ref": 9002,
+        "num_sub": 4444,
+        "wer": 92.94601199733393
+      },
+      "ensemble_last_hyp": {
+        "hyp_ref_ratio": 0.7067318373694734,
+        "num_del": 3351,
+        "num_err": 8183,
+        "num_hyp": 6362,
+        "num_ins": 711,
+        "num_ref": 9002,
+        "num_sub": 4121,
+        "wer": 90.90202177293935
+      },
+      "fuse_hyp": {
+        "hyp_ref_ratio": 0.7676071984003555,
+        "num_del": 2971,
+        "num_err": 8318,
+        "num_hyp": 6910,
+        "num_ins": 879,
+        "num_ref": 9002,
+        "num_sub": 4468,
+        "wer": 92.40168851366363
+      },
+      "left_hyp": {
+        "hyp_ref_ratio": 0.6493001555209953,
+        "num_del": 3754,
+        "num_err": 8413,
+        "num_hyp": 5845,
+        "num_ins": 597,
+        "num_ref": 9002,
+        "num_sub": 4062,
+        "wer": 93.45700955343257
+      },
+      "right_hyp": {
+        "hyp_ref_ratio": 0.7177293934681181,
+        "num_del": 3286,
+        "num_err": 8264,
+        "num_hyp": 6461,
+        "num_ins": 745,
+        "num_ref": 9002,
+        "num_sub": 4233,
+        "wer": 91.80182181737392
+      }
+    },
+    "learned40": {
+      "body_hyp": {
+        "hyp_ref_ratio": 0.7646078649189069,
+        "num_del": 2966,
+        "num_err": 8276,
+        "num_hyp": 6883,
+        "num_ins": 847,
+        "num_ref": 9002,
+        "num_sub": 4463,
+        "wer": 91.93512552766052
+      },
+      "ensemble_last_hyp": {
+        "hyp_ref_ratio": 0.7067318373694734,
+        "num_del": 3247,
+        "num_err": 8039,
+        "num_hyp": 6362,
+        "num_ins": 607,
+        "num_ref": 9002,
+        "num_sub": 4185,
+        "wer": 89.30237724950011
+      },
+      "fuse_hyp": {
+        "hyp_ref_ratio": 0.7649411241946235,
+        "num_del": 2931,
+        "num_err": 8212,
+        "num_hyp": 6886,
+        "num_ins": 815,
+        "num_ref": 9002,
+        "num_sub": 4466,
+        "wer": 91.22417240613197
+      },
+      "left_hyp": {
+        "hyp_ref_ratio": 0.645412130637636,
+        "num_del": 3708,
+        "num_err": 8335,
+        "num_hyp": 5810,
+        "num_ins": 516,
+        "num_ref": 9002,
+        "num_sub": 4111,
+        "wer": 92.59053543656965
+      },
+      "right_hyp": {
+        "hyp_ref_ratio": 0.7189513441457454,
+        "num_del": 3215,
+        "num_err": 8175,
+        "num_hyp": 6472,
+        "num_ins": 685,
+        "num_ref": 9002,
+        "num_sub": 4275,
+        "wer": 90.81315263274828
+      }
+    },
+    "local": {
+      "body_hyp": {
+        "hyp_ref_ratio": 0.7441679626749611,
+        "num_del": 3086,
+        "num_err": 8465,
+        "num_hyp": 6699,
+        "num_ins": 783,
+        "num_ref": 9002,
+        "num_sub": 4596,
+        "wer": 94.03465896467452
+      },
+      "ensemble_last_hyp": {
+        "hyp_ref_ratio": 0.6611864030215507,
+        "num_del": 3568,
+        "num_err": 8227,
+        "num_hyp": 5952,
+        "num_ins": 518,
+        "num_ref": 9002,
+        "num_sub": 4141,
+        "wer": 91.39080204399022
+      },
+      "fuse_hyp": {
+        "hyp_ref_ratio": 0.7390579871139746,
+        "num_del": 3092,
+        "num_err": 8398,
+        "num_hyp": 6653,
+        "num_ins": 743,
+        "num_ref": 9002,
+        "num_sub": 4563,
+        "wer": 93.29037991557432
+      },
+      "left_hyp": {
+        "hyp_ref_ratio": 0.5859808931348589,
+        "num_del": 4105,
+        "num_err": 8591,
+        "num_hyp": 5275,
+        "num_ins": 378,
+        "num_ref": 9002,
+        "num_sub": 4108,
+        "wer": 95.43434792268384
+      },
+      "right_hyp": {
+        "hyp_ref_ratio": 0.674516774050211,
+        "num_del": 3510,
+        "num_err": 8383,
+        "num_hyp": 6072,
+        "num_ins": 580,
+        "num_ref": 9002,
+        "num_sub": 4293,
+        "wer": 93.12375027771607
+      }
+    },
+    "whole": {
+      "body_hyp": {
+        "hyp_ref_ratio": 0.828815818706954,
+        "num_del": 2712,
+        "num_err": 8324,
+        "num_hyp": 7461,
+        "num_ins": 1171,
+        "num_ref": 9002,
+        "num_sub": 4441,
+        "wer": 92.46834036880693
+      },
+      "ensemble_last_hyp": {
+        "hyp_ref_ratio": 0.821373028215952,
+        "num_del": 2743,
+        "num_err": 8294,
+        "num_hyp": 7394,
+        "num_ins": 1135,
+        "num_ref": 9002,
+        "num_sub": 4416,
+        "wer": 92.13508109309042
+      },
+      "fuse_hyp": {
+        "hyp_ref_ratio": 0.8302599422350588,
+        "num_del": 2692,
+        "num_err": 8314,
+        "num_hyp": 7474,
+        "num_ins": 1164,
+        "num_ref": 9002,
+        "num_sub": 4458,
+        "wer": 92.3572539435681
+      },
+      "left_hyp": {
+        "hyp_ref_ratio": 0.7956009775605422,
+        "num_del": 2911,
+        "num_err": 8317,
+        "num_hyp": 7162,
+        "num_ins": 1071,
+        "num_ref": 9002,
+        "num_sub": 4335,
+        "wer": 92.39057987113975
+      },
+      "right_hyp": {
+        "hyp_ref_ratio": 0.8242612752721618,
+        "num_del": 2742,
+        "num_err": 8324,
+        "num_hyp": 7420,
+        "num_ins": 1160,
+        "num_ref": 9002,
+        "num_sub": 4422,
+        "wer": 92.46834036880693
+      }
+    }
+  },
+  "completed_unix_ns": 1788717450863795352,
+  "composition_identity_pass": true,
+  "coverage": {
+    "emitted": 1176,
+    "missing_predictions": 0,
+    "refused": 0
+  },
+  "emitted_frames": {
+    "fixed40": 87569,
+    "learned40": 86221,
+    "local": 72212,
+    "whole": 121791
+  },
+  "evaluator_contract": {
+    "checkpoint_sha256": "57674e966c74de57657201374677ff64f823973e2ffb15e64928a973034e5de7",
+    "checkpoint_state_key_count": 1216,
+    "config_sha256": "72b76dbd3000d411287d3affc0e5163a2452a87e968bf57c5a68343884181141",
+    "implementation_sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+  },
+  "evidence": {
+    "fixed_subset_provenance": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_inputs_test_v1/first20/CSL-Daily.test_first20_fixed40.provenance.json",
+      "sha256": "03764fdbea5865387ff4ceb15d180e766ceb6fefb2604b83aa54a483582e3387"
+    },
+    "fixed_subset_result": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_eval_v2/first20_fixed40/mska_test_5fe5033c9695.json",
+      "sha256": "ff49fb153681f5bfda1ee0e8995f4f2ee1eff410f2d67542f7811547bb1039e7"
+    },
+    "learned_subset_provenance": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_inputs_test_v1/first20/CSL-Daily.test_first20_learned40.provenance.json",
+      "sha256": "dfa4e18316fa36257d2de04263c552078eba297468978d499f1d74afa00f7038"
+    },
+    "learned_subset_result": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_eval_v2/first20_learned40/mska_test_c37605de1021.json",
+      "sha256": "ff123bb9e2a4a077d2e60a785f15f109e557b24bcad519fac7f6a9a894a4683d"
+    },
+    "local_provenance": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_inputs_test_v1/test_local/CSL-Daily.test_local.provenance.json",
+      "sha256": "907c30665d8f75b483dd2a100d32b426f0f85396ae5e5f998396308d97ae9f6a"
+    },
+    "local_result": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_eval_v2/test_local/mska_test_fe9547244af1.json",
+      "sha256": "47597d8b5560566b1ccae5c21e1e17e90100208e539320b4dbcc2500739dadb4"
+    },
+    "test_evaluator_relocation": {
+      "development_pin_unchanged": "59f77a5deeb1b8f5ea985b0eab251f68e31e7d575d406a52069a76d239859c92",
+      "generic_hash_fallback": false,
+      "recorded": {
+        "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval.py",
+        "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+      },
+      "resolved_snapshot": {
+        "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval_57b74fa1.py",
+        "sha256": "57b74fa11242cc3b11fa2c190eeceb9da7a3e91db1b386305c67e0aa862bf7b9"
+      },
+      "schema": "sealed_test_evaluator_relocation_v1",
+      "supported_test_only_wrapper": {
+        "path": "/home/kumwilai/research/signgen-t2m/scripts/run_csl_mska_split_eval.py",
+        "sha256": "e7a155afad52103c31bbdc00a49932e0df7a024af7b9e1c87f3499f9c80b95d6"
+      }
+    },
+    "whole_provenance": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_inputs_test_v1/test_whole/CSL-Daily.test_whole.provenance.json",
+      "sha256": "479d99c001e685f49ffe6a2ea3196431aaccdc18393e90cbe86a06e2b3ebdeb3"
+    },
+    "whole_result": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_mska_eval_v2/test_whole/mska_test_9e0931316110.json",
+      "sha256": "e98167c6ce3d303c943c8a610a92b5a73feffc586879203288903c0dbae2e4e9"
+    }
+  },
+  "first20_identity": {
+    "fixed40": {
+      "heads": [
+        "ensemble_last_hyp",
+        "body_hyp",
+        "fuse_hyp",
+        "left_hyp",
+        "right_hyp"
+      ],
+      "ids": [
+        "S000020_P0004_T00",
+        "S000040_P0008_T00",
+        "S000054_P0008_T00",
+        "S000153_P0000_T00",
+        "S000185_P0004_T00",
+        "S000185_P0008_T00",
+        "S000195_P0004_T00",
+        "S000196_P0008_T00",
+        "S000201_P0000_T00",
+        "S000213_P0004_T00",
+        "S000213_P0008_T00",
+        "S000218_P0004_T00",
+        "S000218_P0008_T00",
+        "S000220_P0000_T00",
+        "S000224_P0000_T00",
+        "S000224_P0008_T00",
+        "S000225_P0004_T00",
+        "S000230_P0000_T00",
+        "S000230_P0008_T00",
+        "S000236_P0000_T00"
+      ],
+      "mismatches": [],
+      "passed": true
+    },
+    "learned40": {
+      "heads": [
+        "ensemble_last_hyp",
+        "body_hyp",
+        "fuse_hyp",
+        "left_hyp",
+        "right_hyp"
+      ],
+      "ids": [
+        "S000020_P0004_T00",
+        "S000040_P0008_T00",
+        "S000054_P0008_T00",
+        "S000153_P0000_T00",
+        "S000185_P0004_T00",
+        "S000185_P0008_T00",
+        "S000195_P0004_T00",
+        "S000196_P0008_T00",
+        "S000201_P0000_T00",
+        "S000213_P0004_T00",
+        "S000213_P0008_T00",
+        "S000218_P0004_T00",
+        "S000218_P0008_T00",
+        "S000220_P0000_T00",
+        "S000224_P0000_T00",
+        "S000224_P0008_T00",
+        "S000225_P0004_T00",
+        "S000230_P0000_T00",
+        "S000230_P0008_T00",
+        "S000236_P0000_T00"
+      ],
+      "mismatches": [],
+      "passed": true
+    }
+  },
+  "freeze_sha256": "3031ebfec31aaebe6cb9b145cdfecb9e2040e44250ab7a8d91b8d8d30b17e608",
+  "implementation_sha256": "ad47d700905bd5bc8dfb9196a9bccebed07c3ccf487e3579fe4ce49fd9085065",
+  "n": 1176,
+  "native_metric_sha256": "cc18a21a19d9fe817a8177a6da2eb277fea9863b1de1c3f11fdd08acfe859445",
+  "primary_paired_bootstrap": {
+    "ci95": [
+      -2.0748832386960174,
+      -1.1409598214817618
+    ],
+    "difference_learned_minus_fixed_wer": -1.5996445234392358,
+    "group_membership_sha256": "ec094fe8f2c2590493a6d028885970b780c1d4ee41788b02c18106f56f3e2c09",
+    "groups": 798,
+    "learned_benefit_confirmed_by_preregistered_falsifier": true,
+    "percentile_method": "linear",
+    "replicate_sha256": "4e66e0dd521789bfe58c584cad22b870ba9defd7c877d1c7d9fc4b244b1df9c8",
+    "replicates": 10000,
+    "requests": 1176,
+    "sampling_unit": "normalized public-caption group; include all group members",
+    "seed": 30373
+  },
+  "schema": "reduced_csl_analysis_v1",
+  "scope": "post-test reduced one-feature CSL allocation; not PHOENIX-method equivalence or human intelligibility",
+  "seal_sha256": "1d2f6fa96b4e8983b84e4c1140ada6f77cbbab5c11ba59a6463e1e66460fd7b3",
+  "used_direct_full_fallback": false
+}

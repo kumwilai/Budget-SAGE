@@ -1,0 +1,1635 @@
+{
+  "design_sha256": "147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6",
+  "invariance_probes": {
+    "policy": {
+      "device": "cpu",
+      "gloss_policy": "lowest two positive checkpoint vocabulary IDs",
+      "long_codes": 8,
+      "long_frames": 16,
+      "seed": 0,
+      "short_codes": 4,
+      "short_frames": 8,
+      "threads": 1,
+      "tolerance": 1e-05,
+      "vq_code_policy": "arange(short_codes), right-pad with code 0"
+    },
+    "pt": {
+      "historical_export_horizon": {
+        "elements_above_tolerance": 2793,
+        "invariant": false,
+        "max_abs": 0.8913944587111473,
+        "mean_abs": 0.11793637409065107,
+        "tolerance": 1e-05
+      },
+      "historical_export_mixed_batch": {
+        "elements_above_tolerance": 2793,
+        "invariant": false,
+        "max_abs": 0.8913949355483055,
+        "mean_abs": 0.11793647717794122,
+        "tolerance": 1e-05
+      },
+      "long_frames": 16,
+      "mask": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "mechanism": "Local export resamples the complete batch-max trajectory, not the per-item prefix.",
+      "prefix_at_longer_horizon": {
+        "elements_above_tolerance": 0,
+        "invariant": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "tolerance": 1e-05
+      },
+      "same_horizon_batch_composition": {
+        "elements_above_tolerance": 0,
+        "invariant": true,
+        "max_abs": 4.231929779052734e-06,
+        "mean_abs": 3.676838620815585e-07,
+        "tolerance": 1e-05
+      },
+      "same_horizon_reversed_order": {
+        "elements_above_tolerance": 0,
+        "invariant": true,
+        "max_abs": 3.0994415283203125e-06,
+        "mean_abs": 2.913876599457143e-07,
+        "tolerance": 1e-05
+      },
+      "short_frames": 8,
+      "tokens": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "units": "checkpoint normalized (x,y,confidence)"
+    },
+    "vq": {
+      "extended_codes": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mechanism": "Convolutional VQ decoder sees future padded codes before per-item truncation; boundary outputs change.",
+      "mixed_batch_prefix": {
+        "elements_above_tolerance": 1596,
+        "invariant": false,
+        "max_abs": 3.271098017692566,
+        "mean_abs": 0.060112971510470584,
+        "tolerance": 1e-05
+      },
+      "other_codes": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prefix_with_code_zero_padding": {
+        "elements_above_tolerance": 1596,
+        "invariant": false,
+        "max_abs": 3.271098256111145,
+        "mean_abs": 0.060112797919616164,
+        "tolerance": 1e-05
+      },
+      "same_padded_horizon_batch_composition": {
+        "elements_above_tolerance": 0,
+        "invariant": true,
+        "max_abs": 3.0994415283203125e-06,
+        "mean_abs": 2.813728422365317e-07,
+        "tolerance": 1e-05
+      },
+      "same_padded_horizon_reversed_order": {
+        "elements_above_tolerance": 0,
+        "invariant": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "tolerance": 1e-05
+      },
+      "short_codes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "units": "checkpoint normalized (x,y,confidence)"
+    }
+  },
+  "no_training_corpus_generation_or_recognizer_run": true,
+  "official_manifest_checks": {
+    "dev": {
+      "admitted_count": 1077,
+      "admitted_ids_sha256": "c473a347404ab2821093c770c495ee9702ae406144a1d1c5f16b47994e5f4c65",
+      "declared_split_count": 1077,
+      "unannotated_split_ids": []
+    },
+    "test": {
+      "admitted_count": 1176,
+      "admitted_ids_sha256": "3a6f8d6833be00372c5a73d81fc46341c817f07a62a86c5964524451a07fefce",
+      "declared_split_count": 1176,
+      "unannotated_split_ids": []
+    },
+    "train": {
+      "admitted_count": 18400,
+      "admitted_ids_sha256": "db6678d5b2595c2734cc49f747e352c12c80d10c85f196943d79446eb47b2415",
+      "declared_split_count": 18401,
+      "unannotated_split_ids": [
+        "S000005_P0004_T00"
+      ]
+    }
+  },
+  "overall_claim_ceiling": "Post-hoc audit of stored artifacts and bounded counterexamples, not fresh evaluation or untouched-test evidence.",
+  "probe_exception": "Four tiny PT forward-generation calls and four tiny VQ decode calls only, using frozen checkpoints and declared synthetic inputs.",
+  "rows": [
+    {
+      "checkpoint": {
+        "all_weights_finite": true,
+        "frozen_file": {
+          "bytes": 33050363,
+          "path": "outputs/csl_baselines/pt/best.pt",
+          "sha256": "e46351e1993a57684a9e0a73f3bbe4913576e15a3ab59b9fef094ea38c1b8d95"
+        },
+        "frozen_historical_training_provenance_complete": false,
+        "missing_frozen_training_metadata": [
+          "seed",
+          "epoch",
+          "training_ids_sha256",
+          "code_sha256",
+          "command",
+          "environment"
+        ],
+        "state_elements": 8242719,
+        "state_tensors": 136,
+        "stored_keys": [
+          "cfg",
+          "mean",
+          "model",
+          "std",
+          "vocab"
+        ],
+        "stored_metadata": {
+          "cfg": {
+            "counter_loss_weight": 0.1,
+            "d_model": 256,
+            "dropout": 0.1,
+            "ff_dim": 1024,
+            "max_gloss_len": 32,
+            "max_motion_len": 300,
+            "num_decoder_layers": 4,
+            "num_encoder_layers": 4,
+            "num_heads": 4,
+            "pose_dim": 399,
+            "vocab_size": 2001
+          },
+          "mean": [
+            251.04217529296875,
+            263.55615234375,
+            0.836933970451355
+          ],
+          "std": [
+            51.49378204345703,
+            98.52141571044922,
+            0.28257521986961365
+          ]
+        },
+        "tensor_schema_sha256": "eda6603d052d90ab944e28211cd15e9f91e0cbf984e7c04ecacbde7ef676a73a",
+        "training_log": {
+          "best_recorded_epoch": 38,
+          "best_recorded_value": 0.03980551374843344,
+          "checkpoint_epoch_binding": "absent unless epoch is stored; best epoch above is inferred from log only",
+          "epochs": 40,
+          "recorded_epoch_wall_seconds": 1183.9,
+          "selection_metric": "val_pose"
+        },
+        "vocabulary_sha256": "7393ef9aaefd8e4acb957583d34eb6450f2d19cba242dd9f0b690de56c5d8b6d",
+        "vocabulary_size": 2001
+      },
+      "claim_ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+      "id": "pt",
+      "method_fidelity": {
+        "ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+        "defining_mechanisms_missing_or_changed": [
+          "official joint-plus-continuous-counter regression/input; local endpoint BCE is different"
+        ],
+        "identifier_absence_in_local_scope": {},
+        "local_evidence": [
+          {
+            "ast_sha256": "d5812a9578340a08f99ed4e9d8b2b2ac56cac1b9fb3214258aff3ae45adbb1c3",
+            "bytes": 14296,
+            "end_line": 87,
+            "lines_sha256": "a07c845f5b8bb1872430785ec55bf2638d83e903258fd275a7316fa389c47754",
+            "path": "src/baselines/progressive_transformer.py",
+            "sha256": "724454572fa72c1ba370cd4855f834e1492679e07f8b2cfce56e1799e1159b67",
+            "start_line": 81,
+            "symbol": "stop_targets_from_lengths"
+          },
+          {
+            "ast_sha256": "c0efd00323e4b9c942087e6d8db0fb693f8148edf6d17e055b2191f062d6812c",
+            "bytes": 14296,
+            "end_line": 307,
+            "lines_sha256": "9ab8c2156a7962b20656cff6434c51fc63eda312e7c8c59a801773fe74b04439",
+            "path": "src/baselines/progressive_transformer.py",
+            "sha256": "724454572fa72c1ba370cd4855f834e1492679e07f8b2cfce56e1799e1159b67",
+            "start_line": 286,
+            "symbol": "progressive_transformer_loss"
+          },
+          {
+            "ast_sha256": "d0a033d5c9264ad0bdae52dfce7975aa4b920947c47c0ff0c85d4fd1594d3723",
+            "bytes": 14296,
+            "end_line": 187,
+            "lines_sha256": "1d492413b53c265be581eece5469a0a4d423d93761e18e058f9a3383cfc154fb",
+            "path": "src/baselines/progressive_transformer.py",
+            "sha256": "724454572fa72c1ba370cd4855f834e1492679e07f8b2cfce56e1799e1159b67",
+            "start_line": 136,
+            "symbol": "PoseDecoder"
+          },
+          {
+            "ast_sha256": "bf17cb177ff02ee6983e9669fac47191e2a2fabf059a074c6d46daefd864e327",
+            "bytes": 17239,
+            "end_line": 171,
+            "lines_sha256": "664919422b96052df605dba10f7ec0cb487cd83a6d566a5cf5c1a1816b562c51",
+            "path": "scripts/csl_baselines.py",
+            "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+            "start_line": 149,
+            "symbol": "generate_pt"
+          }
+        ],
+        "named_method_fidelity": false,
+        "official_evidence": [
+          {
+            "ast_sha256": "64742ca933550f6e4c47ba33e7298a56a97aba115dbe0bf37feabe343464e37a",
+            "bytes": 2379,
+            "end_line": 48,
+            "lines_sha256": "9157bafee04a7013e98727bd82dbeaa6594f988fcb8ad0526f158dd021be2c88",
+            "path": "external/baselines/ProgressiveTransformersSLP/loss.py",
+            "sha256": "f18d4e7a2f3122d8622b2e05db190cac8994a5c50d112c3cf74595743639ae41",
+            "start_line": 8,
+            "symbol": "RegLoss"
+          }
+        ],
+        "official_markers": [
+          {
+            "bytes": 12417,
+            "end_line": 273,
+            "lines_sha256": "f52b87d6eed94dffd65a9f64a884221a1b0b0614947100364c22bb12eb2f4800",
+            "path": "external/baselines/ProgressiveTransformersSLP/model.py",
+            "sha256": "7000db1fed1686200a2744f582219d675a69fc286872c07ab759e3abb8723886",
+            "start_line": 273
+          },
+          {
+            "bytes": 12417,
+            "end_line": 275,
+            "lines_sha256": "ba3b7bdc41b50467ce02dda6d0a5636b80ba22ff3ed743fec3778084fe26973e",
+            "path": "external/baselines/ProgressiveTransformersSLP/model.py",
+            "sha256": "7000db1fed1686200a2744f582219d675a69fc286872c07ab759e3abb8723886",
+            "start_line": 275
+          }
+        ]
+      },
+      "reasons": [
+        "checkpoint_lacks_frozen_training_provenance",
+        "defining_named_method_mechanisms_missing_or_changed",
+        "dev_confidence_outside_unit_interval_or_nonfinite",
+        "historical_architectural_control_not_named_reproduction",
+        "historical_export_changes_with_batch_horizon",
+        "historical_per_result_best_head_selection",
+        "raw_training_archive_contains_nonadmitted_sources",
+        "test_confidence_outside_unit_interval_or_nonfinite"
+      ],
+      "split_checks": {
+        "dev": {
+          "confidence": {
+            "above_one": 844559,
+            "below_zero": 6643,
+            "elements": 10456859,
+            "finite_range": [
+              -0.20716464519500732,
+              1.0554096698760986
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.0814013079835924,
+            "outside_unit_interval": 851202,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1077,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 78623
+          },
+          "id_set_sha256": "c473a347404ab2821093c770c495ee9702ae406144a1d1c5f16b47994e5f4c65",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "c9c1c5a9c283a8ad9968934399bf0c61f1448b83d1c5df974eb749d91e4e8ce8",
+          "missing_ids": [],
+          "n": 1077,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        },
+        "test": {
+          "confidence": {
+            "above_one": 937338,
+            "below_zero": 8482,
+            "elements": 11556503,
+            "finite_range": [
+              -0.23826241493225098,
+              1.0505924224853516
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.08184309734527824,
+            "outside_unit_interval": 945820,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1176,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 86891
+          },
+          "id_set_sha256": "3a6f8d6833be00372c5a73d81fc46341c817f07a62a86c5964524451a07fefce",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "3e61059efe59ce980f36a551d764ee8f803f6db0a07382778bb9fe57f8aea410",
+          "missing_ids": [],
+          "n": 1176,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        }
+      },
+      "status": "REJECTED"
+    },
+    {
+      "checkpoint": {
+        "all_weights_finite": true,
+        "frozen_file": {
+          "bytes": 41766156,
+          "path": "outputs/csl_baselines/diff/best.pt",
+          "sha256": "0c969969ce4df44e423ceba0d38a0616100ca59e1112c626af0de06df6b18c0d"
+        },
+        "frozen_historical_training_provenance_complete": false,
+        "missing_frozen_training_metadata": [
+          "seed",
+          "epoch",
+          "training_ids_sha256",
+          "code_sha256",
+          "command",
+          "environment"
+        ],
+        "state_elements": 10419599,
+        "state_tensors": 171,
+        "stored_keys": [
+          "d_model",
+          "mean",
+          "model",
+          "std",
+          "vocab"
+        ],
+        "stored_metadata": {
+          "d_model": 256,
+          "mean": [
+            251.04217529296875,
+            263.55615234375,
+            0.836933970451355
+          ],
+          "std": [
+            51.49378204345703,
+            98.52141571044922,
+            0.28257521986961365
+          ]
+        },
+        "tensor_schema_sha256": "83459442bb942aac20fa740c4c1cbc0da1b8b5a73fa1a005f34ba629d05a78b7",
+        "training_log": {
+          "best_recorded_epoch": 32,
+          "best_recorded_value": 0.3673087256029248,
+          "checkpoint_epoch_binding": "absent unless epoch is stored; best epoch above is inferred from log only",
+          "epochs": 40,
+          "recorded_epoch_wall_seconds": 1391.0,
+          "selection_metric": "val_eps"
+        },
+        "vocabulary_sha256": "7393ef9aaefd8e4acb957583d34eb6450f2d19cba242dd9f0b690de56c5d8b6d",
+        "vocabulary_size": 2001
+      },
+      "claim_ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+      "id": "signidd",
+      "method_fidelity": {
+        "ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+        "defining_mechanisms_missing_or_changed": [
+          "iconicity decomposition ID",
+          "attribute-controlled ACD denoiser and attribute attention"
+        ],
+        "identifier_absence_in_local_scope": {
+          "ACD": true,
+          "ACD_Denoiser": true,
+          "ID": true,
+          "layers_mha_ac": true
+        },
+        "local_evidence": [
+          {
+            "ast_sha256": "b201e5c54d7d508350306cff69e1998abcc174defd70461e98dc71095ac67e8e",
+            "bytes": 17239,
+            "end_line": 208,
+            "lines_sha256": "9d72aa09d20caf47128ef5a03231460e813823d6ebe696d2e1d666109ccf4c43",
+            "path": "scripts/csl_baselines.py",
+            "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+            "start_line": 190,
+            "symbol": "PoseDenoiser"
+          },
+          {
+            "ast_sha256": "39c42c6e25e95c6e324ff49044ca27c083c390e6c6f0a45223fc7800b5344ce0",
+            "bytes": 17239,
+            "end_line": 234,
+            "lines_sha256": "82effc0f9bbdb736e398d4ce90109358e9747b88654def75f5bb0fa4a3044b1b",
+            "path": "scripts/csl_baselines.py",
+            "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+            "start_line": 211,
+            "symbol": "Diffusion"
+          },
+          {
+            "ast_sha256": "ee39ad5b3a46ca307c5136f040ff7e93caf7c2488fc793e3eaf5575a89ecd3ea",
+            "bytes": 17239,
+            "end_line": 303,
+            "lines_sha256": "15c2a8351742d60515ea200d53a7778ff12c636ec07cec7d87f45a5b3685aebe",
+            "path": "scripts/csl_baselines.py",
+            "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+            "start_line": 284,
+            "symbol": "generate_diff"
+          }
+        ],
+        "named_method_fidelity": false,
+        "official_evidence": [
+          {
+            "ast_sha256": "2708a74cfad8b6ce45d7fe4b02cec9ae64a69761dda11397c8ee385192733306",
+            "bytes": 870,
+            "end_line": 19,
+            "lines_sha256": "d2d51542c964fae58b1e442825b0cf486c63208f97c5ee4f9c76be28d65803a1",
+            "path": "external/baselines/Sign-IDD/ID.py",
+            "sha256": "e980dc2f4a9522d548788d94685138dcf60df9806839b5b0d29b18b33104b0a2",
+            "start_line": 6,
+            "symbol": "ID"
+          },
+          {
+            "ast_sha256": "1d9e4180e6fd9df5771eeac2aa7a4c8e28cf72c7660ab197cae0df49a72e1681",
+            "bytes": 8953,
+            "end_line": 118,
+            "lines_sha256": "cc43313aa1c5e2da0aae46dc90463a6ae48f054c4abace0d03af47ac05f88b38",
+            "path": "external/baselines/Sign-IDD/ACD.py",
+            "sha256": "dfb29a3e640deb2acd8aff356b4fd5f9e421bbc5bd612419d5ffb5402ffe7b41",
+            "start_line": 104,
+            "symbol": "ACD.model_predictions"
+          },
+          {
+            "ast_sha256": "77ec4d20561915d38336ee1bc7a41d0db6b9813ce359bb24d5142cf6162aa36e",
+            "bytes": 4756,
+            "end_line": 127,
+            "lines_sha256": "73182dd2f6477074ea7c7a6bce9363fc96ca12a4bb3baa4cbe0f2f52a13e5044",
+            "path": "external/baselines/Sign-IDD/ACD_Denoiser.py",
+            "sha256": "6ca24d574497715fd1199cabcc3991811a84f2ae91a06328b43dc69e43b44515",
+            "start_line": 24,
+            "symbol": "ACD_Denoiser"
+          }
+        ],
+        "official_markers": []
+      },
+      "reasons": [
+        "checkpoint_lacks_frozen_training_provenance",
+        "defining_named_method_mechanisms_missing_or_changed",
+        "dev_confidence_outside_unit_interval_or_nonfinite",
+        "generation_rng_seed_not_bound",
+        "historical_architectural_control_not_named_reproduction",
+        "historical_per_result_best_head_selection",
+        "raw_training_archive_contains_nonadmitted_sources",
+        "test_confidence_outside_unit_interval_or_nonfinite"
+      ],
+      "split_checks": {
+        "dev": {
+          "confidence": {
+            "above_one": 4525515,
+            "below_zero": 1481963,
+            "elements": 10456859,
+            "finite_range": [
+              -0.2933669090270996,
+              1.9672348499298096
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.5745011958179794,
+            "outside_unit_interval": 6007478,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1077,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 78623
+          },
+          "id_set_sha256": "c473a347404ab2821093c770c495ee9702ae406144a1d1c5f16b47994e5f4c65",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "c9c1c5a9c283a8ad9968934399bf0c61f1448b83d1c5df974eb749d91e4e8ce8",
+          "missing_ids": [],
+          "n": 1077,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        },
+        "test": {
+          "confidence": {
+            "above_one": 5007374,
+            "below_zero": 1638153,
+            "elements": 11556503,
+            "finite_range": [
+              -0.2933669090270996,
+              1.9672348499298096
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.57504653440578,
+            "outside_unit_interval": 6645527,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1176,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 86891
+          },
+          "id_set_sha256": "3a6f8d6833be00372c5a73d81fc46341c817f07a62a86c5964524451a07fefce",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "3e61059efe59ce980f36a551d764ee8f803f6db0a07382778bb9fe57f8aea410",
+          "missing_ids": [],
+          "n": 1176,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        }
+      },
+      "status": "REJECTED"
+    },
+    {
+      "checkpoint": {
+        "all_weights_finite": true,
+        "frozen_file": {
+          "bytes": 42852443,
+          "path": "outputs/csl_baselines/soke/best.pt",
+          "sha256": "ae8465c65eeef881bb247588ed330255d73220c86ec3877879aa638568690dfc"
+        },
+        "frozen_historical_training_provenance_complete": false,
+        "historical_vq_hash_binding": "absent; checkpoint stores path only",
+        "missing_frozen_training_metadata": [
+          "seed",
+          "epoch",
+          "training_ids_sha256",
+          "code_sha256",
+          "command",
+          "environment"
+        ],
+        "state_elements": 10691328,
+        "state_tensors": 170,
+        "stored_keys": [
+          "K",
+          "d_model",
+          "gen",
+          "max_codes",
+          "model",
+          "vocab",
+          "vqvae"
+        ],
+        "stored_metadata": {
+          "K": 1024,
+          "d_model": 256,
+          "gen": "soke",
+          "max_codes": 128,
+          "vqvae": "outputs/csl_baselines/vqvae/best.pt"
+        },
+        "tensor_schema_sha256": "e0682521b1de00ead03362c45e22e3756cb64ee28047f31675d7dc1afaed3308",
+        "training_log": {
+          "best_recorded_epoch": 8,
+          "best_recorded_value": 2.49216391146183,
+          "checkpoint_epoch_binding": "absent unless epoch is stored; best epoch above is inferred from log only",
+          "epochs": 60,
+          "recorded_epoch_wall_seconds": 1705.4,
+          "selection_metric": "val_ce"
+        },
+        "vocabulary_sha256": "7393ef9aaefd8e4acb957583d34eb6450f2d19cba242dd9f0b690de56c5d8b6d",
+        "vocabulary_size": 2001,
+        "vq_dependency_bound_now": {
+          "bytes": 7852407,
+          "path": "outputs/csl_baselines/vqvae/best.pt",
+          "sha256": "9016ffb2517ca7471256da886c8c715fc7f36aab360fb45c4fa18558765f54c5"
+        }
+      },
+      "claim_ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+      "id": "soke",
+      "method_fidelity": {
+        "ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+        "defining_mechanisms_missing_or_changed": [
+          "pretrained multilingual language model",
+          "separate body/hand tokenizers and multi-head decoding",
+          "retrieval-enhanced conditioning"
+        ],
+        "identifier_absence_in_local_scope": {
+          "MBart": true,
+          "Mbart": true,
+          "lhand": true,
+          "mbart": true,
+          "retrieval": true,
+          "rhand": true
+        },
+        "local_evidence": [
+          {
+            "ast_sha256": "2bdb66905f37115520891fb5c0eb5059c0fbf297277aee8eb101c694effebc4b",
+            "bytes": 18861,
+            "end_line": 77,
+            "lines_sha256": "5697fb4dc1ff19156a195d25099bd160c5c97416b1a136e66dec89233f887a5b",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 49,
+            "symbol": "PoseVQVAE"
+          },
+          {
+            "ast_sha256": "455956cd13261abe0fe136ee1d930f6b910547d4680177fdd0036b613af01ad7",
+            "bytes": 18861,
+            "end_line": 157,
+            "lines_sha256": "54fe2ebbdbde2a1924a7420b94de3f44af45c1edae6508003dedaae748fd1de4",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 134,
+            "symbol": "CodeGenerator"
+          },
+          {
+            "ast_sha256": "757255c1777fdf92574f8f64b86deaeaeaae6a5814c30e11c1bf4e090e8e3101",
+            "bytes": 18861,
+            "end_line": 246,
+            "lines_sha256": "c05df08b3089f64c26f535902d420b8b75d6037fb9232d2fe1e64be219fc150d",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 172,
+            "symbol": "train_gen"
+          },
+          {
+            "ast_sha256": "012676a9a0d40e2076457e09abe5c54080f5ddbc9b6c8807907ee2c21ceed89e",
+            "bytes": 18861,
+            "end_line": 304,
+            "lines_sha256": "74a96cd7601c28a68f9f6fbf11ba94bbbe3771f2cbadde05a2a6a60460f91ffa",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 250,
+            "symbol": "generate"
+          }
+        ],
+        "named_method_fidelity": false,
+        "official_evidence": [
+          {
+            "ast_sha256": "4fbc988543d07e909b2edf92399c11f20ca254f1bc41e98eddd6c06100501b49",
+            "bytes": 42241,
+            "end_line": 52,
+            "lines_sha256": "eec3b747c2dc85ffd5d1e6f2837e0444292bdeed591c8f40b53510b3960ff160",
+            "path": "external/baselines/SOKE/mGPT/archs/mgpt_mbart.py",
+            "sha256": "dfa79bd923e738c94a66c15ec2960ed3a704b2d44857c61e8d3fb95a8c2828b1",
+            "start_line": 27,
+            "symbol": "correct_lang_token"
+          }
+        ],
+        "official_markers": [
+          {
+            "bytes": 5075,
+            "end_line": 6,
+            "lines_sha256": "7f663f9d8c66e7251a059cea721f94bc1b6bbff081e694a7c2b3159970728f1c",
+            "path": "external/baselines/SOKE/README.md",
+            "sha256": "e050ebed5e5eedb97fbf17e38f84f197778bbad1b7723274e267f017da3e5243",
+            "start_line": 6
+          },
+          {
+            "bytes": 240,
+            "end_line": 4,
+            "lines_sha256": "288ab6bc475b6ad917a5d35691c46885adb7d1d8bc79705f228973304df443f2",
+            "path": "external/baselines/SOKE/configs/lm/mbart_h2s_csl_phoenix.yaml",
+            "sha256": "9da74b7e31cca10e6a445839cee3c050ced1859e9038cb9fa58fcd295649b43a",
+            "start_line": 4
+          }
+        ]
+      },
+      "reasons": [
+        "checkpoint_lacks_frozen_training_provenance",
+        "defining_named_method_mechanisms_missing_or_changed",
+        "dev_confidence_outside_unit_interval_or_nonfinite",
+        "historical_architectural_control_not_named_reproduction",
+        "historical_per_result_best_head_selection",
+        "raw_training_archive_contains_nonadmitted_sources",
+        "shared_vq_decoder_changes_with_padded_horizon",
+        "test_confidence_outside_unit_interval_or_nonfinite"
+      ],
+      "split_checks": {
+        "dev": {
+          "confidence": {
+            "above_one": 435350,
+            "below_zero": 338,
+            "elements": 10456859,
+            "finite_range": [
+              -0.08229053020477295,
+              1.0221917629241943
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.041665284001629936,
+            "outside_unit_interval": 435688,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1077,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 78623
+          },
+          "id_set_sha256": "c473a347404ab2821093c770c495ee9702ae406144a1d1c5f16b47994e5f4c65",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "c9c1c5a9c283a8ad9968934399bf0c61f1448b83d1c5df974eb749d91e4e8ce8",
+          "missing_ids": [],
+          "n": 1077,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        },
+        "test": {
+          "confidence": {
+            "above_one": 483152,
+            "below_zero": 674,
+            "elements": 11556503,
+            "finite_range": [
+              -0.08229053020477295,
+              1.0221917629241943
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.04186612507261063,
+            "outside_unit_interval": 483826,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1176,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 86891
+          },
+          "id_set_sha256": "3a6f8d6833be00372c5a73d81fc46341c817f07a62a86c5964524451a07fefce",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "3e61059efe59ce980f36a551d764ee8f803f6db0a07382778bb9fe57f8aea410",
+          "missing_ids": [],
+          "n": 1176,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        }
+      },
+      "status": "REJECTED"
+    },
+    {
+      "checkpoint": {
+        "all_weights_finite": true,
+        "frozen_file": {
+          "bytes": 42852443,
+          "path": "outputs/csl_baselines/g2p_ddm/best.pt",
+          "sha256": "349213987704e46b967b2bc88277b557bf4d2d7a74fd40737a7f8b85c610843d"
+        },
+        "frozen_historical_training_provenance_complete": false,
+        "historical_vq_hash_binding": "absent; checkpoint stores path only",
+        "missing_frozen_training_metadata": [
+          "seed",
+          "epoch",
+          "training_ids_sha256",
+          "code_sha256",
+          "command",
+          "environment"
+        ],
+        "state_elements": 10691328,
+        "state_tensors": 170,
+        "stored_keys": [
+          "K",
+          "d_model",
+          "gen",
+          "max_codes",
+          "model",
+          "vocab",
+          "vqvae"
+        ],
+        "stored_metadata": {
+          "K": 1024,
+          "d_model": 256,
+          "gen": "g2p_ddm",
+          "max_codes": 128,
+          "vqvae": "outputs/csl_baselines/vqvae/best.pt"
+        },
+        "tensor_schema_sha256": "e0682521b1de00ead03362c45e22e3756cb64ee28047f31675d7dc1afaed3308",
+        "training_log": {
+          "best_recorded_epoch": 50,
+          "best_recorded_value": 2.356110978871584,
+          "checkpoint_epoch_binding": "absent unless epoch is stored; best epoch above is inferred from log only",
+          "epochs": 60,
+          "recorded_epoch_wall_seconds": 1715.7,
+          "selection_metric": "val_ce"
+        },
+        "vocabulary_sha256": "7393ef9aaefd8e4acb957583d34eb6450f2d19cba242dd9f0b690de56c5d8b6d",
+        "vocabulary_size": 2001,
+        "vq_dependency_bound_now": {
+          "bytes": 7852407,
+          "path": "outputs/csl_baselines/vqvae/best.pt",
+          "sha256": "9016ffb2517ca7471256da886c8c715fc7f36aab360fb45c4fa18558765f54c5"
+        }
+      },
+      "claim_ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+      "id": "g2p_ddm",
+      "method_fidelity": {
+        "ceiling": "Historical study-specific architectural control; not a reproduction of the named method.",
+        "defining_mechanisms_missing_or_changed": [
+          "categorical diffusion posterior/sampling",
+          "CodeUnet denoiser; local confidence-ordered argmax unmasking is different"
+        ],
+        "identifier_absence_in_local_scope": {
+          "CodeUnet": true,
+          "log_sample_categorical": true,
+          "multinomial_kl": true,
+          "q_posterior": true
+        },
+        "local_evidence": [
+          {
+            "ast_sha256": "455956cd13261abe0fe136ee1d930f6b910547d4680177fdd0036b613af01ad7",
+            "bytes": 18861,
+            "end_line": 157,
+            "lines_sha256": "54fe2ebbdbde2a1924a7420b94de3f44af45c1edae6508003dedaae748fd1de4",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 134,
+            "symbol": "CodeGenerator"
+          },
+          {
+            "ast_sha256": "757255c1777fdf92574f8f64b86deaeaeaae6a5814c30e11c1bf4e090e8e3101",
+            "bytes": 18861,
+            "end_line": 246,
+            "lines_sha256": "c05df08b3089f64c26f535902d420b8b75d6037fb9232d2fe1e64be219fc150d",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 172,
+            "symbol": "train_gen"
+          },
+          {
+            "ast_sha256": "012676a9a0d40e2076457e09abe5c54080f5ddbc9b6c8807907ee2c21ceed89e",
+            "bytes": 18861,
+            "end_line": 304,
+            "lines_sha256": "74a96cd7601c28a68f9f6fbf11ba94bbbe3771f2cbadde05a2a6a60460f91ffa",
+            "path": "scripts/csl_baselines_vq.py",
+            "sha256": "a54bbb24ac42a5a42ab3f4084f691eca86ae419559f2c966fd4db69fb8ed4de8",
+            "start_line": 250,
+            "symbol": "generate"
+          }
+        ],
+        "named_method_fidelity": false,
+        "official_evidence": [
+          {
+            "ast_sha256": "5137cf6d9bfb0a35be29e471faaee0a378ff06a12c361e97d8ad83565fcc1bef",
+            "bytes": 7553,
+            "end_line": 18,
+            "lines_sha256": "4d4dfc21fdfb3f85846b094b4ac1d9ba0035204221a6c1efeb24bbf42ea5b561",
+            "path": "external/baselines/G2P-DDM/modules/vq_codeunet.py",
+            "sha256": "e08e07c9bd813b6e90c4f514b94f99b5ac819a4ad5e571ccc14e267a044ae165",
+            "start_line": 9,
+            "symbol": "CodeUnet"
+          },
+          {
+            "ast_sha256": "976cef469575f55ee59fe2e405c68aa2a88b9924d77205bdbbe07fd6907e9794",
+            "bytes": 43932,
+            "end_line": 388,
+            "lines_sha256": "8f9a494c322a6d460f763de821ad5e137f592db0283a1b540bed1e047175767e",
+            "path": "external/baselines/G2P-DDM/stage2_models/vq_diffusion_codeunet.py",
+            "sha256": "4b25fc3f2cdadb42dbaa7e1e6b2e66b881b6f183a5aab0c94812a811202f2120",
+            "start_line": 347,
+            "symbol": "Point2textModelStage2.q_posterior"
+          },
+          {
+            "ast_sha256": "b3f84a0eab5ac46d685ef09ddc38b335dd9b68bb7801aa0d814deddda4ee68d5",
+            "bytes": 43932,
+            "end_line": 307,
+            "lines_sha256": "56005ed0496082216ed5042628d2e9345dd8ea40fda6338afa4801506a84d514",
+            "path": "external/baselines/G2P-DDM/stage2_models/vq_diffusion_codeunet.py",
+            "sha256": "4b25fc3f2cdadb42dbaa7e1e6b2e66b881b6f183a5aab0c94812a811202f2120",
+            "start_line": 301,
+            "symbol": "Point2textModelStage2.log_sample_categorical"
+          }
+        ],
+        "official_markers": []
+      },
+      "reasons": [
+        "checkpoint_lacks_frozen_training_provenance",
+        "defining_named_method_mechanisms_missing_or_changed",
+        "dev_confidence_outside_unit_interval_or_nonfinite",
+        "historical_architectural_control_not_named_reproduction",
+        "historical_per_result_best_head_selection",
+        "raw_training_archive_contains_nonadmitted_sources",
+        "shared_vq_decoder_changes_with_padded_horizon",
+        "test_confidence_outside_unit_interval_or_nonfinite"
+      ],
+      "split_checks": {
+        "dev": {
+          "confidence": {
+            "above_one": 419754,
+            "below_zero": 3,
+            "elements": 10456859,
+            "finite_range": [
+              -0.0038176774978637695,
+              1.0398133993148804
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.040141786362424894,
+            "outside_unit_interval": 419757,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1077,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 78623
+          },
+          "id_set_sha256": "c473a347404ab2821093c770c495ee9702ae406144a1d1c5f16b47994e5f4c65",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "c9c1c5a9c283a8ad9968934399bf0c61f1448b83d1c5df974eb749d91e4e8ce8",
+          "missing_ids": [],
+          "n": 1077,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        },
+        "test": {
+          "confidence": {
+            "above_one": 467659,
+            "below_zero": 6,
+            "elements": 11556503,
+            "finite_range": [
+              -0.0038176774978637695,
+              1.0398133993148804
+            ],
+            "nonfinite": 0,
+            "outside_fraction": 0.040467691653781425,
+            "outside_unit_interval": 467665,
+            "valid_probability_channel": false
+          },
+          "expected_n": 1176,
+          "extra_ids": [],
+          "frames": {
+            "max": 196,
+            "min": 16,
+            "total": 86891
+          },
+          "id_set_sha256": "3a6f8d6833be00372c5a73d81fc46341c817f07a62a86c5964524451a07fefce",
+          "invalid_ids": {
+            "gloss": [],
+            "name": [],
+            "nonfinite": [],
+            "num_frames": [],
+            "reference_length": [],
+            "shape": []
+          },
+          "length_reference_sha256": "3e61059efe59ce980f36a551d764ee8f803f6db0a07382778bb9fe57f8aea410",
+          "missing_ids": [],
+          "n": 1176,
+          "nonfinite_elements": 0,
+          "structure_gloss_and_length_valid": true
+        }
+      },
+      "status": "REJECTED"
+    },
+    {
+      "claim_ceiling": "Admitted by this audit as a 641-item organizer PT release-bank re-score evaluated with declared --fps 12 and the frozen SLRTP evaluator; no authenticated producer execution/native-rate provenance, locally reproduced generator, or recent-method superiority claim.",
+      "external_evidence": {
+        "complete": true,
+        "coverage": {
+          "dev": {
+            "all_finite": true,
+            "conversion": "identity; native 178-joint xyz; third coordinate is depth, not confidence",
+            "gt_frames": 55460,
+            "id_set_sha256": "3c657dbe70c9e6da10b572d87d950bcd959dc7fa422c794e6dada20bb2ddd2af",
+            "measured_avg_duration_under_declared_fps12": 0.9998355085720831,
+            "n": 515,
+            "pred_frames": 27847,
+            "requests_sha256": "b833bd358ee68110a22220646d733dc0b5dc72ef38fa3e453860cd9b6ee03591",
+            "shape_tail": [
+              178,
+              3
+            ]
+          },
+          "test": {
+            "all_finite": true,
+            "conversion": "identity; native 178-joint xyz; third coordinate is depth, not confidence",
+            "gt_frames": 64504,
+            "id_set_sha256": "1520804532890371efabd1dcd7333cca7cbbb91b6cf7e664b86fabaf6d7ba6e5",
+            "measured_avg_duration_under_declared_fps12": 0.9998164467504118,
+            "n": 641,
+            "pred_frames": 32400,
+            "requests_sha256": "0f76245745810892017537bc6257dbe7be10e44599d870b6a7fd52e0ad266c35",
+            "shape_tail": [
+              178,
+              3
+            ]
+          }
+        },
+        "evaluator_git_head": "db35105a94e126feb04619d56f6103ba8369d382",
+        "historical_environment": {
+          "fastdtw": "0.3.4",
+          "jiwer": "4.0.0",
+          "python": "3.12.3",
+          "sacrebleu": "2.6.0",
+          "torch": "2.10.0+cu128"
+        },
+        "limits": [
+          "Stored scores and execution logs verified; no recognizer rerun in this audit.",
+          "Indexed organizer output-bank evaluation, not a newly trained named-method reproduction.",
+          "Historical producer checkpoint/seed/input execution traces were not identified or accessible in the inspected official sources; the indexed release-bank admission route applies.",
+          "This audit admits the 641-item test release-bank re-score evaluated with declared --fps 12; producer execution and native-rate provenance are not authenticated.",
+          "The declared --fps 12 evaluation setting follows the organizer demo and stored records. The duration fingerprint is consistent with that setting; it does not prove the producing frame rate. No target-pose conversion or length modification was performed."
+        ],
+        "official_fps_example": [
+          {
+            "bytes": 11984,
+            "end_line": 58,
+            "lines_sha256": "01be2f346c06e3fd07a9d0eb84f47d47dcf6abcedff9379df8fa65dd34f54167",
+            "path": "external/SLRTP-Sign-Production-Evaluation/README.md",
+            "sha256": "a6284ea50ede69cc5336a86613e58efbe7fd4c72226be57ed1c97b42287caf73",
+            "start_line": 58
+          }
+        ],
+        "official_release_listing": [
+          {
+            "bytes": 11984,
+            "end_line": 146,
+            "lines_sha256": "13fa18cd5f14f214dab5ce587f7f3795003d80f566fbfb11216d7d13b8990f61",
+            "path": "external/SLRTP-Sign-Production-Evaluation/README.md",
+            "sha256": "a6284ea50ede69cc5336a86613e58efbe7fd4c72226be57ed1c97b42287caf73",
+            "start_line": 146
+          }
+        ],
+        "official_url": "https://github.com/walsharry/SLRTP-Sign-Production-Evaluation",
+        "runtime_version_checks": {
+          "fastdtw": {
+            "current_runtime": "0.3.4",
+            "distribution": "0.3.4",
+            "recorded_runtime": "0.3.4"
+          },
+          "jiwer": {
+            "current_runtime": "4.0.0",
+            "distribution": "4.0.0",
+            "recorded_runtime": "4.0.0"
+          },
+          "python": {
+            "current_runtime": "3.12.3",
+            "distribution": null,
+            "recorded_runtime": "3.12.3"
+          },
+          "sacrebleu": {
+            "current_runtime": "2.6.0",
+            "distribution": "2.6.0",
+            "recorded_runtime": "2.6.0"
+          },
+          "torch": {
+            "current_runtime": "2.10.0+cu128",
+            "distribution": "2.10.0",
+            "recorded_runtime": "2.10.0+cu128"
+          }
+        },
+        "stored_runs": {
+          "gt_identity_dev_fps25": {
+            "fps": 25,
+            "log": {
+              "bytes": 7078,
+              "path": "outputs/baseline_protocol/logs/05_gt_identity_dev_fps25.log",
+              "sha256": "641412a1ed767513b29178574e14819504bdb34e0b6e5f342fa070b020b67a77"
+            },
+            "metrics": {
+              "avg_duration": 1.0,
+              "bleu": {
+                "bleu1": 35.64289683751959,
+                "bleu2": 23.060216602791453,
+                "bleu3": 16.90703014627281,
+                "bleu4": 13.378651856913775
+              },
+              "chrf": 34.82214188714514,
+              "dtw_mje": 0.0,
+              "rouge": 36.85085849846843,
+              "total_distance": 1.0,
+              "wer": 83.37019018133569
+            },
+            "n": 515,
+            "recomputed_text_wer": 83.37019018133569,
+            "results": {
+              "bytes": 333,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/gt_identity_dev_fps25.json",
+              "sha256": "0be499a58d9bdfd14ec358c229fba8e72e7800d5db4ca587da02ba65430c8693"
+            },
+            "stored_text_predictions": {
+              "bytes": 44163,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/gt_identity_dev_fps25_text_preds.pt",
+              "sha256": "c62f1edd22f8cb0c5bbdee0f9ab14003fec6f7a6a301d96fbb16b5970fed6a0d"
+            }
+          },
+          "gt_identity_test_fps25": {
+            "fps": 25,
+            "log": {
+              "bytes": 8359,
+              "path": "outputs/baseline_protocol/logs/01_gt_identity_test_fps25.log",
+              "sha256": "7a72b337f892588dff339e084168c0433dc84d4bc593fe116bf2bf02af70b08e"
+            },
+            "metrics": {
+              "avg_duration": 1.0,
+              "bleu": {
+                "bleu1": 34.39639390982878,
+                "bleu2": 22.038589437767946,
+                "bleu3": 16.092729031718477,
+                "bleu4": 12.777148564612425
+              },
+              "chrf": 34.58509769785496,
+              "dtw_mje": 0.0,
+              "rouge": 35.19608041310144,
+              "total_distance": 1.0,
+              "wer": 85.77470203767781
+            },
+            "n": 641,
+            "recomputed_text_wer": 85.77470203767781,
+            "results": {
+              "bytes": 334,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/gt_identity_test_fps25.json",
+              "sha256": "b58d2f41a62a2c4e2b38d0c6e5fef1bb58273e5a692896a6aa8bb4c33ac4c6dc"
+            },
+            "stored_text_predictions": {
+              "bytes": 52809,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/gt_identity_test_fps25_text_preds.pt",
+              "sha256": "d6175695619262bde9527e674065c9d4e6322ca1440037645cb9ed3fd439585b"
+            }
+          },
+          "pt_demo30_dev_fps12": {
+            "fps": 12,
+            "log": {
+              "bytes": 1258,
+              "path": "outputs/baseline_protocol/logs/06_pt_demo30_dev_fps12.log",
+              "sha256": "a314382cdf65b2a76bef33dc80ecaf7bf0a386a1335c8fac851aba13145b431f"
+            },
+            "metrics": {
+              "avg_duration": 0.9996969696969698,
+              "bleu": {
+                "bleu1": 15.946522413242281,
+                "bleu2": 4.580890661810554,
+                "bleu3": 0.0,
+                "bleu4": 0.0
+              },
+              "chrf": 19.755041720753972,
+              "dtw_mje": 0.044946566224098206,
+              "rouge": 15.536963615448718,
+              "total_distance": 0.30942216515541077,
+              "wer": 101.83727034120736
+            },
+            "n": 30,
+            "recomputed_text_wer": 101.83727034120736,
+            "results": {
+              "bytes": 355,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_demo30_dev_fps12.json",
+              "sha256": "39b883d6ea8ba0528cada098158de4ae0a3621bff204ff7eea5ed0915df24c23"
+            },
+            "stored_text_predictions": {
+              "bytes": 3767,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_demo30_dev_fps12_text_preds.pt",
+              "sha256": "6cf8bbb5d98360ef5d6766a3c004b4ea3f1adad0b1a643363abc73374bfb711f"
+            }
+          },
+          "pt_organizer_release_dev_fps12": {
+            "fps": 12,
+            "log": {
+              "bytes": 6969,
+              "path": "outputs/baseline_protocol/logs/03_pt_organizer_release_dev_fps12.log",
+              "sha256": "ff6e5c7260badc9aa7d8703d0a872c536dd079ce099e2de13196db7185c150de"
+            },
+            "metrics": {
+              "avg_duration": 0.9998355085720831,
+              "bleu": {
+                "bleu1": 15.709580632595015,
+                "bleu2": 4.514958474148895,
+                "bleu3": 1.3823969304114618,
+                "bleu4": 0.0
+              },
+              "chrf": 18.79132852230694,
+              "dtw_mje": 0.044927388429641724,
+              "rouge": 16.339854832972133,
+              "total_distance": 0.2942831516265869,
+              "wer": 100.42753943682736
+            },
+            "n": 515,
+            "recomputed_text_wer": 100.42753943682736,
+            "results": {
+              "bytes": 368,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_dev_fps12.json",
+              "sha256": "b70e5f531354fd172a7ca763de3f61b8fe0718417cbd245b75f14807e9bfaded"
+            },
+            "stored_text_predictions": {
+              "bytes": 41593,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_dev_fps12_text_preds.pt",
+              "sha256": "770fd80d3e6686da8322f43cca5114ef6d1d6687007d260dbb78a9c89020147d"
+            }
+          },
+          "pt_organizer_release_test_fps12": {
+            "fps": 12,
+            "log": {
+              "bytes": 8113,
+              "path": "outputs/baseline_protocol/logs/02_pt_organizer_release_test_fps12.log",
+              "sha256": "430c44ce9bf8cd6f6c4cb017d1f162dadc9a707f6adf66f98ca1c335a9ee5a0e"
+            },
+            "metrics": {
+              "avg_duration": 0.9998164467504118,
+              "bleu": {
+                "bleu1": 16.914736358800415,
+                "bleu2": 5.730855049988388,
+                "bleu3": 2.650144892996147,
+                "bleu4": 1.5942094217904001
+              },
+              "chrf": 19.027939992366928,
+              "dtw_mje": 0.044929325580596924,
+              "rouge": 17.255835698396783,
+              "total_distance": 0.3021577000617981,
+              "wer": 101.678841471229
+            },
+            "n": 641,
+            "recomputed_text_wer": 101.678841471229,
+            "results": {
+              "bytes": 381,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps12.json",
+              "sha256": "6fdbdfdf6d73f4730c7de345cac7475af46e81bb57a394d6f17aa21e1701b187"
+            },
+            "stored_text_predictions": {
+              "bytes": 49919,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps12_text_preds.pt",
+              "sha256": "e285501831c0cca672f2c476f0b546a0afb9aadb96bc2583ed93f664cd69874d"
+            }
+          },
+          "pt_organizer_release_test_fps25_WRONG_negative_control": {
+            "fps": 25,
+            "log": {
+              "bytes": 6917,
+              "path": "outputs/baseline_protocol/logs/04_pt_organizer_release_test_fps25_WRONG_negative_control.log",
+              "sha256": "f235dcb1f2e287090a7d088e747679a115d3ba70d9afde1af26ccbb6d8862057"
+            },
+            "metrics": {
+              "avg_duration": 0.5060557740726089,
+              "bleu": {
+                "bleu1": 12.085775482527875,
+                "bleu2": 3.255457042705461,
+                "bleu3": 1.2405187536312816,
+                "bleu4": 0.6287072198708521
+              },
+              "chrf": 15.381362783157645,
+              "dtw_mje": 0.042016174644231796,
+              "rouge": 15.867687688318405,
+              "total_distance": 0.2819112539291382,
+              "wer": 98.64154812251698
+            },
+            "n": 641,
+            "recomputed_text_wer": 98.64154812251698,
+            "results": {
+              "bytes": 383,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps25_WRONG_negative_control.json",
+              "sha256": "f0977b9005a844566862dddfb07b6791696b1aef12cca95e50df2becaf90c89a"
+            },
+            "stored_text_predictions": {
+              "bytes": 39113,
+              "path": "outputs/baseline_protocol/evaluator_workspace/results/pt_organizer_release_test_fps25_WRONG_negative_control_text_preds.pt",
+              "sha256": "2cb5e184a7773a551800658dedcee0952d3de61004d41ac880044f652bf04a76"
+            }
+          }
+        }
+      },
+      "id": "organizer_progressive_transformer_release",
+      "reasons": [],
+      "status": "ADMITTED"
+    }
+  ],
+  "schema": "recent_control_admission_v3",
+  "shared_vq_checkpoint": {
+    "all_weights_finite": true,
+    "frozen_file": {
+      "bytes": 7852407,
+      "path": "outputs/csl_baselines/vqvae/best.pt",
+      "sha256": "9016ffb2517ca7471256da886c8c715fc7f36aab360fb45c4fa18558765f54c5"
+    },
+    "frozen_historical_training_provenance_complete": false,
+    "missing_frozen_training_metadata": [
+      "seed",
+      "epoch",
+      "training_ids_sha256",
+      "code_sha256",
+      "command",
+      "environment"
+    ],
+    "state_elements": 1961871,
+    "state_tensors": 13,
+    "stored_keys": [
+      "K",
+      "d_model",
+      "mean",
+      "model",
+      "std"
+    ],
+    "stored_metadata": {
+      "K": 1024,
+      "d_model": 256,
+      "mean": [
+        251.04217529296875,
+        263.55615234375,
+        0.836933970451355
+      ],
+      "std": [
+        51.49378204345703,
+        98.52141571044922,
+        0.28257521986961365
+      ]
+    },
+    "tensor_schema_sha256": "b18e6f941d5af8a4a6b27875720b979193e9be555afc9f183103e76ffbaa677b",
+    "training_log": {
+      "best_recorded_epoch": 38,
+      "best_recorded_value": 0.10750674037262797,
+      "checkpoint_epoch_binding": "absent unless epoch is stored; best epoch above is inferred from log only",
+      "epochs": 40,
+      "recorded_epoch_wall_seconds": 379.1,
+      "selection_metric": "val_rec"
+    },
+    "vocabulary_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "vocabulary_size": 0
+  },
+  "static_checks": {
+    "per_result_best_head": {
+      "caller": {
+        "ast_sha256": "6907c882e3fa4399b5cbe87ad4330147fb964640853862ef27c30ad680f559e9",
+        "bytes": 6083,
+        "end_line": 112,
+        "lines_sha256": "1e683a91e80747383a2dd5d8e441973f105988cd9c03b4a2498938a2b3f4978d",
+        "path": "scripts/score_csl_mska_fast.py",
+        "sha256": "036cda943fc8ad682be1dbb8e0ce887b7a5f7bb0d78ad08d897a07f3a6d4b6f6",
+        "start_line": 51,
+        "symbol": "score_one"
+      },
+      "meaning": "Minimum corpus WER across recognizer heads recomputed for each evaluated bank/split; not per-item oracle selection.",
+      "proved_in_bound_source": true,
+      "scope": {
+        "ast_sha256": "2b4310bdfcdf615b92a2c024d92d9731bd6e333cd7dc4928b9c7d92f28872aec",
+        "bytes": 20306,
+        "end_line": 366,
+        "lines_sha256": "7421776370a2366825ee94345e0aafcd79e2d5f1e1b38ea762494f22fd3c6ab2",
+        "path": "external/baselines/MSKA/train.py",
+        "sha256": "a9ffaed27548c86a08c1cd7716c6dfcdef8aedbef7113a28aba626116c33ad0d",
+        "start_line": 275,
+        "symbol": "evaluate"
+      },
+      "selection": [
+        {
+          "bytes": 20306,
+          "end_line": 327,
+          "lines_sha256": "015b6071820681f7d88a84af60801d815b7801ebdcc29e82e31712e3864d5ad2",
+          "path": "external/baselines/MSKA/train.py",
+          "sha256": "a9ffaed27548c86a08c1cd7716c6dfcdef8aedbef7113a28aba626116c33ad0d",
+          "start_line": 327
+        }
+      ]
+    },
+    "unseeded_continuous_diffusion": {
+      "generation_parser_has_seed": false,
+      "inference_seed_calls": [],
+      "limit": "Static call path, not reconstruction of the historical process RNG state.",
+      "proved_in_bound_local_path": true,
+      "random_draw_without_generator": [
+        {
+          "bytes": 17239,
+          "end_line": 221,
+          "lines_sha256": "a29044bc030d9f291858fd11cba3856bd3c9e6a125e83c64aeb2d23a7d10a3f1",
+          "path": "scripts/csl_baselines.py",
+          "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+          "start_line": 221
+        }
+      ],
+      "scope": [
+        {
+          "ast_sha256": "ee39ad5b3a46ca307c5136f040ff7e93caf7c2488fc793e3eaf5575a89ecd3ea",
+          "bytes": 17239,
+          "end_line": 303,
+          "lines_sha256": "15c2a8351742d60515ea200d53a7778ff12c636ec07cec7d87f45a5b3685aebe",
+          "path": "scripts/csl_baselines.py",
+          "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+          "start_line": 284,
+          "symbol": "generate_diff"
+        },
+        {
+          "ast_sha256": "0a3bf36b7f1d65145cfecc2615ee354ae5b5c5001c1baac6c39bb56553f63667",
+          "bytes": 17239,
+          "end_line": 234,
+          "lines_sha256": "6a85f31f667d0706279866fe3374a8a383e75cbd1b1a6417dc498656e6b50eef",
+          "path": "scripts/csl_baselines.py",
+          "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+          "start_line": 220,
+          "symbol": "Diffusion.ddim"
+        },
+        {
+          "ast_sha256": "67788f4b985370e549ee5b7e344b5bc0f7fb48710254bb8d81ac2f5b0de7ee41",
+          "bytes": 17239,
+          "end_line": 328,
+          "lines_sha256": "fd544e12e8196157f7c6f5acb721ad5eb57328569f685cedf45d053a789afbc1",
+          "path": "scripts/csl_baselines.py",
+          "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+          "start_line": 306,
+          "symbol": "main"
+        }
+      ]
+    }
+  },
+  "training_admission": {
+    "admitted_count": 18400,
+    "admitted_ids_sha256": "db6678d5b2595c2734cc49f747e352c12c80d10c85f196943d79446eb47b2415",
+    "archive_read_scope": "Restricted metadata-only pickle decoding: exact IDs, insertion order, labels and tensor shapes; training numeric arrays are not materialized or declared finite.",
+    "extra_ids": [
+      "S000007_P0003_T00"
+    ],
+    "extra_records": {
+      "S000007_P0003_T00": {
+        "gloss": "他 谁",
+        "keypoint": {
+          "storage_materialized": false,
+          "tensor_shape": [
+            55,
+            133,
+            3
+          ],
+          "tensor_stride": [
+            399,
+            3,
+            1
+          ]
+        },
+        "name": "S000007_P0003_T00",
+        "num_frames": 55,
+        "text": "他是谁？"
+      }
+    },
+    "historical_seed_record": {
+      "chain_evidence": [
+        {
+          "bytes": 2694,
+          "end_line": 15,
+          "lines_sha256": "b559b6aaa4f99581124677dbad8c2d6c5215346e6e72b929cea9cd0b041ef483",
+          "path": "scripts/run_csl_baselines_chain.sh",
+          "sha256": "4ce9ec43509b9f43789c05eb7c77714bf8e447aae5d6e5e2ac942fd1990c5aca",
+          "start_line": 15
+        },
+        {
+          "bytes": 2694,
+          "end_line": 22,
+          "lines_sha256": "b271d9939af82aa0bddcd623bf3b7d5d29e61c779e3d974cf11eef690d482b06",
+          "path": "scripts/run_csl_baselines_chain.sh",
+          "sha256": "4ce9ec43509b9f43789c05eb7c77714bf8e447aae5d6e5e2ac942fd1990c5aca",
+          "start_line": 22
+        },
+        {
+          "bytes": 2694,
+          "end_line": 26,
+          "lines_sha256": "30c3ef9dedf28b2c0956aa7fd70a27d0f5df22d9f1753a12d72a69d19848b387",
+          "path": "scripts/run_csl_baselines_chain.sh",
+          "sha256": "4ce9ec43509b9f43789c05eb7c77714bf8e447aae5d6e5e2ac942fd1990c5aca",
+          "start_line": 26
+        },
+        {
+          "bytes": 2694,
+          "end_line": 33,
+          "lines_sha256": "f6ac1f8e3cb2aab4f8e498d082ac70637678d9cb770d0d64102ad180107e6142",
+          "path": "scripts/run_csl_baselines_chain.sh",
+          "sha256": "4ce9ec43509b9f43789c05eb7c77714bf8e447aae5d6e5e2ac942fd1990c5aca",
+          "start_line": 33
+        }
+      ],
+      "chain_seed": 0,
+      "runtime_and_rng_state": "not preserved in checkpoints; CLI/chain text is not proof of exact historical RNG state",
+      "training_cli_default": 0
+    },
+    "holdout_evidence": [
+      {
+        "ast_sha256": "92ce73b96de3e33d0ec734a51755ff2b03057905677dec0371249214d953df74",
+        "bytes": 17239,
+        "end_line": 145,
+        "lines_sha256": "0d0498cfc27614e45e7bf86d3f8041b7d3d122512541bed7691c8c2b0d9025e3",
+        "path": "scripts/csl_baselines.py",
+        "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+        "start_line": 94,
+        "symbol": "train_pt"
+      },
+      {
+        "ast_sha256": "7ffd7f4f2c7d3f0b9f8713cf5a67b492a2ac399810e70bf263cadc563449ca9e",
+        "bytes": 17239,
+        "end_line": 280,
+        "lines_sha256": "f7c8ea9e8c04c1933fbf2e4706cf725410d0e8eaa3ea3a89ec6c329bcc4d7a07",
+        "path": "scripts/csl_baselines.py",
+        "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+        "start_line": 237,
+        "symbol": "train_diff"
+      },
+      {
+        "ast_sha256": "d205761ed68cc4fd50841a1baef8e66fb0430bd3bf84cc30fd23089bf236919e",
+        "bytes": 17239,
+        "end_line": 45,
+        "lines_sha256": "16f002448f68101c201ec5621702ec0a9de23ac1708f13db5127560156e305f0",
+        "path": "scripts/csl_baselines.py",
+        "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+        "start_line": 36,
+        "symbol": "pose_stats"
+      }
+    ],
+    "holdout_policy": "seeded shuffle, first 512 raw-archive IDs reserved for validation; all raw IDs used for vocabulary and first-600 insertion-order normalization",
+    "loader_uses_unfiltered_archive": {
+      "ast_sha256": "91ca53992a24d33f716df186688e75561096a689c9d4a2fc3ddee27d85838e63",
+      "bytes": 17239,
+      "end_line": 29,
+      "lines_sha256": "12e3c64dadeafb701e2760676799c1ed4e7d69c29a19edd5844e694f09ce14f2",
+      "path": "scripts/csl_baselines.py",
+      "sha256": "5a402a9e4b719dd2d5a7c2d0210af55f5b64d2b9384e41266b7d7de9635d328f",
+      "start_line": 28,
+      "symbol": "load_train"
+    },
+    "missing_ids": [],
+    "raw_count": 18401,
+    "raw_equals_admitted_train": false,
+    "raw_ids_sha256": "419a8cc191b67cd13add56ddaadff28e0b9d25253b5a8fd2d2d0f05e5e9d65ee",
+    "seed0_source_reconstructed_partition": {
+      "fit_ids_sha256": "b15d1a072bbf8955774300ed237ec8148fdd281f2b3b4e87fc16dacc8425dce2",
+      "fit_n": 17889,
+      "nonadmitted_fit_ids": [
+        "S000007_P0003_T00"
+      ],
+      "nonadmitted_normalization_ids": [
+        "S000007_P0003_T00"
+      ],
+      "nonadmitted_validation_ids": [],
+      "scope": "Reconstructed from current source and chain seed; absent historical manifest prevents execution attestation.",
+      "validation_ids_sha256": "8bb7b0b5dfcc91687e5e52fd9460497b1c913b0354a1ad47fc8bfba7d567d33e",
+      "validation_n": 512
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "dev": {
+    "bank_glosses": 2000,
+    "bank_skipped_units": {},
+    "budget": {
+      "budget_fraction": {
+        "denominator": 5,
+        "numerator": 2
+      },
+      "emitted_frames": 80361,
+      "optimality_claimed": false,
+      "realized_replay_frame_fraction": 0.3998581401426065,
+      "replay_frames": 32133,
+      "scaled_capacity": 133272,
+      "scaled_unused_capacity": 57,
+      "scaled_used_cost": 133215,
+      "selected_clips": 306,
+      "selection_algorithm": "one-pass score-ranked feasible admission"
+    },
+    "emitted": 1077,
+    "exact_local_reconstructions": 1077,
+    "exact_selected_reconstructions": 1077,
+    "forbidden_local_frames": 0,
+    "integer_budget": "160665 <= 160722",
+    "local_total_frames": 66636,
+    "mean_local_frames": 61.871866295264624,
+    "mean_route_frames": 74.61559888579387,
+    "omitted_plan_tokens": 0,
+    "plan_gloss_wer": {
+      "deletions": 2039,
+      "hypothesis_tokens": 7128,
+      "insertions": 994,
+      "metric": "donor-gloss-plan WER; NOT pose recognizer WER",
+      "n": 1077,
+      "reference_tokens": 8173,
+      "substitutions": 4576,
+      "wer_percent": 93.09922916921572
+    },
+    "planned_tokens": 7128,
+    "prescore_hashes_sha256": "93165d5c2703625148b476541b5af55de346d77d1f457d9ada8596331da55694",
+    "refused": [],
+    "requests": 1077,
+    "source_mass_frames": 80361,
+    "unique_sources": 1135
+  },
+  "peak_rss_kb": 7668448,
+  "protocol_sha256": "82a1d2b1444b34c134a4f41d240ded7574a4ba2f6d017fb8c76d363fcf2c433f",
+  "test": {
+    "bank_glosses": 2000,
+    "bank_skipped_units": {},
+    "budget": {
+      "budget_fraction": {
+        "denominator": 5,
+        "numerator": 2
+      },
+      "emitted_frames": 87569,
+      "optimality_claimed": false,
+      "realized_replay_frame_fraction": 0.39983327433224086,
+      "replay_frames": 35013,
+      "scaled_capacity": 144424,
+      "scaled_unused_capacity": 73,
+      "scaled_used_cost": 144351,
+      "selected_clips": 334,
+      "selection_algorithm": "one-pass score-ranked feasible admission"
+    },
+    "emitted": 1176,
+    "exact_local_reconstructions": 1176,
+    "exact_selected_reconstructions": 1176,
+    "forbidden_local_frames": 0,
+    "integer_budget": "175065 <= 175138",
+    "local_total_frames": 72212,
+    "mean_local_frames": 61.404761904761905,
+    "mean_route_frames": 74.46343537414965,
+    "omitted_plan_tokens": 0,
+    "plan_gloss_wer": {
+      "deletions": 2334,
+      "hypothesis_tokens": 7717,
+      "insertions": 1049,
+      "metric": "donor-gloss-plan WER; NOT pose recognizer WER",
+      "n": 1176,
+      "reference_tokens": 9002,
+      "substitutions": 4948,
+      "wer_percent": 92.5461008664741
+    },
+    "planned_tokens": 7717,
+    "prescore_hashes_sha256": "7abc1ed2c63ded02193e7b02819e695b34d80a531127443b6cfc11a89275cfbe",
+    "refused": [],
+    "requests": 1176,
+    "source_mass_frames": 87569,
+    "unique_sources": 1130
+  }
+}

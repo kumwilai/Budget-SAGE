@@ -1,0 +1,47 @@
+{
+ "schema": "watermark_amplitude_cost_comparison",
+ "version": 1,
+ "created_at": "2026-09-12",
+ "purpose": "Back-translation cost of the two marked banks against the unmarked committed route. The 2.5e-4 figure was deliberately not measured before the amplitude was selected, so that no amplitude was chosen on a test metric; selection happened on development criteria in phase 1 and this measurement is for reporting only.",
+ "evaluator": "external/SLRTP-Sign-Production-Evaluation/main.py --fps 25, 641 test clips",
+ "rows": {
+  "unmarked": {
+   "b1": 35.4393343051319,
+   "b4": 12.15141308210366,
+   "wer": 86.45392797641934,
+   "dtw": 0.03695327043533325,
+   "dur": 1.109863765498609
+  },
+  "marked_eps2p5e_4": {
+   "b1": 35.42461163761373,
+   "b4": 12.084334297706873,
+   "wer": 86.479559143919,
+   "dtw": 0.03696006163954735,
+   "dur": 1.109863765498609
+  },
+  "marked_eps1e_3": {
+   "b1": 35.39321104438443,
+   "b4": 12.187494774941717,
+   "wer": 86.68460848391645,
+   "dtw": 0.03706245496869087,
+   "dur": 1.109863765498609
+  }
+ },
+ "deltas": {
+  "eps2.5e-4": {
+   "b1": -0.014722667518171306,
+   "b4": -0.06707878439678794,
+   "wer": 0.025631167499668095,
+   "dtw": 6.791204214096069e-06,
+   "dur": 0.0
+  },
+  "eps1e-3": {
+   "b1": -0.046123260747471306,
+   "b4": 0.03608169283805651,
+   "wer": 0.23068050749711233,
+   "dtw": 0.00010918453335762024,
+   "dur": 0.0
+  }
+ },
+ "note": "Duration is identical across all three banks, as expected for an additive post-hoc signal."
+}

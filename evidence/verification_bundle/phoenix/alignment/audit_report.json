@@ -1,0 +1,135 @@
+{
+  "builder": {
+    "bytes": 5876,
+    "kind": "file",
+    "path": "scripts/build_pergloss_exemplars.py",
+    "sha256": "f157f6b5ebded26c9b367377facd057c02020cb6833ba324902233ccc50a4224"
+  },
+  "claim_not_supported": "This newly captured run does not prove the content of an absent historical execution log or restore later frozen script bytes.",
+  "claim_supported": "The preserved Phase-24 interval bank is semantically reproducible from the committed builder and inputs.",
+  "consumed_bank_lineage": {
+    "consumed_bank": {
+      "all_referenced_sources_have_poses": true,
+      "interval_multiset_sha256": "287905ac6e4dbf6d8ee596922dd1ceb9bb1a5fdfe338edd3b5c1571bd625d6d4",
+      "n_glosses": 1081,
+      "n_intervals": 54930,
+      "n_pose_source_ids": 7060,
+      "n_referenced_source_ids": 7060,
+      "ordered_interval_sha256": "736875b672db89806fd0c0f97a110055bdeab689449b3c770a6480901aa1f86b"
+    },
+    "mismatches": {},
+    "rebuilt_projected_to_consumed_sources": {
+      "all_referenced_sources_have_poses": true,
+      "interval_multiset_sha256": "287905ac6e4dbf6d8ee596922dd1ceb9bb1a5fdfe338edd3b5c1571bd625d6d4",
+      "n_glosses": 1081,
+      "n_intervals": 54930,
+      "n_pose_source_ids": 7096,
+      "n_referenced_source_ids": 7060,
+      "ordered_interval_sha256": "736875b672db89806fd0c0f97a110055bdeab689449b3c770a6480901aa1f86b"
+    },
+    "source_projection_count": 7060
+  },
+  "environment": {
+    "numpy": "2.4.2",
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "torch": "2.10.0+cu128"
+  },
+  "execution_log": {
+    "bytes": 2003,
+    "kind": "file",
+    "path": "outputs/revision/astra_open_closure_20260906/alignment_rebuild/build.log",
+    "sha256": "ee60e9b8b1dfe1b79c2e7f8b67f60dc4e1164d1b75dc4e426a289b375ec4758b"
+  },
+  "inputs": [
+    {
+      "bytes": 2096763,
+      "kind": "file",
+      "path": "data/phoenix/phoenix_train.json",
+      "sha256": "1f4978d030e5f768c2f61c696e66e04343991876dd23771f0d0214b96364f6c1"
+    },
+    {
+      "bytes": 1341221768,
+      "files": 7096,
+      "kind": "directory",
+      "path": "data/phoenix/sequences/train",
+      "tree_sha256": "d7cc3ccc95ed28ead9b5d09e03e0c23d44305cfa981cc248715f8b3e069d1294"
+    },
+    {
+      "bytes": 1076084486,
+      "kind": "file",
+      "path": "/home/kumwilai/research/coopns-slr/outputs/cached_posteriors_corrnet/train.pkl",
+      "sha256": "7e87b1eefad730056410dccb9ad339556b31e18392cfca35451a7e29e2252f56"
+    },
+    {
+      "bytes": 3740,
+      "kind": "file",
+      "path": "data/phoenix/normalizer.npz",
+      "sha256": "ab7777f1e69bfc9a1e5a698bf492088e57cf754e0d99d79a7d9c9ce471fb3691"
+    }
+  ],
+  "internal_count_checks": {
+    "rebuilt": true,
+    "reference": true
+  },
+  "lineage_builder": {
+    "bytes": 2979,
+    "kind": "file",
+    "path": "scripts/build_slrtp178_exemplars.py",
+    "sha256": "421a8135a8770c08c1d4c9bb34f78bd7909045a3b8e5bdb06baab3f453678cf8"
+  },
+  "lineage_inputs": [
+    {
+      "bytes": 1760183302,
+      "kind": "file",
+      "path": "external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/train.pt",
+      "sha256": "3519be65c554a3145457157d5a0b64a6b7c1a4ad6b7d5c9c3185bbb5a4dcf74a"
+    }
+  ],
+  "mismatches": {},
+  "rebuilt": {
+    "bytes": 486541241,
+    "declared_n_exemplars": 55247,
+    "declared_n_glosses": 1085,
+    "file_sha256": "12a7db6e7e1d6b09cf0548c0cea6a02a670f20e6e371f53a2128c2339cc309f3",
+    "n_source_clips": 7096,
+    "observed_n_exemplars": 55247,
+    "observed_n_glosses": 1085,
+    "path": "outputs/revision/astra_open_closure_20260906/alignment_rebuild/exemplars.pt",
+    "pose_bytes": 332596308,
+    "pose_dtypes": [
+      "float16"
+    ],
+    "pose_frames": 827354,
+    "semantic_sha256": "237a5af94bf5cca75bbd38a4b79e57d0a3bf48ad37dd2c13c6870a7217379775",
+    "top_level_keys": [
+      "exemplar_poses",
+      "gloss_to_exemplars",
+      "n_exemplars",
+      "n_glosses"
+    ]
+  },
+  "reference": {
+    "bytes": 486541241,
+    "declared_n_exemplars": 55247,
+    "declared_n_glosses": 1085,
+    "file_sha256": "12a7db6e7e1d6b09cf0548c0cea6a02a670f20e6e371f53a2128c2339cc309f3",
+    "n_source_clips": 7096,
+    "observed_n_exemplars": 55247,
+    "observed_n_glosses": 1085,
+    "path": "outputs/sota_chase/phase24_pgrast/exemplars.pt",
+    "pose_bytes": 332596308,
+    "pose_dtypes": [
+      "float16"
+    ],
+    "pose_frames": 827354,
+    "semantic_sha256": "237a5af94bf5cca75bbd38a4b79e57d0a3bf48ad37dd2c13c6870a7217379775",
+    "top_level_keys": [
+      "exemplar_poses",
+      "gloss_to_exemplars",
+      "n_exemplars",
+      "n_glosses"
+    ]
+  },
+  "schema": "phase24_alignment_rebuild_audit_v1",
+  "status": "PASS"
+}

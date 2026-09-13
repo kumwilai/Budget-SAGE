@@ -1,0 +1,46 @@
+{
+  "schema": "recent_control_admission_v4_comparison_checks",
+  "created_at": "2026-09-08T11:57:38+07:00",
+  "command": "/home/kumwilai/research/coopns-slr/.venv/bin/python -B scripts/audit_recent_control_admission.py compare --design outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/design_04/design.json --design-sha256 147abf3ae6c42b446967f182a266fba9a737e8d707d2c53bec980426b1f196b6 --output outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04 --repeat outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+  "exit_code": 0,
+  "verified": true,
+  "deterministic_repeat_identical": true,
+  "scientific_sha256_both_runs": "f18cf82a560f3dcd6ae9ab8ca8ba621c6c5e61272ce758823d817d8c704474a3",
+  "executions": [
+    {
+      "directory": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+      "canonical_path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/run_04",
+      "directory_device": 2096,
+      "directory_inode": 3057717,
+      "run_id": "2bb1bde2a6660473bc0b2eaa1ac0edcb2f0725a9f92c4755e6392a964630d7da",
+      "start_unix_ns": 1788843376217572871,
+      "artifact_inodes": {
+        "start.json": {"device": 2096, "inode": 3057718},
+        "scientific.json": {"device": 2096, "inode": 3057719},
+        "telemetry.json": {"device": 2096, "inode": 3057720}
+      }
+    },
+    {
+      "directory": "outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+      "canonical_path": "/home/kumwilai/research/signgen-t2m/outputs/revision/nonhuman_closure_20260907/recent_control_admission_v1/repeat_04",
+      "directory_device": 2096,
+      "directory_inode": 3057722,
+      "run_id": "aa029a545acabf7df8ae1ae17e926c6fde98bfbfa50b0406348b0f8afcaa761a",
+      "start_unix_ns": 1788843398015244503,
+      "artifact_inodes": {
+        "start.json": {"device": 2096, "inode": 3057723},
+        "scientific.json": {"device": 2096, "inode": 3057724},
+        "telemetry.json": {"device": 2096, "inode": 3057725}
+      }
+    }
+  ],
+  "identity_checks": {
+    "distinct_canonical_directories": true,
+    "distinct_directory_inodes": true,
+    "distinct_run_ids": true,
+    "distinct_start_times": true,
+    "disjoint_nonhardlinked_execution_artifacts": true
+  },
+  "negative_alias_checks": "The source-bound 66-test gate covers identical arguments, same-directory reuse, /proc/self/fd aliases, symlink and spelling aliases, simulated bind-mount inode aliases, hardlinked artifacts, copied records/directories, shared IDs/timestamps, malformed identities, and tampered directory bindings.",
+  "scope": "Read-only verification and comparison of two separately executed v4 records; no training, corpus generation, or recognizer inference."
+}

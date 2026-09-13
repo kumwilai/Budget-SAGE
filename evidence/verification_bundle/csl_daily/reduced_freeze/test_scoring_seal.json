@@ -1,0 +1,35 @@
+{
+  "created_unix_ns": 1788706687388819749,
+  "fixed_certificate": {
+    "independent_reconstruction": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_reduced_learned_freeze_v2/seal_fixed_reconstruction.json",
+      "sha256": "374c0a818679868eb5435b17cf8e6ac1a763253b03aec42ec045e7f320bcf133"
+    },
+    "manifest": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_certificate/test_fixed40_manifest.json",
+      "sha256": "9e37774449dd9a06aa8284eeb32e5c5d272ee55c19a50c1b8442d3f16a90c4a7"
+    },
+    "verification_report": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_certificate/test_fixed40_verify_report.json",
+      "sha256": "e32127db7f8fc4708bbd6ff78ed0b3d4099a0858e83e2f3d13894ff52db52716"
+    }
+  },
+  "freeze_sha256": "3031ebfec31aaebe6cb9b145cdfecb9e2040e44250ab7a8d91b8d8d30b17e608",
+  "learned_certificate": {
+    "independent_reconstruction": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_reduced_learned_freeze_v2/seal_learned_reconstruction.json",
+      "sha256": "84b8869760b1a7d744461905c3f5d34d423aaad9c9f95cb1a9e125931f0b51a6"
+    },
+    "manifest": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_certificate/test_learned40_manifest.json",
+      "sha256": "633cc69c5e4c9d99a78859d0bd31dd4d0f84eb2387656187345e8c45a8fa2194"
+    },
+    "verification_report": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/astra_open_closure_20260906/csl_certificate/test_learned40_verify_report.json",
+      "sha256": "18dc1fc3279dec77a3987b8086a768ffc217edf205c93cd8d0a33ad7d64a622a"
+    }
+  },
+  "local_cooperative_ordering_only": true,
+  "schema": "reduced_csl_test_scoring_seal_v1",
+  "scope": "post-test reduced one-feature CSL allocation; not PHOENIX-method equivalence or human intelligibility"
+}

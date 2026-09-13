@@ -1,0 +1,37 @@
+{
+  "flank_frames": 8,
+  "forbidden_route_inputs_loaded": [],
+  "fps": 25,
+  "implementation": "scripts/build_budget_sage_signjepa_hybrid.py",
+  "implementation_sha256": "17e7060410d1881ecd15238c53262ff00022a66bf65eba9a7b1d1a354cb8276b",
+  "inputs": {
+    "outputs/revision/astra_open_closure_20260906/nonlearned_certificate/nonlearned_manifest.json": "33cb1c920088bbdf80078d4745975b67f8359ebe16ea6a36778c139e98a30177",
+    "outputs/revision/clean_rerank_frame40_test.pt": "c209fbac4184f3716a32de12a69aecffb2c2e70d614f14657ca085e1d7fad012",
+    "outputs/revision/clean_rerank_frame40_test_ledger.json": "a034d55f1dddd1a50514262eac265abe3f29626778cbd638edace1ba6fb46f22",
+    "outputs/revision/generative_route_restore_20260911/test641_mt5gloss.pt": "2307335ff0ba921034819a4b7a3b7208841a89cb224630083f2c350bfa17c912"
+  },
+  "outputs": {
+    "outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/budget_sage_signjepa_hybrid_test.pt": "6245e8b90395a514ff1bdf383f2c7a133e630525a5f992740c8a54be31d56dcb",
+    "outputs/reviewer_closure_takeover_20260912/hybrid_signjepa/budget_sage_signjepa_hybrid_test_ledger.json": "2250820bb109f6448fcce957aff59b3db04adc4f910929cbcb2f16c35f938195"
+  },
+  "policy": "bridge every recorded local-assembly join; no evaluator-based selection",
+  "schema": "budget-sage-signjepa-hybrid-manifest-v1",
+  "status": "authenticated provenance record; not an archive reconstruction certificate",
+  "summary": {
+    "archive_mass": 36944.5,
+    "generated_frame_fraction": 0.21817200660261565,
+    "generated_mass": 10309.5,
+    "merged_bridges": 695,
+    "n_clips": 641,
+    "recorded_joins": 948,
+    "seam": {
+      "hard_boundary_jump_median": 0.052930841222405434,
+      "median_reduction_fraction": 0.8409782651803607,
+      "n": 695,
+      "smooth_outer_jump_median": 0.00841715419664979
+    },
+    "total_frames": 47254,
+    "unique_archive_sources": 1204,
+    "whole_replay_clips_unchanged": 192
+  }
+}

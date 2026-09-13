@@ -1,0 +1,13 @@
+{
+  "admitted_pose_sources": 18400,
+  "admitted_span_sources": 18397,
+  "excluded_pose_sources": [
+    "S000007_P0003_T00"
+  ],
+  "excluded_span_sources": [
+    "S000007_P0003_T00"
+  ],
+  "raw_pose_sources": 18401,
+  "raw_span_sources": 18398,
+  "train_sources_missing_poses": []
+}

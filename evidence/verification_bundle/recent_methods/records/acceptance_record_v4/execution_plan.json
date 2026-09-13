@@ -1,0 +1,22 @@
+{
+  "schema": "recent_control_admission_v4_provenance_correction_plan",
+  "purpose": "Correct the v3 closure provenance after its sealed official-status narrative changed from 6041 bytes (SHA256 2128bfe2f6179ebb1efded5d0fb88d14c0d358a554b95f2fce2f62c9b73f1fd0) to 6389 bytes (SHA256 e6782c9f204c97ec74c749a6994922947313c308fd4e318c94abfbfb39c81561) after design_03 was sealed.",
+  "ownership": [
+    "design_04",
+    "run_04",
+    "repeat_04",
+    "acceptance_record_v4"
+  ],
+  "prior_evidence": "All v1-v3 designs, runs, gates, and acceptance records remain unchanged. V3 is superseded for closure because its live official-status input no longer matches its design record.",
+  "acceptance": [
+    "Freeze the current official-status narrative and every current dependency in a fresh design.",
+    "Require the unchanged audit implementation and tests and a source-bound 66-test gate with zero failures, errors, or skips.",
+    "Execute two fresh separate sequential CPU audit processes in new directories with no concurrent memory-heavy process.",
+    "Revalidate every sealed input in each run, retain any failure, and do not adjust the admission policy.",
+    "Require distinct nonaliased execution identities, disjoint non-hardlinked execution artifacts, and byte-identical scientific JSON.",
+    "Require each measured peak RSS to remain strictly below 7340032 KiB.",
+    "Bind the v4 plan, gate, design, runs, and comparison in a new acceptance record and obtain distinct independent review before closure."
+  ],
+  "claim_ceiling": "Post-hoc admission and reproducibility audit of stored artifacts. One 641-item organizer PT release bank is admitted for its stored re-score using declared --fps 12 and the frozen SLRTP evaluator. Four local architectural controls remain rejected as named-method reproductions. This does not authenticate producer execution, native-rate provenance, or computation against an owner rewriting all evidence. It establishes no recent-method superiority, fresh recognizer evaluation, or untouched-test result. Missing-artifact conclusions apply only to inspected official sources. No training or corpus generation occurs; the audit's declared tiny frozen-checkpoint probes and saved-prediction metric recomputation are disclosed.",
+  "review_state": "Astra-max correction contract approved; awaiting gate, executions, acceptance record, and distinct review."
+}

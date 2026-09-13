@@ -1,0 +1,102 @@
+{
+  "stage": "detect",
+  "condition": "clean",
+  "preregistration_sha256": "065bdc4701a77ea0871cb15cbc1b41c3660cf0e0359545ced6b00ba5fcfcf3e1",
+  "interpreter": "/home/kumwilai/research/coopns-slr/.venv/bin/python",
+  "eps": 0.00025,
+  "z_threshold": 8.0,
+  "key_id_sha256_16": "97d41a11b8b9c6d0",
+  "marked_bank": {
+    "path": "/home/kumwilai/research/signgen-t2m/outputs/watermark_generative_route_20260911/test641_mt5gloss_wm_eps2.5e-4.pt",
+    "sha256": "f7b0423be058cf1e635a43b68511ec64f27cc8ddd6b05eb340fed4426448b057"
+  },
+  "n_positives": 641,
+  "detector_errors": {
+    "pos": 0,
+    "n1": 0,
+    "n2": 0,
+    "n3": 0,
+    "n4": 0
+  },
+  "payload_ber_mean": 0.0,
+  "payload_ber_max": 0.0,
+  "payload_exact_recovery": 641,
+  "z_pos": {
+    "median": 108.18474325431337,
+    "min": 50.37547904880495,
+    "max": 232.01718033863568,
+    "p05": 72.08978933338723
+  },
+  "pools": {
+    "N1_unmarked_source": {
+      "n_pos": 641,
+      "n_neg": 641,
+      "auc": 1.0,
+      "tpr_at_zero_fpr": 1.0,
+      "zero_fpr_threshold_z": 4.488229589676581,
+      "tpr_at_z8": 1.0,
+      "tpr_at_z8_cp95_lower": 0.9942616454705175,
+      "fpr_at_z8": 0.0,
+      "z_pos_median": 108.18474325431337,
+      "z_pos_min": 50.37547904880495,
+      "z_neg_median": 0.03965983610938184,
+      "z_neg_max": 4.488229589676581,
+      "z_neg_p99": 3.499346023592341
+    },
+    "N2_wrong_key": {
+      "n_pos": 641,
+      "n_neg": 641,
+      "auc": 1.0,
+      "tpr_at_zero_fpr": 1.0,
+      "zero_fpr_threshold_z": 5.203823327169859,
+      "tpr_at_z8": 1.0,
+      "tpr_at_z8_cp95_lower": 0.9942616454705175,
+      "fpr_at_z8": 0.0,
+      "z_pos_median": 108.18474325431337,
+      "z_pos_min": 50.37547904880495,
+      "z_neg_median": 0.7549874330926009,
+      "z_neg_max": 5.203823327169859,
+      "z_neg_p99": 3.6777597618717497
+    },
+    "N3_wrong_clip_id": {
+      "n_pos": 641,
+      "n_neg": 641,
+      "auc": 1.0,
+      "tpr_at_zero_fpr": 1.0,
+      "zero_fpr_threshold_z": 5.189365595672999,
+      "tpr_at_z8": 1.0,
+      "tpr_at_z8_cp95_lower": 0.9942616454705175,
+      "fpr_at_z8": 0.0,
+      "z_pos_median": 108.18474325431337,
+      "z_pos_min": 50.37547904880495,
+      "z_neg_median": 0.662560796561595,
+      "z_neg_max": 5.189365595672999,
+      "z_neg_p99": 4.0624475547847085
+    },
+    "N4_real_motion_gt": {
+      "n_pos": 641,
+      "n_neg": 641,
+      "auc": 1.0,
+      "tpr_at_zero_fpr": 1.0,
+      "zero_fpr_threshold_z": 4.461092536241086,
+      "tpr_at_z8": 1.0,
+      "tpr_at_z8_cp95_lower": 0.9942616454705175,
+      "fpr_at_z8": 0.0,
+      "z_pos_median": 108.18474325431337,
+      "z_pos_min": 50.37547904880495,
+      "z_neg_median": 1.050256150636495,
+      "z_neg_max": 4.461092536241086,
+      "z_neg_p99": 3.944352224514229
+    }
+  },
+  "binding": {
+    "n": 641,
+    "binding_match_own_id_at_z8": 641,
+    "transfer_detections_other_id_at_z8": 0,
+    "z_own_median": 108.18474325431337,
+    "z_own_min": 50.37547904880495,
+    "z_other_median": 0.662560796561595,
+    "z_other_max": 5.189365595672999
+  },
+  "seconds": 2.3248276710510254
+}

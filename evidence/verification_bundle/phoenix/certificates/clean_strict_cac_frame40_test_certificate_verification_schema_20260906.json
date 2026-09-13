@@ -1,0 +1,36 @@
+{
+  "archive_sha256": "4170dfb76edef0110d74f60cd79fecb25f771c07e4e3de7d294470c1ec009fec",
+  "blend_boundary_positions": 3763,
+  "certificate_helper_sha256": "040809dd3259ed5e7f98e78b4bee944a00403e145ccf4a17bbfbee9fc3dd8cd7",
+  "fallback_clips": 432,
+  "fallback_frames": 29561,
+  "fractional_blend_positions": 1861,
+  "implementation": "/home/kumwilai/research/signgen-t2m/scripts/clean_route_certificate.py",
+  "implementation_sha256": "d27d5ff59e916e35aa8f15c377e0af57c1de737d67a14dfc0231f5f3f444c608",
+  "manifest_entries": 641,
+  "manifest_sha256": "963a1bef6f1d70f240797e5a89decd46270148974e29fbf0e9c7ae0c482dd687",
+  "pose_bank_sha256": "3e2125b73bfa7591ec0cbab771a617f40bea0de68ec974d3e746676523d56c3d",
+  "replay_clips": 209,
+  "replay_frame_budget": {
+    "denominator": 5,
+    "integer_check": "98465 <= 98508",
+    "numerator": 2,
+    "verified": true
+  },
+  "replay_frame_fraction": 0.3998253948917854,
+  "replay_frames": 19693,
+  "router_records_read_by_verifier": false,
+  "tamper_drills": {
+    "archive_commitment_edit_caught": true,
+    "blend_config_edit_caught": true,
+    "ledger_edit_caught": true,
+    "pose_edit_caught": true,
+    "release_membership_edit_caught": true,
+    "route_relabel_caught": true,
+    "wrong_key_caught": true
+  },
+  "total_frames": 49254,
+  "unique_training_sources": 1231,
+  "unknown_or_untraced_frames": 0,
+  "verdict": "PASS"
+}
