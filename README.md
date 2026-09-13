@@ -67,6 +67,20 @@ archives and model checkpoints are not redistributed. Obtain them from their
 respective custodians and follow their licenses. Released manifests preserve
 hashes and input contracts so authorized holders can check local copies.
 
+## Human evaluation instrument
+
+The web instrument used for the human evaluation is published separately, so
+that the study materials stay distinct from this code release:
+
+- instrument source: <https://github.com/kumwilai/sign-eval>
+- live instrument: <https://kumwilai.github.io/sign-eval/>
+
+That repository contains the participant-facing evaluation page only. No
+participant response, identifier, access token, or collected result is
+published there or here. Human-evaluation results are not reported in this
+release; automatic recognition and trajectory metrics in this repository are
+not evidence of human sign-language intelligibility.
+
 ## Claim boundaries
 
 This release reproduces the current artifact-level routing, reconstruction,
