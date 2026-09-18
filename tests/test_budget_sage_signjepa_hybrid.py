@@ -51,3 +51,27 @@ def test_router_blends_when_archive_has_a_join():
     assert decision.mode == "join_hybrid"
     assert decision.generated_weight[12] == 1
     assert decision.generated_weight[4] == 0
+
+
+def test_native_metadata_is_not_translated_as_spatial_geometry():
+    from budget_sage.generation.hybrid_router import route_motion
+
+    base = torch.zeros(30, 133, 3)
+    base[..., 2] = 0.8
+    generated = torch.ones(20, 133, 3)
+    generated[..., 2] = 0.2
+    rows = [{"frame": frame} for frame in range(12, 16)]
+    decision = route_motion(
+        generated, base, rows, spatial_dims=2,
+    )
+    # XY receives the shared body-anchor translation. Confidence is mixed by
+    # the route weight only and never receives that translation.
+    expected_confidence = (
+        (1.0 - decision.generated_weight) * 0.8
+        + decision.generated_weight * 0.2
+    )
+    assert torch.allclose(decision.pose[..., 2], expected_confidence[:, None])
+    changed_confidence = generated.clone()
+    changed_confidence[..., 2] = 0.6
+    changed = route_motion(changed_confidence, base, rows, spatial_dims=2)
+    assert torch.equal(decision.pose[..., :2], changed.pose[..., :2])

@@ -35,6 +35,7 @@ def route_motion(
     *,
     archive_admissible: bool = True,
     flank: int = FLANK,
+    spatial_dims: int | None = None,
 ) -> HybridDecision:
     """Route one request without references, evaluator output, or target pose."""
     if base is None or not archive_admissible:
@@ -54,7 +55,9 @@ def route_motion(
             mode="archive",
             bridges=(),
         )
-    aligned = aligned_generated(base, generated.float(), groups, flank=flank)
+    aligned = aligned_generated(
+        base, generated.float(), groups, flank=flank, spatial_dims=spatial_dims
+    )
     weight = bridge_weight(base.shape[0], groups, flank=flank)
     pose = ((1.0 - weight[:, None, None]) * base + weight[:, None, None] * aligned).contiguous()
     return HybridDecision(pose=pose, generated_weight=weight,

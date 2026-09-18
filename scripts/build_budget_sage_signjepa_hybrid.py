@@ -42,9 +42,12 @@ def smoothstep5(x: torch.Tensor) -> torch.Tensor:
 def resize_pose(pose: torch.Tensor, length: int) -> torch.Tensor:
     if int(pose.shape[0]) == int(length):
         return pose.float().clone()
+    if pose.ndim != 3 or pose.shape[0] < 1 or pose.shape[1] < 1 or pose.shape[2] < 1:
+        raise ValueError(f"expected non-empty [T,J,D] pose, got {tuple(pose.shape)}")
+    trailing = tuple(pose.shape[1:])
     flat = pose.float().reshape(pose.shape[0], -1).T.unsqueeze(0)
     out = F.interpolate(flat, size=int(length), mode="linear", align_corners=True)
-    return out.squeeze(0).T.reshape(int(length), 178, 3).contiguous()
+    return out.squeeze(0).T.reshape(int(length), *trailing).contiguous()
 
 
 def join_groups(blend_frames: list[dict[str, Any]], flank: int = FLANK) -> list[tuple[int, int]]:
@@ -81,16 +84,27 @@ def bridge_weight(length: int, groups: list[tuple[int, int]], flank: int = FLANK
 
 
 def aligned_generated(base: torch.Tensor, generated: torch.Tensor,
-                      groups: list[tuple[int, int]], flank: int = FLANK) -> torch.Tensor:
+                      groups: list[tuple[int, int]], flank: int = FLANK,
+                      spatial_dims: int | None = None) -> torch.Tensor:
     """Apply a geometry-preserving, minimum-jerk body-anchor translation."""
+    if base.ndim != 3 or generated.ndim != 3 or base.shape[1:] != generated.shape[1:]:
+        raise ValueError(
+            f"base/generated layouts differ: {tuple(base.shape)}, {tuple(generated.shape)}"
+        )
+    if base.shape[1] < BODY.stop:
+        raise ValueError("pose layout lacks the frozen body-anchor joints")
+    if spatial_dims is None:
+        spatial_dims = int(base.shape[2])
+    if not 1 <= int(spatial_dims) <= int(base.shape[2]):
+        raise ValueError("spatial_dims must select a non-empty coordinate prefix")
     out = resize_pose(generated, int(base.shape[0]))
     for start, end in groups:
         left, right = max(0, start - flank), min(base.shape[0] - 1, end + flank)
-        dl = (base[left, BODY] - out[left, BODY]).mean(dim=0)
-        dr = (base[right, BODY] - out[right, BODY]).mean(dim=0)
+        dl = (base[left, BODY, :spatial_dims] - out[left, BODY, :spatial_dims]).mean(dim=0)
+        dr = (base[right, BODY, :spatial_dims] - out[right, BODY, :spatial_dims]).mean(dim=0)
         u = smoothstep5(torch.linspace(0.0, 1.0, right - left + 1)).view(-1, 1)
-        shift = (1.0 - u) * dl.view(1, 3) + u * dr.view(1, 3)
-        out[left:right + 1] += shift[:, None, :]
+        shift = (1.0 - u) * dl.view(1, spatial_dims) + u * dr.view(1, spatial_dims)
+        out[left:right + 1, :, :spatial_dims] += shift[:, None, :]
     return out
 
 
