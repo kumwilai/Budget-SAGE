@@ -1,0 +1,186 @@
+{
+  "comparisons": {
+    "learned_vs_fallback": {
+      "baseline": "fallback",
+      "bootstrap_delta": {
+        "bleu1": {
+          "ci95": [
+            8.825845489305983,
+            12.047106012687715
+          ],
+          "fraction_negative": 0.0,
+          "fraction_positive": 1.0,
+          "mean": 10.431772640793191,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "bleu4": {
+          "ci95": [
+            6.343525444612633,
+            8.809586903805268
+          ],
+          "fraction_negative": 0.0,
+          "fraction_positive": 1.0,
+          "mean": 7.569822698785958,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "corpus_wer": {
+          "ci95": [
+            -8.562284031837814,
+            -5.551229429774214
+          ],
+          "fraction_negative": 1.0,
+          "fraction_positive": 0.0,
+          "mean": -7.018546538675632,
+          "two_sided_p": 0.00019998000199980003
+        }
+      },
+      "comparison": "learned",
+      "orientation": "comparison minus baseline; lower corpus WER is better",
+      "point_delta": {
+        "bleu1": 10.428935185412389,
+        "bleu4": 7.572458377116128,
+        "corpus_wer": -7.022939894912213
+      }
+    },
+    "learned_vs_rerank": {
+      "baseline": "rerank",
+      "bootstrap_delta": {
+        "bleu1": {
+          "ci95": [
+            1.4501007147772031,
+            4.523416581951626
+          ],
+          "fraction_negative": 0.0,
+          "fraction_positive": 1.0,
+          "mean": 2.9878788224453383,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "bleu4": {
+          "ci95": [
+            0.5774189533791696,
+            2.783053581195284
+          ],
+          "fraction_negative": 0.0017,
+          "fraction_positive": 0.9983,
+          "mean": 1.6707574071678715,
+          "two_sided_p": 0.0035996400359964
+        },
+        "corpus_wer": {
+          "ci95": [
+            -3.337619367008357,
+            -0.5769831522002787
+          ],
+          "fraction_negative": 0.9965,
+          "fraction_positive": 0.0033,
+          "mean": -1.966651422947444,
+          "two_sided_p": 0.0071992800719928
+        }
+      },
+      "comparison": "learned",
+      "orientation": "comparison minus baseline; lower corpus WER is better",
+      "point_delta": {
+        "bleu1": 2.966258458945809,
+        "bleu4": 1.6585458373683526,
+        "corpus_wer": -1.9607843137254974
+      }
+    },
+    "learned_vs_retrieval": {
+      "baseline": "retrieval",
+      "bootstrap_delta": {
+        "bleu1": {
+          "ci95": [
+            -19.159603154308336,
+            -15.917759713300674
+          ],
+          "fraction_negative": 1.0,
+          "fraction_positive": 0.0,
+          "mean": -17.54818758097794,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "bleu4": {
+          "ci95": [
+            -8.799180746968457,
+            -6.873209950788457
+          ],
+          "fraction_negative": 1.0,
+          "fraction_positive": 0.0,
+          "mean": -7.826695936569475,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "corpus_wer": {
+          "ci95": [
+            2.636046895284003,
+            6.217223883493204
+          ],
+          "fraction_negative": 0.0,
+          "fraction_positive": 1.0,
+          "mean": 4.432843369295871,
+          "two_sided_p": 0.00019998000199980003
+        }
+      },
+      "comparison": "learned",
+      "orientation": "comparison minus baseline; lower corpus WER is better",
+      "point_delta": {
+        "bleu1": -17.616979675916042,
+        "bleu4": -7.863716677118145,
+        "corpus_wer": 4.43419197744457
+      }
+    }
+  },
+  "meta": {
+    "ground_truth": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+    "ground_truth_sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f",
+    "ids_sha256": "f4a610be7ceffc9c0870ca8a588f3d8c49c66aeea01d63ad3298d83c34cd7a60",
+    "implementation": "/home/kumwilai/research/signgen-t2m/scripts/bootstrap_clean_route_comparisons.py",
+    "implementation_sha256": "2a04356b56308326c1ec902af98e99f539e555f91d16311db32a735f2fa4b893",
+    "inputs": {
+      "fallback": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/revision_clean_phrase_lattice_test_text_preds.pt",
+        "sha256": "7341fed1792458a2f0fe00c66ba3f3f213d7c9f214551487d655cd23d49be39d"
+      },
+      "learned": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/clean_strict_cac_frame40_test_text_preds.pt",
+        "sha256": "0c15037740e86ed5a7fe7caede5b8053460f5451d171d74cf38f5a6c2b41bc31"
+      },
+      "rerank": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/clean_rerank_frame40_test_text_preds.pt",
+        "sha256": "49db5307e4803f2564452bd3b5968ef30c9e193fb2b35d0b65e964b711e07003"
+      },
+      "retrieval": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/revision_clean_topk_test_text_preds.pt",
+        "sha256": "ade00e778fb525d20177e4627323fee07e0bce849a8cc10958a664787a7e219a"
+      }
+    },
+    "n": 641,
+    "n_boot": 10000,
+    "numpy_version": "2.4.2",
+    "paired": true,
+    "paired_bootstrap_implementation": "/home/kumwilai/research/signgen-t2m/scripts/bootstrap_strict_cac.py",
+    "paired_bootstrap_implementation_sha256": "5371d2b75a98493c1c759f6e5fbd3d67b10b16ab1783ee5062c52545361055c4",
+    "seed": 30373,
+    "split": "test",
+    "torch_version": "2.10.0+cu128"
+  },
+  "methods": {
+    "fallback": {
+      "bleu1": 25.92416318054749,
+      "bleu4": 9.189309308092298,
+      "corpus_wer": 90.64462386261694
+    },
+    "learned": {
+      "bleu1": 36.35309836595988,
+      "bleu4": 16.761767685208426,
+      "corpus_wer": 83.62168396770473
+    },
+    "rerank": {
+      "bleu1": 33.38683990701407,
+      "bleu4": 15.103221847840073,
+      "corpus_wer": 85.58246828143022
+    },
+    "retrieval": {
+      "bleu1": 53.97007804187592,
+      "bleu4": 24.62548436232657,
+      "corpus_wer": 79.18749199026016
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "certificate_used": false,
+  "flank_frames": 8,
+  "forbidden_route_inputs_loaded": [],
+  "fps": 25,
+  "implementation": "scripts/build_hybrid_route_20260915.py",
+  "implementation_sha256": "12935ae0e0a4716882435ff8d834ab2f06a2043dcb385e5574a56b1ac4c19bf2",
+  "inputs": {
+    "outputs/revision/clean_strict_cac_frame40_test.pt": "3e2125b73bfa7591ec0cbab771a617f40bea0de68ec974d3e746676523d56c3d",
+    "outputs/revision/clean_strict_cac_frame40_test_ledger.json": "9f63c64c306cc5b145a502087fb785b1389836eac66c73529a8ae70f342d46f4",
+    "outputs/revision/generative_route_restore_20260911/test641_mt5gloss.pt": "2307335ff0ba921034819a4b7a3b7208841a89cb224630083f2c350bfa17c912"
+  },
+  "outputs": {
+    "outputs/hybrid_learned_route_20260915/learned/budget_sage_signjepa_hybrid_learned_test.pt": "ed5cff4b09b5234d08439add8e49e818eb13a2a71360df6fc44b1a8936eaf4d8",
+    "outputs/hybrid_learned_route_20260915/learned/budget_sage_signjepa_hybrid_learned_test_ledger.json": "ca3319e8c1af10c5611fb36696420c802cdd2608df0b83f5b6c22ebbbc7aed9a"
+  },
+  "policy": "bridge every recorded local-assembly join; no evaluator-based selection",
+  "schema": "budget-sage-signjepa-hybrid-manifest-v1",
+  "status": "authenticated provenance record; not an archive reconstruction certificate",
+  "summary": {
+    "archive_mass": 38922.0,
+    "generated_frame_fraction": 0.20976976489219148,
+    "generated_mass": 10332.0,
+    "merged_bridges": 706,
+    "n_clips": 641,
+    "recorded_joins": 951,
+    "seam": {
+      "hard_boundary_jump_median": 0.052754671312868595,
+      "median_reduction_fraction": 0.8419036250520502,
+      "n": 706,
+      "smooth_outer_jump_median": 0.008340322296135128
+    },
+    "total_frames": 49254,
+    "unique_archive_sources": 1231,
+    "whole_replay_clips_unchanged": 209
+  }
+}

@@ -1,0 +1,157 @@
+{
+ "reproduction": {
+  "frozen_bit_exact": true,
+  "hermite3_h2": {
+   "n": 641,
+   "hand_speed": 0.988424582732185,
+   "hand_jerk": 0.9886941991905609,
+   "hand_posestd": 0.907846604659801,
+   "xy_speed_vs_xyGT": 1.001456187694492,
+   "xy_jerk_vs_xyGT": 0.9985303755515121,
+   "xy_speed_lead_scale": 0.8122721397317659,
+   "xy_jerk_lead_scale": 0.7441584637325668,
+   "joint_obj": 0.022881218077254073
+  },
+  "recorded": {
+   "hand_jerk": 0.9887,
+   "hand_speed": 0.9884,
+   "hand_posestd": 0.9078
+  },
+  "max_abs_diff_vs_recorded": 4.660465980099726e-05
+ },
+ "test641": {
+  "rcx_h2": {
+   "local": {
+    "n": 641,
+    "hand_speed": 0.9960648612517052,
+    "hand_jerk": 1.060807580343339,
+    "hand_posestd": 0.8983181793689791,
+    "xy_speed_vs_xyGT": 1.0115643102996617,
+    "xy_jerk_vs_xyGT": 1.0727275347039131,
+    "xy_speed_lead_scale": 0.8204707473973433,
+    "xy_jerk_lead_scale": 0.7994541716249535,
+    "joint_obj": 0.06474271909163376
+   },
+   "cac_route": {
+    "n": 641,
+    "hand_speed": 0.9913116346240357,
+    "hand_jerk": 1.048360967959011,
+    "hand_posestd": 0.9330054719358363,
+    "xy_speed_vs_xyGT": 0.9989338074636662,
+    "xy_jerk_vs_xyGT": 1.0581690496300877,
+    "xy_speed_lead_scale": 0.8102262597297392,
+    "xy_jerk_lead_scale": 0.7886044066582866,
+    "joint_obj": 0.057049333334975194
+   }
+  },
+  "hermite3_h2": {
+   "local": {
+    "n": 641,
+    "hand_speed": 0.988424582732185,
+    "hand_jerk": 0.9886941991905609,
+    "hand_posestd": 0.907846604659801,
+    "xy_speed_vs_xyGT": 1.001456187694492,
+    "xy_jerk_vs_xyGT": 0.9985303755515121,
+    "xy_speed_lead_scale": 0.8122721397317659,
+    "xy_jerk_lead_scale": 0.7441584637325668,
+    "joint_obj": 0.022881218077254073
+   },
+   "cac_route": {
+    "n": 641,
+    "hand_speed": 0.9879574614838348,
+    "hand_jerk": 0.9972081876677672,
+    "hand_posestd": 0.9372343279424122,
+    "xy_speed_vs_xyGT": 0.9944356670786448,
+    "xy_jerk_vs_xyGT": 0.997720069387429,
+    "xy_speed_lead_scale": 0.8065778583715464,
+    "xy_jerk_lead_scale": 0.7435545800601406,
+    "joint_obj": 0.014834350848398015
+   }
+  },
+  "frozen_cosine_w4": {
+   "local": {
+    "n": 641,
+    "hand_speed": 1.1039703188373655,
+    "hand_jerk": 1.8529779082861673,
+    "hand_posestd": 0.8942922424160437,
+    "xy_speed_vs_xyGT": 1.117392945535097,
+    "xy_jerk_vs_xyGT": 1.9282358279167884,
+    "xy_speed_lead_scale": 0.9063074051002397,
+    "xy_jerk_lead_scale": 1.437024898340338,
+    "joint_obj": 0.9569482271235328
+   },
+   "cac_route": {
+    "n": 641,
+    "hand_speed": 1.0708100366317008,
+    "hand_jerk": 1.482603049795189,
+    "hand_posestd": 0.9320769739610143,
+    "xy_speed_vs_xyGT": 1.0819995234417707,
+    "xy_jerk_vs_xyGT": 1.5138534403166692,
+    "xy_speed_lead_scale": 0.8776001176028599,
+    "xy_jerk_lead_scale": 1.1282048879485462,
+    "joint_obj": 0.5534130864268898
+   }
+  }
+ },
+ "ledger": {
+  "rcx_h2": {
+   "local_route_641_clips": {
+    "frames": 42635,
+    "exact_archive_rows": 37219,
+    "non_archive_positions": 5416,
+    "pct_exact": 87.3
+   },
+   "cac_route_432_local_clips": {
+    "frames": 29561,
+    "exact_archive_rows": 25757,
+    "non_archive_positions": 3804,
+    "pct_exact": 87.13
+   },
+   "frac_non_archive_641": 0.127031781400258
+  },
+  "hermite3_h2": {
+   "local_route_641_clips": {
+    "frames": 42635,
+    "exact_archive_rows": 37219,
+    "non_archive_positions": 5416,
+    "pct_exact": 87.3
+   },
+   "cac_route_432_local_clips": {
+    "frames": 29561,
+    "exact_archive_rows": 25757,
+    "non_archive_positions": 3804,
+    "pct_exact": 87.13
+   },
+   "frac_non_archive_641": 0.127031781400258
+  },
+  "frozen_cosine_w4": {
+   "local_route_641_clips": {
+    "frames": 42635,
+    "exact_archive_rows": 38626,
+    "non_archive_positions": 4009,
+    "pct_exact": 90.6
+   },
+   "cac_route_432_local_clips": {
+    "frames": 29561,
+    "exact_archive_rows": 26749,
+    "non_archive_positions": 2812,
+    "pct_exact": 90.49
+   },
+   "frac_non_archive_641": 0.09403072592940073
+  }
+ },
+ "convexity": {
+  "emitted_rows": 5416,
+  "min_coefficient": 0.0034164078649987287,
+  "max_abs_sum_minus_one": 0.0,
+  "assertion_passed": true,
+  "per_source_a_weight_total": 2707.999999999999,
+  "per_source_b_weight_total": 2707.999999999999
+ },
+ "provenance": {
+  "joins": 1354,
+  "bridge_rows": 5416,
+  "rows_reading_a_previously_overwritten_row": 0,
+  "joins_affected": 0
+ }
+}

@@ -1,0 +1,162 @@
+{
+  "note": "written incrementally; task 1 = hybrid on learned route",
+  "environment": "/home/kumwilai/research/coopns-slr/.venv (interpreter pinned by score_record.json evaluator_command)",
+  "reproduction_gate": {
+    "status": "PASS (bit-for-bit)",
+    "rebuilt_pose_sha256": "6245e8b90395a514ff1bdf383f2c7a133e630525a5f992740c8a54be31d56dcb",
+    "recorded_pose_sha256": "6245e8b90395a514ff1bdf383f2c7a133e630525a5f992740c8a54be31d56dcb",
+    "rebuilt_ledger_sha256": "2250820bb109f6448fcce957aff59b3db04adc4f910929cbcb2f16c35f938195",
+    "recorded_ledger_sha256": "2250820bb109f6448fcce957aff59b3db04adc4f910929cbcb2f16c35f938195",
+    "rescored_bleu4": 15.339975745126376,
+    "recorded_bleu4": 15.339975745126376,
+    "rescored_wer": 84.68537741894143,
+    "recorded_wer": 84.68537741894143,
+    "difference": "exactly zero to all printed digits"
+  },
+  "learned_hybrid": {
+    "split": "test",
+    "n_clips": 641,
+    "fps": 25,
+    "flank_frames": 8,
+    "recorded_joins": 951,
+    "merged_bridges": 706,
+    "total_frames": 49254,
+    "generated_mass": 10332.0,
+    "archive_mass": 38922.0,
+    "generated_frame_fraction": 0.20976976489219148,
+    "whole_replay_clips_unchanged": 209,
+    "unique_archive_sources": 1231,
+    "pose_sha256": "ed5cff4b09b5234d08439add8e49e818eb13a2a71360df6fc44b1a8936eaf4d8",
+    "metrics": {
+      "bleu1": 37.03589290892842,
+      "bleu2": 26.63482320556162,
+      "bleu3": 20.694353569440626,
+      "bleu4": 16.93347813632895,
+      "chrf": 36.69550535812559,
+      "rouge": 39.25255763450815,
+      "wer": 83.14750736896066,
+      "dtw_mje": 0.04594491049647331,
+      "total_distance": 0.7547732591629028,
+      "avg_duration": 0.894686372709369
+    }
+  },
+  "learned_baseline_unhybridised": {
+    "source": "outputs/revision/evaluator_workspace/results/clean_strict_cac_frame40_test.json",
+    "metrics": {
+      "bleu1": 36.35309836595988,
+      "bleu4": 16.761767685208422,
+      "wer": 83.62168396770473,
+      "dtw_mje": 0.044562388211488724
+    }
+  },
+  "delta_hybrid_minus_baseline": {
+    "bleu1": 0.68279454296854,
+    "bleu4": 0.171710451120528,
+    "wer": -0.47417659874407,
+    "dtw_mje": 0.001382522284984586
+  },
+  "task1_mechanism": {
+    "what_the_hybrid_does_to_the_stronger_base": "every recorded local-assembly join in the learned (strict-CAC) route is replaced by a temporally-resized Sign-JEPA bridge, body-anchor translated, with an 8-frame quintic cross-fade on each side; parameters identical to the nonlearned hybrid (FLANK=8, smoothstep5, BODY=slice(0,8)); pose-critical functions verified character-identical.",
+    "joins": {
+      "learned_recorded_joins": 951,
+      "learned_merged_bridges": 706,
+      "nonlearned_recorded_joins": 948,
+      "nonlearned_merged_bridges": 695
+    },
+    "clip_modes": {
+      "learned": {
+        "whole_clip_replay": 209,
+        "compositional_local_reuse": 432
+      },
+      "nonlearned": {
+        "whole_clip_replay": 192,
+        "compositional_local_reuse": 449
+      }
+    },
+    "joins_per_compositional_clip": {
+      "learned": 2.201388888888889,
+      "nonlearned": 2.111358574610245
+    },
+    "untouched_clips_byte_identical": {
+      "learned": {
+        "whole_clip_replay": "209/209 byte-identical",
+        "compositional_with_no_joins": "17/432 byte-identical"
+      },
+      "nonlearned": {
+        "whole_clip_replay": "192/192 byte-identical",
+        "compositional_with_no_joins": "23/449 byte-identical"
+      }
+    },
+    "mass_accounting": {
+      "learned": {
+        "archive": 38922.0,
+        "generated": 10332.0,
+        "sum": 49254.0,
+        "total_frames": 49254,
+        "residual": 0.0,
+        "generated_frame_fraction": 0.20976976489219148
+      },
+      "nonlearned": {
+        "archive": 36944.5,
+        "generated": 10309.5,
+        "sum": 47254.0,
+        "total_frames": 47254,
+        "residual": 0.0,
+        "generated_frame_fraction": 0.21817200660261565
+      }
+    },
+    "mechanistic_reading": "The stronger learned base replays 17 more clips whole (209 vs 192), so it exposes fewer composed clips (432 vs 449) but slightly more joins inside them (951 vs 948, i.e. 2.20 vs 2.11 joins per composed clip). Generated frame fraction therefore falls slightly (20.98% vs 21.82%) even though the absolute generated mass is marginally higher (10332 vs 10309.5 frames), because the learned bank is longer overall (49254 vs 47254 frames)."
+  },
+  "task1_motion": {
+    "learned_hybrid": {
+      "clips": 641,
+      "hand_speed_ratio": 0.8173784777484457,
+      "body_speed_ratio": 0.856356002118184,
+      "face_speed_ratio": 1.278788662630979,
+      "hand_jerk_ratio": 1.236975091319287,
+      "hand_posestd_ratio": 0.9614854505092163
+    },
+    "learned_baseline": {
+      "clips": 641,
+      "hand_speed_ratio": 0.8842261769632249,
+      "body_speed_ratio": 0.9237887693858976,
+      "face_speed_ratio": 0.9223393670648725,
+      "hand_jerk_ratio": 1.502043647074758,
+      "hand_posestd_ratio": 0.9727396681294799
+    },
+    "note": "hand_posestd_ratio (variance ratio) 0.961 vs 0.973 baseline - no variance collapse; both below 1, not inflated."
+  },
+  "task1_paired_bootstrap": {
+    "N": 641,
+    "n_boot": 2000,
+    "seed": 42,
+    "hybrid": {
+      "BLEU-1": 37.03589290892842,
+      "BLEU-4": 16.93347813632895,
+      "pcWER": 78.77834998949479
+    },
+    "parent": {
+      "BLEU-1": 36.35309836595988,
+      "BLEU-4": 16.761767685208422,
+      "pcWER": 79.53355730357654
+    },
+    "dBLEU1": {
+      "point": 0.7114810682206896,
+      "ci_lo": -0.06774941422329216,
+      "ci_hi": 1.4801643814740892,
+      "frac_favourable": 0.9585
+    },
+    "dBLEU4": {
+      "point": 0.18457169843090612,
+      "ci_lo": -0.24230949696791354,
+      "ci_hi": 0.6369337584158475,
+      "frac_favourable": 0.777
+    },
+    "dpcWER": {
+      "point": -0.7756253603697143,
+      "ci_lo": -1.9318356239410603,
+      "ci_hi": 0.3784710864472199,
+      "frac_favourable": 0.9035
+    }
+  }
+}

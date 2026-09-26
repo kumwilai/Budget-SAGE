@@ -77,9 +77,64 @@ def verify_evidence() -> None:
     assert verdict["ground_truth_duration_conditioned"] is False
 
 
+def verify_revision_evidence() -> None:
+    """The 26 September 2026 revision: motion ratios, learned hybrid,
+    crossfade study, and paired intervals."""
+    motion = load_json("evidence/motion_ratios/hybrid_fixed_test_kinematics.json")
+    assert motion["n_clips"] == 641
+    assert abs(motion["hand_speed_ratio"] - 1.005530949173178) < 1e-9
+    assert abs(motion["hand_jerk_ratio"] - 1.2262462545804587) < 1e-9
+    assert abs(motion["hand_posestd_ratio"] - 0.8456225659744873) < 1e-9
+
+    evaluator_hybrid = load_json(
+        "evidence/evaluator_results/budget_sage_signjepa_hybrid_test.json"
+    )
+    assert abs(evaluator_hybrid["bleu"]["bleu4"] - 15.339975745126376) < 1e-9
+    assert "avg_duration" in evaluator_hybrid
+
+    learned_manifest = load_json(
+        "evidence/hybrid_learned/materialization_manifest.json"
+    )
+    learned_summary = learned_manifest["summary"]
+    assert learned_summary["n_clips"] == 641
+    assert learned_summary["recorded_joins"] == 951
+    assert learned_summary["merged_bridges"] == 706
+
+    learned_bootstrap = load_json("evidence/hybrid_learned/paired_bootstrap_2000.json")
+    assert learned_bootstrap["N"] == 641
+    assert learned_bootstrap["n_boot"] == 2000
+
+    rcx_summary = load_json("evidence/jerk_study/rcx_summary.json")
+    assert rcx_summary["all_acceptance_passed"] is True
+    rcx_h2 = {
+        (row["route"]): row
+        for row in rcx_summary["rows"]
+        if row["variant"] == "rcx_h2" and row["split"] == "test641"
+    }
+    assert abs(rcx_h2["local"]["hand_jerk"] - 1.060807580343339) < 1e-9
+    assert abs(rcx_h2["local"]["hand_speed"] - 0.9960648612517052) < 1e-9
+    assert abs(rcx_h2["cac_route"]["hand_jerk"] - 1.048360967959011) < 1e-9
+    assert abs(rcx_h2["cac_route"]["hand_speed"] - 0.9913116346240357) < 1e-9
+
+    clean_route = load_json(
+        "evidence/paired_intervals/clean_route_test_paired_bootstrap.json"
+    )
+    learned_vs_rerank = clean_route["comparisons"]["learned_vs_rerank"]["bootstrap_delta"]
+    assert abs(learned_vs_rerank["bleu4"]["mean"] - 1.6707574071678715) < 1e-9
+    assert abs(learned_vs_rerank["corpus_wer"]["mean"] - (-1.966651422947444)) < 1e-9
+
+    exact_excl = load_json(
+        "evidence/paired_intervals/exact_excl_sensitivity_test_paired_bootstrap.json"
+    )
+    learned_vs_nonlearned = exact_excl["comparisons"]["learned_minus_nonlearned"]["bootstrap_delta"]
+    assert abs(learned_vs_nonlearned["bleu4"]["mean"] - 1.6169512347747566) < 1e-9
+    assert abs(learned_vs_nonlearned["corpus_wer"]["mean"] - (-1.8280776862367958)) < 1e-9
+
+
 def main() -> None:
     count = verify_manifest()
     verify_evidence()
+    verify_revision_evidence()
     print(f"verified {count} files")
     print("PASS: release integrity and declared evidence checks")
 

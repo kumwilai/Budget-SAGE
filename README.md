@@ -20,7 +20,14 @@ generated-motion watermark implementation.
 - source-withdrawal re-issuance and tamper rejection;
 - the frozen Budget-SAGE/Sign-JEPA join-hybrid implementation;
 - a generated-motion watermark and its frozen detector records;
-- compact PHOENIX-2014T, CSL-Daily, recent-method and raw-RGB audit records.
+- compact PHOENIX-2014T, CSL-Daily, recent-method and raw-RGB audit records;
+- the recognizer-free hand-motion ratio audit behind the Table IV speed, jerk
+  and variation columns;
+- the learned-route join hybrid and its paired-bootstrap intervals;
+- the retimed crossfade study behind the Section VI-C bridge comparison;
+- the paired-bootstrap intervals behind the Section VI-E main comparison;
+- the Round 3 human-rating analysis code behind the Table V panel, with no
+  participant data.
 
 The command below verifies every released byte against `MANIFEST.sha256` and
 checks the headline machine-readable evidence:
@@ -44,7 +51,8 @@ python -m pip install -r requirements-verification.txt
 python -m pytest -q \
   tests/test_budget_sage_signjepa_hybrid.py \
   tests/test_clean_route_certificate.py \
-  tests/test_route_certificate_manifest.py
+  tests/test_route_certificate_manifest.py \
+  tests/test_motion_ratios.py
 ```
 
 ## Layout
@@ -52,6 +60,8 @@ python -m pytest -q \
 - `budget_sage/`: reusable routing, generation and certificate modules.
 - `scripts/`: exact research scripts retained for the reported routes and
   audits.
+- `scripts/jerk_study/`: the retimed crossfade study behind Section VI-C, kept
+  as its own subfolder because it is a self-contained multi-step pipeline.
 - `tests/`: focused deterministic and failure-case tests.
 - `evidence/hybrid/`: preregistration, materialization, seam audit, score and
   independent review for the frozen join hybrid.
@@ -59,6 +69,51 @@ python -m pytest -q \
 - `evidence/watermark/`: frozen watermark and detector records.
 - `evidence/signbase/`: controlled Sign-Base scoring audit.
 - `evidence/verification_bundle/`: compact archived verification records.
+- `evidence/motion_ratios/`: hand-motion kinematic ratio JSONs for every route
+  reported in Table IV.
+- `evidence/evaluator_results/`: SLRTP evaluator result records, including the
+  `avg_duration` figures reported in Table IV.
+- `evidence/hybrid_learned/`: the learned-route join hybrid results, its
+  materialization ledger, and its paired-bootstrap intervals.
+- `evidence/jerk_study/`: the retimed crossfade study results that back the
+  Section VI-C bridge comparison.
+- `evidence/paired_intervals/`: the paired-bootstrap intervals behind the
+  Section VI-E main comparison.
+
+## Evidence for the 26 September 2026 revision
+
+This revision adds the code and evidence behind five parts of the paper that
+the prior release did not yet cover.
+
+The Table IV motion and duration columns come from two places. The speed,
+jerk and variation ratios are produced by `scripts/exp_revision_motion_ratios.py`
+and stored as JSON files under `evidence/motion_ratios/`. The duration column
+is the evaluator's own `avg_duration` field, stored in the evaluator result
+records under `evidence/evaluator_results/`.
+
+The learned-hybrid row in Table IV and its confidence intervals in Section
+VI-C come from `evidence/hybrid_learned/`. That folder holds the route's
+scored results, its paired-bootstrap interval file, its materialization
+ledger, and its per-clip provenance ledger.
+
+The Section VI-C crossfade comparison, the values 1.061, 1.048, 0.996 and
+0.991, and the variation and DTW evidence behind them, come from the retimed
+crossfade study. Its code is `scripts/jerk_study/`, and its results are
+`evidence/jerk_study/rcx_results_test641.json` and
+`evidence/jerk_study/rcx_summary.json`.
+
+The Section VI-E main-comparison paired intervals come from
+`evidence/paired_intervals/`. Both files there were produced by
+`scripts/bootstrap_clean_route_comparisons.py`, which is already part of this
+release, as recorded in each file's own embedded `meta.implementation` field
+and its matching sha256.
+
+The Table V Round 3 rating panel is produced by
+`scripts/analyse_signer_round.py`. Only the analysis code is published here.
+No participant response, token, or identifier is included. The two
+participant codes that appear in the script, P288 and P289, are the research
+team's own test accounts, excluded from the analysis by id, and were already
+documented that way in the prior release's protocol.
 
 ## Data and checkpoints
 
