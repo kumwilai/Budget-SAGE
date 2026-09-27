@@ -131,10 +131,35 @@ def verify_revision_evidence() -> None:
     assert abs(learned_vs_nonlearned["corpus_wer"]["mean"] - (-1.8280776862367958)) < 1e-9
 
 
+def verify_csl_dev_evidence() -> None:
+    """Table IX: the CSL-Daily 1,077-request development study, as aggregates."""
+    summary = load_json("evidence/csl_daily_dev/transfer_summary_public_v1.json")
+    ensemble = {route: heads["ensemble_last_hyp"]
+                for route, heads in summary["recognition"].items()}
+    expected = {"local": 91.374, "whole": 91.839, "fixed_h40": 91.558,
+                "hybrid": 90.053, "all_generated": 99.229}
+    for route, wer in expected.items():
+        assert abs(ensemble[route]["wer"] - wer) < 5e-4, route
+        assert ensemble[route]["denominator"] == 1077
+        assert ensemble[route]["num_ref"] == 8173
+    empty = {route: ensemble[route]["empty_hypotheses"] for route in expected}
+    assert empty == {"local": 0, "whole": 2, "fixed_h40": 0, "hybrid": 5, "all_generated": 525}
+    hybrid_ci = summary["paired_comparisons"]["hybrid_minus_fixed_h40"]["heads"]["ensemble_last_hyp"]["ci95"]
+    fixed_ci = summary["paired_comparisons"]["fixed_h40_minus_local"]["heads"]["ensemble_last_hyp"]["ci95"]
+    assert abs(hybrid_ci[0] + 2.458) < 5e-4 and abs(hybrid_ci[1] + 0.601) < 5e-4
+    assert abs(fixed_ci[0] + 0.502) < 5e-4 and abs(fixed_ci[1] - 0.872) < 5e-4
+    assert summary["bootstrap"]["groups"] == 797 and summary["bootstrap"]["draws"] == 10000
+    assert summary["preregistered_gate"]["pass"] is False
+    assert summary["test_inputs_opened"] == []
+    native = load_json("evidence/csl_daily_dev/calibration_analysis_v1.json")
+    assert abs(native["native_calibration"]["ensemble_last_hyp"]["point"] - 28.386) < 5e-4
+
+
 def main() -> None:
     count = verify_manifest()
     verify_evidence()
     verify_revision_evidence()
+    verify_csl_dev_evidence()
     print(f"verified {count} files")
     print("PASS: release integrity and declared evidence checks")
 

@@ -115,6 +115,19 @@ participant codes that appear in the script, P288 and P289, are the research
 team's own test accounts, excluded from the analysis by id, and were already
 documented that way in the prior release's protocol.
 
+
+## Evidence added on 27 September 2026 (v1.1.1)
+
+Table IX and Section VI-G report the CSL-Daily development study on 1,077
+requests. Its full analysis record holds material derived from the licensed
+CSL-Daily corpus, so this release carries an aggregate-only summary,
+`evidence/csl_daily_dev/transfer_summary_public_v1.json`, written by
+`scripts/summarize_csl_dev1077_transfer.py`. The summary gives the WER and edit
+counts of every route and recognizer head, the paired bootstrap intervals, the
+preregistered gate outcome, and the SHA-256 of the full record it was read
+from. The native-motion calibration of Section VI-G is
+`evidence/csl_daily_dev/calibration_analysis_v1.json`.
+
 ## Data and checkpoints
 
 PHOENIX-2014T, CSL-Daily, the SLRTP evaluator, pretrained recognizers, pose
