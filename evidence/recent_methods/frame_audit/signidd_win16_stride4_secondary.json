@@ -1,0 +1,5172 @@
+{
+  "win": 16,
+  "stride": 4,
+  "threshold": 0.02,
+  "train_pt": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/train.pt",
+  "n_train_windows": 187069,
+  "device": "cuda",
+  "banks": {
+    "signidd": {
+      "n_clips": 641,
+      "n_frames": 66710,
+      "n_zero_frames": 0,
+      "n_flagged_all": 0,
+      "n_flagged_nonpad": 0,
+      "share_all_frames": 0.0,
+      "share_nonpad_frames": 0.0,
+      "clips_flagged": 0,
+      "clip_min_min": 0.07965590059757233,
+      "clip_min_median": 0.17488355934619904,
+      "clip_min_max": 0.2636423707008362,
+      "quantiles_all_frames": {
+        "p0": 0.07965590059757233,
+        "p5": 0.12631992995738983,
+        "p25": 0.1819717139005661,
+        "p50": 0.2067074328660965,
+        "p75": 0.2314528077840805,
+        "p95": 0.2702616751194,
+        "p100": 0.35394784808158875
+      },
+      "quantiles_nonpad_frames": {
+        "p0": 0.07965590059757233,
+        "p5": 0.12631992995738983,
+        "p25": 0.1819717139005661,
+        "p50": 0.2067074328660965,
+        "p75": 0.2314528077840805,
+        "p95": 0.2702616751194,
+        "p100": 0.35394784808158875
+      },
+      "per_clip": {
+        "27April_2010_Tuesday_heute-1028": {
+          "T": 184,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18387776613235474,
+          "share": 0.0
+        },
+        "28January_2010_Thursday_heute-2882": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2002599984407425,
+          "share": 0.0
+        },
+        "26July_2010_Monday_tagesschau-6266": {
+          "T": 144,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11081432551145554,
+          "share": 0.0
+        },
+        "04July_2010_Sunday_tagesschau-7206": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16553883254528046,
+          "share": 0.0
+        },
+        "06May_2011_Friday_tagesschau-6436": {
+          "T": 124,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19458967447280884,
+          "share": 0.0
+        },
+        "25June_2010_Friday_tagesschau-3877": {
+          "T": 160,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2060408890247345,
+          "share": 0.0
+        },
+        "29August_2011_Monday_tagesschau-5710": {
+          "T": 144,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18803107738494873,
+          "share": 0.0
+        },
+        "21October_2011_Friday_tagesschau-4103": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18062594532966614,
+          "share": 0.0
+        },
+        "08September_2010_Wednesday_tagesschau-5240": {
+          "T": 166,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2034507542848587,
+          "share": 0.0
+        },
+        "27November_2011_Sunday_tagesschau-5138": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11456838250160217,
+          "share": 0.0
+        },
+        "06October_2011_Thursday_heute-5535": {
+          "T": 54,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18777649104595184,
+          "share": 0.0
+        },
+        "01April_2010_Thursday_tagesschau-4331": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18121843039989471,
+          "share": 0.0
+        },
+        "05February_2010_Friday_tagesschau-2916": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18380016088485718,
+          "share": 0.0
+        },
+        "26January_2010_Tuesday_tagesschau-2784": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09708976000547409,
+          "share": 0.0
+        },
+        "26April_2010_Monday_tagesschau-7272": {
+          "T": 177,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16193844377994537,
+          "share": 0.0
+        },
+        "07December_2010_Tuesday_heute-5633": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.24559597671031952,
+          "share": 0.0
+        },
+        "11August_2009_Tuesday_tagesschau-4354": {
+          "T": 63,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22367434203624725,
+          "share": 0.0
+        },
+        "01April_2011_Friday_tagesschau-3388": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12596672773361206,
+          "share": 0.0
+        },
+        "02March_2011_Wednesday_tagesschau-4702": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08769248425960541,
+          "share": 0.0
+        },
+        "07September_2010_Tuesday_tagesschau-1945": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08859354257583618,
+          "share": 0.0
+        },
+        "25November_2010_Thursday_tagesschau-2527": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1998431533575058,
+          "share": 0.0
+        },
+        "12October_2009_Monday_tagesschau-548": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08677415549755096,
+          "share": 0.0
+        },
+        "26September_2009_Saturday_tagesschau-2336": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21175839006900787,
+          "share": 0.0
+        },
+        "28October_2009_Wednesday_tagesschau-4535": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1866435557603836,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6567": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21595945954322815,
+          "share": 0.0
+        },
+        "04December_2009_Friday_tagesschau-835": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16508840024471283,
+          "share": 0.0
+        },
+        "29September_2012_Saturday_tagesschau-2963": {
+          "T": 142,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20181292295455933,
+          "share": 0.0
+        },
+        "14December_2009_Monday_tagesschau-2093": {
+          "T": 65,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18103687465190887,
+          "share": 0.0
+        },
+        "04January_2010_Monday_tagesschau-8544": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08718553930521011,
+          "share": 0.0
+        },
+        "13October_2009_Tuesday_tagesschau-1657": {
+          "T": 47,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17090189456939697,
+          "share": 0.0
+        },
+        "27August_2010_Friday_tagesschau-5164": {
+          "T": 116,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19805766642093658,
+          "share": 0.0
+        },
+        "12December_2011_Monday_tagesschau-8269": {
+          "T": 133,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.169056698679924,
+          "share": 0.0
+        },
+        "04December_2010_Saturday_tagesschau-4834": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10065853595733643,
+          "share": 0.0
+        },
+        "22February_2010_Monday_tagesschau-3247": {
+          "T": 52,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1756071150302887,
+          "share": 0.0
+        },
+        "07February_2010_Sunday_tagesschau-499": {
+          "T": 117,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15083031356334686,
+          "share": 0.0
+        },
+        "08April_2010_Thursday_tagesschau-3961": {
+          "T": 70,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1447327584028244,
+          "share": 0.0
+        },
+        "06October_2010_Wednesday_tagesschau-638": {
+          "T": 143,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18716278672218323,
+          "share": 0.0
+        },
+        "08October_2009_Thursday_tagesschau-5353": {
+          "T": 59,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1715715527534485,
+          "share": 0.0
+        },
+        "24August_2010_Tuesday_heute-3007": {
+          "T": 72,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17430324852466583,
+          "share": 0.0
+        },
+        "07August_2009_Friday_tagesschau-6165": {
+          "T": 69,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10549261420965195,
+          "share": 0.0
+        },
+        "27November_2009_Friday_tagesschau-7340": {
+          "T": 73,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13420741260051727,
+          "share": 0.0
+        },
+        "15February_2011_Tuesday_tagesschau-7474": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15508107841014862,
+          "share": 0.0
+        },
+        "11September_2009_Friday_tagesschau-8773": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20367863774299622,
+          "share": 0.0
+        },
+        "04June_2010_Friday_tagesschau-1176": {
+          "T": 148,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16864462196826935,
+          "share": 0.0
+        },
+        "26May_2010_Wednesday_heute-7863": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1098489984869957,
+          "share": 0.0
+        },
+        "12May_2010_Wednesday_tagesschau-323": {
+          "T": 190,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12004205584526062,
+          "share": 0.0
+        },
+        "27May_2011_Friday_tagesschau-8129": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19378307461738586,
+          "share": 0.0
+        },
+        "15December_2009_Tuesday_tagesschau-6963": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1620420515537262,
+          "share": 0.0
+        },
+        "29April_2010_Thursday_heute-8626": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16642138361930847,
+          "share": 0.0
+        },
+        "25June_2010_Friday_tagesschau-3879": {
+          "T": 141,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17948018014431,
+          "share": 0.0
+        },
+        "20June_2011_Monday_tagesschau-1257": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1576901376247406,
+          "share": 0.0
+        },
+        "29April_2010_Thursday_heute-8627": {
+          "T": 76,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20818699896335602,
+          "share": 0.0
+        },
+        "03July_2011_Sunday_tagesschau-1672": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10520873218774796,
+          "share": 0.0
+        },
+        "16June_2010_Wednesday_tagesschau-8148": {
+          "T": 122,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1588619500398636,
+          "share": 0.0
+        },
+        "26September_2009_Saturday_tagesschau-2339": {
+          "T": 74,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18998996913433075,
+          "share": 0.0
+        },
+        "21April_2010_Wednesday_heute-3108": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17154087126255035,
+          "share": 0.0
+        },
+        "29October_2009_Thursday_tagesschau-1024": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17641940712928772,
+          "share": 0.0
+        },
+        "06July_2010_Tuesday_tagesschau-2658": {
+          "T": 73,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22273299098014832,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6080": {
+          "T": 39,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23715698719024658,
+          "share": 0.0
+        },
+        "25November_2009_Wednesday_tagesschau-7677": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15870916843414307,
+          "share": 0.0
+        },
+        "14September_2010_Tuesday_heute-8237": {
+          "T": 124,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15452958643436432,
+          "share": 0.0
+        },
+        "12October_2009_Monday_tagesschau-561": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23522372543811798,
+          "share": 0.0
+        },
+        "14October_2010_Thursday_tagesschau-291": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19662798941135406,
+          "share": 0.0
+        },
+        "06July_2011_Wednesday_tagesschau-6865": {
+          "T": 43,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20760606229305267,
+          "share": 0.0
+        },
+        "24October_2010_Sunday_tagesschau-2910": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16108155250549316,
+          "share": 0.0
+        },
+        "21November_2009_Saturday_tagesschau-4907": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21207375824451447,
+          "share": 0.0
+        },
+        "17April_2011_Sunday_tagesschau-2152": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09463611245155334,
+          "share": 0.0
+        },
+        "24May_2011_Tuesday_tagesschau-4468": {
+          "T": 141,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1821611225605011,
+          "share": 0.0
+        },
+        "04October_2010_Monday_tagesschau-4723": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19004257023334503,
+          "share": 0.0
+        },
+        "27April_2010_Tuesday_heute-1038": {
+          "T": 87,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1968393474817276,
+          "share": 0.0
+        },
+        "06September_2009_Sunday_tagesschau-5309": {
+          "T": 120,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.24499133229255676,
+          "share": 0.0
+        },
+        "31January_2013_Thursday_tagesschau-2708": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18803715705871582,
+          "share": 0.0
+        },
+        "28July_2010_Wednesday_tagesschau-871": {
+          "T": 78,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.141535684466362,
+          "share": 0.0
+        },
+        "06February_2010_Saturday_tagesschau-7362": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1631639301776886,
+          "share": 0.0
+        },
+        "23July_2009_Thursday_tagesschau-6750": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09511618316173553,
+          "share": 0.0
+        },
+        "30November_2009_Monday_tagesschau-5751": {
+          "T": 138,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15139982104301453,
+          "share": 0.0
+        },
+        "18January_2011_Tuesday_tagesschau-6987": {
+          "T": 101,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1005500927567482,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6566": {
+          "T": 159,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1297551393508911,
+          "share": 0.0
+        },
+        "16December_2009_Wednesday_tagesschau-5913": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15821518003940582,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5879": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15409599244594574,
+          "share": 0.0
+        },
+        "25March_2011_Friday_tagesschau-5828": {
+          "T": 152,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11150342226028442,
+          "share": 0.0
+        },
+        "28January_2010_Thursday_heute-2883": {
+          "T": 95,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1872292160987854,
+          "share": 0.0
+        },
+        "25November_2009_Wednesday_tagesschau-7668": {
+          "T": 76,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1558794379234314,
+          "share": 0.0
+        },
+        "19September_2010_Sunday_tagesschau-3802": {
+          "T": 183,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1955919861793518,
+          "share": 0.0
+        },
+        "08February_2010_Monday_tagesschau-2797": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17263858020305634,
+          "share": 0.0
+        },
+        "21April_2010_Wednesday_tagesschau-6235": {
+          "T": 115,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19085058569908142,
+          "share": 0.0
+        },
+        "08December_2009_Tuesday_heute-4199": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2047821581363678,
+          "share": 0.0
+        },
+        "11January_2011_Tuesday_tagesschau-8032": {
+          "T": 68,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1924620121717453,
+          "share": 0.0
+        },
+        "18February_2010_Thursday_tagesschau-4533": {
+          "T": 66,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18620769679546356,
+          "share": 0.0
+        },
+        "24October_2010_Sunday_tagesschau-2909": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1152912974357605,
+          "share": 0.0
+        },
+        "01April_2011_Friday_tagesschau-3377": {
+          "T": 141,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1894579529762268,
+          "share": 0.0
+        },
+        "05April_2011_Tuesday_heute-5120": {
+          "T": 51,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19183146953582764,
+          "share": 0.0
+        },
+        "31January_2011_Monday_heute-3053": {
+          "T": 42,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17883673310279846,
+          "share": 0.0
+        },
+        "14July_2009_Tuesday_tagesschau-2427": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1848832666873932,
+          "share": 0.0
+        },
+        "05September_2009_Saturday_tagesschau-4085": {
+          "T": 57,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16337794065475464,
+          "share": 0.0
+        },
+        "12October_2009_Monday_tagesschau-562": {
+          "T": 68,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15913738310337067,
+          "share": 0.0
+        },
+        "26October_2009_Monday_tagesschau-1402": {
+          "T": 77,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16649700701236725,
+          "share": 0.0
+        },
+        "01June_2010_Tuesday_heute-6603": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17368058860301971,
+          "share": 0.0
+        },
+        "06May_2011_Friday_tagesschau-6435": {
+          "T": 122,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23158298432826996,
+          "share": 0.0
+        },
+        "04August_2011_Thursday_tagesschau-713": {
+          "T": 92,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16311857104301453,
+          "share": 0.0
+        },
+        "05May_2010_Wednesday_tagesschau-3353": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18887920677661896,
+          "share": 0.0
+        },
+        "01May_2010_Saturday_tagesschau-7194": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11271274089813232,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6562": {
+          "T": 132,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1631910353899002,
+          "share": 0.0
+        },
+        "22November_2011_Tuesday_heute-4646": {
+          "T": 60,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19245052337646484,
+          "share": 0.0
+        },
+        "06January_2011_Thursday_tagesschau-5641": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19764582812786102,
+          "share": 0.0
+        },
+        "12October_2009_Monday_tagesschau-563": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.196516215801239,
+          "share": 0.0
+        },
+        "17February_2011_Thursday_tagesschau-6310": {
+          "T": 78,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17275166511535645,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_heute-2355": {
+          "T": 52,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.194605752825737,
+          "share": 0.0
+        },
+        "21August_2011_Sunday_tagesschau-263": {
+          "T": 162,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16573551297187805,
+          "share": 0.0
+        },
+        "11August_2009_Tuesday_tagesschau-4356": {
+          "T": 117,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17984198033809662,
+          "share": 0.0
+        },
+        "07December_2009_Monday_tagesschau-7103": {
+          "T": 102,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1754615157842636,
+          "share": 0.0
+        },
+        "25January_2011_Tuesday_tagesschau-2993": {
+          "T": 231,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13506759703159332,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5878": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17035773396492004,
+          "share": 0.0
+        },
+        "21April_2010_Wednesday_heute-3109": {
+          "T": 52,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1380382776260376,
+          "share": 0.0
+        },
+        "05June_2010_Saturday_tagesschau-3925": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20317983627319336,
+          "share": 0.0
+        },
+        "28February_2011_Monday_tagesschau-4988": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.214374840259552,
+          "share": 0.0
+        },
+        "03July_2009_Friday_tagesschau-2015": {
+          "T": 91,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16856543719768524,
+          "share": 0.0
+        },
+        "02October_2010_Saturday_tagesschau-1300": {
+          "T": 40,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.24511119723320007,
+          "share": 0.0
+        },
+        "24November_2011_Thursday_tagesschau-8341": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1776016801595688,
+          "share": 0.0
+        },
+        "24October_2009_Saturday_tagesschau-4287": {
+          "T": 50,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1911645382642746,
+          "share": 0.0
+        },
+        "05November_2010_Friday_tagesschau-1872": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18355509638786316,
+          "share": 0.0
+        },
+        "13April_2010_Tuesday_tagesschau-2318": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11763131618499756,
+          "share": 0.0
+        },
+        "27August_2009_Thursday_tagesschau-3268": {
+          "T": 60,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22438745200634003,
+          "share": 0.0
+        },
+        "29August_2009_Saturday_tagesschau-5018": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17930835485458374,
+          "share": 0.0
+        },
+        "10February_2010_Wednesday_tagesschau-2515": {
+          "T": 64,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20274829864501953,
+          "share": 0.0
+        },
+        "29October_2009_Thursday_tagesschau-1013": {
+          "T": 118,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15637104213237762,
+          "share": 0.0
+        },
+        "17July_2009_Friday_tagesschau-5101": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0923437774181366,
+          "share": 0.0
+        },
+        "26August_2009_Wednesday_tagesschau-3226": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15013624727725983,
+          "share": 0.0
+        },
+        "01November_2010_Monday_tagesschau-136": {
+          "T": 77,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20108045637607574,
+          "share": 0.0
+        },
+        "12December_2009_Saturday_tagesschau-4728": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.167422354221344,
+          "share": 0.0
+        },
+        "27November_2009_Friday_tagesschau-7341": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21628564596176147,
+          "share": 0.0
+        },
+        "29September_2011_Thursday_tagesschau-7236": {
+          "T": 87,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20276258885860443,
+          "share": 0.0
+        },
+        "23July_2009_Thursday_tagesschau-6751": {
+          "T": 83,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16323311626911163,
+          "share": 0.0
+        },
+        "08November_2010_Monday_tagesschau-6922": {
+          "T": 139,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18381966650485992,
+          "share": 0.0
+        },
+        "23July_2009_Thursday_tagesschau-6752": {
+          "T": 73,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1676878035068512,
+          "share": 0.0
+        },
+        "06September_2010_Monday_tagesschau-1153": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18537285923957825,
+          "share": 0.0
+        },
+        "06February_2010_Saturday_tagesschau-7363": {
+          "T": 82,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1869686394929886,
+          "share": 0.0
+        },
+        "11November_2009_Wednesday_tagesschau-8042": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16979026794433594,
+          "share": 0.0
+        },
+        "14September_2010_Tuesday_heute-8239": {
+          "T": 145,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15401378273963928,
+          "share": 0.0
+        },
+        "23September_2010_Thursday_tagesschau-3448": {
+          "T": 175,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12925438582897186,
+          "share": 0.0
+        },
+        "12April_2010_Monday_tagesschau-365": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10358045995235443,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6560": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10139409452676773,
+          "share": 0.0
+        },
+        "21May_2010_Friday_tagesschau-5094": {
+          "T": 123,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15775930881500244,
+          "share": 0.0
+        },
+        "10August_2009_Monday_heute-6897": {
+          "T": 75,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1945202648639679,
+          "share": 0.0
+        },
+        "26August_2009_Wednesday_tagesschau-3213": {
+          "T": 115,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0953381136059761,
+          "share": 0.0
+        },
+        "16November_2009_Monday_tagesschau-3106": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21142594516277313,
+          "share": 0.0
+        },
+        "01June_2010_Tuesday_tagesschau-5009": {
+          "T": 161,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14224651455879211,
+          "share": 0.0
+        },
+        "11November_2010_Thursday_tagesschau-3565": {
+          "T": 138,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1707714945077896,
+          "share": 0.0
+        },
+        "25September_2010_Saturday_tagesschau-3489": {
+          "T": 168,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14556849002838135,
+          "share": 0.0
+        },
+        "20October_2011_Thursday_tagesschau-506": {
+          "T": 69,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19575341045856476,
+          "share": 0.0
+        },
+        "15May_2010_Saturday_tagesschau-5656": {
+          "T": 133,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1908845752477646,
+          "share": 0.0
+        },
+        "15February_2011_Tuesday_tagesschau-7473": {
+          "T": 50,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16775286197662354,
+          "share": 0.0
+        },
+        "16July_2009_Thursday_tagesschau-5052": {
+          "T": 166,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21493108570575714,
+          "share": 0.0
+        },
+        "27May_2010_Thursday_heute-1236": {
+          "T": 76,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16951054334640503,
+          "share": 0.0
+        },
+        "16September_2010_Thursday_tagesschau-6278": {
+          "T": 151,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18125464022159576,
+          "share": 0.0
+        },
+        "09March_2011_Wednesday_heute-1741": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19629129767417908,
+          "share": 0.0
+        },
+        "03June_2011_Friday_tagesschau-7644": {
+          "T": 85,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18411080539226532,
+          "share": 0.0
+        },
+        "12April_2010_Monday_heute-7690": {
+          "T": 146,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1594042032957077,
+          "share": 0.0
+        },
+        "03October_2012_Wednesday_tagesschau-7654": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14488238096237183,
+          "share": 0.0
+        },
+        "08February_2010_Monday_heute-1498": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15254193544387817,
+          "share": 0.0
+        },
+        "30October_2009_Friday_tagesschau-2273": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1679937243461609,
+          "share": 0.0
+        },
+        "20April_2011_Wednesday_tagesschau-3086": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1931062787771225,
+          "share": 0.0
+        },
+        "25January_2013_Friday_tagesschau-7811": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08548799157142639,
+          "share": 0.0
+        },
+        "14August_2009_Friday_tagesschau-73": {
+          "T": 138,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1437988132238388,
+          "share": 0.0
+        },
+        "09August_2009_Sunday_tagesschau-1186": {
+          "T": 69,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15175819396972656,
+          "share": 0.0
+        },
+        "19October_2010_Tuesday_tagesschau-8290": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2074362188577652,
+          "share": 0.0
+        },
+        "13July_2009_Monday_tagesschau-7508": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19366176426410675,
+          "share": 0.0
+        },
+        "08May_2010_Saturday_tagesschau-175": {
+          "T": 78,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22259970009326935,
+          "share": 0.0
+        },
+        "14October_2009_Wednesday_tagesschau-526": {
+          "T": 129,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18401050567626953,
+          "share": 0.0
+        },
+        "10August_2009_Monday_heute-6902": {
+          "T": 116,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.24840494990348816,
+          "share": 0.0
+        },
+        "03August_2010_Tuesday_tagesschau-2780": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16732844710350037,
+          "share": 0.0
+        },
+        "08May_2010_Saturday_tagesschau-176": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19174833595752716,
+          "share": 0.0
+        },
+        "05July_2010_Monday_heute-8688": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16706927120685577,
+          "share": 0.0
+        },
+        "24August_2010_Tuesday_heute-3006": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15913546085357666,
+          "share": 0.0
+        },
+        "18November_2009_Wednesday_tagesschau-5578": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08919945359230042,
+          "share": 0.0
+        },
+        "06June_2010_Sunday_tagesschau-6363": {
+          "T": 147,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17824488878250122,
+          "share": 0.0
+        },
+        "29March_2010_Monday_tagesschau-8387": {
+          "T": 58,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16679230332374573,
+          "share": 0.0
+        },
+        "26October_2009_Monday_tagesschau-1403": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1029413565993309,
+          "share": 0.0
+        },
+        "28September_2010_Tuesday_heute-8355": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22444763779640198,
+          "share": 0.0
+        },
+        "29March_2010_Monday_tagesschau-8388": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19262288510799408,
+          "share": 0.0
+        },
+        "13November_2009_Friday_tagesschau-8608": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20612196624279022,
+          "share": 0.0
+        },
+        "12July_2010_Monday_tagesschau-373": {
+          "T": 87,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14918193221092224,
+          "share": 0.0
+        },
+        "01October_2009_Thursday_tagesschau-420": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17980337142944336,
+          "share": 0.0
+        },
+        "12December_2011_Monday_heute-5804": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16606754064559937,
+          "share": 0.0
+        },
+        "09February_2010_Tuesday_tagesschau-4504": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12530358135700226,
+          "share": 0.0
+        },
+        "14December_2009_Monday_tagesschau-2088": {
+          "T": 124,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15398603677749634,
+          "share": 0.0
+        },
+        "14December_2009_Monday_tagesschau-2092": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16819751262664795,
+          "share": 0.0
+        },
+        "08June_2010_Tuesday_tagesschau-5524": {
+          "T": 162,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18481887876987457,
+          "share": 0.0
+        },
+        "08February_2010_Monday_heute-1501": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20127235352993011,
+          "share": 0.0
+        },
+        "25June_2010_Friday_tagesschau-3882": {
+          "T": 148,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1564510464668274,
+          "share": 0.0
+        },
+        "05March_2011_Saturday_tagesschau-5447": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17796386778354645,
+          "share": 0.0
+        },
+        "04August_2011_Thursday_tagesschau-712": {
+          "T": 176,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14372240006923676,
+          "share": 0.0
+        },
+        "14September_2010_Tuesday_heute-8238": {
+          "T": 263,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12826426327228546,
+          "share": 0.0
+        },
+        "19April_2010_Monday_heute-782": {
+          "T": 40,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1849476397037506,
+          "share": 0.0
+        },
+        "18July_2009_Saturday_tagesschau-1640": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16885395348072052,
+          "share": 0.0
+        },
+        "14September_2010_Tuesday_tagesschau-5220": {
+          "T": 153,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19579198956489563,
+          "share": 0.0
+        },
+        "24January_2011_Monday_heute-6981": {
+          "T": 166,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15294453501701355,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5882": {
+          "T": 51,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.26117539405822754,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6083": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1617923229932785,
+          "share": 0.0
+        },
+        "04June_2010_Friday_tagesschau-1173": {
+          "T": 102,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1815439909696579,
+          "share": 0.0
+        },
+        "19January_2011_Wednesday_heute-2690": {
+          "T": 51,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18066354095935822,
+          "share": 0.0
+        },
+        "20October_2010_Wednesday_tagesschau-8210": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1886807680130005,
+          "share": 0.0
+        },
+        "11December_2010_Saturday_tagesschau-8669": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18563567101955414,
+          "share": 0.0
+        },
+        "04July_2010_Sunday_tagesschau-7205": {
+          "T": 38,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2202317863702774,
+          "share": 0.0
+        },
+        "21May_2010_Friday_tagesschau-5092": {
+          "T": 132,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17024753987789154,
+          "share": 0.0
+        },
+        "23September_2009_Wednesday_tagesschau-7590": {
+          "T": 38,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19645020365715027,
+          "share": 0.0
+        },
+        "22August_2010_Sunday_tagesschau-1344": {
+          "T": 180,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16214419901371002,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6565": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2180415391921997,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5684": {
+          "T": 129,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14766761660575867,
+          "share": 0.0
+        },
+        "10December_2009_Thursday_heute-7944": {
+          "T": 36,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20472848415374756,
+          "share": 0.0
+        },
+        "24November_2011_Thursday_heute-224": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20390737056732178,
+          "share": 0.0
+        },
+        "31March_2010_Wednesday_tagesschau-1000": {
+          "T": 127,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18247121572494507,
+          "share": 0.0
+        },
+        "14August_2011_Sunday_tagesschau-3230": {
+          "T": 115,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16890951991081238,
+          "share": 0.0
+        },
+        "26August_2009_Wednesday_tagesschau-3227": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17338646948337555,
+          "share": 0.0
+        },
+        "10August_2009_Monday_heute-6893": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1638563573360443,
+          "share": 0.0
+        },
+        "01April_2010_Thursday_tagesschau-4329": {
+          "T": 55,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10243167728185654,
+          "share": 0.0
+        },
+        "14October_2010_Thursday_tagesschau-290": {
+          "T": 127,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11890409141778946,
+          "share": 0.0
+        },
+        "07October_2010_Thursday_tagesschau-4117": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08720478415489197,
+          "share": 0.0
+        },
+        "17May_2010_Monday_heute-5576": {
+          "T": 146,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19430600106716156,
+          "share": 0.0
+        },
+        "21November_2009_Saturday_tagesschau-4908": {
+          "T": 78,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1686324179172516,
+          "share": 0.0
+        },
+        "06September_2010_Monday_tagesschau-1147": {
+          "T": 179,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13974769413471222,
+          "share": 0.0
+        },
+        "08April_2010_Thursday_tagesschau-3950": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21673773229122162,
+          "share": 0.0
+        },
+        "24January_2013_Thursday_heute-7259": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16058631241321564,
+          "share": 0.0
+        },
+        "05January_2011_Wednesday_tagesschau-2255": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1666124314069748,
+          "share": 0.0
+        },
+        "06September_2009_Sunday_tagesschau-5308": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16307786107063293,
+          "share": 0.0
+        },
+        "22April_2010_Thursday_tagesschau-3738": {
+          "T": 165,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1628372222185135,
+          "share": 0.0
+        },
+        "20June_2011_Monday_tagesschau-1249": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09295151382684708,
+          "share": 0.0
+        },
+        "08April_2010_Thursday_tagesschau-3957": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17975160479545593,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5691": {
+          "T": 39,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21615473926067352,
+          "share": 0.0
+        },
+        "01July_2010_Thursday_tagesschau-8797": {
+          "T": 136,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13429321348667145,
+          "share": 0.0
+        },
+        "29August_2009_Saturday_tagesschau-5019": {
+          "T": 63,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1578385978937149,
+          "share": 0.0
+        },
+        "02October_2012_Tuesday_tagesschau-2847": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21553651988506317,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6575": {
+          "T": 72,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1757413148880005,
+          "share": 0.0
+        },
+        "28September_2009_Monday_tagesschau-4682": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11606887727975845,
+          "share": 0.0
+        },
+        "28January_2013_Monday_heute-7998": {
+          "T": 177,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13062478601932526,
+          "share": 0.0
+        },
+        "08September_2010_Wednesday_tagesschau-5246": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12496825307607651,
+          "share": 0.0
+        },
+        "08July_2011_Friday_tagesschau-6727": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18457724153995514,
+          "share": 0.0
+        },
+        "01October_2009_Thursday_tagesschau-421": {
+          "T": 41,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1844354122877121,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_tagesschau-2064": {
+          "T": 116,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20588642358779907,
+          "share": 0.0
+        },
+        "02June_2010_Wednesday_heute-6789": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16916407644748688,
+          "share": 0.0
+        },
+        "12July_2010_Monday_tagesschau-374": {
+          "T": 149,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1728183478116989,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5688": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18180309236049652,
+          "share": 0.0
+        },
+        "26June_2010_Saturday_tagesschau-725": {
+          "T": 75,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17778801918029785,
+          "share": 0.0
+        },
+        "11July_2009_Saturday_tagesschau-664": {
+          "T": 101,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20565877854824066,
+          "share": 0.0
+        },
+        "30January_2013_Wednesday_tagesschau-476": {
+          "T": 135,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15102846920490265,
+          "share": 0.0
+        },
+        "30November_2009_Monday_tagesschau-5750": {
+          "T": 122,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1802310049533844,
+          "share": 0.0
+        },
+        "11July_2009_Saturday_tagesschau-655": {
+          "T": 94,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0922098383307457,
+          "share": 0.0
+        },
+        "09August_2010_Monday_heute-5892": {
+          "T": 128,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14777348935604095,
+          "share": 0.0
+        },
+        "12October_2009_Monday_tagesschau-560": {
+          "T": 48,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23438997566699982,
+          "share": 0.0
+        },
+        "24May_2011_Tuesday_heute-6062": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18081338703632355,
+          "share": 0.0
+        },
+        "17February_2010_Wednesday_heute-1482": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19412726163864136,
+          "share": 0.0
+        },
+        "17April_2010_Saturday_tagesschau-406": {
+          "T": 149,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1372017115354538,
+          "share": 0.0
+        },
+        "31January_2013_Thursday_tagesschau-2713": {
+          "T": 96,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16006571054458618,
+          "share": 0.0
+        },
+        "01June_2011_Wednesday_tagesschau-6952": {
+          "T": 86,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19762574136257172,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_tagesschau-2054": {
+          "T": 162,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14139491319656372,
+          "share": 0.0
+        },
+        "25October_2010_Monday_tagesschau-24": {
+          "T": 158,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12919002771377563,
+          "share": 0.0
+        },
+        "27May_2010_Thursday_tagesschau-8382": {
+          "T": 132,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11568634957075119,
+          "share": 0.0
+        },
+        "23August_2010_Monday_heute-5329": {
+          "T": 120,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13030783832073212,
+          "share": 0.0
+        },
+        "22September_2010_Wednesday_tagesschau-3258": {
+          "T": 190,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1888553649187088,
+          "share": 0.0
+        },
+        "05June_2010_Saturday_tagesschau-3926": {
+          "T": 55,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21132270991802216,
+          "share": 0.0
+        },
+        "21May_2010_Friday_tagesschau-5097": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1754615157842636,
+          "share": 0.0
+        },
+        "01December_2011_Thursday_tagesschau-3473": {
+          "T": 190,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.164358451962471,
+          "share": 0.0
+        },
+        "06October_2012_Saturday_tagesschau-8743": {
+          "T": 89,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16999907791614532,
+          "share": 0.0
+        },
+        "20September_2010_Monday_heute-2930": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19637446105480194,
+          "share": 0.0
+        },
+        "09June_2010_Wednesday_tagesschau-5961": {
+          "T": 86,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17014577984809875,
+          "share": 0.0
+        },
+        "04January_2010_Monday_tagesschau-8551": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17203205823898315,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6082": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17253291606903076,
+          "share": 0.0
+        },
+        "05July_2010_Monday_heute-8689": {
+          "T": 118,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19655269384384155,
+          "share": 0.0
+        },
+        "15March_2011_Tuesday_tagesschau-3322": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1868404746055603,
+          "share": 0.0
+        },
+        "07April_2010_Wednesday_tagesschau-6024": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09534451365470886,
+          "share": 0.0
+        },
+        "15May_2010_Saturday_tagesschau-5659": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14813703298568726,
+          "share": 0.0
+        },
+        "17September_2010_Friday_tagesschau-3413": {
+          "T": 69,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14750787615776062,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5678": {
+          "T": 151,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19555844366550446,
+          "share": 0.0
+        },
+        "03July_2011_Sunday_tagesschau-1665": {
+          "T": 167,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19543004035949707,
+          "share": 0.0
+        },
+        "24July_2011_Sunday_tagesschau-6632": {
+          "T": 47,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18186813592910767,
+          "share": 0.0
+        },
+        "11February_2010_Thursday_tagesschau-8761": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16897590458393097,
+          "share": 0.0
+        },
+        "25August_2009_Tuesday_tagesschau-7086": {
+          "T": 73,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20295552909374237,
+          "share": 0.0
+        },
+        "17February_2011_Thursday_heute-387": {
+          "T": 123,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18049876391887665,
+          "share": 0.0
+        },
+        "29July_2010_Thursday_tagesschau-7420": {
+          "T": 70,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15922796726226807,
+          "share": 0.0
+        },
+        "17July_2009_Friday_tagesschau-5104": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18412365019321442,
+          "share": 0.0
+        },
+        "21November_2010_Sunday_tagesschau-5676": {
+          "T": 171,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17704665660858154,
+          "share": 0.0
+        },
+        "01October_2010_Friday_tagesschau-2700": {
+          "T": 117,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.208862766623497,
+          "share": 0.0
+        },
+        "02August_2010_Monday_heute-1243": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18635310232639313,
+          "share": 0.0
+        },
+        "24January_2013_Thursday_heute-7266": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19762806594371796,
+          "share": 0.0
+        },
+        "19February_2010_Friday_tagesschau-4093": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1632901281118393,
+          "share": 0.0
+        },
+        "07December_2010_Tuesday_tagesschau-4155": {
+          "T": 122,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12221257388591766,
+          "share": 0.0
+        },
+        "25August_2010_Wednesday_heute-6005": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2207791656255722,
+          "share": 0.0
+        },
+        "06October_2012_Saturday_tagesschau-8742": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14882299304008484,
+          "share": 0.0
+        },
+        "05June_2010_Saturday_tagesschau-3932": {
+          "T": 144,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1558094322681427,
+          "share": 0.0
+        },
+        "08December_2009_Tuesday_heute-4198": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17246612906455994,
+          "share": 0.0
+        },
+        "25June_2010_Friday_tagesschau-3880": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14943742752075195,
+          "share": 0.0
+        },
+        "22February_2010_Monday_tagesschau-3246": {
+          "T": 139,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21443960070610046,
+          "share": 0.0
+        },
+        "28September_2009_Monday_tagesschau-4681": {
+          "T": 33,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1977480947971344,
+          "share": 0.0
+        },
+        "24August_2009_Monday_heute-6643": {
+          "T": 49,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21487854421138763,
+          "share": 0.0
+        },
+        "17February_2010_Wednesday_heute-1478": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19676297903060913,
+          "share": 0.0
+        },
+        "13September_2010_Monday_tagesschau-4592": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08748342841863632,
+          "share": 0.0
+        },
+        "25October_2010_Monday_tagesschau-17": {
+          "T": 161,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1876268982887268,
+          "share": 0.0
+        },
+        "16December_2009_Wednesday_tagesschau-5912": {
+          "T": 65,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13228699564933777,
+          "share": 0.0
+        },
+        "25August_2010_Wednesday_tagesschau-8508": {
+          "T": 120,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1617828905582428,
+          "share": 0.0
+        },
+        "11November_2010_Thursday_tagesschau-3564": {
+          "T": 86,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.184732586145401,
+          "share": 0.0
+        },
+        "24April_2010_Saturday_tagesschau-3971": {
+          "T": 83,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22455230355262756,
+          "share": 0.0
+        },
+        "12January_2010_Tuesday_heute-2544": {
+          "T": 145,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1463947594165802,
+          "share": 0.0
+        },
+        "13August_2009_Thursday_tagesschau-8492": {
+          "T": 74,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19210967421531677,
+          "share": 0.0
+        },
+        "30March_2010_Tuesday_tagesschau-5699": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15285621583461761,
+          "share": 0.0
+        },
+        "05May_2010_Wednesday_tagesschau-3352": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17481635510921478,
+          "share": 0.0
+        },
+        "21January_2011_Friday_tagesschau-4889": {
+          "T": 116,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16567520797252655,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_heute-2361": {
+          "T": 77,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1737297773361206,
+          "share": 0.0
+        },
+        "08July_2010_Thursday_tagesschau-5388": {
+          "T": 50,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18832945823669434,
+          "share": 0.0
+        },
+        "09November_2010_Tuesday_heute-5840": {
+          "T": 40,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2061774879693985,
+          "share": 0.0
+        },
+        "17May_2010_Monday_heute-5577": {
+          "T": 40,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18159566819667816,
+          "share": 0.0
+        },
+        "04May_2011_Wednesday_heute-3995": {
+          "T": 158,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18648365139961243,
+          "share": 0.0
+        },
+        "07February_2011_Monday_heute-4658": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11660924553871155,
+          "share": 0.0
+        },
+        "03June_2010_Thursday_tagesschau-2636": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17093759775161743,
+          "share": 0.0
+        },
+        "21November_2011_Monday_heute-5428": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14580048620700836,
+          "share": 0.0
+        },
+        "25August_2010_Wednesday_tagesschau-8516": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15755508840084076,
+          "share": 0.0
+        },
+        "18April_2010_Sunday_tagesschau-6663": {
+          "T": 161,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1266661435365677,
+          "share": 0.0
+        },
+        "24March_2011_Thursday_tagesschau-3938": {
+          "T": 37,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19921377301216125,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5686": {
+          "T": 66,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17418678104877472,
+          "share": 0.0
+        },
+        "31March_2010_Wednesday_tagesschau-1008": {
+          "T": 142,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14045345783233643,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_heute-2360": {
+          "T": 37,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19392947852611542,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6561": {
+          "T": 125,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1502947062253952,
+          "share": 0.0
+        },
+        "01June_2010_Tuesday_tagesschau-5008": {
+          "T": 70,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17025156319141388,
+          "share": 0.0
+        },
+        "18April_2011_Monday_tagesschau-1314": {
+          "T": 102,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.07965590059757233,
+          "share": 0.0
+        },
+        "29August_2009_Saturday_tagesschau-5020": {
+          "T": 66,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15765482187271118,
+          "share": 0.0
+        },
+        "12January_2011_Wednesday_tagesschau-1727": {
+          "T": 142,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15077568590641022,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5886": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1592380255460739,
+          "share": 0.0
+        },
+        "25June_2010_Friday_tagesschau-3881": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12821190059185028,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5881": {
+          "T": 55,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13941974937915802,
+          "share": 0.0
+        },
+        "25August_2010_Wednesday_heute-6006": {
+          "T": 55,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.231610968708992,
+          "share": 0.0
+        },
+        "30October_2009_Friday_tagesschau-2267": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08964396268129349,
+          "share": 0.0
+        },
+        "01September_2010_Wednesday_tagesschau-5039": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1922541707754135,
+          "share": 0.0
+        },
+        "01November_2010_Monday_tagesschau-137": {
+          "T": 47,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19882620871067047,
+          "share": 0.0
+        },
+        "28October_2009_Wednesday_tagesschau-4543": {
+          "T": 54,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22858905792236328,
+          "share": 0.0
+        },
+        "28July_2010_Wednesday_tagesschau-864": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16657397150993347,
+          "share": 0.0
+        },
+        "16May_2010_Sunday_tagesschau-5226": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1853325217962265,
+          "share": 0.0
+        },
+        "23January_2011_Sunday_tagesschau-7823": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08552546799182892,
+          "share": 0.0
+        },
+        "24April_2010_Saturday_tagesschau-3967": {
+          "T": 135,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13441020250320435,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6084": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13527530431747437,
+          "share": 0.0
+        },
+        "01April_2010_Thursday_heute-6704": {
+          "T": 39,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2268875539302826,
+          "share": 0.0
+        },
+        "06January_2010_Wednesday_tagesschau-7737": {
+          "T": 34,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.24066367745399475,
+          "share": 0.0
+        },
+        "17July_2009_Friday_tagesschau-5106": {
+          "T": 86,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1873929500579834,
+          "share": 0.0
+        },
+        "11November_2009_Wednesday_tagesschau-8041": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17016147077083588,
+          "share": 0.0
+        },
+        "13July_2009_Monday_tagesschau-7509": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1670861691236496,
+          "share": 0.0
+        },
+        "22September_2010_Wednesday_heute-2625": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1299237757921219,
+          "share": 0.0
+        },
+        "04December_2011_Sunday_tagesschau-7791": {
+          "T": 91,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18925286829471588,
+          "share": 0.0
+        },
+        "18May_2010_Tuesday_heute-3366": {
+          "T": 188,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.166306272149086,
+          "share": 0.0
+        },
+        "01October_2010_Friday_tagesschau-2701": {
+          "T": 102,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17967136204242706,
+          "share": 0.0
+        },
+        "22September_2010_Wednesday_heute-2624": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1819532811641693,
+          "share": 0.0
+        },
+        "28July_2010_Wednesday_tagesschau-872": {
+          "T": 95,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18526087701320648,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5679": {
+          "T": 101,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1976134032011032,
+          "share": 0.0
+        },
+        "23September_2009_Wednesday_tagesschau-7589": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13123837113380432,
+          "share": 0.0
+        },
+        "11December_2009_Friday_tagesschau-3504": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08284842222929001,
+          "share": 0.0
+        },
+        "06February_2010_Saturday_tagesschau-7365": {
+          "T": 70,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18159441649913788,
+          "share": 0.0
+        },
+        "24February_2011_Thursday_heute-6666": {
+          "T": 135,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1838976889848709,
+          "share": 0.0
+        },
+        "24July_2011_Sunday_tagesschau-6630": {
+          "T": 64,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23038199543952942,
+          "share": 0.0
+        },
+        "11September_2009_Friday_tagesschau-8772": {
+          "T": 76,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1743365079164505,
+          "share": 0.0
+        },
+        "03September_2010_Friday_tagesschau-8428": {
+          "T": 153,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20575112104415894,
+          "share": 0.0
+        },
+        "24August_2009_Monday_heute-6648": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21223054826259613,
+          "share": 0.0
+        },
+        "07October_2012_Sunday_tagesschau-3033": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15124200284481049,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6091": {
+          "T": 48,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18992732465267181,
+          "share": 0.0
+        },
+        "13August_2009_Thursday_tagesschau-8491": {
+          "T": 145,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1685948520898819,
+          "share": 0.0
+        },
+        "01October_2012_Monday_tagesschau-5370": {
+          "T": 136,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17509500682353973,
+          "share": 0.0
+        },
+        "07April_2011_Thursday_tagesschau-8101": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20047056674957275,
+          "share": 0.0
+        },
+        "11August_2009_Tuesday_tagesschau-4355": {
+          "T": 166,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18188408017158508,
+          "share": 0.0
+        },
+        "06November_2010_Saturday_tagesschau-1162": {
+          "T": 189,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16810086369514465,
+          "share": 0.0
+        },
+        "24January_2010_Sunday_tagesschau-8703": {
+          "T": 102,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09427424520254135,
+          "share": 0.0
+        },
+        "26July_2010_Monday_tagesschau-6268": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17604710161685944,
+          "share": 0.0
+        },
+        "18December_2010_Saturday_tagesschau-6125": {
+          "T": 81,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1729719042778015,
+          "share": 0.0
+        },
+        "05May_2010_Wednesday_tagesschau-3348": {
+          "T": 195,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16964596509933472,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_tagesschau-2061": {
+          "T": 91,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1651521623134613,
+          "share": 0.0
+        },
+        "16June_2010_Wednesday_tagesschau-8149": {
+          "T": 72,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1982182264328003,
+          "share": 0.0
+        },
+        "08October_2009_Thursday_tagesschau-5357": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13565602898597717,
+          "share": 0.0
+        },
+        "05January_2010_Tuesday_tagesschau-2668": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19697612524032593,
+          "share": 0.0
+        },
+        "10August_2009_Monday_heute-6903": {
+          "T": 95,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18637561798095703,
+          "share": 0.0
+        },
+        "10December_2009_Thursday_heute-7945": {
+          "T": 67,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17275607585906982,
+          "share": 0.0
+        },
+        "14July_2009_Tuesday_tagesschau-2433": {
+          "T": 72,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.24522539973258972,
+          "share": 0.0
+        },
+        "20October_2010_Wednesday_tagesschau-8214": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16043515503406525,
+          "share": 0.0
+        },
+        "29March_2011_Tuesday_tagesschau-8108": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08663160353899002,
+          "share": 0.0
+        },
+        "20June_2011_Monday_heute-6516": {
+          "T": 152,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17711257934570312,
+          "share": 0.0
+        },
+        "26October_2009_Monday_tagesschau-1394": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16407644748687744,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5685": {
+          "T": 57,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20449097454547882,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5680": {
+          "T": 44,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1965569704771042,
+          "share": 0.0
+        },
+        "13July_2009_Monday_tagesschau-7510": {
+          "T": 129,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15739084780216217,
+          "share": 0.0
+        },
+        "11September_2009_Friday_tagesschau-8771": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0929424837231636,
+          "share": 0.0
+        },
+        "14March_2011_Monday_tagesschau-7600": {
+          "T": 63,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2191193848848343,
+          "share": 0.0
+        },
+        "08November_2010_Monday_heute-6875": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.179010272026062,
+          "share": 0.0
+        },
+        "21October_2011_Friday_tagesschau-4104": {
+          "T": 152,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18823789060115814,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_heute-2362": {
+          "T": 51,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18413400650024414,
+          "share": 0.0
+        },
+        "24March_2011_Thursday_tagesschau-3937": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17818152904510498,
+          "share": 0.0
+        },
+        "04May_2010_Tuesday_heute-460": {
+          "T": 169,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17245596647262573,
+          "share": 0.0
+        },
+        "11April_2010_Sunday_tagesschau-8632": {
+          "T": 94,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08705855906009674,
+          "share": 0.0
+        },
+        "31March_2010_Wednesday_tagesschau-999": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08750435709953308,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6081": {
+          "T": 81,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20009878277778625,
+          "share": 0.0
+        },
+        "08December_2009_Tuesday_tagesschau-1938": {
+          "T": 161,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19362473487854004,
+          "share": 0.0
+        },
+        "28March_2011_Monday_tagesschau-2286": {
+          "T": 82,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15258044004440308,
+          "share": 0.0
+        },
+        "05May_2010_Wednesday_tagesschau-3360": {
+          "T": 172,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15342018008232117,
+          "share": 0.0
+        },
+        "14July_2009_Tuesday_tagesschau-2430": {
+          "T": 85,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22235313057899475,
+          "share": 0.0
+        },
+        "24May_2010_Monday_tagesschau-3139": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0989261195063591,
+          "share": 0.0
+        },
+        "13November_2009_Friday_tagesschau-8607": {
+          "T": 128,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23674388229846954,
+          "share": 0.0
+        },
+        "22July_2009_Wednesday_tagesschau-2873": {
+          "T": 153,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20363293588161469,
+          "share": 0.0
+        },
+        "17July_2009_Friday_tagesschau-5105": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19632588326931,
+          "share": 0.0
+        },
+        "21August_2010_Saturday_tagesschau-8822": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16999952495098114,
+          "share": 0.0
+        },
+        "28October_2009_Wednesday_tagesschau-4537": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15128538012504578,
+          "share": 0.0
+        },
+        "12December_2011_Monday_heute-5800": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1654558628797531,
+          "share": 0.0
+        },
+        "16December_2009_Wednesday_tagesschau-5914": {
+          "T": 50,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18913310766220093,
+          "share": 0.0
+        },
+        "30October_2009_Friday_tagesschau-2274": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14395153522491455,
+          "share": 0.0
+        },
+        "08July_2011_Friday_tagesschau-6729": {
+          "T": 187,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1618804931640625,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5883": {
+          "T": 108,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18120159208774567,
+          "share": 0.0
+        },
+        "06May_2011_Friday_tagesschau-6434": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18222813308238983,
+          "share": 0.0
+        },
+        "04April_2010_Sunday_tagesschau-4574": {
+          "T": 128,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1762039214372635,
+          "share": 0.0
+        },
+        "04May_2011_Wednesday_heute-3991": {
+          "T": 94,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14100858569145203,
+          "share": 0.0
+        },
+        "17January_2011_Monday_tagesschau-7005": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1986200362443924,
+          "share": 0.0
+        },
+        "04October_2010_Monday_tagesschau-4722": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20574556291103363,
+          "share": 0.0
+        },
+        "13October_2009_Tuesday_tagesschau-1659": {
+          "T": 42,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2084181159734726,
+          "share": 0.0
+        },
+        "07April_2010_Wednesday_heute-1626": {
+          "T": 158,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18170864880084991,
+          "share": 0.0
+        },
+        "07October_2010_Thursday_tagesschau-4122": {
+          "T": 137,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17105673253536224,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_tagesschau-2056": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2127077728509903,
+          "share": 0.0
+        },
+        "03June_2010_Thursday_tagesschau-2628": {
+          "T": 95,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17372801899909973,
+          "share": 0.0
+        },
+        "20June_2011_Monday_heute-6511": {
+          "T": 35,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22766903042793274,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5690": {
+          "T": 87,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17488355934619904,
+          "share": 0.0
+        },
+        "06October_2011_Thursday_tagesschau-825": {
+          "T": 153,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18026655912399292,
+          "share": 0.0
+        },
+        "06August_2010_Friday_tagesschau-2178": {
+          "T": 117,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18746459484100342,
+          "share": 0.0
+        },
+        "05May_2011_Thursday_heute-3747": {
+          "T": 50,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21940888464450836,
+          "share": 0.0
+        },
+        "30April_2010_Friday_tagesschau-2025": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1858094334602356,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_heute-2354": {
+          "T": 39,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2470449060201645,
+          "share": 0.0
+        },
+        "27August_2009_Thursday_tagesschau-3269": {
+          "T": 82,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15703853964805603,
+          "share": 0.0
+        },
+        "14October_2010_Thursday_tagesschau-287": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10155122727155685,
+          "share": 0.0
+        },
+        "24October_2010_Sunday_tagesschau-2908": {
+          "T": 170,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12218135595321655,
+          "share": 0.0
+        },
+        "24October_2009_Saturday_tagesschau-4286": {
+          "T": 72,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20657600462436676,
+          "share": 0.0
+        },
+        "04January_2010_Monday_tagesschau-8550": {
+          "T": 86,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17533493041992188,
+          "share": 0.0
+        },
+        "29November_2009_Sunday_tagesschau-7045": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10590332746505737,
+          "share": 0.0
+        },
+        "24July_2010_Saturday_tagesschau-6343": {
+          "T": 148,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14631709456443787,
+          "share": 0.0
+        },
+        "07October_2010_Thursday_heute-8568": {
+          "T": 187,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1695096492767334,
+          "share": 0.0
+        },
+        "28January_2013_Monday_tagesschau-3624": {
+          "T": 175,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1719593107700348,
+          "share": 0.0
+        },
+        "01April_2011_Friday_tagesschau-3387": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14506131410598755,
+          "share": 0.0
+        },
+        "12December_2011_Monday_heute-5805": {
+          "T": 55,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17427216470241547,
+          "share": 0.0
+        },
+        "07April_2010_Wednesday_heute-1630": {
+          "T": 176,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1461329162120819,
+          "share": 0.0
+        },
+        "21May_2010_Friday_tagesschau-5096": {
+          "T": 126,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16192667186260223,
+          "share": 0.0
+        },
+        "14August_2009_Friday_tagesschau-62": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16461078822612762,
+          "share": 0.0
+        },
+        "05May_2010_Wednesday_tagesschau-3359": {
+          "T": 57,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23526296019554138,
+          "share": 0.0
+        },
+        "13April_2010_Tuesday_tagesschau-2314": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17580078542232513,
+          "share": 0.0
+        },
+        "23October_2010_Saturday_tagesschau-896": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19982902705669403,
+          "share": 0.0
+        },
+        "10December_2009_Thursday_heute-7943": {
+          "T": 125,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17880813777446747,
+          "share": 0.0
+        },
+        "13July_2011_Wednesday_tagesschau-7978": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23086002469062805,
+          "share": 0.0
+        },
+        "13July_2009_Monday_tagesschau-7507": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2636423707008362,
+          "share": 0.0
+        },
+        "09June_2010_Wednesday_tagesschau-5960": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19590924680233002,
+          "share": 0.0
+        },
+        "20February_2010_Saturday_tagesschau-7899": {
+          "T": 118,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17033086717128754,
+          "share": 0.0
+        },
+        "31January_2011_Monday_tagesschau-668": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08239410072565079,
+          "share": 0.0
+        },
+        "20November_2009_Friday_tagesschau-6574": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1843956857919693,
+          "share": 0.0
+        },
+        "23October_2010_Saturday_tagesschau-895": {
+          "T": 76,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17147547006607056,
+          "share": 0.0
+        },
+        "09June_2010_Wednesday_heute-8259": {
+          "T": 74,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17771463096141815,
+          "share": 0.0
+        },
+        "15December_2010_Wednesday_tagesschau-37": {
+          "T": 164,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15011490881443024,
+          "share": 0.0
+        },
+        "15March_2011_Tuesday_tagesschau-3326": {
+          "T": 69,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13930532336235046,
+          "share": 0.0
+        },
+        "10March_2011_Thursday_heute-58": {
+          "T": 147,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18677063286304474,
+          "share": 0.0
+        },
+        "22September_2010_Wednesday_heute-2626": {
+          "T": 45,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1909988522529602,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6079": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16734258830547333,
+          "share": 0.0
+        },
+        "25February_2010_Thursday_tagesschau-1761": {
+          "T": 95,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2138417661190033,
+          "share": 0.0
+        },
+        "07September_2010_Tuesday_tagesschau-1954": {
+          "T": 205,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1531648486852646,
+          "share": 0.0
+        },
+        "04December_2009_Friday_tagesschau-844": {
+          "T": 135,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16976644098758698,
+          "share": 0.0
+        },
+        "08February_2010_Monday_heute-1497": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15446588397026062,
+          "share": 0.0
+        },
+        "09August_2010_Monday_heute-5890": {
+          "T": 116,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14954255521297455,
+          "share": 0.0
+        },
+        "26September_2009_Saturday_tagesschau-2340": {
+          "T": 125,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16091379523277283,
+          "share": 0.0
+        },
+        "08January_2010_Friday_tagesschau-3981": {
+          "T": 184,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13592009246349335,
+          "share": 0.0
+        },
+        "18February_2010_Thursday_tagesschau-4531": {
+          "T": 52,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2148643434047699,
+          "share": 0.0
+        },
+        "12August_2010_Thursday_tagesschau-4403": {
+          "T": 144,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1743566393852234,
+          "share": 0.0
+        },
+        "30December_2010_Thursday_tagesschau-2232": {
+          "T": 92,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19495083391666412,
+          "share": 0.0
+        },
+        "28September_2010_Tuesday_heute-8343": {
+          "T": 41,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17950525879859924,
+          "share": 0.0
+        },
+        "13December_2010_Monday_tagesschau-6944": {
+          "T": 57,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12091910094022751,
+          "share": 0.0
+        },
+        "04October_2010_Monday_heute-5953": {
+          "T": 132,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19169819355010986,
+          "share": 0.0
+        },
+        "19March_2011_Saturday_tagesschau-4686": {
+          "T": 139,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18244194984436035,
+          "share": 0.0
+        },
+        "28October_2009_Wednesday_tagesschau-4539": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14961498975753784,
+          "share": 0.0
+        },
+        "15July_2010_Thursday_tagesschau-4056": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2118106186389923,
+          "share": 0.0
+        },
+        "25November_2011_Friday_tagesschau-4399": {
+          "T": 139,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12848535180091858,
+          "share": 0.0
+        },
+        "11September_2009_Friday_tagesschau-8781": {
+          "T": 118,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15942047536373138,
+          "share": 0.0
+        },
+        "04January_2010_Monday_heute-7395": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15372073650360107,
+          "share": 0.0
+        },
+        "14April_2010_Wednesday_tagesschau-3809": {
+          "T": 133,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1709902584552765,
+          "share": 0.0
+        },
+        "18December_2010_Saturday_tagesschau-6126": {
+          "T": 136,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16633333265781403,
+          "share": 0.0
+        },
+        "13August_2011_Saturday_tagesschau-1412": {
+          "T": 153,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21638333797454834,
+          "share": 0.0
+        },
+        "25February_2011_Friday_tagesschau-568": {
+          "T": 125,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.179670512676239,
+          "share": 0.0
+        },
+        "31May_2011_Tuesday_heute-1904": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18448463082313538,
+          "share": 0.0
+        },
+        "05February_2010_Friday_tagesschau-2924": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16593794524669647,
+          "share": 0.0
+        },
+        "18February_2011_Friday_tagesschau-6825": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17506015300750732,
+          "share": 0.0
+        },
+        "24August_2010_Tuesday_heute-3010": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14572249352931976,
+          "share": 0.0
+        },
+        "05July_2010_Monday_tagesschau-1202": {
+          "T": 77,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1769457906484604,
+          "share": 0.0
+        },
+        "17June_2010_Thursday_tagesschau-3903": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19894397258758545,
+          "share": 0.0
+        },
+        "03October_2010_Sunday_tagesschau-5770": {
+          "T": 155,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16663487255573273,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5689": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1373073309659958,
+          "share": 0.0
+        },
+        "14September_2010_Tuesday_tagesschau-5223": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11478859186172485,
+          "share": 0.0
+        },
+        "23August_2010_Monday_heute-5328": {
+          "T": 67,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20437192916870117,
+          "share": 0.0
+        },
+        "10February_2010_Wednesday_tagesschau-2514": {
+          "T": 91,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1871737837791443,
+          "share": 0.0
+        },
+        "25October_2010_Monday_heute-2049": {
+          "T": 223,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1836797595024109,
+          "share": 0.0
+        },
+        "06April_2010_Tuesday_tagesschau-306": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14674091339111328,
+          "share": 0.0
+        },
+        "24October_2009_Saturday_tagesschau-4289": {
+          "T": 121,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17884953320026398,
+          "share": 0.0
+        },
+        "08June_2010_Tuesday_tagesschau-5521": {
+          "T": 195,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17526225745677948,
+          "share": 0.0
+        },
+        "02July_2009_Thursday_tagesschau-2860": {
+          "T": 104,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1780560314655304,
+          "share": 0.0
+        },
+        "20June_2011_Monday_heute-6510": {
+          "T": 141,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18141493201255798,
+          "share": 0.0
+        },
+        "12July_2011_Tuesday_heute-1283": {
+          "T": 173,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18626751005649567,
+          "share": 0.0
+        },
+        "02December_2009_Wednesday_tagesschau-4045": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15297894179821014,
+          "share": 0.0
+        },
+        "05March_2011_Saturday_tagesschau-5443": {
+          "T": 103,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1928287297487259,
+          "share": 0.0
+        },
+        "11May_2010_Tuesday_heute-5990": {
+          "T": 200,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10923121124505997,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_heute-2356": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17179863154888153,
+          "share": 0.0
+        },
+        "07April_2010_Wednesday_heute-1619": {
+          "T": 57,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15168024599552155,
+          "share": 0.0
+        },
+        "18January_2011_Tuesday_tagesschau-6989": {
+          "T": 83,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18338751792907715,
+          "share": 0.0
+        },
+        "03July_2009_Friday_tagesschau-2014": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16352078318595886,
+          "share": 0.0
+        },
+        "20July_2010_Tuesday_heute-5254": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16502970457077026,
+          "share": 0.0
+        },
+        "26June_2010_Saturday_tagesschau-724": {
+          "T": 210,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15790820121765137,
+          "share": 0.0
+        },
+        "25November_2011_Friday_tagesschau-4398": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13414371013641357,
+          "share": 0.0
+        },
+        "22November_2010_Monday_heute-283": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18303771317005157,
+          "share": 0.0
+        },
+        "22April_2010_Thursday_tagesschau-3736": {
+          "T": 81,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.11524628847837448,
+          "share": 0.0
+        },
+        "24November_2011_Thursday_tagesschau-8342": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1472189873456955,
+          "share": 0.0
+        },
+        "29November_2009_Sunday_tagesschau-7044": {
+          "T": 76,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18342578411102295,
+          "share": 0.0
+        },
+        "14October_2010_Thursday_tagesschau-294": {
+          "T": 134,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21165747940540314,
+          "share": 0.0
+        },
+        "15February_2011_Tuesday_heute-7911": {
+          "T": 133,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20364828407764435,
+          "share": 0.0
+        },
+        "27November_2011_Sunday_tagesschau-5149": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19824054837226868,
+          "share": 0.0
+        },
+        "05March_2011_Saturday_tagesschau-5442": {
+          "T": 93,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14579525589942932,
+          "share": 0.0
+        },
+        "18December_2010_Saturday_tagesschau-6118": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08515714854001999,
+          "share": 0.0
+        },
+        "28September_2010_Tuesday_heute-8344": {
+          "T": 148,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17184171080589294,
+          "share": 0.0
+        },
+        "18February_2010_Thursday_tagesschau-4532": {
+          "T": 54,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15343061089515686,
+          "share": 0.0
+        },
+        "01April_2010_Thursday_heute-6705": {
+          "T": 43,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23979730904102325,
+          "share": 0.0
+        },
+        "19November_2009_Thursday_tagesschau-3781": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09667948633432388,
+          "share": 0.0
+        },
+        "26January_2010_Tuesday_heute-106": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2002154141664505,
+          "share": 0.0
+        },
+        "25August_2010_Wednesday_tagesschau-8509": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19606845080852509,
+          "share": 0.0
+        },
+        "15March_2011_Tuesday_tagesschau-3325": {
+          "T": 154,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18844690918922424,
+          "share": 0.0
+        },
+        "08June_2010_Tuesday_tagesschau-5529": {
+          "T": 83,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10663489997386932,
+          "share": 0.0
+        },
+        "07October_2010_Thursday_tagesschau-4127": {
+          "T": 122,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18643087148666382,
+          "share": 0.0
+        },
+        "02December_2010_Thursday_tagesschau-3631": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18748535215854645,
+          "share": 0.0
+        },
+        "07October_2012_Sunday_tagesschau-3032": {
+          "T": 73,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20044924318790436,
+          "share": 0.0
+        },
+        "08October_2009_Thursday_tagesschau-5358": {
+          "T": 66,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.244203120470047,
+          "share": 0.0
+        },
+        "30November_2009_Monday_tagesschau-5753": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17374075949192047,
+          "share": 0.0
+        },
+        "29March_2010_Monday_tagesschau-8389": {
+          "T": 37,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18989317119121552,
+          "share": 0.0
+        },
+        "19October_2010_Tuesday_tagesschau-8289": {
+          "T": 184,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19364836812019348,
+          "share": 0.0
+        },
+        "18November_2011_Friday_tagesschau-2142": {
+          "T": 79,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18181149661540985,
+          "share": 0.0
+        },
+        "19October_2010_Tuesday_tagesschau-8291": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18285423517227173,
+          "share": 0.0
+        },
+        "13October_2009_Tuesday_tagesschau-1658": {
+          "T": 65,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1395007073879242,
+          "share": 0.0
+        },
+        "26January_2010_Tuesday_heute-105": {
+          "T": 124,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1533714383840561,
+          "share": 0.0
+        },
+        "01April_2010_Thursday_tagesschau-4332": {
+          "T": 60,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1761917918920517,
+          "share": 0.0
+        },
+        "06October_2011_Thursday_tagesschau-823": {
+          "T": 70,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1878073662519455,
+          "share": 0.0
+        },
+        "04March_2011_Friday_tagesschau-2838": {
+          "T": 215,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19701524078845978,
+          "share": 0.0
+        },
+        "14August_2011_Sunday_tagesschau-3232": {
+          "T": 124,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20900700986385345,
+          "share": 0.0
+        },
+        "25August_2010_Wednesday_tagesschau-8507": {
+          "T": 136,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18475323915481567,
+          "share": 0.0
+        },
+        "17September_2010_Friday_tagesschau-3412": {
+          "T": 91,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15476787090301514,
+          "share": 0.0
+        },
+        "28December_2011_Wednesday_tagesschau-1912": {
+          "T": 72,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1607629507780075,
+          "share": 0.0
+        },
+        "24November_2009_Tuesday_tagesschau-5692": {
+          "T": 61,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1812790334224701,
+          "share": 0.0
+        },
+        "14February_2010_Sunday_tagesschau-3834": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18132364749908447,
+          "share": 0.0
+        },
+        "08June_2010_Tuesday_tagesschau-5530": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16918030381202698,
+          "share": 0.0
+        },
+        "24January_2013_Thursday_tagesschau-6322": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1590030938386917,
+          "share": 0.0
+        },
+        "14July_2009_Tuesday_tagesschau-2425": {
+          "T": 44,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2266921103000641,
+          "share": 0.0
+        },
+        "29June_2011_Wednesday_tagesschau-4490": {
+          "T": 49,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20524285733699799,
+          "share": 0.0
+        },
+        "01May_2010_Saturday_tagesschau-7195": {
+          "T": 138,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.138908252120018,
+          "share": 0.0
+        },
+        "25November_2009_Wednesday_tagesschau-7678": {
+          "T": 54,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1542840152978897,
+          "share": 0.0
+        },
+        "03September_2010_Friday_tagesschau-8429": {
+          "T": 63,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2178223878145218,
+          "share": 0.0
+        },
+        "26July_2010_Monday_tagesschau-6267": {
+          "T": 96,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15926294028759003,
+          "share": 0.0
+        },
+        "03February_2010_Wednesday_tagesschau-2062": {
+          "T": 82,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16831858456134796,
+          "share": 0.0
+        },
+        "23May_2010_Sunday_tagesschau-4337": {
+          "T": 130,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20024169981479645,
+          "share": 0.0
+        },
+        "09July_2010_Friday_tagesschau-591": {
+          "T": 138,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17483162879943848,
+          "share": 0.0
+        },
+        "04December_2009_Friday_tagesschau-834": {
+          "T": 119,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21344538033008575,
+          "share": 0.0
+        },
+        "08October_2009_Thursday_tagesschau-5352": {
+          "T": 71,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19057977199554443,
+          "share": 0.0
+        },
+        "24July_2011_Sunday_tagesschau-6631": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1705506443977356,
+          "share": 0.0
+        },
+        "25November_2009_Wednesday_tagesschau-7666": {
+          "T": 115,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10590261220932007,
+          "share": 0.0
+        },
+        "13April_2010_Tuesday_tagesschau-2308": {
+          "T": 139,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20083709061145782,
+          "share": 0.0
+        },
+        "28March_2011_Monday_tagesschau-2287": {
+          "T": 74,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16723358631134033,
+          "share": 0.0
+        },
+        "11May_2010_Tuesday_heute-5994": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16797737777233124,
+          "share": 0.0
+        },
+        "01April_2011_Friday_tagesschau-3374": {
+          "T": 94,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0960119366645813,
+          "share": 0.0
+        },
+        "12January_2010_Tuesday_heute-2543": {
+          "T": 120,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18676654994487762,
+          "share": 0.0
+        },
+        "28October_2009_Wednesday_tagesschau-4540": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16309985518455505,
+          "share": 0.0
+        },
+        "02December_2009_Wednesday_tagesschau-4039": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0900566428899765,
+          "share": 0.0
+        },
+        "11December_2010_Saturday_tagesschau-8661": {
+          "T": 84,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1549156904220581,
+          "share": 0.0
+        },
+        "30July_2011_Saturday_tagesschau-8595": {
+          "T": 170,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1551169902086258,
+          "share": 0.0
+        },
+        "12December_2011_Monday_heute-5811": {
+          "T": 64,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19674551486968994,
+          "share": 0.0
+        },
+        "09August_2010_Monday_heute-5891": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1755545437335968,
+          "share": 0.0
+        },
+        "11September_2009_Friday_tagesschau-8782": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19110627472400665,
+          "share": 0.0
+        },
+        "14August_2009_Friday_tagesschau-75": {
+          "T": 74,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19694125652313232,
+          "share": 0.0
+        },
+        "04December_2009_Friday_tagesschau-833": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09023014456033707,
+          "share": 0.0
+        },
+        "10January_2011_Monday_tagesschau-6402": {
+          "T": 62,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2086953967809677,
+          "share": 0.0
+        },
+        "24June_2010_Thursday_tagesschau-7300": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09290636330842972,
+          "share": 0.0
+        },
+        "24September_2009_Thursday_heute-6090": {
+          "T": 55,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17608220875263214,
+          "share": 0.0
+        },
+        "06October_2011_Thursday_heute-5534": {
+          "T": 121,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.23118731379508972,
+          "share": 0.0
+        },
+        "01November_2010_Monday_tagesschau-133": {
+          "T": 106,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1423874944448471,
+          "share": 0.0
+        },
+        "24May_2011_Tuesday_tagesschau-4477": {
+          "T": 148,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1410924345254898,
+          "share": 0.0
+        },
+        "25August_2009_Tuesday_tagesschau-7092": {
+          "T": 131,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20559050142765045,
+          "share": 0.0
+        },
+        "06January_2010_Wednesday_tagesschau-7736": {
+          "T": 56,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12668481469154358,
+          "share": 0.0
+        },
+        "20September_2010_Monday_heute-2929": {
+          "T": 37,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20804989337921143,
+          "share": 0.0
+        },
+        "24May_2011_Tuesday_heute-6067": {
+          "T": 147,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17635150253772736,
+          "share": 0.0
+        },
+        "07October_2010_Thursday_tagesschau-4129": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16860300302505493,
+          "share": 0.0
+        },
+        "11January_2011_Tuesday_tagesschau-8021": {
+          "T": 149,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15447576344013214,
+          "share": 0.0
+        },
+        "28August_2009_Friday_tagesschau-5884": {
+          "T": 38,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.232273131608963,
+          "share": 0.0
+        },
+        "27August_2009_Thursday_tagesschau-3267": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08774641156196594,
+          "share": 0.0
+        },
+        "16November_2009_Monday_tagesschau-3105": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12527801096439362,
+          "share": 0.0
+        },
+        "15October_2009_Thursday_tagesschau-7715": {
+          "T": 111,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1795167326927185,
+          "share": 0.0
+        },
+        "25August_2009_Tuesday_tagesschau-7085": {
+          "T": 163,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18225786089897156,
+          "share": 0.0
+        },
+        "16December_2009_Wednesday_tagesschau-5907": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08989214152097702,
+          "share": 0.0
+        },
+        "27April_2010_Tuesday_heute-1039": {
+          "T": 138,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18001753091812134,
+          "share": 0.0
+        },
+        "06January_2010_Wednesday_tagesschau-7728": {
+          "T": 97,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1885768175125122,
+          "share": 0.0
+        },
+        "14December_2010_Tuesday_heute-650": {
+          "T": 80,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1901465207338333,
+          "share": 0.0
+        },
+        "20October_2011_Thursday_tagesschau-513": {
+          "T": 102,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19974501430988312,
+          "share": 0.0
+        },
+        "04December_2011_Sunday_tagesschau-7792": {
+          "T": 50,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.2176489382982254,
+          "share": 0.0
+        },
+        "04December_2009_Friday_tagesschau-845": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.12631992995738983,
+          "share": 0.0
+        },
+        "28May_2010_Friday_tagesschau-7501": {
+          "T": 135,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16368865966796875,
+          "share": 0.0
+        },
+        "27June_2010_Sunday_tagesschau-7392": {
+          "T": 151,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17280642688274384,
+          "share": 0.0
+        },
+        "05July_2010_Monday_tagesschau-1205": {
+          "T": 127,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1277540773153305,
+          "share": 0.0
+        },
+        "14October_2009_Wednesday_tagesschau-516": {
+          "T": 115,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.08527442812919617,
+          "share": 0.0
+        },
+        "14December_2010_Tuesday_heute-651": {
+          "T": 70,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17506320774555206,
+          "share": 0.0
+        },
+        "11May_2010_Tuesday_tagesschau-1969": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18508082628250122,
+          "share": 0.0
+        },
+        "04January_2010_Monday_tagesschau-8552": {
+          "T": 140,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17940959334373474,
+          "share": 0.0
+        },
+        "20June_2011_Monday_tagesschau-1256": {
+          "T": 113,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21481853723526,
+          "share": 0.0
+        },
+        "10February_2010_Wednesday_tagesschau-2523": {
+          "T": 98,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09763827919960022,
+          "share": 0.0
+        },
+        "21November_2011_Monday_heute-5437": {
+          "T": 36,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17587801814079285,
+          "share": 0.0
+        },
+        "11January_2011_Tuesday_tagesschau-8017": {
+          "T": 99,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.0916895940899849,
+          "share": 0.0
+        },
+        "11September_2009_Friday_tagesschau-8780": {
+          "T": 52,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20742224156856537,
+          "share": 0.0
+        },
+        "24February_2011_Thursday_tagesschau-4771": {
+          "T": 127,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1768793761730194,
+          "share": 0.0
+        },
+        "27November_2009_Friday_tagesschau-7342": {
+          "T": 51,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.20768579840660095,
+          "share": 0.0
+        },
+        "24August_2009_Monday_heute-6642": {
+          "T": 155,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19264823198318481,
+          "share": 0.0
+        },
+        "10January_2011_Monday_tagesschau-6403": {
+          "T": 96,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16750116646289825,
+          "share": 0.0
+        },
+        "30November_2009_Monday_tagesschau-5752": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.14577694237232208,
+          "share": 0.0
+        },
+        "09June_2010_Wednesday_heute-8260": {
+          "T": 110,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18277034163475037,
+          "share": 0.0
+        },
+        "17April_2010_Saturday_tagesschau-399": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.19466611742973328,
+          "share": 0.0
+        },
+        "24August_2010_Tuesday_tagesschau-2196": {
+          "T": 132,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18352515995502472,
+          "share": 0.0
+        },
+        "06July_2010_Tuesday_tagesschau-2657": {
+          "T": 87,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1830768883228302,
+          "share": 0.0
+        },
+        "28October_2009_Wednesday_tagesschau-4544": {
+          "T": 114,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1206272542476654,
+          "share": 0.0
+        },
+        "05October_2010_Tuesday_heute-1218": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18112999200820923,
+          "share": 0.0
+        },
+        "11July_2011_Monday_tagesschau-849": {
+          "T": 141,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.18804201483726501,
+          "share": 0.0
+        },
+        "30March_2011_Wednesday_tagesschau-7125": {
+          "T": 112,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.10663275420665741,
+          "share": 0.0
+        },
+        "25November_2010_Thursday_tagesschau-2528": {
+          "T": 36,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.25323015451431274,
+          "share": 0.0
+        },
+        "08October_2009_Thursday_tagesschau-5345": {
+          "T": 100,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.09296136349439621,
+          "share": 0.0
+        },
+        "28March_2011_Monday_tagesschau-2285": {
+          "T": 196,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1971685290336609,
+          "share": 0.0
+        },
+        "10May_2010_Monday_tagesschau-6854": {
+          "T": 175,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17227581143379211,
+          "share": 0.0
+        },
+        "18July_2009_Saturday_tagesschau-1634": {
+          "T": 109,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.16710077226161957,
+          "share": 0.0
+        },
+        "12August_2009_Wednesday_tagesschau-1806": {
+          "T": 105,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13603848218917847,
+          "share": 0.0
+        },
+        "29July_2010_Thursday_tagesschau-7421": {
+          "T": 88,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17579296231269836,
+          "share": 0.0
+        },
+        "07October_2010_Thursday_tagesschau-4121": {
+          "T": 122,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1480659395456314,
+          "share": 0.0
+        },
+        "01April_2010_Thursday_tagesschau-4330": {
+          "T": 90,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.22626933455467224,
+          "share": 0.0
+        },
+        "11July_2009_Saturday_tagesschau-665": {
+          "T": 127,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.15453848242759705,
+          "share": 0.0
+        },
+        "03June_2010_Thursday_tagesschau-2629": {
+          "T": 107,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.17906098067760468,
+          "share": 0.0
+        },
+        "21November_2010_Sunday_tagesschau-5672": {
+          "T": 115,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1589450091123581,
+          "share": 0.0
+        },
+        "05January_2010_Tuesday_tagesschau-2667": {
+          "T": 142,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1742410808801651,
+          "share": 0.0
+        },
+        "26September_2009_Saturday_tagesschau-2341": {
+          "T": 158,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1642400473356247,
+          "share": 0.0
+        },
+        "08July_2010_Thursday_tagesschau-5389": {
+          "T": 78,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.13654844462871552,
+          "share": 0.0
+        },
+        "08November_2010_Monday_heute-6874": {
+          "T": 46,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.21397872269153595,
+          "share": 0.0
+        },
+        "11July_2009_Saturday_tagesschau-667": {
+          "T": 146,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1176903247833252,
+          "share": 0.0
+        },
+        "08October_2009_Thursday_tagesschau-5359": {
+          "T": 53,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1863883137702942,
+          "share": 0.0
+        },
+        "18January_2010_Monday_tagesschau-4023": {
+          "T": 121,
+          "n_zero": 0,
+          "n_flagged": 0,
+          "n_flagged_nonpad": 0,
+          "clip_min": 0.1815456748008728,
+          "share": 0.0
+        }
+      },
+      "pred_path": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/signidd/gate5/preds/signidd_gate4best_test_seed11.pt"
+    }
+  }
+}

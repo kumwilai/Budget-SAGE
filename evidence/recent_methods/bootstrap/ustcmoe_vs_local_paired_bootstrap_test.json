@@ -1,0 +1,113 @@
+{
+ "all 641": {
+  "comparisons": {
+   "d4_vs_local": {
+    "baseline": "local",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       6.899345248271271,
+       9.942121073063674
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 8.411948115595019,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       1.3126125292327389,
+       3.6587569702322007
+      ],
+      "fraction_negative": 0.0002,
+      "fraction_positive": 0.9998,
+      "mean": 2.4761031522523926,
+      "two_sided_p": 0.0005999400059994001
+     },
+     "corpus_wer": {
+      "ci95": [
+       -7.094798894106818,
+       -3.2412805381749585
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -5.1098764913161565,
+      "two_sided_p": 0.00019998000199980003
+     }
+    },
+    "comparison": "ustcmoe_d4",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": 8.411055270647307,
+     "bleu4": 2.480633815983694,
+     "corpus_wer": -5.11341791618608
+    }
+   },
+   "natlen_vs_local": {
+    "baseline": "local",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       8.618538692336266,
+       11.90755302467356
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 10.246477378349327,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       2.400833455638823,
+       4.678585642717397
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 3.54813410649731,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "corpus_wer": {
+      "ci95": [
+       -3.9290851179164257,
+       0.5809470829570077
+      ],
+      "fraction_negative": 0.9234,
+      "fraction_positive": 0.0751,
+      "mean": -1.6338465747207414,
+      "two_sided_p": 0.1533846615338466
+     }
+    },
+    "comparison": "ustcmoe_natlen",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": 10.229860338013726,
+     "bleu4": 3.54452095829428,
+     "corpus_wer": -1.6275791362296559
+    }
+   }
+  },
+  "meta": {
+   "n": 641,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "local": {
+    "bleu1": 25.92416318054749,
+    "bleu4": 9.189309308092298,
+    "corpus_wer": 90.64462386261694
+   },
+   "ustcmoe_d4": {
+    "bleu1": 34.3352184511948,
+    "bleu4": 11.669943124075992,
+    "corpus_wer": 85.53120594643086
+   },
+   "ustcmoe_natlen": {
+    "bleu1": 36.15402351856122,
+    "bleu4": 12.733830266386578,
+    "corpus_wer": 89.01704472638728
+   }
+  }
+ }
+}

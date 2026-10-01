@@ -1,0 +1,386 @@
+{
+ "Sign-IDD at fixed-route lengths|fixed|all 641": {
+  "comparisons": {
+   "base_vs_fixed": {
+    "baseline": "fixed",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       -13.921333468649491,
+       -10.323087617169366
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -12.07880993096441,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       -10.545168223420784,
+       -7.797147387161423
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -9.134116199800259,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "corpus_wer": {
+      "ci95": [
+       9.100314113589421,
+       13.258036599583832
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 11.167271623886952,
+      "two_sided_p": 0.00019998000199980003
+     }
+    },
+    "comparison": "base",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": -12.103846127600136,
+     "bleu4": -9.148237750850328,
+     "corpus_wer": 11.175189029860306
+    }
+   }
+  },
+  "meta": {
+   "n": 641,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "base": {
+    "bleu1": 21.282993779413935,
+    "bleu4": 5.9549840969897465,
+    "corpus_wer": 96.75765731129053
+   },
+   "fixed": {
+    "bleu1": 33.38683990701407,
+    "bleu4": 15.103221847840073,
+    "corpus_wer": 85.58246828143022
+   }
+  }
+ },
+ "Sign-IDD at fixed-route lengths|fixed|assembled 449": {
+  "comparisons": {
+   "base_vs_fixed": {
+    "baseline": "fixed",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       -4.702408703575726,
+       -1.9781108080641636
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -3.3394093651762873,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       -2.508390267091113,
+       -0.5614992691018942
+      ],
+      "fraction_negative": 0.9992,
+      "fraction_positive": 0.0008,
+      "mean": -1.5223677439548007,
+      "two_sided_p": 0.0017998200179982
+     },
+     "corpus_wer": {
+      "ci95": [
+       1.0059241225674975,
+       4.499485558140437
+      ],
+      "fraction_negative": 0.0011,
+      "fraction_positive": 0.9988,
+      "mean": 2.781267686787285,
+      "two_sided_p": 0.0025997400259974
+     }
+    },
+    "comparison": "base",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": -3.341826008526338,
+     "bleu4": -1.5159260051422128,
+     "corpus_wer": 2.7768075445337104
+    }
+   }
+  },
+  "meta": {
+   "n": 449,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "base": {
+    "bleu1": 15.294908526646859,
+    "bleu4": 1.4830518153348153,
+    "corpus_wer": 100.05239259517988
+   },
+   "fixed": {
+    "bleu1": 18.636734535173197,
+    "bleu4": 2.998977820477028,
+    "corpus_wer": 97.27558505064617
+   }
+  }
+ },
+ "Sign-IDD at fixed-route lengths|fixed|whole-replay 192": {
+  "comparisons": {
+   "base_vs_fixed": {
+    "baseline": "fixed",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       -36.21138901600376,
+       -29.581901583593975
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -32.85069314171825,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       -29.44787168527284,
+       -23.509183062428118
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -26.40120447047879,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "corpus_wer": {
+      "ci95": [
+       29.590853232148387,
+       38.95617472291598
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 34.33270208606117,
+      "two_sided_p": 0.00019998000199980003
+     }
+    },
+    "comparison": "base",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": -32.56872001827457,
+     "bleu4": -26.259226529171418,
+     "corpus_wer": 34.32835820895523
+    }
+   }
+  },
+  "meta": {
+   "n": 192,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "base": {
+    "bleu1": 36.996497373029776,
+    "bleu4": 16.06748478323352,
+    "corpus_wer": 87.67453057294175
+   },
+   "fixed": {
+    "bleu1": 69.56521739130434,
+    "bleu4": 42.32671131240494,
+    "corpus_wer": 53.34617236398652
+   }
+  }
+ },
+ "Sign-IDD at learned-route lengths|learned|all 641": {
+  "comparisons": {
+   "base_vs_learned": {
+    "baseline": "learned",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       -16.694506517469524,
+       -12.960677367151082
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -14.830911724074353,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       -11.892713698015163,
+       -9.002211765980308
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -10.420079617132293,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "corpus_wer": {
+      "ci95": [
+       11.769992419205257,
+       15.908560418770493
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 13.808202433375275,
+      "two_sided_p": 0.00019998000199980003
+     }
+    },
+    "comparison": "base",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": -14.827742033949207,
+     "bleu4": -10.418318652310788,
+     "corpus_wer": 13.802383698577472
+    }
+   }
+  },
+  "meta": {
+   "n": 641,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "base": {
+    "bleu1": 21.525356332010674,
+    "bleu4": 6.343449032897638,
+    "corpus_wer": 97.4240676662822
+   },
+   "learned": {
+    "bleu1": 36.35309836595988,
+    "bleu4": 16.761767685208426,
+    "corpus_wer": 83.62168396770473
+   }
+  }
+ },
+ "Sign-IDD at learned-route lengths|learned|assembled 449": {
+  "comparisons": {
+   "base_vs_learned": {
+    "baseline": "learned",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       -11.61546734286324,
+       -7.930266870836137
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -9.759909977768595,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       -7.9630249780809335,
+       -5.136085123081711
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -6.528594195864106,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "corpus_wer": {
+      "ci95": [
+       7.021311211032479,
+       11.12890060453005
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 9.08047283254003,
+      "two_sided_p": 0.00019998000199980003
+     }
+    },
+    "comparison": "base",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": -9.769309445093352,
+     "bleu4": -6.525832759857139,
+     "corpus_wer": 9.081383164512744
+    }
+   }
+  },
+  "meta": {
+   "n": 449,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "base": {
+    "bleu1": 16.346303559696292,
+    "bleu4": 1.9550046579595104,
+    "corpus_wer": 101.57177785539643
+   },
+   "learned": {
+    "bleu1": 26.115613004789644,
+    "bleu4": 8.48083741781665,
+    "corpus_wer": 92.49039469088369
+   }
+  }
+ },
+ "Sign-IDD at learned-route lengths|learned|whole-replay 192": {
+  "comparisons": {
+   "base_vs_learned": {
+    "baseline": "learned",
+    "bootstrap_delta": {
+     "bleu1": {
+      "ci95": [
+       -31.722514888496004,
+       -23.754692317000934
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -27.825679074185544,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "bleu4": {
+      "ci95": [
+       -24.53267631955625,
+       -17.5673896217525
+      ],
+      "fraction_negative": 1.0,
+      "fraction_positive": 0.0,
+      "mean": -21.080510198068,
+      "two_sided_p": 0.00019998000199980003
+     },
+     "corpus_wer": {
+      "ci95": [
+       21.946297977019384,
+       31.815964800582115
+      ],
+      "fraction_negative": 0.0,
+      "fraction_positive": 1.0,
+      "mean": 26.84124323305265,
+      "two_sided_p": 0.00019998000199980003
+     }
+    },
+    "comparison": "base",
+    "orientation": "comparison minus baseline; lower corpus WER is better",
+    "point_delta": {
+     "bleu1": -28.363465965328324,
+     "bleu4": -21.39375836261679,
+     "corpus_wer": 26.817525276841593
+    }
+   }
+  },
+  "meta": {
+   "n": 192,
+   "n_boot": 10000,
+   "paired": true,
+   "seed": 30373
+  },
+  "methods": {
+   "base": {
+    "bleu1": 35.54133170305859,
+    "bleu4": 16.559874863898553,
+    "corpus_wer": 85.98940779971112
+   },
+   "learned": {
+    "bleu1": 63.90479766838691,
+    "bleu4": 37.95363322651534,
+    "corpus_wer": 59.171882522869524
+   }
+  }
+ }
+}

@@ -1,0 +1,28 @@
+{
+  "identity": {
+    "json": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/ustc_moe/results/identity_test_before_ustcmoe_mt5_policylen_test_fps25.json",
+    "difference": {
+      "bleu4": 0.0,
+      "wer": 0.0,
+      "dtw_mje": 0.0
+    }
+  },
+  "invariants": {
+    "coverage": "641/641",
+    "extra_keys": 0,
+    "nan_or_inf": 0,
+    "shapes_178x3": true,
+    "pred_sha256": "53e99b9f46a8c0fd982445042aa46a952ad88504a5840b6813da6bf2aa27ec3b",
+    "gt": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+    "gt_sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+  },
+  "result_json": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/ustc_moe/results/ustcmoe_mt5_policylen_test_fps25.json",
+  "bleu1": 34.3352184511948,
+  "bleu4": 11.669943124075992,
+  "wer": 85.53120594643086,
+  "dtw_mje": 0.04786538705229759,
+  "avg_duration": 1.091551509095655,
+  "chrf": 33.241701529855284,
+  "rouge": 34.92068244020717,
+  "n": 641
+}

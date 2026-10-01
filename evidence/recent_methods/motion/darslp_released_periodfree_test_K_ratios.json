@@ -1,0 +1,12 @@
+{
+  "n_clips": 641,
+  "hand_speed_pred_med": 0.02207292802631855,
+  "hand_speed_gt_med": 0.02902499958872795,
+  "hand_speed_ratio": 0.7604798738702038,
+  "hand_jerk_pred_med": 0.015790553763508797,
+  "hand_jerk_gt_med": 0.017476815730333328,
+  "hand_jerk_ratio": 0.9035143476452749,
+  "hand_posestd_pred_med": 0.044220153242349625,
+  "hand_posestd_gt_med": 0.0649891048669815,
+  "hand_posestd_ratio": 0.6804241008221088
+}

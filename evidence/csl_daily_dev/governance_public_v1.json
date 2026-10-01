@@ -1,0 +1,47 @@
+{
+ "fixed_route": {
+  "budget_fraction": "2/5",
+  "compositional_local_reuse": 711,
+  "emitted_frames": 88240,
+  "optimality_claimed": false,
+  "replay_frame_fraction": 0.3998640072529465,
+  "replay_frames": 35284,
+  "selection_algorithm": "one-pass score-ranked feasible admission",
+  "whole_clip_replays": 366,
+  "within_budget": true
+ },
+ "hybrid": {
+  "archive_mass": 65580.99999943376,
+  "bridged_joins": 2151,
+  "generated_fraction": 0.2567883046301705,
+  "generated_mass": 22659.000000566244,
+  "recorded_joins": 2151,
+  "row_modes": {
+   "archive": 370,
+   "join_hybrid": 707
+  },
+  "row_recorded_join_cores_sum": 2151,
+  "total_frames": 88240,
+  "whole_replays_unchanged": 366
+ },
+ "ledger_rows": 1077,
+ "mass_conservation": {
+  "max_row_abs_error": 0.0,
+  "max_row_source_sum_abs_error": 0.0,
+  "pass": true,
+  "recorded_flag": true,
+  "row_archive_mass_sum": 65580.99999943376,
+  "row_frames_sum": 88240,
+  "row_generated_mass_sum": 22659.000000566244,
+  "tolerance_frames": 1e-06,
+  "total_abs_error": 0.0
+ },
+ "n_requests": 1077,
+ "recognizer_outputs_opened": [],
+ "schema": "budget_sage.csl_dev1077_governance_summary.v1",
+ "source_record_sha256": {
+  "fractional_ledger": "509dab907ea946d59d513df4140e0fcf145a630e31e19b8d22290dd9c443cf0a",
+  "portfolio_summary": "2a7cc2161f248f9f1b37a034d7653e88754831f01ace5f3c38a2dc65a88718d3"
+ },
+ "test_inputs_opened": []
+}

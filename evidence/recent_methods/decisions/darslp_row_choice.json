@@ -1,0 +1,28 @@
+{
+  "created": "2026-09-29T15:05:43",
+  "branch": "F1 failed (addendum Section 1.3); B' ran (Section 1.4); rule of Section 1.5",
+  "rule": "higher dev BLEU-4 under the paper's dev harness; a difference under 0.10 goes to the released weights; dev only, applied once, never on test",
+  "dev_bleu4_paper_harness": {
+    "released_periodfree": 9.016198406855636,
+    "bprime": null
+  },
+  "distance_from_11.40": {
+    "released_periodfree": 2.383801593144364,
+    "bprime": null
+  },
+  "bprime_admissible": false,
+  "choice": "released",
+  "table_row_label": "DARSLP (released weights)",
+  "letter_candidate": null,
+  "why": "B' failed a gate before dev scoring, so the released weights stand (darslp_gap_ruling.md Section 3)",
+  "f1_verdict_sha256": "02518bd5c44ef45e6d879354d8dcf28a70cce30d3b1586efe3971ebb78f0c42f",
+  "bprime_dev_verdict_sha256": null,
+  "test_numbers_known_at_writing": "none",
+  "checked_absent": [
+    "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/test_after_choice",
+    "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/f1/preds/darslp_test_periodfree_raw.pt",
+    "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/f1/preds/darslp_test_periodfree.pt",
+    "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/f1/results/darslp_test_periodfree_fps25.json",
+    "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/bprime/preds/bprime_test_raw.pt"
+  ]
+}

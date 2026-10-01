@@ -1,0 +1,14 @@
+{
+  "test_wer": 79.08,
+  "test_bleu4": 7.15,
+  "test_bleu1": 20.92,
+  "published": {
+    "bleu4": 9.08,
+    "wer": 76.66
+  },
+  "tolerance": {
+    "wer": 4.0,
+    "bleu4": 1.5
+  },
+  "pass": false
+}

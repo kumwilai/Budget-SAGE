@@ -1,0 +1,28 @@
+{
+  "identity": {
+    "json": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/baselines_lenmatch/results/identity_test_before_signidd_len_fixed_test_fps25.json",
+    "difference": {
+      "bleu4": 0.0,
+      "wer": 0.0,
+      "dtw_mje": 0.0
+    }
+  },
+  "invariants": {
+    "coverage": "641/641",
+    "extra_keys": 0,
+    "nan_or_inf": 0,
+    "shapes_178x3": true,
+    "pred_sha256": "d80d3c4330c7e6184ae35ba9e814b340d7162346037f184b8509e4ffaf5a85c8",
+    "gt": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+    "gt_sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
+  },
+  "result_json": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/baselines_lenmatch/results/signidd_len_fixed_test_fps25.json",
+  "bleu1": 21.28299377941393,
+  "bleu4": 5.9549840969897465,
+  "wer": 96.75765731129053,
+  "dtw_mje": 0.03769920393824577,
+  "avg_duration": 0.8625320530313528,
+  "chrf": 22.9636132732202,
+  "rouge": 24.03416815980359,
+  "n": 641
+}

@@ -1,0 +1,148 @@
+{
+  "inputs": {
+    "fixed": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/clean_rerank_frame40_test_text_preds.pt",
+      "sha256": "49db5307e4803f2564452bd3b5968ef30c9e193fb2b35d0b65e964b711e07003"
+    },
+    "ustcmoe_natlen": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/ustc_moe/results/ustcmoe_mt5_natlen_test_fps25_text_preds.pt",
+      "sha256": "c25a1d8b10c1c192b69baa15feefef241392ff3783a382658f3128b7e2269d55"
+    }
+  },
+  "strata": {
+    "compositional_local_reuse": {
+      "comparisons": {
+        "ustcmoe_natlen_vs_fixed": {
+          "baseline": "fixed",
+          "bootstrap_delta": {
+            "bleu1": {
+              "ci95": [
+                9.727262176024583,
+                13.447517637816032
+              ],
+              "fraction_negative": 0.0,
+              "fraction_positive": 1.0,
+              "mean": 11.591900776066185,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "bleu4": {
+              "ci95": [
+                2.3269439043883784,
+                5.074527473626044
+              ],
+              "fraction_negative": 0.0,
+              "fraction_positive": 1.0,
+              "mean": 3.699080428125599,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "corpus_wer": {
+              "ci95": [
+                -3.3968275357315707,
+                1.7235921899347468
+              ],
+              "fraction_negative": 0.7407,
+              "fraction_positive": 0.2554,
+              "mean": -0.8322016445598869,
+              "two_sided_p": 0.5187481251874813
+            }
+          },
+          "comparison": "ustcmoe_natlen",
+          "orientation": "comparison minus baseline; lower corpus WER is better",
+          "point_delta": {
+            "bleu1": 11.60436397991542,
+            "bleu4": 3.6989388702064656,
+            "corpus_wer": -0.8382815228780913
+          }
+        }
+      },
+      "meta": {
+        "definition": "ledger mode of clean_rerank_frame40_test_ledger.json",
+        "ledger_sha256": "a034d55f1dddd1a50514262eac265abe3f29626778cbd638edace1ba6fb46f22",
+        "n": 449,
+        "n_boot": 10000,
+        "paired": true,
+        "seed": 30373,
+        "stratum": "compositional_local_reuse"
+      },
+      "methods": {
+        "fixed": {
+          "bleu1": 18.636734535173197,
+          "bleu4": 2.998977820477028,
+          "corpus_wer": 97.27558505064617
+        },
+        "ustcmoe_natlen": {
+          "bleu1": 30.241098515088616,
+          "bleu4": 6.697916690683494,
+          "corpus_wer": 96.43730352776808
+        }
+      }
+    },
+    "whole_clip_replay": {
+      "comparisons": {
+        "ustcmoe_natlen_vs_fixed": {
+          "baseline": "fixed",
+          "bootstrap_delta": {
+            "bleu1": {
+              "ci95": [
+                -21.831849278518778,
+                -14.320191320371952
+              ],
+              "fraction_negative": 1.0,
+              "fraction_positive": 0.0,
+              "mean": -18.08403857926063,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "bleu4": {
+              "ci95": [
+                -19.01285267139142,
+                -12.14998223571508
+              ],
+              "fraction_negative": 1.0,
+              "fraction_positive": 0.0,
+              "mean": -15.529873455901363,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "corpus_wer": {
+              "ci95": [
+                9.599990352146643,
+                20.72338245135583
+              ],
+              "fraction_negative": 0.0,
+              "fraction_positive": 1.0,
+              "mean": 15.239282198802224,
+              "two_sided_p": 0.00019998000199980003
+            }
+          },
+          "comparison": "ustcmoe_natlen",
+          "orientation": "comparison minus baseline; lower corpus WER is better",
+          "point_delta": {
+            "bleu1": -18.051322741781327,
+            "bleu4": -15.48646407098007,
+            "corpus_wer": 15.214251324025035
+          }
+        }
+      },
+      "meta": {
+        "definition": "ledger mode of clean_rerank_frame40_test_ledger.json",
+        "ledger_sha256": "a034d55f1dddd1a50514262eac265abe3f29626778cbd638edace1ba6fb46f22",
+        "n": 192,
+        "n_boot": 10000,
+        "paired": true,
+        "seed": 30373,
+        "stratum": "whole_clip_replay"
+      },
+      "methods": {
+        "fixed": {
+          "bleu1": 69.56521739130434,
+          "bleu4": 42.32671131240494,
+          "corpus_wer": 53.34617236398652
+        },
+        "ustcmoe_natlen": {
+          "bleu1": 51.51389464952302,
+          "bleu4": 26.84024724142487,
+          "corpus_wer": 68.56042368801155
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "n": 519,
+    "mean_frames": 227.5067437379576,
+    "feature_size": 150
+  },
+  "test": {
+    "n": 642,
+    "mean_frames": 206.54205607476635,
+    "feature_size": 150
+  }
+}

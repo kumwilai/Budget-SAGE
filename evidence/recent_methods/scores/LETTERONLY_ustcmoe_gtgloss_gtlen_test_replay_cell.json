@@ -1,0 +1,17 @@
+{
+  "archive_share_of_nonpad_frames": 1.0,
+  "whole_clip_share": 0.02103745504154781,
+  "segment_share": 0.9586692298152053,
+  "zero_pad_share": 0.02029331514324693,
+  "total_frames": 64504,
+  "n_items": 641,
+  "n_whole_clip_items": 32,
+  "n_empty_items": 0,
+  "n_items_cut": 559,
+  "n_items_padded": 77,
+  "n_distinct_segment_source_clips": 355,
+  "n_segment_placements": 4086,
+  "cell": "archive 100% (2.10% whole clips, 95.87% segments), zero padding 2.03%, no ledger, no budget, no certificate",
+  "prediction_w_4_to_6pct": false,
+  "prediction_p_below_15pct": true
+}

@@ -1,0 +1,84 @@
+{
+  "comparisons": {
+    "signidd_vs_fixed": {
+      "baseline": "fixed",
+      "bootstrap_delta": {
+        "bleu1": {
+          "ci95": [
+            -9.911357087490279,
+            -5.725330107092685
+          ],
+          "fraction_negative": 1.0,
+          "fraction_positive": 0.0,
+          "mean": -7.804500704025297,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "bleu4": {
+          "ci95": [
+            -9.990975284953207,
+            -7.1454871325819855
+          ],
+          "fraction_negative": 1.0,
+          "fraction_positive": 0.0,
+          "mean": -8.54145664097477,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "corpus_wer": {
+          "ci95": [
+            8.91828201606788,
+            13.479412094865554
+          ],
+          "fraction_negative": 0.0,
+          "fraction_positive": 1.0,
+          "mean": 11.185325923294295,
+          "two_sided_p": 0.00019998000199980003
+        }
+      },
+      "comparison": "signidd",
+      "orientation": "comparison minus baseline; lower corpus WER is better",
+      "point_delta": {
+        "bleu1": -7.830824262117559,
+        "bleu4": -8.558462040137975,
+        "corpus_wer": 11.188004613610147
+      }
+    }
+  },
+  "meta": {
+    "ground_truth": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+    "ground_truth_sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f",
+    "ids_sha256": "f4a610be7ceffc9c0870ca8a588f3d8c49c66aeea01d63ad3298d83c34cd7a60",
+    "implementation": "/home/kumwilai/research/signgen-t2m/scripts/bootstrap_clean_route_comparisons.py",
+    "implementation_sha256": "2a04356b56308326c1ec902af98e99f539e555f91d16311db32a735f2fa4b893",
+    "inputs": {
+      "fixed": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/clean_rerank_frame40_test_text_preds.pt",
+        "sha256": "49db5307e4803f2564452bd3b5968ef30c9e193fb2b35d0b65e964b711e07003"
+      },
+      "signidd": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/signidd/gate5/results/signidd_gate4best_test_seed11_fps25_text_preds.pt",
+        "sha256": "6a633f14f390a32f6ef4307db64d7bf584fcff8d86ab781fca98232c0fe90bb1"
+      }
+    },
+    "n": 641,
+    "n_boot": 10000,
+    "numpy_version": "2.4.2",
+    "paired": true,
+    "paired_bootstrap_implementation": "/home/kumwilai/research/signgen-t2m/scripts/bootstrap_strict_cac.py",
+    "paired_bootstrap_implementation_sha256": "5371d2b75a98493c1c759f6e5fbd3d67b10b16ab1783ee5062c52545361055c4",
+    "seed": 30373,
+    "split": "test",
+    "torch_version": "2.10.0+cu128"
+  },
+  "methods": {
+    "fixed": {
+      "bleu1": 33.38683990701407,
+      "bleu4": 15.103221847840073,
+      "corpus_wer": 85.58246828143022
+    },
+    "signidd": {
+      "bleu1": 25.55601564489651,
+      "bleu4": 6.544759807702099,
+      "corpus_wer": 96.77047289504037
+    }
+  }
+}

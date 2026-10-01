@@ -1,0 +1,84 @@
+{
+  "comparisons": {
+    "darslp_released_periodfree_test_vs_fixed": {
+      "baseline": "fixed",
+      "bootstrap_delta": {
+        "bleu1": {
+          "ci95": [
+            -2.9890041408387975,
+            1.2205649762834065
+          ],
+          "fraction_negative": 0.7968,
+          "fraction_positive": 0.2032,
+          "mean": -0.8820943984872478,
+          "two_sided_p": 0.40655934406559346
+        },
+        "bleu4": {
+          "ci95": [
+            -5.918669664799933,
+            -3.073058372101711
+          ],
+          "fraction_negative": 1.0,
+          "fraction_positive": 0.0,
+          "mean": -4.477661659372138,
+          "two_sided_p": 0.00019998000199980003
+        },
+        "corpus_wer": {
+          "ci95": [
+            5.471117805007703,
+            10.047586880480619
+          ],
+          "fraction_negative": 0.0,
+          "fraction_positive": 1.0,
+          "mean": 7.726339011760061,
+          "two_sided_p": 0.00019998000199980003
+        }
+      },
+      "comparison": "darslp_released_periodfree_test",
+      "orientation": "comparison minus baseline; lower corpus WER is better",
+      "point_delta": {
+        "bleu1": -0.8574281423081871,
+        "bleu4": -4.471052690112231,
+        "corpus_wer": 7.740612584903232
+      }
+    }
+  },
+  "meta": {
+    "ground_truth": "/home/kumwilai/research/signgen-t2m/external/SLRTP-Sign-Production-Evaluation/pretrained/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+    "ground_truth_sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f",
+    "ids_sha256": "f4a610be7ceffc9c0870ca8a588f3d8c49c66aeea01d63ad3298d83c34cd7a60",
+    "implementation": "/home/kumwilai/research/signgen-t2m/scripts/bootstrap_clean_route_comparisons.py",
+    "implementation_sha256": "2a04356b56308326c1ec902af98e99f539e555f91d16311db32a735f2fa4b893",
+    "inputs": {
+      "darslp_released_periodfree_test": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/test_after_choice/results/darslp_released_periodfree_test_fps25_text_preds.pt",
+        "sha256": "a4c21814433a8df87d7a26a7710680336ef77e382cb106f3f4d9f619bafe30d6"
+      },
+      "fixed": {
+        "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/clean_rerank_frame40_test_text_preds.pt",
+        "sha256": "49db5307e4803f2564452bd3b5968ef30c9e193fb2b35d0b65e964b711e07003"
+      }
+    },
+    "n": 641,
+    "n_boot": 10000,
+    "numpy_version": "2.4.2",
+    "paired": true,
+    "paired_bootstrap_implementation": "/home/kumwilai/research/signgen-t2m/scripts/bootstrap_strict_cac.py",
+    "paired_bootstrap_implementation_sha256": "5371d2b75a98493c1c759f6e5fbd3d67b10b16ab1783ee5062c52545361055c4",
+    "seed": 30373,
+    "split": "test",
+    "torch_version": "2.10.0+cu128"
+  },
+  "methods": {
+    "darslp_released_periodfree_test": {
+      "bleu1": 32.529411764705884,
+      "bleu4": 10.632169157727843,
+      "corpus_wer": 93.32308086633346
+    },
+    "fixed": {
+      "bleu1": 33.38683990701407,
+      "bleu4": 15.103221847840073,
+      "corpus_wer": 85.58246828143022
+    }
+  }
+}

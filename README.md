@@ -28,6 +28,11 @@ generated-motion watermark implementation.
 - the paired-bootstrap intervals behind the Section VI-E main comparison;
 - the Round 3 human-rating analysis code behind the Table V panel, with no
   participant data.
+- the recent-method comparison behind the grouped Table IV rows (USTC-MoE,
+  DARSLP and Sign-IDD), their Section VI-F margins and the Sign-IDD retrain
+  row of Table VIII;
+- the aggregate-only CSL-Daily governance counts behind the Section VI-G
+  replay budget, join and source-mass sentence.
 
 The command below verifies every released byte against `MANIFEST.sha256` and
 checks the headline machine-readable evidence:
@@ -79,6 +84,10 @@ python -m pytest -q \
   Section VI-C bridge comparison.
 - `evidence/paired_intervals/`: the paired-bootstrap intervals behind the
   Section VI-E main comparison.
+- `evidence/recent_methods/`: scores, paired intervals, motion ratios, frame
+  audit, decision record and reproduction records of the recent-method
+  comparison, with its own README mapping each file to the paper.
+- `scripts/recent_methods/`: the scripts that produced them.
 
 ## Evidence for the 26 September 2026 revision
 
@@ -127,6 +136,26 @@ counts of every route and recognizer head, the paired bootstrap intervals, the
 preregistered gate outcome, and the SHA-256 of the full record it was read
 from. The native-motion calibration of Section VI-G is
 `evidence/csl_daily_dev/calibration_analysis_v1.json`.
+
+## Evidence added on 1 October 2026 (v1.2.0)
+
+The 30 September 2026 revision scores three recent systems, USTC-MoE, DARSLP
+and Sign-IDD, on the same 641 PHOENIX-2014T requests as our routes. Their
+Table IV rows, the Section VI-F margins, the Sign-IDD retrain row of Table
+VIII and the margins table of the response letter come from
+`evidence/recent_methods/`. Its README maps every file to the sentence or
+table cell it supports, and `verify_release.py` checks every printed value.
+The code is in `scripts/recent_methods/`. Text predictions, pose banks and
+checkpoints are not included.
+
+The Section VI-G governance sentence is backed by
+`evidence/csl_daily_dev/governance_public_v1.json`, written by
+`scripts/summarize_csl_dev1077_governance.py`. It holds counts only: the fixed
+route's 35,284 whole-replay frames of 88,240 (39.986%, within the 2/5
+budget), the hybrid's 2,151 recorded and bridged joins, its generated mass of
+25.679%, and a mass-conservation check recomputed over all 1,077 ledger rows.
+No request identifier or per-request row from the licensed corpus is
+included.
 
 ## Data and checkpoints
 

@@ -1,0 +1,12 @@
+{
+  "n_items": 642,
+  "n_identical_hypotheses": 642,
+  "bleu4_saved_vs_fgdm_test_text": 11.929439835304489,
+  "bleu4_ours_vs_fgdm_test_text": 11.929439835304489,
+  "primary_recorded_saved_bleu4": 11.93,
+  "saved_reproduces_primary_11.93": true,
+  "slt_log_test_wer_bleu4": [
+    "71.94",
+    "11.93"
+  ]
+}

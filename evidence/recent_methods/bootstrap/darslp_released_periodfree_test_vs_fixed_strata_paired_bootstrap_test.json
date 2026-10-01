@@ -1,0 +1,148 @@
+{
+  "inputs": {
+    "darslp_released_periodfree_test": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/recent_baselines_2026-09-28/darslp/test_after_choice/results/darslp_released_periodfree_test_fps25_text_preds.pt",
+      "sha256": "a4c21814433a8df87d7a26a7710680336ef77e382cb106f3f4d9f619bafe30d6"
+    },
+    "fixed": {
+      "path": "/home/kumwilai/research/signgen-t2m/outputs/revision/evaluator_workspace/results/clean_rerank_frame40_test_text_preds.pt",
+      "sha256": "49db5307e4803f2564452bd3b5968ef30c9e193fb2b35d0b65e964b711e07003"
+    }
+  },
+  "strata": {
+    "compositional_local_reuse": {
+      "comparisons": {
+        "darslp_released_periodfree_test_vs_fixed": {
+          "baseline": "fixed",
+          "bootstrap_delta": {
+            "bleu1": {
+              "ci95": [
+                6.48701270830276,
+                9.991203009991116
+              ],
+              "fraction_negative": 0.0,
+              "fraction_positive": 1.0,
+              "mean": 8.247361826026145,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "bleu4": {
+              "ci95": [
+                0.5696690753002221,
+                2.9715798836482707
+              ],
+              "fraction_negative": 0.0016,
+              "fraction_positive": 0.9984,
+              "mean": 1.7824898281993027,
+              "two_sided_p": 0.0033996600339966003
+            },
+            "corpus_wer": {
+              "ci95": [
+                0.6919145907261445,
+                5.291214564378263
+              ],
+              "fraction_negative": 0.0054,
+              "fraction_positive": 0.9943,
+              "mean": 3.0242327148568173,
+              "two_sided_p": 0.0115988401159884
+            }
+          },
+          "comparison": "darslp_released_periodfree_test",
+          "orientation": "comparison minus baseline; lower corpus WER is better",
+          "point_delta": {
+            "bleu1": 8.34278489717643,
+            "bleu4": 1.8044609605311792,
+            "corpus_wer": 3.0038421236465354
+          }
+        }
+      },
+      "meta": {
+        "definition": "ledger mode of clean_rerank_frame40_test_ledger.json",
+        "ledger_sha256": "a034d55f1dddd1a50514262eac265abe3f29626778cbd638edace1ba6fb46f22",
+        "n": 449,
+        "n_boot": 10000,
+        "paired": true,
+        "seed": 30373,
+        "stratum": "compositional_local_reuse"
+      },
+      "methods": {
+        "darslp_released_periodfree_test": {
+          "bleu1": 26.979519432349626,
+          "bleu4": 4.803438781008207,
+          "corpus_wer": 100.2794271742927
+        },
+        "fixed": {
+          "bleu1": 18.636734535173197,
+          "bleu4": 2.998977820477028,
+          "corpus_wer": 97.27558505064617
+        }
+      }
+    },
+    "whole_clip_replay": {
+      "comparisons": {
+        "darslp_released_periodfree_test_vs_fixed": {
+          "baseline": "fixed",
+          "bootstrap_delta": {
+            "bleu1": {
+              "ci95": [
+                -25.82061185044707,
+                -18.538805824595435
+              ],
+              "fraction_negative": 1.0,
+              "fraction_positive": 0.0,
+              "mean": -22.193699045216785,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "bleu4": {
+              "ci95": [
+                -21.46000721195329,
+                -14.642902531601354
+              ],
+              "fraction_negative": 1.0,
+              "fraction_positive": 0.0,
+              "mean": -18.002757602798734,
+              "two_sided_p": 0.00019998000199980003
+            },
+            "corpus_wer": {
+              "ci95": [
+                15.258184208087629,
+                26.345305530335924
+              ],
+              "fraction_negative": 0.0,
+              "fraction_positive": 1.0,
+              "mean": 20.815833333324154,
+              "two_sided_p": 0.00019998000199980003
+            }
+          },
+          "comparison": "darslp_released_periodfree_test",
+          "orientation": "comparison minus baseline; lower corpus WER is better",
+          "point_delta": {
+            "bleu1": -22.06630482062144,
+            "bleu4": -17.925054368461026,
+            "corpus_wer": 20.799229658160804
+          }
+        }
+      },
+      "meta": {
+        "definition": "ledger mode of clean_rerank_frame40_test_ledger.json",
+        "ledger_sha256": "a034d55f1dddd1a50514262eac265abe3f29626778cbd638edace1ba6fb46f22",
+        "n": 192,
+        "n_boot": 10000,
+        "paired": true,
+        "seed": 30373,
+        "stratum": "whole_clip_replay"
+      },
+      "methods": {
+        "darslp_released_periodfree_test": {
+          "bleu1": 47.498912570682904,
+          "bleu4": 24.401656943943912,
+          "corpus_wer": 74.14540202214732
+        },
+        "fixed": {
+          "bleu1": 69.56521739130434,
+          "bleu4": 42.32671131240494,
+          "corpus_wer": 53.34617236398652
+        }
+      }
+    }
+  }
+}
