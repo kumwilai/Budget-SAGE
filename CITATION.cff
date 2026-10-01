@@ -4,7 +4,7 @@ title: "Budget-SAGE: Verifiable Source Routing for Provenance-Governed Text-to-S
 type: software
 license: MIT
 repository-code: "https://github.com/kumwilai/-Budget-SAGE"
-version: 1.2.0
+version: 1.2.1
 date-released: 2026-10-01
 authors:
   - family-names: Kumwilaisak

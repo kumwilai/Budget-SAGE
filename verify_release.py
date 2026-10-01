@@ -189,8 +189,10 @@ def check_margin(got: dict, bleu4: tuple, wer: tuple) -> None:
 def verify_recent_methods_evidence() -> None:
     """Table IV grouped rows, the Section VI-F margins, Table VIII's Sign-IDD
     retrain row, the Comment 3.5 margins of the response letter, and the
-    Section VI-G CSL-Daily governance counts. Every value below is one the
-    manuscript or the letter prints, at its printed rounding."""
+    Section VI-G CSL-Daily governance counts, and the aggregate-only records of
+    the USTC-MoE and unrestricted-retrieval whole replay and of the Progressive
+    Transformer timing. Every value below is one the manuscript or the letter
+    prints, at its printed rounding."""
     base = "evidence/recent_methods/"
     rows = {  # Table IV: BLEU-1, BLEU-4, WER, DTW-MJE, duration
         "scores/ustcmoe_mt5_natlen_test_fps25.json": (36.15, 12.73, 89.02, 0.04492, 1.323),
@@ -327,6 +329,30 @@ def verify_recent_methods_evidence() -> None:
     assert gov["mass_conservation"]["pass"] is True
     assert gov["mass_conservation"]["row_frames_sum"] == hybrid["total_frames"] == 88240
     assert gov["test_inputs_opened"] == []
+
+    # Aggregate-only records of three per-item audits that hold licensed corpus text
+    agg = lambda name: load_json(base + "aggregates/" + name)  # noqa: E731
+    script = sha256(ROOT / "scripts/recent_methods/summarize_exception_records.py")
+    # Table IV USTC-MoE row: 32 clips, 1,538 frames, 1.888%
+    e1 = agg("ustcmoe_whole_replay_aggregate.json")
+    assert (e1["whole_replay_clips"], e1["whole_replay_frames"], e1["total_frames"]) == (32, 1538, 81467)
+    assert printed(100 * e1["whole_replay_frame_share"], 1.888, 3) and e1["n_requests"] == 641
+    audit = base + "frame_audit/ustcmoe_natlen_win1_stride1_thr0.005.json"
+    bank = load_json(audit)["banks"]["ustcmoe_natlen"]
+    assert (bank["n_frames"], bank["n_clips"]) == (e1["total_frames"], e1["n_requests"])
+    assert e1["source_record_sha256"]["frame_audit"] == sha256(ROOT / audit)
+    # Table IV unrestricted retrieval row, Sections VI-B and VII-A: 632 clips, 62,966 frames, 99.592%
+    e2 = agg("unrestricted_retrieval_whole_replay_aggregate.json")
+    assert (e2["whole_replay_clips"], e2["whole_replay_frames"], e2["total_frames"]) == (632, 62966, 63224)
+    assert printed(100 * e2["whole_replay_frame_share"], 99.592, 3) and e2["n_requests"] == 641
+    assert sum(e2["requests_by_source"].values()) == 641
+    # letter, Comment 3.5: Progressive Transformer test bank, 630 of 641 clips at ceil(L/2)
+    e3 = agg("pt_bank_duration_aggregate.json")
+    assert (e3["exact_ceil_half_reference"], e3["n_clips"]) == (630, 641) and e3["split"] == "test"
+    assert e3["exact_ceil_half_reference"] + e3["exact_floor_half_reference"] + e3["neither"] == 641
+    for record in (e1, e2, e3):
+        assert all(record["checks"].values()) and record["producing_script_sha256"] == script
+        assert not any(isinstance(v, list) for v in record.values())  # no per-item rows
 
 
 def main() -> None:

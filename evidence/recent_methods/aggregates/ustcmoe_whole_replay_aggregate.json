@@ -1,0 +1,31 @@
+{
+ "checks": {
+  "denominator_equals_frame_audit": true,
+  "frames_conserved": true,
+  "requests_equal_frame_audit_clips": true
+ },
+ "items_by_mode": {
+  "segments": 609,
+  "whole_clip": 32
+ },
+ "n_requests": 641,
+ "producing_script": "scripts/recent_methods/summarize_exception_records.py",
+ "producing_script_sha256": "eed1c609d897267ccdcb8c680bd0640a926a2714dff4da357c78492feeb8b4c1",
+ "schema": "budget_sage.recent_methods.ustcmoe_whole_replay_aggregate.v1",
+ "segment_frames": 79929,
+ "source_record_sha256": {
+  "frame_audit": "1bc13bf805a2b7aab4fd47ab1e43acf602e162611e87dd9fde8aa8d5c5bf3a0b",
+  "per_item_tag_file": "94faa3453076517d893f57549626e1e279ef2032913fe704591551ef5e4784ba"
+ },
+ "source_records": {
+  "frame_audit": "evidence/recent_methods/frame_audit/ustcmoe_natlen_win1_stride1_thr0.005.json (released, gives the same frame denominator)",
+  "per_item_tag_file": "USTC-MoE length-free test run, instrumentation tags (not released, holds predicted German glosses)"
+ },
+ "supports": "Table IV, USTC-MoE row, whole-replay clips, frames and share",
+ "total_frames": 81467,
+ "whole_replay_clips": 32,
+ "whole_replay_frame_share": 0.01887880982483705,
+ "whole_replay_frames": 1538,
+ "working_tree_copy": "scripts/recent_baselines/summarize_exception_records.py",
+ "zero_pad_frames": 0
+}

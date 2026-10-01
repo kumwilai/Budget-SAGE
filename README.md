@@ -69,8 +69,8 @@ python -m pytest -q \
   as its own subfolder because it is a self-contained multi-step pipeline.
 - `tests/`: focused deterministic and failure-case tests.
 - `evidence/hybrid/`: preregistration, materialization, seam audit, score and
-  independent review for the frozen join hybrid.
-- `evidence/takedown/`: independent eight-arm withdrawal re-verification.
+  review for the frozen join hybrid.
+- `evidence/takedown/`: eight-arm withdrawal re-verification.
 - `evidence/watermark/`: frozen watermark and detector records.
 - `evidence/signbase/`: controlled Sign-Base scoring audit.
 - `evidence/verification_bundle/`: compact archived verification records.
@@ -139,7 +139,7 @@ from. The native-motion calibration of Section VI-G is
 
 ## Evidence added on 1 October 2026 (v1.2.0)
 
-The 30 September 2026 revision scores three recent systems, USTC-MoE, DARSLP
+The 1 October 2026 revision scores three recent systems, USTC-MoE, DARSLP
 and Sign-IDD, on the same 641 PHOENIX-2014T requests as our routes. Their
 Table IV rows, the Section VI-F margins, the Sign-IDD retrain row of Table
 VIII and the margins table of the response letter come from
@@ -156,6 +156,25 @@ budget), the hybrid's 2,151 recorded and bridged joins, its generated mass of
 25.679%, and a mass-conservation check recomputed over all 1,077 ledger rows.
 No request identifier or per-request row from the licensed corpus is
 included.
+
+## Aggregate records added on 1 October 2026 (v1.2.1)
+
+Three counts were taken from per-item records that hold licensed
+PHOENIX-2014T text or name every clip, so those records are withheld. Their
+counts are released as aggregate-only records in
+`evidence/recent_methods/aggregates/`, written by
+`scripts/recent_methods/summarize_exception_records.py`, each with the
+SHA-256 of its source record:
+
+- the USTC-MoE whole replay of Table IV, 32 clips and 1,538 of 81,467 frames
+  (1.888%);
+- the unrestricted-retrieval whole replay of Table IV and Sections VI-B and
+  VII-A, 632 clips and 62,966 of 63,224 frames (99.592%);
+- the Progressive Transformer timing count of the response letter, 630 of
+  641 test clips at half the reference length, rounded up.
+
+`verify_release.py` checks each count. No per-item row, clip identifier,
+German text or hypothesis string is included.
 
 ## Data and checkpoints
 
@@ -189,7 +208,7 @@ metrics are not evidence of human sign-language intelligibility.
 
 ## Version and citation
 
-Prepared release: `v1.0.0` (2026-09-13). See `CITATION.cff`.
+Prepared release: `v1.2.1` (2026-10-01). See `CITATION.cff`.
 
 Released under the MIT License; see `LICENSE`. Dataset annotations, checkpoints,
 third-party evaluators and third-party code remain governed by their original

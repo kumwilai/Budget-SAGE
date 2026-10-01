@@ -1,0 +1,27 @@
+{
+ "checks": {
+  "replayed_clip_emitted_whole": true,
+  "requests_conserved": true
+ },
+ "n_requests": 641,
+ "other_frames": 258,
+ "producing_script": "scripts/recent_methods/summarize_exception_records.py",
+ "producing_script_sha256": "eed1c609d897267ccdcb8c680bd0640a926a2714dff4da357c78492feeb8b4c1",
+ "requests_by_source": {
+  "pgrastpp": 9,
+  "retrieval": 632
+ },
+ "schema": "budget_sage.recent_methods.unrestricted_retrieval_whole_replay_aggregate.v1",
+ "source_record_sha256": {
+  "per_request_trace": "d2066da1a0693e4186377f3c0724c71b58be8f9515f484ce377eb9422d5a29ee"
+ },
+ "source_records": {
+  "per_request_trace": "unrestricted retrieval route, PHOENIX-2014T test, per-request trace (not released, holds German input text and clip identifiers)"
+ },
+ "supports": "Table IV unrestricted retrieval row (whole-replay clips, frames and share), and the 99.592% of Sections VI-B and VII-A",
+ "total_frames": 63224,
+ "whole_replay_clips": 632,
+ "whole_replay_frame_share": 0.9959192711628495,
+ "whole_replay_frames": 62966,
+ "working_tree_copy": "scripts/recent_baselines/summarize_exception_records.py"
+}

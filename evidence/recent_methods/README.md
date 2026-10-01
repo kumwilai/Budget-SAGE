@@ -1,4 +1,4 @@
-# Recent-method comparison evidence (v1.2.0, 30 September 2026 revision)
+# Recent-method comparison evidence (v1.2.0 and v1.2.1, 1 October 2026 revision)
 
 This folder holds the records behind the three recent systems that the
 revision scores on the same 641 PHOENIX-2014T test requests as our routes:
@@ -13,7 +13,8 @@ USTC-MoE, DARSLP and Sign-IDD. They support
 
 Every file is a byte-identical copy of a record in the authors' working tree
 (`outputs/recent_baselines_2026-09-28/`), except `LEDGER.md`, which is that
-tree's `RESULTS.md` copied unchanged under a new name. `verify_release.py`
+tree's `RESULTS.md` copied unchanged under a new name, and the files in
+`aggregates/`, which the summary script writes directly. `verify_release.py`
 (`verify_recent_methods_evidence`) checks every number below that the
 manuscript or the letter prints, at its printed rounding.
 
@@ -21,12 +22,14 @@ All scores come from the SLRTP evaluator (`main.py --fps 25`) on 641 test
 requests. All paired intervals are 10,000 paired bootstrap resamples with seed
 30373, reported as resample means and 95% percentile intervals, the numbers
 the manuscript prints. Files marked `LETTERONLY` are diagnostics that use
-ground-truth glosses or lengths. They appear only in the letter, never in a
-table.
+ground-truth glosses or lengths. They appear in no table, and the response
+letter does not cite them.
 
 Text predictions (`*_text_preds.pt`), generated pose banks, checkpoints and
 the per-item tag files of USTC-MoE are not released. The text predictions and
-tag files hold back-translated or predicted German text.
+tag files hold back-translated or predicted German text, so this per-item
+corpus text is withheld. The counts taken from the tag files and from two
+other withheld per-item records are released as aggregates in `aggregates/`.
 
 ## scores/
 
@@ -41,8 +44,8 @@ prediction and ground-truth SHA-256 and a zero identity difference.
 | `darslp_released_periodfree_test_fps25` | Table IV DARSLP row (32.53, 10.63, 93.32, 0.03912, duration 1.167). The letter's 10.63 and 0.0391 |
 | `signidd_gate4best_test_seed11_fps25` | Table IV Sign-IDD row (25.56, 6.54, 96.77, 0.03844, duration 1.092) |
 | `ustcmoe_mt5_policylen_test_fps25` | Letter. The pre-registered USTC-MoE run with text-predicted lengths, 11.67 BLEU-4 and 85.53 WER, and the 1.06 and 3.49 change to the length-free row |
-| `LETTERONLY_ustcmoe_gtgloss_gtlen_test_fps25` | Letter. The G3 diagnostic with ground-truth glosses and lengths |
-| `LETTERONLY_ustcmoe_gtgloss_natlen_test_fps25` | Letter. The falsifier run with ground-truth glosses and natural length |
+| `LETTERONLY_ustcmoe_gtgloss_gtlen_test_fps25` | Diagnostic, not cited. The G3 diagnostic with ground-truth glosses and lengths |
+| `LETTERONLY_ustcmoe_gtgloss_natlen_test_fps25` | Diagnostic, not cited. The falsifier run with ground-truth glosses and natural length |
 | `ustcmoe_mt5_len_fixed_test_fps25`, `ustcmoe_mt5_len_learned_test_fps25` | Letter. USTC-MoE at the fixed-route and learned-route output lengths |
 | `darslp_len_fixed_test_fps25`, `darslp_len_learned_test_fps25` | Ledger. DARSLP (with the input period) resampled to the route lengths |
 | `darslp_pf_len_fixed_test_fps25`, `darslp_pf_len_learned_test_fps25` | Letter. Period-free DARSLP resampled to the route lengths |
@@ -151,6 +154,21 @@ against 11.88 for the authors' own pose files of the same 641 requests, as the
 letter states. That gate failed, so no route was scored this way. The code is
 `scripts/recent_methods/their_evaluator.py` and `slrtp_pt_mapping.py`.
 
+## aggregates/
+
+Aggregate-only records of three counts whose per-item sources hold licensed
+PHOENIX-2014T text or clip identifiers, written by
+`scripts/recent_methods/summarize_exception_records.py`. Each holds the
+counts, the denominator, the share, conservation checks recomputed over
+every source row, the SHA-256 of each source record and the SHA-256 of the
+script. The per-item sources are withheld.
+
+| file | supports |
+|---|---|
+| `ustcmoe_whole_replay_aggregate.json` | Table IV USTC-MoE whole replay, 32 clips and 1,538 of 81,467 frames (1.888%). The denominator equals the released `frame_audit/ustcmoe_natlen_win1_stride1_thr0.005.json` |
+| `unrestricted_retrieval_whole_replay_aggregate.json` | Table IV unrestricted retrieval whole replay and Sections VI-B and VII-A, 632 clips and 62,966 of 63,224 frames (99.592%) |
+| `pt_bank_duration_aggregate.json` | Letter, Comment 3.5. 630 of 641 clips of the released Progressive Transformer test bank are exactly half the reference length, rounded up, and all 641 are within one frame of half |
+
 ## LEDGER.md
 
 The complete step ledger of this comparison: every step's criterion, number,
@@ -169,7 +187,8 @@ absolute paths in it refer to the authors' machine.
   `scores/darslp_withperiod_test_fps25.json`, because the letter cites its 9.03.
 - The Table IV USTC-MoE replay columns (32 clips, 1,538 frames, 1.888%) are
   counted from USTC-MoE's per-item tag file. That file holds predicted German
-  glosses, so it is not released.
+  glosses, so it is withheld. Its counts are released in
+  `aggregates/ustcmoe_whole_replay_aggregate.json`.
 - `scripts/recent_methods/` holds byte-identical copies of the working-tree
   scripts. The shell drivers name the authors' paths and lock helpers, and
   `memcap.sh` is the memory cap used for every heavy step.
